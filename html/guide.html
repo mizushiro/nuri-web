@@ -13,7 +13,7 @@
   <meta name="description" content="" />
   <meta name="autocomplete" content="off" />
 
-  <title>날씨누리</title>
+  <title>기후변화 상황지도</title>
 
   <link rel="stylesheet" href="../resources/css/ui.base.css">
 
@@ -58,7 +58,8 @@
         <p class="text-28-800">text-28-800</p>
       </div>
     </div>
-    <div class="guide-group">
+
+    <div class="guide-group" style="display:none;">
       <p class="guide-title">BUTTON</p>
       <p class="guide-sub-title">Button Style</p>
       <div class="guide-item-wrap">
@@ -119,7 +120,7 @@
         </button>
       </div>
     </div>
-    <div class="guide-group">
+    <div class="guide-group" style="display:none;">
       <p class="guide-title">FORM</p>
       <p class="guide-sub-title">Checkbox</p>
       <div class="guide-item-wrap gap-20">
@@ -241,7 +242,7 @@
           </div>
         </div>
 
-        <div class="form-fake-group-flex" data-form-style="round-box" data-form-h="40" data-item-size="80">
+        <div class="form-fake-group-flex" data-form-style="round-box-light" data-form-h="40" data-item-size="40">
           <div class="form-fake-button">
             <input type="radio" id="radio005-1" name="radio005" value="" class="form-fake-input">
             <label for="radio005-1" class="form-fake-label">
@@ -262,7 +263,7 @@
           </div>
         </div>
 
-        <div class="form-fake-group-flex" data-form-style="round-box" data-form-h="40" data-item-size="58">
+        <div class="form-fake-group-flex" data-form-style="round-box-list" data-form-h="40" data-item-size="58">
           <div class="form-fake-button">
             <input type="radio" id="radio006-1" name="radio006" value="" class="form-fake-input" checked>
             <label for="radio006-1" class="form-fake-label">
@@ -677,222 +678,324 @@
     </div>
     <div class="guide-group">
       <p class="guide-title">ICON</p>
-      <p class="guide-sub-title">Weather Icon</p>
-      <div class="guide-item-wrap gap-20">
-        <div class="guide-item">
-          <i class="icon-aspect-NB01" data-size="24"></i>
-          <span>icon-aspect-NB01</span>
-        </div>
-        <div class="guide-item">
-          <i class="icon-aspect-NB02" data-size="24"></i>
-          <span>icon-aspect-NB02</span>
-        </div>
-        <div class="guide-item">
-          <i class="icon-aspect-NB03" data-size="24"></i>
-          <span>icon-aspect-NB03</span>
-        </div>
-        <div class="guide-item">
-          <i class="icon-aspect-NB04" data-size="24"></i>
-          <span>icon-aspect-NB04</span>
-        </div>
-        <div class="guide-item">
-          <i class="icon-aspect-NB05" data-size="24"></i>
-          <span>icon-aspect-NB05</span>
-        </div>
-        <div class="guide-item">
-          <i class="icon-aspect-NB06" data-size="24"></i>
-          <span>icon-aspect-NB06</span>
-        </div>
-        <div class="guide-item">
-          <i class="icon-aspect-NB07" data-size="24"></i>
-          <span>icon-aspect-NB07</span>
-        </div>
-        <div class="guide-item">
-          <i class="icon-aspect-NB08" data-size="24"></i>
-          <span>icon-aspect-NB08</span>
-        </div>
-        <div class="guide-item">
-          <i class="icon-aspect-NB09" data-size="24"></i>
-          <span>icon-aspect-NB09</span>
-        </div>
-        <div class="guide-item">
-          <i class="icon-aspect-NB10" data-size="24"></i>
-          <span>icon-aspect-NB10</span>
-        </div>
-
-        <div class="guide-item">
-          <i class="icon-aspect-NB11" data-size="24"></i>
-          <span>icon-aspect-NB11</span>
-        </div>
-        <div class="guide-item">
-          <i class="icon-aspect-NB12" data-size="24"></i>
-          <span>icon-aspect-NB12</span>
-        </div>
-        <div class="guide-item">
-          <i class="icon-aspect-NB13" data-size="24"></i>
-          <span>icon-aspect-NB13</span>
-        </div>
-        <div class="guide-item">
-          <i class="icon-aspect-NB14" data-size="24"></i>
-          <span>icon-aspect-NB14</span>
-        </div>
-        <div class="guide-item">
-          <i class="icon-aspect-NB15" data-size="24"></i>
-          <span>icon-aspect-NB15</span>
-        </div>
-        <div class="guide-item">
-          <i class="icon-aspect-NB16" data-size="24"></i>
-          <span>icon-aspect-NB16</span>
-        </div>
-        <div class="guide-item">
-          <i class="icon-aspect-NB17" data-size="24"></i>
-          <span>icon-aspect-NB17</span>
-        </div>
-        <div class="guide-item">
-          <i class="icon-aspect-NB18" data-size="24"></i>
-          <span>icon-aspect-NB18</span>
-        </div>
-        <div class="guide-item">
-          <i class="icon-aspect-NB19" data-size="24"></i>
-          <span>icon-aspect-NB19</span>
-        </div>
-        <div class="guide-item">
-          <i class="icon-aspect-NB20" data-size="24"></i>
-          <span>icon-aspect-NB20</span>
-        </div>
-        <div class="guide-item">
-          <i class="icon-aspect-NB21" data-size="24"></i>
-          <span>icon-aspect-NB21</span>
-        </div>
-      </div>
       <p class="guide-sub-title">LNB Icon</p>
       <div class="guide-item-wrap gap-20">
         <div class="guide-item">
-          <i class="icon-aspect-map-nav1" data-size="24"></i>
-          <span>icon-aspect-map-nav1</span>
+          <i class="icon-aspect-lnb1" data-size="24"></i>
+          <span>icon-aspect-lnb1</span>
         </div>
         <div class="guide-item">
-          <i class="icon-aspect-map-nav2" data-size="24"></i>
-          <span>icon-aspect-map-nav2</span>
+          <i class="icon-aspect-lnb1" data-size="24"></i>
+          <span>icon-aspect-lnb2</span>
         </div>
         <div class="guide-item">
-          <i class="icon-aspect-map-nav3" data-size="24"></i>
-          <span>icon-aspect-map-nav3</span>
+          <i class="icon-aspect-lnb3" data-size="24"></i>
+          <span>icon-aspect-lnb3</span>
         </div>
         <div class="guide-item">
-          <i class="icon-aspect-map-nav4" data-size="24"></i>
-          <span>icon-aspect-map-nav4</span>
+          <i class="icon-aspect-lnb4" data-size="24"></i>
+          <span>icon-aspect-lnb4</span>
         </div>
         <div class="guide-item">
-          <i class="icon-aspect-map-nav5" data-size="24"></i>
-          <span>icon-aspect-map-nav5</span>
+          <i class="icon-aspect-lnb5" data-size="24"></i>
+          <span>icon-aspect-lnb5</span>
         </div>
         <div class="guide-item">
-          <i class="icon-aspect-map-nav6" data-size="24"></i>
-          <span>icon-aspect-map-nav6</span>
+          <i class="icon-aspect-lnb6" data-size="24"></i>
+          <span>icon-aspect-lnb6</span>
         </div>
         <div class="guide-item">
-          <i class="icon-aspect-map-nav7" data-size="24"></i>
-          <span>icon-aspect-map-nav7</span>
+          <i class="icon-aspect-lnb7" data-size="24"></i>
+          <span>icon-aspect-lnb7</span>
         </div>
         <div class="guide-item">
-          <i class="icon-aspect-map-nav8" data-size="24"></i>
-          <span>icon-aspect-map-nav8</span>
+          <i class="icon-aspect-lnb8" data-size="24"></i>
+          <span>icon-aspect-lnb8</span>
         </div>
         <div class="guide-item">
-          <i class="icon-aspect-map-nav9" data-size="24"></i>
-          <span>icon-aspect-map-nav9</span>
-        </div>
-        <div class="guide-item">
-          <i class="icon-aspect-map-nav10" data-size="24"></i>
-          <span>icon-aspect-map-nav10</span>
-        </div>
-        <div class="guide-item">
-          <i class="icon-aspect-map-nav11" data-size="24"></i>
-          <span>icon-aspect-map-nav11</span>
-        </div>
-        <div class="guide-item">
-          <i class="icon-aspect-map-nav12" data-size="24"></i>
-          <span>icon-aspect-map-nav12</span>
-        </div>
-        <div class="guide-item">
-          <i class="icon-aspect-map-nav13" data-size="24"></i>
-          <span>icon-aspect-map-nav13</span>
-        </div>
-        <div class="guide-item">
-          <i class="icon-aspect-map-nav14" data-size="24"></i>
-          <span>icon-aspect-map-nav14</span>
-        </div>
-        <div class="guide-item">
-          <i class="icon-aspect-map-nav15" data-size="24"></i>
-          <span>icon-aspect-map-nav15</span>
-        </div>
-        <div class="guide-item">
-          <i class="icon-aspect-map-nav16" data-size="24"></i>
-          <span>icon-aspect-map-nav16</span>
-        </div>
-        <div class="guide-item">
-          <i class="icon-aspect-map-nav17" data-size="24"></i>
-          <span>icon-aspect-map-nav17</span>
-        </div>
-        <div class="guide-item">
-          <i class="icon-aspect-map-nav18" data-size="24"></i>
-          <span>icon-aspect-map-nav18</span>
-        </div>
-        <div class="guide-item">
-          <i class="icon-aspect-map-nav19" data-size="24"></i>
-          <span>icon-aspect-map-nav19</span>
-        </div>
-        <div class="guide-item">
-          <i class="icon-aspect-map-nav20" data-size="24"></i>
-          <span>icon-aspect-map-nav20</span>
+          <i class="icon-aspect-lnb9" data-size="24"></i>
+          <span>icon-aspect-lnb9</span>
         </div>
       </div>
       <p class="guide-sub-title">Color Icon</p>
       <div class="guide-item-wrap gap-20">
+        <div class="guide-item">
+          <i class="icon-aspect-sunny-snowing" data-size="24"></i>
+          <span>icon-aspect-sunny-snowing</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-bloodtype" data-size="24"></i>
+          <span>icon-aspect-bloodtype</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-bloodtype2" data-size="24"></i>
+          <span>icon-aspect-bloodtype2</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-dew-point" data-size="24"></i>
+          <span>icon-aspect-dew-point</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-average-temperature" data-size="24"></i>
+          <span>icon-aspect-average-temperature</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-minimum-temperature" data-size="24"></i>
+          <span>icon-aspect-minimum-temperature</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-high-temperature" data-size="24"></i>
+          <span>icon-aspect-high-temperature</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-humidity" data-size="24"></i>
+          <span>icon-aspect-humidity</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-rainfall" data-size="24"></i>
+          <span>icon-aspect-rainfall</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-air" data-size="24"></i>
+          <span>icon-aspect-air</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-scenario" data-size="24"></i>
+          <span>icon-aspect-scenario</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-past" data-size="24"></i>
+          <span>icon-aspect-past</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-past2" data-size="24"></i>
+          <span>icon-aspect-past2</span>
+        </div>
 
+      </div>
+      <p class="guide-sub-title">Main Icon</p>
+      <div class="guide-item-wrap gap-20">
+        <div class="guide-item">
+          <i class="icon-aspect-main-n01" data-size="24"></i>
+          <span>icon-aspect-main-n01</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-main-n02" data-size="24"></i>
+          <span>icon-aspect-main-n02</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-main-n03" data-size="24"></i>
+          <span>icon-aspect-main-n03</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-main-n04" data-size="24"></i>
+          <span>icon-aspect-main-n04</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-main-n05" data-size="24"></i>
+          <span>icon-aspect-main-n05</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-main-n06" data-size="24"></i>
+          <span>icon-aspect-main-n06</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-main-n07" data-size="24"></i>
+          <span>icon-aspect-main-n07</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-main-n08" data-size="24"></i>
+          <span>icon-aspect-main-n08</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-main-n09" data-size="24"></i>
+          <span>icon-aspect-main-n09</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-main-n10" data-size="24"></i>
+          <span>icon-aspect-main-n10</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-main-n11" data-size="24"></i>
+          <span>icon-aspect-main-n11</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-main-n12" data-size="24"></i>
+          <span>icon-aspect-main-n12</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-tab1" data-size="24"></i>
+          <span>icon-aspect-tab1</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-tab2" data-size="24"></i>
+          <span>icon-aspect-tab2</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-tab3" data-size="24"></i>
+          <span>icon-aspect-tab3</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-tab1-on" data-size="24"></i>
+          <span>icon-aspect-tab1-on</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-tab2-on" data-size="24"></i>
+          <span>icon-aspect-tab2-on</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-tab3-on" data-size="24"></i>
+          <span>icon-aspect-tab3-on</span>
+        </div>
       </div>
       <p class="guide-sub-title">Content Icon</p>
       <div class="guide-item-wrap gap-20">
         <div class="guide-item">
-          <i class="icon-aspect-logo" data-size="24"></i>
-          <span>icon-aspect-logo</span>
+          <i class="icon-aspect-blank" data-size="24"></i>
+          <span>icon-aspect-blank</span>
         </div>
         <div class="guide-item">
-          <i class="icon-aspect-map-control1" data-size="24"></i>
-          <span>icon-aspect-map-control1</span>
+          <i class="icon-aspect-reload" data-size="24"></i>
+          <span>icon-aspect-reload</span>
         </div>
         <div class="guide-item">
-          <i class="icon-aspect-map-control2" data-size="24"></i>
-          <span>icon-aspect-map-control2</span>
+          <i class="icon-aspect-q" data-size="24"></i>
+          <span>icon-aspect-q</span>
         </div>
         <div class="guide-item">
-          <i class="icon-aspect-map-control3" data-size="24"></i>
-          <span>icon-aspect-map-control3</span>
+          <i class="icon-aspect-star" data-size="24"></i>
+          <span>icon-aspect-star</span>
         </div>
         <div class="guide-item">
-          <i class="icon-aspect-map-control4" data-size="24"></i>
-          <span>icon-aspect-map-control4</span>
+          <i class="icon-aspect-star-on" data-size="24"></i>
+          <span>icon-aspect-star-on</span>
         </div>
         <div class="guide-item">
-          <i class="icon-aspect-map-control5" data-size="24"></i>
-          <span>icon-aspect-map-control5</span>
+          <i class="icon-aspect-down" data-size="24"></i>
+          <span>icon-aspect-down</span>
         </div>
         <div class="guide-item">
-          <i class="icon-aspect-map-control6" data-size="24"></i>
-          <span>icon-aspect-map-control6</span>
+          <i class="icon-aspect-location" data-size="24"></i>
+          <span>icon-aspect-location</span>
         </div>
         <div class="guide-item">
-          <i class="icon-aspect-map-control7" data-size="24"></i>
-          <span>icon-aspect-map-control7</span>
+          <i class="icon-aspect-error" data-size="24"></i>
+          <span>icon-aspect-error</span>
         </div>
         <div class="guide-item">
-          <i class="icon-aspect-map-control8" data-size="24"></i>
-          <span>icon-aspect-map-control8</span>
+          <i class="icon-aspect-setting" data-size="24"></i>
+          <span>icon-aspect-setting</span>
         </div>
         <div class="guide-item">
-          <i class="icon-aspect-map-control9" data-size="24"></i>
-          <span>icon-aspect-map-control9</span>
+          <i class="icon-aspect-menu" data-size="24"></i>
+          <span>icon-aspect-menu</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-info-round" data-size="24"></i>
+          <span>icon-aspect-info-round</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-arrow-r" data-size="24"></i>
+          <span>icon-aspect-arrow-r</span>
+        </div>
+
+
+
+        <div class="guide-item">
+          <i class="icon-aspect-map1" data-size="24"></i>
+          <span>icon-aspect-map1</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-map2" data-size="24"></i>
+          <span>icon-aspect-map2</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-map3" data-size="24"></i>
+          <span>icon-aspect-map3</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-map4" data-size="24"></i>
+          <span>icon-aspect-map4</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-map5" data-size="24"></i>
+          <span>icon-aspect-map5</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-aws" data-size="24"></i>
+          <span>icon-aspect-aws</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-asos" data-size="24"></i>
+          <span>icon-aspect-asos</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-map6" data-size="24"></i>
+          <span>icon-aspect-map6</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-map7" data-size="24"></i>
+          <span>icon-aspect-map7</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-map8" data-size="24"></i>
+          <span>icon-aspect-map8</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-map9" data-size="24"></i>
+          <span>icon-aspect-map9</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-map10" data-size="24"></i>
+          <span>icon-aspect-map10</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-map11" data-size="24"></i>
+          <span>icon-aspect-map11</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-map12" data-size="24"></i>
+          <span>icon-aspect-map12</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-map13" data-size="24"></i>
+          <span>icon-aspect-map13</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-map14" data-size="24"></i>
+          <span>icon-aspect-map14</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-minus" data-size="24"></i>
+          <span>icon-aspect-minus</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-plus" data-size="24"></i>
+          <span>icon-aspect-plus</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-plus2" data-size="24"></i>
+          <span>icon-aspect-plus2</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-refresh" data-size="24"></i>
+          <span>icon-aspect-refresh</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-avg" data-size="24"></i>
+          <span>icon-aspect-avg</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-down" data-size="24"></i>
+          <span>icon-aspect-down</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-home" data-size="24"></i>
+          <span>icon-aspect-home</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-breadcrumbs-arrow" data-size="24"></i>
+          <span>icon-aspect-breadcrumbs-arrow</span>
         </div>
         <div class="guide-item">
           <i class="icon-aspect-close" data-size="24"></i>
@@ -907,8 +1010,20 @@
           <span>icon-aspect-close-small</span>
         </div>
         <div class="guide-item">
-          <i class="icon-aspect-setting" data-size="24"></i>
-          <span>icon-aspect-setting</span>
+          <i class="icon-aspect-circle-down" data-size="24"></i>
+          <span>icon-aspect-circle-down</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-settings" data-size="24"></i>
+          <span>icon-aspect-settings</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-contrast" data-size="24"></i>
+          <span>icon-aspect-contrast</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-expand-circle" data-size="24"></i>
+          <span>icon-aspect-expand-circle</span>
         </div>
         <div class="guide-item">
           <i class="icon-aspect-search" data-size="24"></i>
@@ -919,36 +1034,163 @@
           <span>icon-aspect-search-b</span>
         </div>
         <div class="guide-item">
+          <i class="icon-aspect-reset" data-size="24"></i>
+          <span>icon-aspect-reset</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-reset2" data-size="24"></i>
+          <span>icon-aspect-reset2</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-division" data-size="24"></i>
+          <span>icon-aspect-division</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-division2" data-size="24"></i>
+          <span>icon-aspect-division2</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-link" data-size="24"></i>
+          <span>icon-aspect-link</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-unlink" data-size="24"></i>
+          <span>icon-aspect-unlink</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-range" data-size="24"></i>
+          <span>icon-aspect-range</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-screen-left" data-size="24"></i>
+          <span>icon-aspect-screen-left</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-screen-right" data-size="24"></i>
+          <span>icon-aspect-screen-right</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-arrow-more" data-size="24"></i>
+          <span>icon-aspect-arrow-more</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-arrow-right" data-size="24"></i>
+          <span>icon-aspect-arrow-right</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-notice" data-size="24"></i>
+          <span>icon-aspect-notice</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-notice2" data-size="24"></i>
+          <span>icon-aspect-notice2</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-select-arrow" data-size="24"></i>
+          <span>icon-aspect-select-arrow</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-m-filter" data-size="24"></i>
+          <span>icon-aspect-m-filter</span>
+        </div>
+        <div class="guide-item">
           <i class="icon-aspect-calendar" data-size="24"></i>
           <span>icon-aspect-calendar</span>
         </div>
         <div class="guide-item">
-          <i class="icon-aspect-calendar2" data-size="24"></i>
-          <span>icon-aspect-calendar2</span>
+          <i class="icon-aspect-web" data-size="24"></i>
+          <span>icon-aspect-web</span>
         </div>
         <div class="guide-item">
-          <i class="icon-aspect-dropdown" data-size="24"></i>
-          <span>icon-aspect-dropdown</span>
+          <i class="icon-aspect-prev" data-size="24"></i>
+          <span>icon-aspect-prev</span>
         </div>
         <div class="guide-item">
-          <i class="icon-aspect-star" data-size="24"></i>
-          <span>icon-aspect-star</span>
+          <i class="icon-aspect-next" data-size="24"></i>
+          <span>icon-aspect-next</span>
         </div>
         <div class="guide-item">
-          <i class="icon-aspect-star-on" data-size="24"></i>
-          <span>icon-aspect-star-on</span>
+          <i class="icon-aspect-join1" data-size="24"></i>
+          <span>icon-aspect-join1</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-join2" data-size="24"></i>
+          <span>icon-aspect-join2</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-join3" data-size="24"></i>
+          <span>icon-aspect-join3</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-exclamation" data-size="24"></i>
+          <span>icon-aspect-exclamation</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-del" data-size="24"></i>
+          <span>icon-aspect-del</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-write" data-size="24"></i>
+          <span>icon-aspect-write</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-more" data-size="24"></i>
+          <span>icon-aspect-more</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-t" data-size="24"></i>
+          <span>icon-aspect-t</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-download" data-size="24"></i>
+          <span>icon-aspect-download</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-article" data-size="24"></i>
+          <span>icon-aspect-article</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-round-help" data-size="24"></i>
+          <span>icon-aspect-round-help</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-touch" data-size="24"></i>
+          <span>icon-aspect-touch</span>
+        </div>
+        <div class="guide-item">
+          <i class="icon-aspect-add" data-size="24"></i>
+          <span>icon-aspect-add</span>
         </div>
 
-
+        <div class="guide-item">
+          <i class="icon-q"></i>
+          <span>icon-q</span>
+        </div>
 
 
         <div class="guide-item dark">
-          <i class="icon-aspect-arrow-r-w" data-size="24"></i>
-          <span>icon-aspect-arrow-r-w</span>
+          <i class="icon-q-w"></i>
+          <span>icon-q-w</span>
         </div>
         <div class="guide-item dark">
-          <i class="icon-aspect-check-circle-w" data-size="24"></i>
-          <span>icon-aspect-check-circle-w</span>
+          <i class="icon-aspect-home-w" data-size="24"></i>
+          <span>icon-aspect-home-w</span>
+        </div>
+        <div class="guide-item dark">
+          <i class="icon-aspect-select-arrow-w" data-size="24"></i>
+          <span>icon-aspect-select-arrow-w</span>
+        </div>
+        <div class="guide-item dark">
+          <i class="icon-aspect-breadcrumbs-arrow-w" data-size="24"></i>
+          <span>icon-aspect-breadcrumbs-arrow-w</span>
+        </div>
+        <div class="guide-item dark">
+          <i class="icon-aspect-stacks" data-size="24"></i>
+          <span>icon-aspect-stacks</span>
+        </div>
+        <div class="guide-item dark">
+          <i class="icon-aspect-split-scene" data-size="24"></i>
+          <span>icon-aspect-split-scene</span>
         </div>
         <div class="guide-item dark">
           <i class="icon-aspect-close2-w" data-size="24"></i>
@@ -959,8 +1201,44 @@
           <span>icon-aspect-close3-w</span>
         </div>
         <div class="guide-item dark">
-          <i class="icon-aspect-arrow-range-w" data-size="24"></i>
-          <span>icon-aspect-arrow-range-w</span>
+          <i class="icon-aspect-filter-w" data-size="24"></i>
+          <span>icon-aspect-filter-w</span>
+        </div>
+        <div class="guide-item dark">
+          <i class="icon-aspect-menu" data-size="24"></i>
+          <span>icon-aspect-menu</span>
+        </div>
+        <div class="guide-item dark">
+          <i class="icon-aspect-play" data-size="24"></i>
+          <span>icon-aspect-play</span>
+        </div>
+        <div class="guide-item dark">
+          <i class="icon-aspect-stop" data-size="24"></i>
+          <span>icon-aspect-stop</span>
+        </div>
+        <div class="guide-item dark">
+          <i class="icon-aspect-pause" data-size="24"></i>
+          <span>icon-aspect-pause</span>
+        </div>
+        <div class="guide-item dark">
+          <i class="icon-aspect-swap-vert-w" data-size="24"></i>
+          <span>icon-aspect-swap-vert-w</span>
+        </div>
+        <div class="guide-item dark">
+          <i class="icon-aspect-query-stats-w" data-size="24"></i>
+          <span>icon-aspect-query-stats-w</span>
+        </div>
+        <div class="guide-item dark">
+          <i class="icon-aspect-download-w" data-size="24"></i>
+          <span>icon-aspect-download-w</span>
+        </div>
+        <div class="guide-item dark">
+          <i class="icon-aspect-login" data-size="24"></i>
+          <span>icon-aspect-login</span>
+        </div>
+        <div class="guide-item dark">
+          <i class="icon-aspect-logout" data-size="24"></i>
+          <span>icon-aspect-logout</span>
         </div>
       </div>
     </div>

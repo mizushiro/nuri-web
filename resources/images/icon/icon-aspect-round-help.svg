@@ -1,0 +1,25 @@
+<svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_dd_6158_1983)">
+<rect x="2" y="1" width="36" height="36" rx="18" fill="white"/>
+</g>
+<rect x="4" y="3" width="32" height="32" rx="16" fill="#2E7EF6"/>
+<path d="M19.5966 21.0056C19.1092 21.0056 18.7563 20.6364 18.6891 20.1832L18.521 19.042C18.437 18.4881 18.7563 18.1021 19.2941 18.035C20.7563 17.8503 21.4286 17.3972 21.4286 16.5748V16.5413C21.4286 15.786 20.8571 15.3497 19.8824 15.3497C19.1597 15.3497 18.5378 15.5678 17.9328 16.021C17.7311 16.172 17.4622 16.2895 17.1765 16.2895C16.5378 16.2895 16 15.7524 16 15.1147C16 14.7958 16.1345 14.4601 16.437 14.2084C17.3277 13.4699 18.4538 13 19.9328 13C22.3529 13 24 14.242 24 16.4741V16.5077C24 18.6392 22.521 19.5119 20.6891 19.8811L20.6387 20.1832C20.5714 20.6196 20.2185 21.0056 19.7311 21.0056H19.5966ZM19.5966 22.1133C20.437 22.1133 21.0588 22.7343 21.0588 23.5399V23.5734C21.0588 24.379 20.437 25 19.5966 25C18.7563 25 18.1345 24.379 18.1345 23.5734V23.5399C18.1345 22.7343 18.7563 22.1133 19.5966 22.1133Z" fill="white"/>
+<defs>
+<filter id="filter0_dd_6158_1983" x="0" y="0" width="40" height="41" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2"/>
+<feGaussianBlur stdDeviation="1"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_6158_1983"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_6158_1983" result="effect2_dropShadow_6158_1983"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_6158_1983" result="shape"/>
+</filter>
+</defs>
+</svg>
