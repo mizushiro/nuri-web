@@ -403,6 +403,28 @@ body[data-content-bg="F7F8FB"] {background-color:#F7F8FB}
 .icon-aspect-menu {background-image:url("../images/icon/icon-aspect-menu.svg")}
 .icon-aspect-info-round {background-image:url("../images/icon/icon-aspect-info-round.svg")}
 .icon-aspect-arrow-r {background-image:url("../images/icon/icon-aspect-arrow-r.svg")}
+/* 날씨 */
+.icon-aspect-NB01 {background-image:url("../images/weather/NB01.png")}  /* 맑은 */
+.icon-aspect-NB02 {background-image:url("../images/weather/NB02.png")}  /* 구름많은(낮) */
+.icon-aspect-NB03 {background-image:url("../images/weather/NB03.png")}  /* 흐림 */
+.icon-aspect-NB04 {background-image:url("../images/weather/NB04.png")}  /* 비 */
+.icon-aspect-NB05 {background-image:url("../images/weather/NB05.png")}  /* 눈 */
+.icon-aspect-NB06 {background-image:url("../images/weather/NB06.png")}  /* 비 또는 눈 */
+.icon-aspect-NB07 {background-image:url("../images/weather/NB07.png")}  /* 눈 또는 비 */
+.icon-aspect-NB08 {background-image:url("../images/weather/NB08.png")}  /* 낙뢰 */
+.icon-aspect-NB09 {background-image:url("../images/weather/NB09.png")}  /* 연무 */
+.icon-aspect-NB10 {background-image:url("../images/weather/NB10.png")}  /* 안개 */
+.icon-aspect-NB11 {background-image:url("../images/weather/NB11.png")}  /* 황사 */
+.icon-aspect-NB12 {background-image:url("../images/weather/NB12.png")}  /* 맑음(밤) */
+.icon-aspect-NB13 {background-image:url("../images/weather/NB13.png")}  /* 구름많음(밤) */
+.icon-aspect-NB14 {background-image:url("../images/weather/NB14.png")}  /* 소나기 */
+.icon-aspect-NB15 {background-image:url("../images/weather/NB15.png")}  /* 가끔 비, 한때 비 */
+.icon-aspect-NB16 {background-image:url("../images/weather/NB16.png")}  /* 가끔 눈, 한때 눈 */
+.icon-aspect-NB17 {background-image:url("../images/weather/NB17.png")}  /* 가끔 비 또는 눈, 한때 비 또는 눈 */
+.icon-aspect-NB18 {background-image:url("../images/weather/NB18.png")}  /* 가끔 눈 또는 비, 한때 눈 또는 비 */
+.icon-aspect-NB19 {background-image:url("../images/weather/NB19.png")}  /* 빗방울 */
+.icon-aspect-NB20 {background-image:url("../images/weather/NB20.png")}  /* 눈날림 */
+.icon-aspect-NB21 {background-image:url("../images/weather/NB21.png")}  /* 박무 */
 /* 컬러타입 */
 .icon-aspect-bloodtype {background-image:url("../images/icon/icon-aspect-bloodtype.svg")}
 .icon-aspect-bloodtype2 {background-image:url("../images/icon/icon-aspect-bloodtype2.svg")}
