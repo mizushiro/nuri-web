@@ -1,0 +1,67 @@
+[data-icon-cricle] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+[data-icon-cricle="gray"] {
+  background-color: #EEF2F7;
+}
+
+[data-icon="youtube"] {
+  color:#EE2328;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.8rem;
+  height: 2.4rem;
+  background-color: currentColor; /* 현재 요소의 폰트 색상(color)을 그대로 따름 */
+  mask-image: url('../img/component/icon/youtube.svg');
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+}
+
+[data-icon="setting"] {
+  color:#000000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: currentColor; /* 현재 요소의 폰트 색상(color)을 그대로 따름 */
+  mask-image: url('../img/component/icon/setting.svg');
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+}
+
+[data-icon="allmenu"] {
+  color:#000000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: currentColor; /* 현재 요소의 폰트 색상(color)을 그대로 따름 */
+  mask-image: url('../img/component/icon/allmenu.svg');
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+}
+
+[data-icon="link"] {
+  color:#000000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: currentColor; /* 현재 요소의 폰트 색상(color)을 그대로 따름 */
+  mask-image: url('../img/component/icon/link.svg');
+  mask-repeat: no-repeat;
+  mask-size: 1.8rem;
+  mask-position: center;
+}

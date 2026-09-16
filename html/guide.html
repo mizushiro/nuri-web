@@ -15,7 +15,9 @@
 
   <title>기후변화 상황지도</title>
 
-  <link rel="stylesheet" href="../resources/css/ui.base.css">
+  <link rel="stylesheet" href="../resources/cdn/krds.min.css">
+  <link rel="stylesheet" href="../resources/css/custom.css">
+  <link rel="stylesheet" href="../resources/css/icon.css">
 
   <style>
     .guide-page-content {padding:2rem}
@@ -37,6 +39,266 @@
     .tooltip-blue-box,
     .tooltip-gradation-box {position:relative !important;}
     .form-input-tooltip-area .tooltip-pink-box {position:absolute !important;}
+  
+    /* ================= Icon Guide Custom Styles ================= */
+    .icon-guide-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+    .icon-guide-search {
+      position: relative;
+      flex: 1;
+      min-width: 260px;
+      max-width: 400px;
+    }
+    .icon-guide-search input {
+      width: 100%;
+      height: 42px;
+      padding: 0 16px 0 40px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .icon-guide-search input:focus {
+      border-color: #0b78cb;
+      box-shadow: 0 0 0 3px rgba(11, 120, 203, 0.15);
+    }
+    .icon-guide-search .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      color: #94a3b8;
+    }
+    .icon-guide-controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px;
+    }
+    .control-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .control-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: #475569;
+    }
+    .btn-chip-group {
+      display: inline-flex;
+      background: #f1f5f9;
+      padding: 3px;
+      border-radius: 8px;
+      gap: 2px;
+    }
+    .btn-chip {
+      border: none;
+      background: transparent;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #64748b;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .btn-chip:hover {
+      color: #0f172a;
+    }
+    .btn-chip.is-active {
+      background: #ffffff;
+      color: #0b78cb;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    .color-dot-group {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .color-dot {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      cursor: pointer;
+      padding: 0;
+      transition: transform 0.15s, border-color 0.15s;
+    }
+    .color-dot:hover {
+      transform: scale(1.15);
+    }
+    .color-dot.is-active {
+      border-color: #0f172a;
+      transform: scale(1.15);
+    }
+
+    /* Icon Grid */
+    .icon-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+    .icon-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 10px 14px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      text-align: center;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+    }
+    .icon-card:hover {
+      border-color: #0b78cb;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px -4px rgba(11, 120, 203, 0.15);
+    }
+    .icon-card-preview {
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+    .icon-card-name {
+      font-size: 13px;
+      font-weight: 700;
+      color: #1e293b;
+      word-break: break-all;
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+    .icon-card-sub {
+      font-size: 11px;
+      color: #94a3b8;
+    }
+    .icon-card-copy-hint {
+      position: absolute;
+      top: 6px;
+      right: 8px;
+      font-size: 10px;
+      background: #eff6ff;
+      color: #0b78cb;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+      opacity: 0;
+      transform: translateY(-4px);
+      transition: all 0.2s;
+    }
+    .icon-card:hover .icon-card-copy-hint {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Showcase Demo Section */
+    .icon-demo-box {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .icon-demo-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px;
+    }
+    .demo-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      border: 1px solid #cbd5e1;
+      background: #ffffff;
+      color: #1e293b;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .demo-btn:hover {
+      background: #f8fafc;
+      border-color: #94a3b8;
+    }
+    .demo-btn.primary {
+      background: #0b78cb;
+      border-color: #0b78cb;
+      color: #ffffff;
+    }
+    .demo-btn.primary:hover {
+      background: #0963a8;
+    }
+    .demo-btn.dark {
+      background: #1e293b;
+      border-color: #1e293b;
+      color: #ffffff;
+    }
+    .demo-btn.danger {
+      background: #ef4444;
+      border-color: #ef4444;
+      color: #ffffff;
+    }
+    .demo-code {
+      background: #0f172a;
+      color: #38bdf8;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 13px;
+      overflow-x: auto;
+    }
+
+    /* Toast Notification */
+    #icon-toast {
+      position: fixed;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #0f172a;
+      color: #ffffff;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 600;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+      z-index: 9999;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    #icon-toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
   </style>
 </head>
 
@@ -1326,6 +1588,10 @@
         </div>
       </div>
     </div>
+     
+
+         
+
   </main>
   <footer class="footer" data-id="footer"></footer>
 </div>
@@ -1340,5 +1606,88 @@
       tooltip: true,
   });
 </script>
+
+<!-- Toast Notification -->
+<div id="icon-toast">
+  <i data-icon="ico_step_done" data-icon-size="18" data-icon-color="white"></i>
+  <span id="icon-toast-msg">복사되었습니다!</span>
+</div>
+
+<script>
+  // 1. 클립보드 복사 함수
+  function copyIconCode(shortName) {
+    const code = 'data-icon="' + shortName + '"';
+    navigator.clipboard.writeText(code).then(() => {
+      showToast('"' + code + '" 복사 완료!');
+    }).catch(() => {
+      showToast('복사 실패');
+    });
+  }
+
+  function showToast(msg) {
+    const toast = document.getElementById('icon-toast');
+    const toastMsg = document.getElementById('icon-toast-msg');
+    toastMsg.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(window._toastTimer);
+    window._toastTimer = setTimeout(() => {
+      toast.classList.remove('show');
+    }, 2000);
+  }
+
+  // 2. 실시간 검색 필터
+  const searchInput = document.getElementById('icon-search-input');
+  const cards = document.querySelectorAll('.icon-card');
+  const totalCountEl = document.getElementById('icon-total-count');
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      let visible = 0;
+      cards.forEach(c => {
+        const name = c.dataset.name.toLowerCase();
+        const short = c.dataset.short.toLowerCase();
+        if (!q || name.includes(q) || short.includes(q)) {
+          c.style.display = 'flex';
+          visible++;
+        } else {
+          c.style.display = 'none';
+        }
+      });
+      if (totalCountEl) totalCountEl.textContent = visible;
+    });
+  }
+
+  // 3. 크기 변경
+  const sizeChips = document.querySelectorAll('#size-chip-group .btn-chip');
+  sizeChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      sizeChips.forEach(c => c.classList.remove('is-active'));
+      chip.classList.add('is-active');
+      const s = chip.dataset.val;
+      document.querySelectorAll('.guide-icon-target').forEach(ic => {
+        ic.setAttribute('data-icon-size', s);
+      });
+    });
+  });
+
+  // 4. 색상 변경
+  const colorDots = document.querySelectorAll('#color-dot-group .color-dot');
+  colorDots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      colorDots.forEach(d => d.classList.remove('is-active'));
+      dot.classList.add('is-active');
+      const color = dot.dataset.color;
+      document.querySelectorAll('.guide-icon-target').forEach(ic => {
+        if (color) {
+          ic.setAttribute('data-icon-color', color);
+        } else {
+          ic.removeAttribute('data-icon-color');
+        }
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
