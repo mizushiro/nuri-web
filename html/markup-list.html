@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="author" content="" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="autocomplete" content="off" />
+
+  <title>날씨누리</title>
+
+  <link rel="stylesheet" href="../resources/css/ui.base.css">
+  <style>
+    .markup-header {height:6rem;display:flex;padding:0 2.4rem;align-items:center;background-color:#2B3244;position:fixed;top:0;z-index:10;gap:1.2rem;left:0;right:0}
+    .markup-title {font-size:2rem;font-weight:700;color:#fff;flex:1}
+    .markup-wrapper {padding:8rem 2rem 2rem;gap:2rem;min-height:calc(100vh - 6rem);display:flex;}
+    .iframe {height:calc(100vh - 10.4rem);min-height:60rem;border:.2rem solid #454545;overflow-y:auto;box-sizing:border-box;border-radius:1.6rem;width:120rem;position:sticky;top:8rem}
+    .iframe.mobile {width:40rem}
+    .markup-list-box {flex:1;display:flex;gap:1.6rem;flex-direction:column}
+    .markup-list-section {border:.1rem solid #eee;border-radius:.8rem;overflow:hidden}
+    .markup-list-title {height:4.8rem;padding:0 2rem;font-size:1.6rem;color:#111;font-weight:800;display:flex;align-items:center;background-color:#F3F9FE;line-height:1}
+    .markup-list-group {padding:1.2rem}
+    .markup-list-item {display:flex;align-items:center;min-height:4rem;font-size:1.4rem;color:#454545;font-weight:500;text-decoration:none;padding:.8rem 1.2rem;border-radius:.8rem}
+    .markup-list-item:hover {background-color:#f7f7f7}
+    .markup-list-item ~ .markup-list-item {border-top:.1rem dashed #eee}
+    .markup-page-name {flex:1;display:flex;align-items:center;gap:.4rem .8rem;flex-wrap:wrap}
+    .markup-stats {flex-shrink:0;display:flex;gap:.8rem;align-items:center;color:#fff;font-size:1.4rem;font-weight:500}
+    .markup-stats-item {height:2.4rem;font-size:1.2rem;border-radius:99em;padding:0 1.2rem;display:flex;align-items:center;color:#fff}
+    .markup-stats-item[data-stats="markup"] {background-color:#2E7EF6;}
+    .markup-stats-item[data-stats="markup"]:before {content:'마크업완료';}
+    .markup-stats-item[data-stats="update"] {background-color:#FF5C00;}
+    .markup-stats-item[data-stats="update"]:before {content:'업데이트진행';}
+    [data-hidden="true"] {display:none}
+    .markup-update-day {font-size:1.3rem;margin-right:1.2rem;color:#888;}
+    .info-dot-list-item .modify-day {position:relative;top:-.2rem}
+    @media (max-width:767px) {
+      .markup-stats,
+      .iframe,
+      .markup-list-section .modify-day,
+      .modify-desc,
+      .markup-update-day {display:none}
+    }
+  </style>
+</head>
+
+<body>
+<div class="markup-header">
+  <h1 class="markup-title">날씨누리</h1>
+  <div class="ui-flex" data-align-items="center" data-gap="8">
+    <span class="text-14-800" data-text-color="white">모바일로 보기</span>
+    <div class="form-element-switch" data-size="28">
+      <input type="checkbox" id="btn-switch" />
+      <label for="btn-switch">
+        <span class="txt-uncheck">꺼짐</span>
+        <span class="txt-checked">켜짐</span>
+      </label>
+    </div>
+  </div>
+  <div class="markup-stats">
+    상태표시 :
+    <span class="markup-stats-item" data-stats="update"></span>
+    <span class="markup-stats-item" data-stats="markup"></span>
+  </div>
+</div>
+<div class="markup-wrapper">
+  <div class="markup-list-box">
+    <div class="markup-list-section">
+      <h2 class="markup-list-title">GUIDE</h2>
+      <div class="markup-list-group">
+        <a href="guide.html" target="_blank" class="markup-list-item">
+          <span class="markup-page-name">GUIDE - ELEMENT</span>
+          <div class="markup-stats">
+            <span class="markup-stats-item" data-stats="update"></span>
+          </div>
+        </a>
+        <a href="guide_component.html" target="_blank" class="markup-list-item">
+          <span class="markup-page-name">GUIDE - COMPONENT</span>
+          <div class="markup-stats">
+            <span class="markup-stats-item" data-stats="update"></span>
+          </div>
+        </a>
+        <a href="guide_cp_slider.html" target="_blank" class="markup-list-item">
+          <span class="markup-page-name">GUIDE - SLIDER</span>
+          <div class="markup-stats">
+            <span class="markup-stats-item" data-stats="update"></span>
+          </div>
+        </a>
+        <a href="guide_cp_tab.html" target="_blank" class="markup-list-item">
+          <span class="markup-page-name">GUIDE - TAB</span>
+          <div class="markup-stats">
+            <span class="markup-stats-item" data-stats="update"></span>
+          </div>
+        </a>
+        <a href="guide_range.html" target="_blank" class="markup-list-item">
+          <span class="markup-page-name">GUIDE - RANGE</span>
+          <div class="markup-stats">
+            <span class="markup-stats-item" data-stats="update"></span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+  <iframe src="guide.html" class="iframe"></iframe>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const iframe = document.querySelector('.iframe');
+    const listItems = document.querySelectorAll('.markup-list-item');
+    const switchEl = document.getElementById('btn-switch');
+
+    // Add hover event listeners
+    listItems.forEach(item => {
+      item.addEventListener('mouseover', () => {
+        const src = item.getAttribute('href');
+        iframe.src = src; // Update iframe src on hover
+      });
+
+    });
+
+    switchEl.addEventListener('change', function () {
+      iframe.classList.toggle('mobile', this.checked);
+    });
+  });
+</script>
+</body>
+
+</html>
