@@ -26,59 +26,58 @@
       </section>
       <section class="krds-main--sec">
         <div class="krds-main--wrap">
-          <h3>일별 예보</h3>
-          <!-- 스와이퍼 콘텐츠 -->
-          <div class="weather-swiper-container">
-            <div class="swiper weather-swiper">
-              <div class="swiper-wrapper">
-                <!-- 데이터 json 형식으로 받아올 예정 -->
-              </div>
+          <div class="krds-main--group">
+            <div class="krds-main--head">
+              <h3 class="krds-main--title">일별 예보</h3>
             </div>
-            <!-- 좌우 이동 버튼 (클릭 시 1개씩 이동) -->
-            <button type="button" class="weather-swiper-prev swiper-button-prev" aria-label="이전 일기예보"></button>
-            <button type="button" class="weather-swiper-next swiper-button-next" aria-label="다음 일기예보"></button>
-          </div>
-
-          <!-- 콜백 실행 시 선택 정보 출력 영역 -->
-          <div class="selected-weather-info">
-            <span class="info-title">📌 선택된 날씨 예보:</span>
-            <span id="selected-info-detail" class="info-detail">오늘(05.22) - 오전 20°C (강수 0%) / 오후 26°C (강수 40%)</span>
+            
+            <!-- 스와이퍼 콘텐츠 -->
+            <div class="weather-swiper-container">
+              <div class="swiper weather-swiper">
+                <div class="swiper-wrapper">
+                  <!-- 데이터 json 형식으로 받아올 예정 -->
+                </div>
+              </div>
+              <!-- 좌우 이동 버튼 (클릭 시 1개씩 이동) -->
+              <button type="button" class="weather-swiper-prev swiper-button-prev" aria-label="이전 일기예보"></button>
+              <button type="button" class="weather-swiper-next swiper-button-next" aria-label="다음 일기예보"></button>
+            </div>
           </div>
 
           <!-- 시간별 예보 -->
-          <div id="hourly-forecast-sec">
-          <div class="hourly-forecast-container">
-            <!-- Toolbar Header -->
-            <div class="hourly-toolbar">
-              <div class="hourly-toolbar-left">
-                <h3 class="hourly-title">시간별 예보</h3>
+          <div class="krds-main--group" id="hourly-forecast-sec">
+            <div class="krds-main--head">
+              <div class="krds-main--head-item">
+                <h3 class="krds-main--title">시간별 예보</h3>
                 <div class="hourly-interval-group">
-                  <button type="button" class="hourly-interval-btn" data-interval="3">3시간 간격</button>
-                  <button type="button" class="hourly-interval-btn active" data-interval="1">1시간 간격</button>
-                </div>
+                    <button type="button" class="hourly-interval-btn" data-interval="3">3시간 간격</button>
+                    <button type="button" class="hourly-interval-btn active" data-interval="1">1시간 간격</button>
+                  </div>
               </div>
-              <div class="hourly-toolbar-right">
+
+              <div class="krds-main--head-item">
                 <button type="button" class="hourly-info-btn">시계열예보안내</button>
                 <button type="button" class="hourly-info-btn">최근발표시각</button>
                 <button type="button" class="hourly-info-btn">날씨기호 설명</button>
                 <!-- View Mode Switcher -->
                 <div class="hourly-view-switcher">
-                  <button type="button" class="hourly-view-btn active" data-view="mode1" aria-label="선형 차트 보기">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M17 7h4v4"/></svg>
+                  <button type="button" class="hourly-view-btn active" data-view="mode1" aria-label="선형 차트 보기" >
+                    <span data-icon="legend-1"></span>
                   </button>
                   <button type="button" class="hourly-view-btn" data-view="mode2" aria-label="막대 차트 보기">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="12" width="4" height="8"/><rect x="10" y="8" width="4" height="12"/><rect x="17" y="4" width="4" height="16"/></svg>
+                    <span data-icon="legend-2"></span>
                   </button>
                   <button type="button" class="hourly-view-btn" data-view="mode3" aria-label="리스트 보기">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                    <span data-icon="legend-3"></span>
                   </button>
                 </div>
               </div>
+              
             </div>
-
-            <!-- Content Container (Rendered dynamically) -->
-            <div id="hourly-forecast-content"></div>
-          </div>
+            <div class="hourly-forecast-container">
+              <!-- Content Container (Rendered dynamically) -->
+              <div id="hourly-forecast-content"></div>
+            </div>
         </div>
       </section>
     </main>

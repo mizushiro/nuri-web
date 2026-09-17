@@ -17,10 +17,14 @@
   justify-content: center;
   width: 2.8rem;
   height: 2.4rem;
-  background-color: currentColor; /* 현재 요소의 폰트 색상(color)을 그대로 따름 */
+  background-color: currentColor;
+  -webkit-mask-image: url('../img/component/icon/youtube.svg');
   mask-image: url('../img/component/icon/youtube.svg');
+  -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
   mask-size: contain;
+  -webkit-mask-position: center;
   mask-position: center;
 }
 
@@ -31,10 +35,14 @@
   justify-content: center;
   width: 2.4rem;
   height: 2.4rem;
-  background-color: currentColor; /* 현재 요소의 폰트 색상(color)을 그대로 따름 */
+  background-color: currentColor;
+  -webkit-mask-image: url('../img/component/icon/setting.svg');
   mask-image: url('../img/component/icon/setting.svg');
+  -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
   mask-size: contain;
+  -webkit-mask-position: center;
   mask-position: center;
 }
 
@@ -45,24 +53,84 @@
   justify-content: center;
   width: 2.4rem;
   height: 2.4rem;
-  background-color: currentColor; /* 현재 요소의 폰트 색상(color)을 그대로 따름 */
+  background-color: currentColor;
+  -webkit-mask-image: url('../img/component/icon/allmenu.svg');
   mask-image: url('../img/component/icon/allmenu.svg');
+  -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
   mask-size: contain;
+  -webkit-mask-position: center;
   mask-position: center;
 }
 
 [data-icon="link"] {
-  color:#000000;
+  color:#D4D4D4;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 1.8rem;
   height: 1.8rem;
-  background-color: currentColor; /* 현재 요소의 폰트 색상(color)을 그대로 따름 */
+  background-color: currentColor;
+  -webkit-mask-image: url('../img/component/icon/link.svg');
   mask-image: url('../img/component/icon/link.svg');
+  -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+  -webkit-mask-size: 1.8rem;
   mask-size: 1.8rem;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+[data-icon="legend-1"] {
+  color:#D4D4D4;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: currentColor;
+  -webkit-mask-image: url('../img/icon/icon-legend-1.svg');
+  mask-image: url('../img/icon/icon-legend-1.svg');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 2.4rem;
+  mask-size: 2.4rem;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+[data-icon="legend-2"] {
+  color:#D4D4D4;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: currentColor;
+  -webkit-mask-image: url('../img/icon/icon-legend-2.svg');
+  mask-image: url('../img/icon/icon-legend-2.svg');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 2.4rem;
+  mask-size: 2.4rem;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+[data-icon="legend-3"] {
+  color:#000000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: currentColor;
+  -webkit-mask-image: url('../img/icon/icon-legend-3.svg');
+  mask-image: url('../img/icon/icon-legend-3.svg');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 2.4rem;
+  mask-size: 2.4rem;
+  -webkit-mask-position: center;
   mask-position: center;
 }
 

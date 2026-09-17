@@ -177,5 +177,83 @@
       { "time": "21시", "icon": "NB01", "text": "맑음", "temp": "23°C", "sensoryTemp": "32°C", "precip": "8", "precipIntensity": "-", "rainProb": "20%", "windDir": "W", "windSpeed": "2", "windText": "약 2", "humidity": "20%", "heatImpact": "-" },
       { "time": "00시", "icon": "NB01", "text": "맑음", "temp": "23°C", "sensoryTemp": "32°C", "precip": "8", "precipIntensity": "-", "rainProb": "0%", "windDir": "NW", "windSpeed": "2", "windText": "약 2", "humidity": "0%", "heatImpact": "-" }
     ]
+  },
+  {
+    "day": "수",
+    "date": "05.27",
+    "dayOfWeek": "토",
+    "forecastType": "중기예보",
+    "minTemp": "15°C",
+    "maxTemp": "28°C",
+    "amIcon": "NB01",
+    "amText": "맑음",
+    "amTemp": "20°C",
+    "amRain": "10%",
+    "pmIcon": "NB04",
+    "pmText": "흐림",
+    "pmTemp": "29°C",
+    "pmRain": "30%",
+    "hourly": [
+      { "time": "03시", "icon": "NB02", "text": "구름조금", "temp": "23°C", "sensoryTemp": "32°C", "precip": "8", "precipIntensity": "-", "rainProb": "20%", "windDir": "N", "windSpeed": "2", "windText": "약 2", "humidity": "30%", "heatImpact": "-" },
+      { "time": "06시", "icon": "NB01", "text": "맑음", "temp": "23°C", "sensoryTemp": "32°C", "precip": "8", "precipIntensity": "-", "rainProb": "0%", "windDir": "NE", "windSpeed": "2", "windText": "약 2", "humidity": "20%", "heatImpact": "-" },
+      { "time": "09시", "icon": "NB05", "text": "비", "temp": "23°C", "sensoryTemp": "32°C", "precip": "10", "precipIntensity": "보통", "rainProb": "70%", "windDir": "E", "windSpeed": "3", "windText": "약 3", "humidity": "70%", "heatImpact": "-" },
+      { "time": "12시", "icon": "NB01", "text": "맑음", "temp": "23°C", "sensoryTemp": "32°C", "precip": "8", "precipIntensity": "-", "rainProb": "20%", "windDir": "SE", "windSpeed": "3", "windText": "약 3", "humidity": "20%", "heatImpact": "-" },
+      { "time": "15시", "icon": "NB01", "text": "맑음", "temp": "23°C", "sensoryTemp": "32°C", "precip": "8", "precipIntensity": "-", "rainProb": "10%", "windDir": "S", "windSpeed": "3", "windText": "약 3", "humidity": "10%", "heatImpact": "-" },
+      { "time": "18시", "icon": "NB02", "text": "구름조금", "temp": "23°C", "sensoryTemp": "32°C", "precip": "8", "precipIntensity": "-", "rainProb": "0%", "windDir": "SW", "windSpeed": "2", "windText": "약 2", "humidity": "0%", "heatImpact": "-" },
+      { "time": "21시", "icon": "NB01", "text": "맑음", "temp": "23°C", "sensoryTemp": "32°C", "precip": "8", "precipIntensity": "-", "rainProb": "20%", "windDir": "W", "windSpeed": "2", "windText": "약 2", "humidity": "20%", "heatImpact": "-" },
+      { "time": "00시", "icon": "NB01", "text": "맑음", "temp": "23°C", "sensoryTemp": "32°C", "precip": "8", "precipIntensity": "-", "rainProb": "0%", "windDir": "NW", "windSpeed": "2", "windText": "약 2", "humidity": "0%", "heatImpact": "-" }
+    ]
+  },
+  {
+    "day": "목",
+    "date": "05.28",
+    "dayOfWeek": "토",
+    "forecastType": "중기예보",
+    "minTemp": "15°C",
+    "maxTemp": "28°C",
+    "amIcon": "NB01",
+    "amText": "맑음",
+    "amTemp": "20°C",
+    "amRain": "10%",
+    "pmIcon": "NB04",
+    "pmText": "흐림",
+    "pmTemp": "29°C",
+    "pmRain": "30%",
+    "hourly": [
+      { "time": "03시", "icon": "NB02", "text": "구름조금", "temp": "23°C", "sensoryTemp": "32°C", "precip": "8", "precipIntensity": "-", "rainProb": "20%", "windDir": "N", "windSpeed": "2", "windText": "약 2", "humidity": "30%", "heatImpact": "-" },
+      { "time": "06시", "icon": "NB01", "text": "맑음", "temp": "23°C", "sensoryTemp": "32°C", "precip": "8", "precipIntensity": "-", "rainProb": "0%", "windDir": "NE", "windSpeed": "2", "windText": "약 2", "humidity": "20%", "heatImpact": "-" },
+      { "time": "09시", "icon": "NB05", "text": "비", "temp": "23°C", "sensoryTemp": "32°C", "precip": "10", "precipIntensity": "보통", "rainProb": "70%", "windDir": "E", "windSpeed": "3", "windText": "약 3", "humidity": "70%", "heatImpact": "-" },
+      { "time": "12시", "icon": "NB01", "text": "맑음", "temp": "23°C", "sensoryTemp": "32°C", "precip": "8", "precipIntensity": "-", "rainProb": "20%", "windDir": "SE", "windSpeed": "3", "windText": "약 3", "humidity": "20%", "heatImpact": "-" },
+      { "time": "15시", "icon": "NB01", "text": "맑음", "temp": "23°C", "sensoryTemp": "32°C", "precip": "8", "precipIntensity": "-", "rainProb": "10%", "windDir": "S", "windSpeed": "3", "windText": "약 3", "humidity": "10%", "heatImpact": "-" },
+      { "time": "18시", "icon": "NB02", "text": "구름조금", "temp": "23°C", "sensoryTemp": "32°C", "precip": "8", "precipIntensity": "-", "rainProb": "0%", "windDir": "SW", "windSpeed": "2", "windText": "약 2", "humidity": "0%", "heatImpact": "-" },
+      { "time": "21시", "icon": "NB01", "text": "맑음", "temp": "23°C", "sensoryTemp": "32°C", "precip": "8", "precipIntensity": "-", "rainProb": "20%", "windDir": "W", "windSpeed": "2", "windText": "약 2", "humidity": "20%", "heatImpact": "-" },
+      { "time": "00시", "icon": "NB01", "text": "맑음", "temp": "23°C", "sensoryTemp": "32°C", "precip": "8", "precipIntensity": "-", "rainProb": "0%", "windDir": "NW", "windSpeed": "2", "windText": "약 2", "humidity": "0%", "heatImpact": "-" }
+    ]
+  },
+  {
+    "day": "금",
+    "date": "05.29",
+    "dayOfWeek": "토",
+    "forecastType": "중기예보",
+    "minTemp": "15°C",
+    "maxTemp": "28°C",
+    "amIcon": "NB01",
+    "amText": "맑음",
+    "amTemp": "20°C",
+    "amRain": "10%",
+    "pmIcon": "NB04",
+    "pmText": "흐림",
+    "pmTemp": "29°C",
+    "pmRain": "30%",
+    "hourly": [
+      { "time": "03시", "icon": "NB02", "text": "구름조금", "temp": "23°C", "sensoryTemp": "32°C", "precip": "8", "precipIntensity": "-", "rainProb": "20%", "windDir": "N", "windSpeed": "2", "windText": "약 2", "humidity": "30%", "heatImpact": "-" },
+      { "time": "06시", "icon": "NB01", "text": "맑음", "temp": "23°C", "sensoryTemp": "32°C", "precip": "8", "precipIntensity": "-", "rainProb": "0%", "windDir": "NE", "windSpeed": "2", "windText": "약 2", "humidity": "20%", "heatImpact": "-" },
+      { "time": "09시", "icon": "NB05", "text": "비", "temp": "23°C", "sensoryTemp": "32°C", "precip": "10", "precipIntensity": "보통", "rainProb": "70%", "windDir": "E", "windSpeed": "3", "windText": "약 3", "humidity": "70%", "heatImpact": "-" },
+      { "time": "12시", "icon": "NB01", "text": "맑음", "temp": "23°C", "sensoryTemp": "32°C", "precip": "8", "precipIntensity": "-", "rainProb": "20%", "windDir": "SE", "windSpeed": "3", "windText": "약 3", "humidity": "20%", "heatImpact": "-" },
+      { "time": "15시", "icon": "NB01", "text": "맑음", "temp": "23°C", "sensoryTemp": "32°C", "precip": "8", "precipIntensity": "-", "rainProb": "10%", "windDir": "S", "windSpeed": "3", "windText": "약 3", "humidity": "10%", "heatImpact": "-" },
+      { "time": "18시", "icon": "NB02", "text": "구름조금", "temp": "23°C", "sensoryTemp": "32°C", "precip": "8", "precipIntensity": "-", "rainProb": "0%", "windDir": "SW", "windSpeed": "2", "windText": "약 2", "humidity": "0%", "heatImpact": "-" },
+      { "time": "21시", "icon": "NB01", "text": "맑음", "temp": "23°C", "sensoryTemp": "32°C", "precip": "8", "precipIntensity": "-", "rainProb": "20%", "windDir": "W", "windSpeed": "2", "windText": "약 2", "humidity": "20%", "heatImpact": "-" },
+      { "time": "00시", "icon": "NB01", "text": "맑음", "temp": "23°C", "sensoryTemp": "32°C", "precip": "8", "precipIntensity": "-", "rainProb": "0%", "windDir": "NW", "windSpeed": "2", "windText": "약 2", "humidity": "0%", "heatImpact": "-" }
+    ]
   }
 ]
