@@ -1,0 +1,118 @@
+@charset "utf-8";
+.section-top {display:table;padding:0;margin-bottom:8px;background:none;}
+.section-top:after {display:block;content:'';clear:both;}
+.section-top .col {float:left;background:#fff;line-height:40px;}
+.section-top .col:first-child {border-top-left-radius:3px;border-bottom-left-radius:3px;}
+.section-top .col:last-child {border-top-right-radius:3px;border-bottom-right-radius:3px;}
+.section-top .col:only-child {border-radius:3px;}
+.section-top .time {position:relative;display:block;padding-left:22px;margin:0 16px;font-family:'ngb';color:#666;font-size:14px;}
+.section-top .time:after {display:block;content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:16px;height:16px;background:url(../image/marine/ico-info.png) 0 0 no-repeat;}
+
+.section-top .issu1 {position:relative;display:block;padding-left:22px;margin:0 16px;font-family:'ngb';color:#666;font-size:14px;}
+.section-top .issu1:after {display:block;content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:16px;height:16px;background:url(../image/marine/ico-secu-info09.png) 0 0 no-repeat;}
+
+.section-top .issu2 {position:relative;display:block;padding-left:22px;margin:0 16px;font-family:'ngb';color:#666;font-size:14px;}
+.section-top .issu2:after {display:block;content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:16px;height:16px;background:url(../image/marine/ico-secu-info04.png) 0 0 no-repeat;}
+
+.section-top .issu3 {position:relative;display:block;padding-left:22px;margin:0 16px;font-family:'ngb';color:#666;font-size:14px;}
+.section-top .issu3:after {display:block;content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:16px;height:16px;background:url(../image/marine/ico-secu-info02.png) 0 0 no-repeat;}
+
+.section-top .issu4 {position:relative;display:block;padding-left:22px;margin:0 16px;font-family:'ngb';color:#666;font-size:14px;}
+.section-top .issu4:after {display:block;content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:16px;height:16px;background:url(../image/marine/ico-wave-info00.png) 0 0 no-repeat;}
+
+.section-top .col p {margin:0 40px 0 16px;}
+
+.section-top .col .select-wrap {border:0;width:160px;}
+.section-top .col + .col {border-left:1px solid #e0e0e0;}
+.section-top .col + .col.desc {position:relative;border-left:0;color:#666;}
+.section-top .col.desc:before {display:block;content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:1px;height:16px;background:#eaedee;}
+
+.section-top .col.col-btn {border-left:0;}
+.section-top .col.col-btn a,
+.section-top .col.col-btn button {vertical-align:top;border-radius:0;min-width:80px;}
+
+.section-top.right {float:right;}
+
+.map-area {position:relative;overflow:hidden; background: #fff; min-height: 300px;}
+.map-area .thumb {text-align:center;}
+.map-area .thumb.center {margin:0 auto;padding:15px;}
+.map-area .thumb.center img {width:100%;max-width:100%; height: auto; border:1px solid #ebeef0;border-radius:3px;}
+
+.search-layer {position:absolute;top:8px;left:8px;background:#fff;border-radius:3px;z-index:300;box-shadow:2px 5px 12px 1px rgba(0,0,0,0.2);}
+.search-layer-cont {padding:15px;}
+.search-layer .layer-tit {display:block;font-size:16px;color:#222;}
+.search-layer dl {display:table;table-layout:fixed;text-align:left;margin-top:10px;}
+.search-layer dt {display:table-cell;width:60px;font-size:14px;font-family:'ngb';line-height:40px;color:#222;vertical-align:top;}
+.search-layer dd {display:table-cell;vertical-align:top;}
+.search-layer dd .select-wrap {width:160px;}
+.search-layer ul li {margin-top:16px;}
+.search-layer ul li:first-child {margin-top:0;}
+
+.search-layer .btn-area {margin-top:16px;padding: 10px 0;border-top:1px solid #ebeef0;}
+.search-layer .btn-area button {width:60px;}
+
+.inp {position:relative;display:inline-block;vertical-align:middle;padding-left:20px;}
+.inp b {display:inline-block;vertical-align:middle;margin-left:2px;font-size:14px;line-height:16px;color:#666;}
+.inp input[type="radio"] {font-size:0;line-height:0;border:0;opacity:0;position:absolute;z-index:-1;left:0;top:0;width:19px;height:18px;}
+.inp input[type="checkbox"] {font-size:0;line-height:0;border:0;opacity:0;position:absolute;z-index:-1;left:0;top:0;width:16px;height:16px;}
+.inp b:after {position:absolute;left:0;top:0;display:inline-block;content:'';width:16px;height:16px;transition:all .1s ease;vertical-align:middle;}
+.inp input[type="radio"] + b:after {background:url(../image/marine/ico-radio.png) 0 0 no-repeat;width:19px;height:18px;}
+.inp input[type="radio"]:checked + b{text-decoration: underline;}
+.inp input[type="radio"]:checked + b:after {background:url(../image/marine/ico-radio-checked.png) 0 0 no-repeat;}
+.inp input[type="checkbox"] + b:after {background:url(../image/marine/ico-checkbox.png) 0 0 no-repeat;}
+.inp input[type="checkbox"]:checked + b:after {background:url(../image/marine/ico-checkbox-check.png) 0 0 no-repeat;}
+
+.inp.ico {padding-left:50px;}
+.inp.ico:before,
+.inp.dot:before {display:block;content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);margin-left:30px;}
+
+.inp.fish:before {width:15px;height:19px;background:url(../image/marine/ico-check-fish.png) 0 0 no-repeat;}
+.inp.surf:before {width:19px;height:17px;background:url(../image/marine/ico-check-surf.png) 0 0 no-repeat;margin-left:26px;}
+.inp.fship:before {width:22px;height:17px;background:url(../image/marine/ico-check-fship.png) 0 0 no-repeat;margin-left:26px;}
+
+.inp.fog:before {width:18px;height:10px;background:url(../image/marine/ico-check-fog.png) 0 0 no-repeat;margin-left:26px;}
+.inp.swell:before {width:19px;height:9px;background:url(../image/marine/ico-check-swell.png) 0 0 no-repeat;margin-left:26px;}
+.inp.rip-current:before {width:19px;height:18px;background:url(../image/marine/ico-check-rip-current.png) 0 0 no-repeat;margin-left:26px;border-radius:0;}
+.inp.ico.port:before {width:22px;height:20px;background:url(../image/marine/ico-map-layer-tit.png) 0 0 no-repeat;margin-left:26px;border-radius:0;}
+.inp.ico.dot01:before {width:16px;height:20px;background:url(../image/marine/ico-check-dot01.png) 0 0 no-repeat;margin-left:26px;border-radius:0;}
+.inp.ico.dot02:before {width:22px;height:18px;background:url(../image/marine/ico-check-dot02.png) 0 0 no-repeat;margin-left:23px;border-radius:0;}
+.inp.ico.dot03:before {width:12px;height:19px;background:url(../image/marine/ico-check-dot03.png) 0 0 no-repeat;margin-left:28px;border-radius:0;}
+.inp.ico.disabled:before {width:20px;height:16px;background:url(../image/marine/ico-check-dot-disabled.png) 0 0 no-repeat;margin-left:24px;border-radius:0;}
+
+
+
+.inp.dot {padding-left:38px;}
+.inp.dot:before {margin-left:25px;}
+.inp.dot01:before {width:8px;height:8px;border-radius:50%;background:#ece027;}
+.inp.dot02:before {width:8px;height:8px;border-radius:50%;background:#e46c0a;}
+.inp.dot03:before {width:8px;height:8px;border-radius:50%;background:#00b050;}
+
+.alert-script {padding:0 15px 15px; background: #fff;}
+.alert-script .alert-script-inner {padding:15px; border:1px solid #ebeef0;font-size:14px;line-height:23px;color:#666;border-radius:3px;}
+
+@media screen and (max-width:700px) {
+	#map .search-layer {
+		position: relative;
+	}
+	#map .search-layer .search-layer-cont {
+		overflow:hidden;
+	}
+	#map .search-layer ul li {
+		float: left;
+		display: inline-block;
+		width: 30%;
+		height: 24px;
+		margin: 0;
+	}
+	#map .search-layer ul li:nth-child(1),
+		#map .search-layer ul li:nth-child(4),
+		#map .search-layer ul li:nth-child(7) {
+		width: 40%;
+	}
+	.section-top .col:first-child {
+		display: block;
+		width: 100%;
+	}
+	.section-top .col + .col {border-left:0; width: 50%;}
+	.section-top { width: 100%;}
+}

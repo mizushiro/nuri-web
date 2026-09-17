@@ -1,0 +1,26 @@
+.card {
+    @apply border rounded-xl overflow-hidden;
+
+    a {
+        @apply block;
+    }
+
+    .title {
+       @apply flex items-center justify-between p-3 rounded-t-xl bg-alternative text-white text-lg font-semibold; 
+    }
+
+    a[target="_popup"] .title:after {
+        content: '\f4c8';
+        font-family: 'Material Symbols Outlined';
+        transform: rotate(180deg);
+    }
+
+    a[target="_blank"] .title:after {
+        content: '\e89e';
+        font-family: 'Material Symbols Outlined';
+    }
+
+    .content {
+        @apply p-3 pb-8 min-h-16 text-sm;
+    }
+}

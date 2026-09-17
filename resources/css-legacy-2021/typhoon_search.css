@@ -1,0 +1,121 @@
+@charset "euc-kr";
+
+.map_legend_image{position: absolute;right: 5px;top:34px; z-index:1;}
+.map_legend{position:absolute;top:4px;right:5px;width:52px;height:26px;background:url(../image/typoon/btn_legend_open.png) 0 0 no-repeat; z-index:1;}
+.marker_close{position:absolute;top:4px;right:5px;width:52px;height:26px;background:url(../image/typoon/btn_legend_close.png) 0 0 no-repeat; z-index:1;}
+
+.map_legend_image_pop{position: absolute;right: 5px;top:90px; z-index:1;}
+.map_legend_pop{position:absolute;top:60px;right:5px;width:52px;height:26px;background:url(../image/typoon/btn_legend_open.png) 0 0 no-repeat; z-index:1;}
+.marker_close_pop{position:absolute;top:60px;right:5px;width:52px;height:26px;background:url(../image/typoon/btn_legend_close.png) 0 0 no-repeat; z-index:1;}
+
+/**************************
+ * MAP
+ **************************/
+/*발표정보 토글버튼 - 태풍 조회용*/
+.map_toggle_marker{position:absolute;top:3px;left:6px;}
+.map_toggle_marker .btn_custom{width:65px;height:28px;background:url(../image/typoon/typ_new/btn_toggle_marker.png) 0 0 no-repeat;}
+.map_toggle_marker .allTyp{background-position:0 -28px;}
+
+.map_toggle_realtime{position:absolute;top:3px;left:73px;}
+.map_toggle_realtime .btn_custom{width:65px;height:28px;background:url(../image/typoon/typ_new/btn_toggle_realtime.png) 0 0 no-repeat;}
+.map_toggle_realtime .allTyp{background-position:0 -28px;}
+
+/* 예보정보 전체 또는 일부 표시 */
+.map_toggle_rt_future{position:absolute;top:3px;left:140px;}
+.map_toggle_rt_future .btn_custom{width:65px;height:28px;background:url(../image/typoon/typ_new/btn_toggle_rt_future.png) 0 0 no-repeat;}
+.map_toggle_rt_future .allTyp{background-position:0 -28px;}
+
+/*발표정보 토글버튼 - 앞에 토글버튼이 없는 경우 용*/
+.map_toggle_marker_2{position:absolute;top:3px;left:5px;}
+.map_toggle_marker_2 .btn_custom{width:87px;height:28px;background:url(../image/typoon/typ_new/btn_toggle_marker.png) 0 0 no-repeat;}
+.map_toggle_marker_2 .allTyp{background-position:0 -28px;}
+
+.map_toggle_realtime_2{position:absolute;top:3px;left:130px;}
+.map_toggle_realtime_2 .btn_custom{width:65px;height:28px;background:url(../image/typoon/typ_new/btn_toggle_realtime.png) 0 0 no-repeat;}
+.map_toggle_realtime_2 .allTyp{background-position:0 -28px;}
+
+/* 예보정보 전체 또는 일부 표시 */
+.map_toggle_rt_future_2{position:absolute;top:3px;left:200px;}
+.map_toggle_rt_future_2 .btn_custom{width:65px;height:28px;background:url(../image/typoon/typ_new/btn_toggle_rt_future.png) 0 0 no-repeat;}
+.map_toggle_rt_future_2 .allTyp{background-position:0 -28px;}
+
+/* map search tab */
+.tab.list li .tab_search_menu {position:relative;float:left;width:100%;height:28px;text-decoration:none;background:url(../image/typoon/typ_new/btn_maptab_search_off.png) 0 0 no-repeat;color:#fff;font-size:0px;text-indent:-9999px;overflow:hidden;padding:0;}
+.tab.list li:nth-child(1) .tab_search_menu{background-position:0 0;}
+.tab.list li:nth-child(2) .tab_search_menu{background-position:-75px 0;}
+.tab.list li.active .tab_search_menu {background-image:url(../image/typoon/typ_new/btn_maptab_search_on.png);color:#333}
+
+/**************************
+ * HTML
+ **************************/
+/* result */
+.search_result{float:right;display:inline-block;width:100%;height:100%;background:url(../image/typoon/typ_new/btn_search.jpg) 0 0 no-repeat;width:52px;height:23px;}
+
+/* result */
+.btn_search_typ{display:inline-block;overflow:hidden;text-indent:-9999px;font-size:0;background:url(../image/typoon/typ_new/btn_typ_search_t.gif) 0 0 no-repeat;width:42px;height:19px;}
+.btn_search_reset{display:inline-block;overflow:hidden;text-indent:-9999px;font-size:0;background:url(../image/typoon/typ_new/btn_typ_reset.gif) 0 0 no-repeat;width:52px;height:19px;}
+
+/* search table */
+.typ_sch_option{border-top:2px solid #0f5ca6;width:100%;}
+.typ_sch_option th{text-align:center;background:#f1f7f9;border-bottom:1px solid #e1e7e8;padding:14px 0 9px;}
+.typ_sch_option th.last{border-bottom:1px solid #c8c8c8;}
+.typ_sch_option td{padding:8px 0 8px 10px;border-bottom:1px solid #eee;}
+.typ_sch_option td.last{border-bottom:1px solid #c8c8c8;}
+.typ_sch_option td select{width:56px;height:19px;border:1px solid #cadae5;font-size:11px;float:left;margin:0;padding:0;}
+.typ_sch_option td input{float:left;margin:0;padding:0;}
+.typ_sch_option td label{font-size:11px;float:left;line-height:1em;text-align:center;padding:4px 0 0 0;margin:0 12px 0 0;display:inline;}
+.typ_sch_option td span{float:left;line-height:1em;font-size:11px;text-align:center;padding:4px 0 0 0;margin:0;}
+.typ_sch_option td .radio{width:13px;height:13px;margin:0px 5px 0 0;display:inline;}
+.typ_sch_option td .checkbox{width:18px;height:13px;margin:4px 5px 0 0;display:inline;}
+.typ_sch_option td .wd17{width:17px;}
+.typ_sch_option td .wd26{width:26px;}
+.typ_sch_option td .wd19{width:19px;}
+.typ_sch_option td .wd31{width:31px;}
+.typ_sch_option td .wd32{width:22px;text-align:left;}
+.typ_sch_option td .wd50{width:52px;text-align:left;}
+.typ_sch_option td .search_check01{color:#3297bb;}
+.typ_sch_option td .inp_text01{width:41px;height:19px;border:1px solid #cadae5;line-height:19px;font-size:11px;text-align:center;}
+.typ_sch_option td .inp_text02{width:150px;height:19px;border:1px solid #cadae5;line-height:19px;font-size:11px;}
+
+/* result table */
+/* .typ_sch_result{margin-top:10px;margin-left:8px;margin-bottom:10px;width:668px;overflow-y:auto;border:1px solid #cdcdcd;background:#fff;z-index:99;} */
+.typ_sch_result .tit{overflow:hidden;margin-bottom:10px!important;}
+.typ_sch_result .tit h1{float:left;font-size:12px;color:#0089cd;width:auto;}
+.typ_sch_result .body{margin-bottom:10px;}
+.typ_sch_result .body h2{font-size:11px;margin-bottom:10px;}
+.typ_sch_result .body h2:before{content:"[ ";}
+.typ_sch_result .body h2:after{content:" ]";}
+.typ_sch_result ul{margin-bottom:30px;}
+.typ_sch_result li{line-height:20px;font-size:11px;background:url(../image/typoon/typ_new/ico_mark.png) 0 -335px no-repeat;padding-left:15px;}
+.typ_sch_result li span{display:inline-block;width:121px;}
+.typ_sch_result thead,
+.typ_sch_result tbody{border:1px solid #7fc3e6;}
+.typ_sch_result th,
+.typ_sch_result td{border:1px solid #dbe0e4;border-width:1px 0 0 1px;text-align:center;padding:5px 3px;}
+
+.typ_sch_result th{background:#e5f4fb;font-weight:normal;}
+.typ_sch_result tr:first-child th{border-top:0;}
+.typ_sch_result tr:first-child th:first-child,
+.typ_sch_result td:first-child{border-left:0;}
+.typ_sch_result tbody tr:first-child td{border-top:#7fc3e6;}
+.typ_sch_result tr:nth-child(even){background:#f1f9fc;}
+
+/* 20160127 misun */
+.table_area{position:relative;display:inline-block;width:100%;box-sizing:border-box;padding-top:15px;}
+.table_area .table_top{line-height:23px;}
+.search_submit{display:inline-block;width:100%;text-align:right;margin-top:10px;}
+
+/* 20160225 misun */
+.searchText{text-indent:10px;}
+.typ_sch_result tbody th:first-child{border-left:1px solid #7fc3e6;}
+
+/* sort */
+.sort{position:relative;display:inline-block;width:16px;height:16px; }
+.sort>a{position:absolute;left:0;width:16px;height:12px;padding:0 2px;font-size:0;line-height:0;overflow:hidden;text-indent:-9999px;}
+.sort>a:hover{opacity:1;}
+.sort_up{bottom:0;background:url(../image/renew/ic_sym_12.png) no-repeat center center; transform:rotateZ(180deg); background-size:12px auto;}
+.sort_down{bottom:0;background:url(../image/renew/ic_sym_12.png) no-repeat center center; background-size:12px auto;}
+
+@media screen and (max-width: 1100px){
+	/* .marker_close, .map_legend { top: auto; right:15px; bottom:5px;} */
+}

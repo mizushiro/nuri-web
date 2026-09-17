@@ -1,0 +1,35 @@
+.outer {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  
+}
+.inner h1 {text-align: center; font-size: 5em; font-weight: 700; text-transform: uppercase }
+.inner p {text-align: center; font-size: 3em; font-weight: 600; text-transform: uppercase }
+
+#error{margin:0 auto;background:url(/w/resources/image/error/error_bg.jpg) no-repeat left 50px; width:560px; height:693px;position:relative;}
+#error .title{position:absolute; left:250px; top:240px;}
+#error .txt_1{position:absolute; left:145px; top:270px;}
+#error .txt_2{position:absolute; left:270px; top:358px;}
+#error .txt_3{position:absolute; left:253px; top:234px;}
+#error .txt_4{position:absolute; left:258px; top:240px;}
+#error .txt_5{position:absolute; left:267px; top:261px;}
+#error .txt_6{position:absolute; left:262px; top:230px;}
+#error .mail_tel_01{position:absolute; left:280px; top:383px;}
+#error .mail_tel_02{position:absolute; left:280px; top:400px;}
+#error ul.menu{position:absolute; left:74px; bottom:65px;}
+#error ul.menu li{display:inline;padding:0;margin:0;}

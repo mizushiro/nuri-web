@@ -1,0 +1,235 @@
+@charset "utf-8";
+
+/* 어제 날씨 */
+.subp01-10 .tab-menu-wrap .tab-menu-cont{margin-top:15px;}
+.subp01-10 .tab-menu-wrap .tab-menu-cont .cont01:after{clear:both;content:"";display:block;}
+.subp01-10 .tab-menu-wrap .tab-menu-cont .cont01{height:450px;}
+.subp01-10 .tab-menu-wrap .tab-menu-cont .map-data{height:100%;position:relative;width:calc(100% - 580px);background:#fff;overflow:hidden;border:10px solid #eef2f7;float:left;}
+.subp01-10 .tab-menu-wrap .tab-menu-cont .txt-data{height:100%;float:left;width:560px;margin-left:20px;background:#eef2f7;padding:0px 20px;}
+.subp01-10 .tab-menu-wrap .tab-menu-cont .txt-data .tit{font-size:22px;font-weight:700;margin-top:5px}
+.subp01-10 .tab-menu-wrap .tab-menu-cont .txt-data .txt{font-size:17px;font-weight:300;margin-top:20px;line-height:140%;}
+.subp01-10 .tab-menu-wrap .tab-menu-cont .txt-data .img-area{overflow:hidden;background:#fff;padding:10px 10px;width:405px;margin:15px auto 0;}
+.subp01-10 .tab-menu-wrap .tab-menu-cont .txt-data .img-area > div{position:relative;float:left;width:calc(50% - 9px);}
+.subp01-10 .tab-menu-wrap .tab-menu-cont .txt-data .img-area > div+div{margin-left:20px;width:calc(50% - 11px);}
+.subp01-10 .tab-menu-wrap .tab-menu-cont .txt-data .img-area > div span{display:block;position:absolute;bottom:10px;left:50%;transform:translateX(-50%);background:#ebebeb;border-radius:4px;padding:3px 10px;font-size:13px;}
+
+.updated-at {position:relative; padding: 10px; font-size:17px;}
+.updated-at .more { position:absolute; right: 10px; bottom:10px; font-size:17px; font-weight: 600;}
+.nation_map_wrapper {
+	width:100%;
+	height:430px;
+	border:1px solid #ccc;
+	background: radial-gradient(#fff, #6eaada);
+}
+.nation_map {position: relative;width: 330px;background: url(../images/korea_map3.png) no-repeat;background-position:-40px top;background-size: auto 360px;height: 430px;padding: 0 ; margin: 0 auto 0px auto;}
+
+/* 전국날씨 */
+.tm_fc {
+	position:absolute;
+	right:10px;
+	bottom:10px;
+	color:rgb(44,44,44);
+	font-weight:bold;
+}
+p.unit {
+	position:absolute;
+	right:50px;
+	bottom:60px;
+	color:rgb(44,44,44);
+	font-weight:bold;
+	font-size:11px;
+}
+p.unit span.blue { color:#005dc6 !important; }
+p.unit span.red { color:#cc0000 !important; }
+
+.png25{width:19px !important; height:19px !important;}
+
+#weather dl { font-size: 13px; line-height:1em;text-align:center;height:auto;width:39px;border:1px solid #cdcdcd; border-radius:5px; background:#fff; padding:2px 1px;}
+#weather dl dt{font-size:0.95em;color:#111;width:100%; padding-bottom:1px;}
+#weather dl dd {text-align:center;}
+#weather dl dd img { width:50%;}
+#weather dl dd img.fct { width:75%; margin-top:-1px;}
+#weather dl dd span.red{color:#cc0000 !important;}
+#weather dl dd span.blue{color:#005dc6 !important;}
+#weather dl dd span{display:block;letter-spacing:1px;text-align:center;color:rgb(204, 0, 0); font-weight:bold;}
+
+#weather2 dl { font-size: 13px; line-height:1em;text-align:center;height:auto;width:37px;border:1px solid #cdcdcd; border-radius:5px; background:#fff; padding:2px 1px;}
+#weather2 dl dt{font-size:0.95em;color:#111; text-align:center; width:100%; }
+#weather2 dl dd span.red{color:#cc0000 !important;}
+#weather2 dl dd span.blue{color:#005dc6 !important;}
+#weather2 dl dd span{display:block;letter-spacing:1px;text-align:center;color:rgb(204, 0, 0); font-weight:bold;}
+#weather2 dl dd a img{width:100%; max-width:30px;height:auto;}
+
+#rainfall dl { font-size: 13px; line-height:1em;text-align:center;height:auto;width:38px;border:1px solid #cdcdcd; border-radius:5px; background:#fff; padding-left:1px; padding-right:1px;}
+#rainfall dl.dokdo {height:60px !important;}
+#rainfall dl dt{padding-bottom:2px;font-size:0.95em;color:#111; left:0; top:-15px; width:100%; padding-top:3px; text-align:center; top:-1px;}
+#rainfall dl dd{font-weight:bold; width:34px; height:17px; padding-top:1px; color:rgb(10, 121, 203); }
+#rainfall dl dd.rain{ color:#cc0000; width:34px; height:15px; padding-top:0; line-height:15px;}
+#rainfall dl dd.snow{ color:#005dc6; width:34px; height:15px; padding-top:0; }
+
+#rainfall dl dd span{font-size:10px; letter-spacing:-1px; font-weight:normal; color:#333;}
+
+#rainfall dl.one { height:36px !important; }
+#rainfall dl.one dd.rain { bottom:1px !important;}
+#rainfall dl.one dd.snow { bottom:1px !important;}
+
+#rainfall dl.dokdoone {height:45px !important;}
+#rainfall dl.dokdoone dd.rain { bottom:1px !important;}
+#rainfall dl.dokdoone dd.snow { bottom:1px !important;}
+
+#wind dl {line-height:1em;text-align:center;height:35px;width:36px;border:1px solid #cdcdcd; border-radius:5px; background:#fff; padding-left:1px; padding-right:1px;}
+#wind dl dt{padding-bottom:2px;font-size:0.95em;color:#111; position:absolute; left:0; top:-15px; width:100%; padding-top:3px;}
+#wind dl dt.wind{width:37px; position:absolute; top:-1px;}
+#wind dl dd.wind{width:35px; height:24px; color:#000; position:absolute; top:16px; left:2px;}
+#wind dl dd.wind a{color:#000;}
+#wind dl.dokdo{height:50px !important;}
+#wind dl dt.dokdo{top:-1px;}
+#wind dl dd.dokdo{top:27px !important;}
+
+#windspeed dl {line-height:1em;text-align:center;height:35px;width:36px;border:1px solid #cdcdcd; border-radius:5px; background:#fff; padding-left:1px; padding-right:1px;}
+#windspeed dl dt{padding-bottom:2px;font-size:0.95em;color:#111; position:absolute; left:0; top:-15px; width:100%; padding-top:3px;}
+#windspeed dl dt.wind{width:37px; position:absolute; top:-1px;}
+#windspeed dl dd.wind{font-weight:bold; width:50px; height:17px; padding-top:1px; color:rgb(10, 121, 203); position:absolute; top:18px; left:-6px;}
+#windspeed dl dd.wind a{color:rgb(10, 121, 203);}
+#windspeed dl dd.wind span{font-weight:normal; font-size:11px;color:rgb(10, 121, 203); letter-spacing:-1px;}
+#windspeed dl.dokdo{height:47px !important;}
+#windspeed dl dt.dokdo{top:-1px;}
+#windspeed dl dd.dokdo{top:27px !important;}
+
+#index dl { font-size: 13px; line-height:1em;text-align:center;height:auto;width:37px;border:1px solid #cdcdcd; border-radius:5px; background:#fff; padding:2px 1px;}
+#index dl dt{padding-bottom:2px;font-size:0.95em;color:#111; width:100%; padding-top:3px;} 
+#index dl dd{font-weight:bold; padding-top:1px; color:rgb(10, 121, 203); }
+#index dl dd a{color:rgb(10, 121, 203);}
+#index dl dd span{font-weight:normal; font-size:11px;color:rgb(10, 121, 203); letter-spacing:-1px;}
+#index dl dd span{display:block;letter-spacing:1px;text-align:center;color:rgb(204, 0, 0); font-weight:bold;}
+
+#minmax dl {line-height:1em;text-align:center;height: auto;width:39px;border:1px solid #cdcdcd;border-radius:5px;background:#fff;padding-left:1px;padding-right:1px;font-size: 13px; padding-top:2px;}
+#minmax dl dt{font-size:0.95em;color:#111; width:100%; text-align:center;}
+#minmax dl dd{width:36px;}
+#minmax dl dd span{display:block;letter-spacing:1px;text-align:center;font-weight:bold;}
+#minmax dl dd span.red{color:#cc0000 !important;}
+#minmax dl dd span.blue{color:#005dc6 !important;}
+
+/* 풍향 풍속 */
+.po_108{position:absolute;left:108px;top:40px; } /* 서울 */
+.po_112{position:absolute;left:60px;top:64px; } /* 인천 */
+.po_119{position:absolute;left:115px;top:99px; } /* 수원 */
+.po_101{position:absolute;left: 169px;top:43px;} /* 춘천 */
+.po_115{position:absolute;left: 263px;top: 30px;} /* 울릉도, 독도 */
+.po_102{position:absolute;left:11px;top:85px; } /* 백령도 */
+.po_133{position:absolute;left:150px;top:171px; } /* 대전 */
+.po_129{position:absolute;left:25px;top:125px; } /* 서산 */
+.po_177{position:absolute;left:70px;top:124px; } /* 홍성 */
+.po_131{position:absolute;left: 165px;top:111px;} /* 청주 */
+.po_146{position:absolute;left: 102px;top:183px; } /* 전주 */
+.po_156{position:absolute;left: 103px;top: 242px;} /* 광주 */
+.po_168{position:absolute;left: 120px;top: 303px;} /* 여수 */
+.po_165{position:absolute;left: 58px;top: 250px;} /* 목포 */
+.po_169{position:absolute;left:10px;top:255px; } /* 흑산도 */
+.po_176{position:absolute;left: 200px;top:192px;} /* 대구 */
+.po_143{position:absolute;left: 200px;top:192px;} /* 대구 */
+.po_136{position:absolute;left: 212px;top: 133px;} /* 안동 */
+.po_130{position:absolute;left:250px;top:118px; } /* 울진 */
+.po_138{position:absolute;left:260px;top:156px; } /* 포항 */
+.po_152{position:absolute;left:260px;top: 220px;} /* 울산 */
+.po_159{position:absolute;left: 236px;top: 279px;} /* 부산 */
+.po_184{position:absolute;left: 67px;top:339px;} /* 제주 */
+.po_99 {position:absolute;left:-999px;bottom:-999px; display:none; } /* 문산 */
+.po_104{position:absolute;left:217px;top:27px; } /* 강릉 */
+.po_90 {position:absolute;left:194px;top:7px; display:none; } /* 속초 */
+.po_105{position:absolute;left:217px;top:27px; } /* 강릉 */
+.po_155 {position:absolute;left:174px;top:281px; }  /* 창원 */
+
+/* 날씨 기온*/
+.po2_108{position:absolute;left:108px;top:40px; } /* 서울 */
+.po2_112{position:absolute;left:60px;top:64px; } /* 인천 */
+.po2_119{position:absolute;left:115px;top:99px; } /* 수원 */
+.po2_101{position:absolute;left: 169px;top:43px;} /* 춘천 */
+.po2_115{position:absolute;left: 263px;top: 30px;} /* 울릉도, 독도 */
+.po2_102{position:absolute;left:11px;top:85px; } /* 백령도 */
+.po2_133{position:absolute;left:150px;top:171px; } /* 대전 */
+.po2_129{position:absolute;left:25px;top:125px; } /* 서산 */
+.po2_177{position:absolute;left:70px;top:124px; } /* 홍성 */
+.po2_131{position:absolute;left: 165px;top:111px;} /* 청주 */
+.po2_146{position:absolute;left: 102px;top:183px; } /* 전주 */
+.po2_156{position:absolute;left: 103px;top: 242px;} /* 광주 */
+.po2_168{position:absolute;left: 120px;top: 303px;} /* 여수 */
+.po2_165{position:absolute;left: 58px;top: 250px;} /* 목포 */
+.po2_169{position:absolute;left:10px;top:255px; } /* 흑산도 */
+.po2_176{position:absolute;left: 200px;top:192px;} /* 대구 */
+.po2_143{position:absolute;left: 200px;top:192px;} /* 대구 */
+.po2_136{position:absolute;left: 212px;top: 133px;} /* 안동 */
+.po2_130{position:absolute;left:250px;top:118px; } /* 울진 */
+.po2_138{position:absolute;left:260px;top:156px; } /* 포항 */
+.po2_152{position:absolute;left:260px;top: 220px;} /* 울산 */
+.po2_159{position:absolute;left: 236px;top: 279px;} /* 부산 */
+.po2_184{position:absolute;left: 67px;top:339px;} /* 제주 */
+.po2_99 {position:absolute;left:-999px;bottom:-999px; display:none; } /* 문산 */
+.po2_104{position:absolute;left:217px;top:27px; } /* 강릉 */
+.po2_90 {position:absolute;left:194px;top:7px; display:none; } /* 속초 */
+.po2_105{position:absolute;left:217px;top:27px; } /* 강릉 */
+.po2_155 {position:absolute;left:174px;top:281px; }  /* 창원 */
+
+
+/* 내일 예보*/
+.po_11B10101{position:absolute;left:120px;top:31px; } /* 서울 */
+.po_11B20201{position:absolute;left:64px;top:68px; } /* 인천 */
+.po_11B20601{position:absolute;left:120px;top:90px; } /* 수원 */
+.po_11D10301{position:absolute;left:165px;top:33px; } /* 춘천 */
+.po_11D20501{position:absolute;left:210px;top:17px; }  /* 강릉 */
+.po_11E00101{position:absolute;left: 285px;top: 11px;} /* 울릉도, 독도 */
+.po_11A00101{position:absolute;left:2px;top:75px; } /* 백령도 */
+.po_11C20401{position:absolute;left:153px;top:160px; } /* 대전 */
+.po_11C20101{position:absolute;left:25px;top:125px; } /* 서산*/
+.po_11C20104{position:absolute;left:95px;top:148px; } /* 홍성*/
+.po_11C10301{position:absolute;left:170px;top:100px; } /* 청주 */
+.po_11F10201{position:absolute;left:70px;top:210px; } /* 전주 */
+.po_11F20501{position:absolute;left: 128px;top: 221px;} /* 광주 */
+.po_11F20401{position:absolute;left: 137px;top: 310px;} /* 여수 */
+.po_21F20801{position:absolute;left:73px;top:275px; } /* 목포 */
+.po_11H10701{position:absolute;left: 205px;top: 192px;} /* 대구 */
+.po_11H10501{position:absolute;left:217px;top:120px; } /* 안동 */
+.po_11H10101{position:absolute;left:263px;top:112px; } /* 울진 */
+.po_11H10201{position:absolute;left:282px;top:148px; } /* 포항 */
+.po_11H20101{position:absolute;left: 265px;top: 207px;} /* 울산 */
+.po_11H20201{position:absolute;left:245px;top:266px; } /* 부산 */
+.po_11G00201{position:absolute;left:50px;top:339px; } /* 제주 */
+.po_11H20301{position:absolute;left:185px;top:277px; }  /* 창원 */
+
+.po_11E00102{position:absolute;left:254px;top:39px;  display:none; }  /* 독도 */
+.po_11F20701{position:absolute;left:9px;top:255px; }  /* 흑산도 */
+
+.weather-cmt .right-flid .text-area{height:360px;background:#fff;overflow:auto;margin-top:10px;position:relative;}
+.weather-cmt .right-flid .text-area .swiper-slide{height:auto;font-size:17px;padding:20px;line-height:160%;}
+.weather-cmt-title {display:none; background-color:#eef2f7; padding-bottom:0; font-weight: 500;}
+.weather-cmt-title .more { bottom:0;}
+
+@media screen and (max-width:1260px) {
+	.subp01-10 .tab-menu-wrap .tab-menu-cont .map-data {width:calc(100% - 470px);}
+	.subp01-10 .tab-menu-wrap .tab-menu-cont .txt-data {width:440px;}
+}
+@media screen and (max-width:1160px) {
+	.subp01-10 .tab-menu-wrap .tab-menu-cont .cont01 {height: auto;}
+	.subp01-10 .tab-menu-wrap .tab-menu-cont .map-data {width:100%; float:none;}
+	.subp01-10 .tab-menu-wrap .tab-menu-cont .txt-data {width:100%; float:none; margin-left:0;padding:10px;}
+	.subp01-10 .tab-menu-wrap .tab-menu-cont .txt-data .txt{margin-top:10px;}
+	.weather-cmt .right-flid .text-area .swiper-slide{padding:15px;}
+}
+@media screen and (max-width:1100px) {
+	.subp01-10 .tab-menu-wrap .tab-menu-cont {margin-top:5px;}
+	.subp01-10 .tab-menu-wrap .tab-menu-cont .txt-data { margin-top:0; padding:10px 10px 20px 10px;}
+	.subp01-10 .tab-menu-wrap .tab-menu-cont .txt-data .img-area{width: 100%;}
+	.subp01-10 .tab-menu-wrap .tab-menu-cont .txt-data .txt{margin-top:0;font-size:14px;}
+	.updated-at { font-size: 14px;}
+	.updated-at .more { font-size: 14px; display:none;}
+	
+	.weather-cmt-title {display:block;}
+	.weather-cmt-title .more {display:inline;}
+	
+	#weather-cmt { min-height: 100px;}
+	
+	.weather-cmt .right-flid .text-area {height:auto;}
+	.weather-cmt .right-flid .text-area .swiper-slide{padding:10px;}
+	
+}
+

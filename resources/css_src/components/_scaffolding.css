@@ -1,0 +1,314 @@
+#gnb {
+    @apply border-gray-200 border-b border-t lg:border-b-0 lg:border-t-0;
+}
+#gnb li {
+    @apply block;
+
+    a {
+        @apply flex items-center justify-center lg:block relative h-full lg:px-3 lg:py-5 text-center font-normal leading-none;
+
+        &:after {
+            content: '';
+            @apply absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-brand;
+            @apply transition-width duration-150 ease-out;
+        }
+
+        &:hover {
+            &:after {
+                @apply w-full;
+            }
+        }
+
+        &.active {
+            @apply font-semibold text-brand;
+
+            &:after {
+                @apply w-full h-1 lg:h-1.5;
+            }
+
+        }
+    }
+}
+
+aside {
+    @apply fixed inset-0 -z-10 bg-transparent lg:static lg:z-20;
+
+    &.active {
+        @apply z-[100] bg-black/75 md:!bg-transparent;
+    }
+
+    &:not(.active) #snb-close-button {
+        @apply hidden;
+    }
+
+    > div.container {
+        @apply absolute right-0 top-0 bottom-0 bg-white;
+        @apply lg:static lg:p-0 lg:max-w-full;
+        @apply translate-x-full transition-transform lg:translate-x-0;
+    }
+
+    &.active > div.container {
+        @apply translate-x-0;
+    }
+
+    i {
+        @apply absolute -left-8 top-4 text-white text-xl lg:hidden;
+    }
+}
+
+aside {
+    nav li > a {
+        @apply flex items-center justify-between pl-2 pr-2 py-2 cursor-pointer;
+    }
+
+    a > span {
+        @apply flex items-center gap-x-1;
+    }
+
+    a[target="_blank"] > span:after,
+    a[target="_popup"] > span:after {
+        content: '\e89e';
+        font-family: 'Material Symbols Outlined';
+    }
+
+    .depth-1 > li > a.toggle::after {
+        content: '\e313';
+        font-family: 'Material Symbols Outlined';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -webkit-font-feature-settings: 'liga';
+        -webkit-font-smoothing: antialiased;
+    }
+    .depth-1 > li > a.toggle.active::after {
+        @apply rotate-180;
+    }
+
+    .depth-2 {
+        @apply hidden text-sm bg-grayscale-5;
+    }
+
+    a.active + .depth-2 {
+        @apply block;
+    }
+
+    .depth-2 > li > a {
+        @apply pl-4;
+    }
+
+    .depth-2 > li > a.toggle::after {
+        content: '\e145';
+        font-family: 'Material Symbols Outlined';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -webkit-font-feature-settings: 'liga';
+        -webkit-font-smoothing: antialiased;
+    }
+    .depth-2 > li > a.toggle.active::after {
+        content: '\e15b';
+    }
+
+    .depth-3 {
+        @apply hidden;
+    }
+
+    a.active + .depth-3 {
+        @apply block;
+    }
+
+    .depth-3 > li > a {
+        @apply pl-6 text-xs;
+    }
+}
+
+#snb {
+    .section-title {
+        /* @apply text-lg font-semibold; */
+        @apply ml-2 mb-2 text-xl font-semibold;
+    }
+    &.sitemap-wrap .section-title {
+        @apply text-lg;
+    }
+
+    .section-wrap {
+        @apply px-2 rounded-lg bg-white;
+    }
+}
+
+#snb li {
+    @apply block;
+
+    a {
+        @apply block relative py-2 font-normal text-grayscale-1;
+
+        &:after {
+            content: '';
+            @apply absolute bottom-2 left-0 w-0 h-0.5 bg-brand;
+            @apply transition-width duration-150 ease-out;
+        }
+
+        &:hover {
+            @apply font-semibold;
+        }
+
+        &.active {
+            @apply font-bold text-brand;
+
+            &:after {
+                @apply w-full;
+            }
+        }
+
+    }
+
+    a > span {
+        @apply flex items-center justify-between;
+    }
+
+    a[target="_blank"] > span:after,
+    a[target="_popup"] > span:after {
+        content: '\e89e';
+        font-family: 'Material Symbols Outlined';
+    }
+}
+
+
+#logo-kma {
+    @apply block w-16 h-8 lg:w-24 lg:h-12 lg:w-36 lg:h-16 bg-no-repeat bg-contain bg-center;
+    background-image: url('/w/resources/images/logo_kma.png');
+}
+
+
+#breadcrumb {
+    @apply flex items-center text-sm font-normal gap-x-2;
+
+    li {
+        @apply flex items-center text-grayscale-1;
+
+        &:not(.home):before,
+        &.home a:before {
+            content: '\f46a';
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+            font-variation-settings: 'FILL' 1;
+        }
+
+        &.home a:before {
+            @apply !text-2xl gap-x-0;
+            content: '\e88a';
+        }
+    }
+
+    a {
+        @apply block;
+    }
+}
+
+
+#language-selector {
+    h4::before,
+    h4::after {
+        display: block;
+        font-family: 'Material Symbols Outlined';
+        font-weight: normal;
+        font-style: normal;
+        font-size: inherit;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -webkit-font-feature-settings: 'liga';
+        -webkit-font-smoothing: antialiased;
+        font-variation-settings: 'FILL' 1;
+    }
+
+    h4::before {
+        content: '\e894';
+    }
+    h4::after {
+        content: '\e313';
+        font-size: 0.75em;
+    }
+
+    > ul {
+        @apply hidden;
+    }
+
+    &.active > ul {
+        @apply block;
+    }
+}
+
+#related-sites a {
+    @apply block py-4 text-sm lg:text-lg;
+
+    &:hover {
+        @apply font-semibold;
+    }
+}
+
+
+#related-pages li {
+    @apply flex items-center;
+}
+
+#related-pages a {
+    @apply block px-4 lg:px-8 leading-none text-xs lg:text-base;
+
+    &:hover {
+        @apply underline;
+    }
+}
+#related-pages li + li:before {
+    content: '|';
+    @apply block text-xs lg:text-base;
+}
+
+#company-info {
+    @apply text-center text-xs lg:text-left lg:text-sm;
+}
+
+#company-info dt,
+#company-info dd {
+    @apply inline;
+}
+
+#company-info dt:after {
+    content: ':';
+}
+
+footer #logos {
+    .logo-131 {
+        @apply w-20 h-8 lg:w-32 lg:h-12 bg-contain bg-no-repeat;
+        background-image: url('/w/resources/images/footer_logos_131.png');
+    }
+}

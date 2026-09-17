@@ -1,0 +1,612 @@
+@charset "utf-8";
+
+@media screen and (max-width:1550px){
+	
+}
+@media screen and (max-width:1505px){
+	
+}
+@media screen and (max-width:1440px){
+	/* 날씨 슬라이더 */
+	/*.cmp-dfs-slider .dfs-tab .right { width:calc(100% - 620px);}
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head { width:620px;} */
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head li { min-width:90px; font-size: 18px;}
+	.cmp-dfs-slider.hr1-fct .dfs-tab .dfs-tab-head li { min-width:100px; }
+}
+@media screen and (max-width:1320px) {
+	/* === layouts */
+	.lay .lay-500 { float:left; width: 440px; padding:0 8px;}
+	.lay .lay-500ext { float:left; width: calc(100% - 440px);}
+	
+	/* 뉴 비주얼맵 홀더 */
+	.cmp-vismap .wrap{ min-height:auto; max-height: 702px;}
+
+	/* 북마크 - 현재 위치 버튼, 관심지역 드롭다운, 특보 여부 아이콘, 관심지역관리 버튼, 도움말 버튼 */
+	.cmp-bookmark .serch-area{ }
+	
+	/* 메일 화면 현재 날씨 */
+	.cmp-cur-weather .wrap-1 { margin-top: 34px; overflow:hidden;}
+	.cmp-cur-weather .w-icon .wic { height: 70px; width: 70px; margin-right: 2px; vertical-align:top; margin-top:5px;}
+	.cmp-cur-weather .w-temp { font-size: 60px; height:80px; margin-top:11px;}
+	.cmp-cur-weather .w-temp .tmp { font-weight: 700;font-size: 48px; letter-spacing:-1px;}	
+	.cmp-cur-weather .wrap-2 li:before { height:58px; top:3px;} 
+	.cmp-cur-weather .wrap-2 .lbl { font-size: 15px; line-height:18px; }
+	.cmp-cur-weather .wrap-2 .lbl > small {font-size:12px; text-align:center; padding:0 2px;}
+	.cmp-cur-weather .wrap-2 .lbl.rn-hr1 small:first-child {font-size:12px;} 
+	.cmp-cur-weather .wrap-2 .val { font-size: 16px; line-height: 25px;}
+	.cmp-cur-weather .wrap-3 { border-bottom:2px solid #D4E4EC; margin-top:14px; padding-bottom:10px; display:flex; position:relative; justify-content:center;}
+	.cmp-cur-weather .wrap-3 li { line-height: 22px; font-size: 14px; color: #000; padding:0 5px; flex-basis:110px; flex-shrink:0;}
+	.cmp-cur-weather .wrap-3 li .with-txt { margin-right:5px; padding-left:26px;}
+	.cmp-cur-weather .wrap-3 li .sym-ic.sunrise {background-size: auto 24px; height:22px;}
+	.cmp-cur-weather .wrap-3 li .sym-ic.sunset {background-size: auto 24px; height:22px;}
+	.cmp-cur-weather .wrap-3 .cmt { flex-basis: 0px; padding: 0px;} 
+	.cmp-cur-weather .wrap-3 .hid-btt { display: none; }
+	.cmp-cur-weather .wrap-3 li:last-child { flex-grow:1; text-align:right; flex-basis: 0px;}
+	.cmp-cur-weather .wrap-3 li a{ padding: 2px 8px;}
+	.cmp-cur-weather .wrap-3 li span{vertical-align: sub;}
+
+	/* 날씨슽라이더 */	
+	.cmp-dfs-slider .dfs-tab { float:none; padding: 6px 0px 0px 8px; height:46px; position:relative; overflow:visible;}
+	.cmp-dfs-slider .dfs-tab .right { float:left; width:calc(100% - 466px); height:auto;}
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head-wrap { float:left; overflow:hidden; margin-top:0;}
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head { display:block; width:466px; height:40px; }
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head li { display:block; position:relative; float:left; min-width:94px; margin-left:3px; font-size: 16px; background:#DAE0E8;}
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head li:first-of-type { margin-left:0; }
+	.cmp-dfs-slider.hr1-fct .dfs-tab .dfs-tab-head li{ min-width: 75px; }
+	.cmp-dfs-slider.hr1-fct .dfs-tab .dfs-tab-head li[data-experimental="Y"] { width:75px; }
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head li a { border:1px solid #B9C5D3; display:block; position:relative; text-align:center; line-height:36px;padding-top:2px;}
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head li a.on + .tt-btn { display:none;}
+	
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head li[data-experimental="Y"] a { height:40px;}
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head li[data-experimental="Y"] a > span { }
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head li[data-experimental="Y"] a > small { font-size:12px; }
+	
+	.cmp-dfs-slider .dfs-tab .right .updated { display:none; font-size:13px; height: 46px; position:relative; width: 250px; padding-top:0px;}
+	.cmp-dfs-slider .dfs-tab .right .updated h4 { position:absolute; left:6px; top:3px; font-weight: 600;}
+	.cmp-dfs-slider .dfs-tab .right .updated strong { display:block; padding-left:64px; line-height:20px; font-weight: 400; letter-spacing:-1px;}
+	.cmp-dfs-slider .dfs-tab .right .btns {float: right; display:inline-block; height:auto; padding-top:0; padding-right:5px;}
+	.cmp-dfs-slider .dfs-tab .right .btns .sym-btn { height:32px; padding-left:28px; background-size: 18px; line-height:32px;}
+	
+	.cmp-dfs-slider .view-options { width:790px; }
+	
+	.cmp-dfs-updated { top:20px; font-size:15px; }
+	.cmp-dfs-slider.hr1-fct + .cmp-dfs-updated { top:22px; font-size:15px; }
+	.right .cmp-dfs-updated { top:12px; }
+	.ts-open-box { top:294px; }
+	.dfs-guide-btn { top:22px; }
+	.right .dfs-guide-btn { top:12px; }
+	
+	.cmp-dfs-slider .dfs-tab-body .slide .daily[data-experimental="Y"] .daily-head .date { padding-right:30px; }
+	.cmp-dfs-slider .dfs-tab-body .slide .daily .daily-head .date .tt-btn { position:absolute; top:-3px; display:inline-block; }
+	.cmp-dfs-slider .dfs-tab-body .slide .daily .daily-head .date .tt-btn .tt { width: 260px; top:24px; left:-102px; padding:16px 20px; border-radius:5px; border:1px solid #CBCBCB; box-shadow:0px 0px 10px 0px rgba(0,0,0,0.2); text-align:left; position:relative; background-color:#fff;}
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .daily-head .date .tt-btn { top:18px; }
+}
+@media screen and (max-width:1170px){
+	.cmp-dfs-updated { display:block; position:relative; text-align:right;top: auto; left: auto; right:auto;}
+	.cmp-dfs-updated a.open-box {float:none; font-size:13px; padding:0 15px;color:#000; line-height:22px; position:relative; margin:10px;}
+	.cmp-dfs-updated .shadow-box { height:0; transition: all .2s ease-out; opacity:0; overflow:hidden;}
+	.cmp-dfs-updated .shadow-box .inner {margin:10px 20px;padding:16px 20px 16px 20px; border-radius:5px; border:1px solid #CBCBCB; box-shadow:0px 0px 10px 0px rgba(0,0,0,0.2); text-align:left; position:relative;}
+	.cmp-dfs-updated .shadow-box a.close-box { content:'';position:absolute; top:0; right:0; width:34px; height:34px; background:url(../image/btn_close.png) no-repeat center center; background-size:14px; text-indent:-9999px;}
+	.cmp-dfs-updated .shadow-box h5 {font-size:15px; font-weight:700; line-height:200%;}
+	.cmp-dfs-updated .shadow-box dl { display:block; font-size:11px; line-height:170%;}
+	.cmp-dfs-updated .shadow-box dl dt { display:inline; color:#000;}
+	.cmp-dfs-updated .shadow-box dl dd { display:inline; color:#000;}
+	.cmp-dfs-updated a.on + .shadow-box { height:auto; max-height:136px; opacity:1;overflow:visible; margin-top:auto;}
+	
+	.cmp-dfs-slider.hr1-fct + .cmp-dfs-updated { position:relative; text-align:right;top: auto; left: auto; }
+	.right .cmp-dfs-updated { display:none; }
+	.dfs-guide-btn { width:130px; top:auto; bottom:-24px; left:0px; display:block;}
+	.dfs-guide-btn a { padding:0 15px; line-height:22px; position:relative; margin:10px; }
+	.right .dfs-guide-btn { display:none; }
+	.ts-open-box { top: auto; bottom: 10px; right: 125px; }
+}
+@media screen and (max-width:1100px){
+	.ts-open-box { top: auto; bottom: 242px; right: 125px; }
+	/* global */
+	.new-main section.page-wrap { min-height: auto;}
+	.new-mobile-app .page-wrap { padding-bottom: 30px;}
+	.cont-head {display:block;}
+	header .tab {display:block;margin-top:0;}
+	.cont-head .site-tit-wrap .logo .btn-tit{color:#fff;font-size:20px;font-weight:700;position:relative;padding:0 0 0 40px ;height:48px; background:url(../image/logo_mark.png) no-repeat left center; background-size:auto 32px; line-height:48px}
+	/* === layouts */
+	.lay .lay-100p { float:none; width: 100%;}
+	.lay .lay-60p { float:none; width: 100%;}
+	.lay .lay-40p { float:none; width: 100%;}
+	.lay .lay-520 { float:none; width: 100%;}
+	.lay .lay-520ext { float:none; width: 100%;}
+	.lay .lay-500 { float:none; width: 100%; padding:0;}
+	.lay .lay-500ext { float:none; width: 100%;}
+	.lay .lay-460 { float:none; width: 100%; padding:0;}
+	.lay .lay-460ext { float:none; width: 100%;}
+	
+	.visweather { display: flex; flex-direction: column-reverse; }
+	/* descktop global menu */
+	.cmp-global-menu { display:none;}
+	/* 메뉴 */
+	nav .d1-wrap [class*="d1-item"] .d1-btn.on:after{transform:translateY(-50%) rotateZ(-180deg);}
+	nav .d1-wrap [class*="d1-item"]:hover .d1-btn.on:after{transform:translateY(-50%) rotateZ(-180deg);}
+	/* content */
+	.page-wrap { padding-left: 0; }
+	
+	/* footer */
+	footer { height: auto;}
+	.f-logo { height: 140px;}
+	.recom-cont-wrap { height:auto;}
+	.f-cont-wrap { padding-top:0;}
+	.f-cont { padding-top:10px;}
+	/* footer - 추천컨텐츠 버튼 조정 */
+	.recom-cont-wrap{float:none;width:100%;}
+    .recom-cont-wrap .recom-cont-btn{font-size:15px;font-weight:700;padding:0 0 0 0;height:51px;}
+    .recom-cont-wrap .recom-cont-btn .icon{top:50%;left:50%;background:url(../image/m_arrow_up.png)no-repeat center center;background-size:cover;width:12px;height:8px;margin-top:-6px;margin-left:-60px;transition: all 0.2s;transform:rotateZ(0);}
+    .recom-cont-wrap.on .recom-cont-btn .icon{transform:rotateZ(-180deg);}
+    
+	/* === components */
+	
+	/* 메인 화면 탭과 탭 페널 */
+	.cmp-main-tabs { margin-top: 4px; position: relative; }
+	.cmp-main-tabs .tab-item { float:left; width: 100%;}
+	.cmp-main-tabs .tab-item .tab-head { z-index: 1; position: absolute; display: inline-block; font-size: 16px; color: #000; width: 55px; left:0; top:0; height: 40px;}
+	.cmp-main-tabs .tab-item:nth-of-type(3) .tab-head { left: 55px; }
+	.cmp-main-tabs .tab-item:nth-of-type(4) .tab-head { left: 110px; }
+	.cmp-main-tabs .tab-item:nth-of-type(5) .tab-head { left: 165px; }
+	.cmp-main-tabs .tab-item:nth-of-type(6) .tab-head { left: 220px; }
+	.cmp-main-tabs .tab-item:nth-of-type(7) .tab-head { left: 275px; }
+	.new-mobile-app .cmp-main-tabs .tab-item:nth-of-type(3) .tab-head { left: 47px; }
+	.new-mobile-app .cmp-main-tabs .tab-item:nth-of-type(4) .tab-head { left: 94px; }
+	.new-mobile-app .cmp-main-tabs .tab-item:nth-of-type(5) .tab-head { left: 141px; }
+	.new-mobile-app .cmp-main-tabs .tab-item:nth-of-type(6) .tab-head { left: 188px; }
+	.new-mobile-app .cmp-main-tabs .tab-item:nth-of-type(7) .tab-head { left: 235px; }
+	
+	.cmp-main-tabs.sp-tab-enabled .tab-item:nth-of-type(3) .tab-head { left: 55px; }
+    .cmp-main-tabs.sp-tab-enabled .tab-item:nth-of-type(4) .tab-head { left: 110px; }
+    .cmp-main-tabs.sp-tab-enabled .tab-item:nth-of-type(5) .tab-head { left: 210px; }
+    .cmp-main-tabs.sp-tab-enabled .tab-item:nth-of-type(6) .tab-head { left: 310px; }
+    .cmp-main-tabs.sp-tab-enabled .tab-item:nth-of-type(7) .tab-head { left: 410px; }
+    
+    .cmp-main-tabs.sp-tab-enabled.eqk-tab-enabled .tab-item:nth-of-type(3) .tab-head { left: 55px; }
+    .cmp-main-tabs.sp-tab-enabled.eqk-tab-enabled .tab-item:nth-of-type(4) .tab-head { left: 110px; }
+    .cmp-main-tabs.sp-tab-enabled.eqk-tab-enabled .tab-item:nth-of-type(5) .tab-head { left: 210px; }
+    .cmp-main-tabs.sp-tab-enabled.eqk-tab-enabled .tab-item:nth-of-type(6) .tab-head { left: 310px; }
+    .cmp-main-tabs.sp-tab-enabled.eqk-tab-enabled .tab-item:nth-of-type(7) .tab-head { left: 410px; }
+    
+	.cmp-main-tabs .tab-item .tab-head a{ line-height:40px; border-radius:0; margin:0 2px; padding-left:0; background:none;box-shadow:none;}
+	.cmp-main-tabs .tab-item .tab-head a:hover {background-color:rgba(0,0,0,0);}
+	.cmp-main-tabs .tab-item .tab-head.eqk a { padding-left:0; text-align:center; background-image:url();}
+	.cmp-main-tabs .tab-item .tab-head.wrn a:hover { padding-left:0; background-color:rgba(0,0,0,0);}
+	.cmp-main-tabs .tab-item .tab-head.wrn.active a:hover { padding-left:12px; text-align:center; background:url(../image/icon_warning_on.png) no-repeat 6px 11px; background-size:16px auto; }
+	.cmp-main-tabs .tab-item .tab-head.wrn.active a { padding-left:12px; text-align:center; background:url(../image/icon_warning_on.png) no-repeat 6px 11px; background-size:16px auto; }
+	.cmp-main-tabs .tab-item.on .tab-head a { background:none !important; color:#1D8DD9;}
+	.cmp-main-tabs .tab-item.on .tab-head.wrn.active a:hover { padding-left:12px; text-align:center; background:url(../image/icon_warning_on.png) no-repeat 6px 11px !important; background-size:16px auto !important; }
+	.cmp-main-tabs .tab-item.on .tab-head.wrn.active a { padding-left:12px; text-align:center; background:url(../image/icon_warning_on.png) no-repeat 6px 11px !important; background-size:16px auto !important; }
+	.cmp-main-tabs .tab-item .tab-head a:after { content:''; position:absolute; background-color:#1D8DD9; height:4px; left:4px; right:4px; bottom:0; transition: all .1s ease-out; opacity:0;}
+	.cmp-main-tabs .tab-item.on .tab-head a:after{ opacity:1;}
+	.cmp-main-tabs .tab-item .tab-head.local {width:55px;}
+	.cmp-main-tabs .tab-item .tab-head.home {width:55px;}
+	.cmp-main-tabs .tab-item .tab-head.eqk {width:55px;}
+	.cmp-main-tabs .tab-item .tab-head.typ {width:55px;}
+	.cmp-main-tabs .tab-item .tab-head.typh {width:55px;}
+	.cmp-main-tabs .tab-item .tab-head.wrn {width:55px;}
+	.cmp-main-tabs .tab-item .tab-head.wrn.active {width:67px;}
+	.cmp-main-tabs .tab-item .tab-head.radar {width:55px;}
+	.cmp-main-tabs .tab-item .tab-head.gismap {width:55px;}
+	
+	.new-mobile-app .cmp-main-tabs .tab-item .tab-head.local {width:47px;}
+	.new-mobile-app .cmp-main-tabs .tab-item .tab-head.home {width:47px;}
+	.new-mobile-app .cmp-main-tabs .tab-item .tab-head.eqk {width:47px;}
+	.new-mobile-app .cmp-main-tabs .tab-item .tab-head.typ {width:47px;}
+	.new-mobile-app .cmp-main-tabs .tab-item .tab-head.typh {width:47px;}
+	.new-mobile-app .cmp-main-tabs .tab-item .tab-head.wrn {width:47px;}
+	.new-mobile-app .cmp-main-tabs .tab-item .tab-head.wrn.active {width:59px;}
+	.new-mobile-app .cmp-main-tabs .tab-item .tab-head.radar {width:47px;}
+	.new-mobile-app .cmp-main-tabs .tab-item .tab-head.gismap {width:47px;}
+	.cmp-main-tabs .tab-item .tab-content { margin-top: 45px;}
+	.cmp-main-tabs:after {content:'';position:absolute;left:0;top: 36px;right:0;height: 4px;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.1);}
+	
+	.cmp-main-tabs .tab-item .tab-head.sp-newyear { width:100px; }
+	.cmp-main-tabs .tab-item .tab-head.sp-newyear a{ padding-left:45px; text-align:left; text-align: center; background-image: url();}
+	.cmp-main-tabs .tab-item .tab-head.sp-sunrise { width:100px; }
+	.cmp-main-tabs .tab-item .tab-head.sp-sunrise a{display:block; padding-left:0; text-align: center; background-image: url();}
+	.cmp-main-tabs .tab-item .tab-head.sp-sunrise a span { margin-top:auto; display:inline; width:auto; text-align:center; height:40px; line-height:40px; background-image: url();}
+	.cmp-main-tabs .tab-item .tab-head.sp-sunrise a span:last-child {margin-top:auto;}
+	.cmp-main-tabs .tab-item .tab-head.sp-summer { width:100px; }
+    .cmp-main-tabs .tab-item .tab-head.sp-summer a{ display:block; padding-left:0;text-align: center; background-image: url();}
+    .cmp-main-tabs .tab-item .tab-head.sp-summer a span { margin-top:auto; display:inline; width:auto; text-align:center; height:40px; line-height:40px; background-image: url();}
+    .cmp-main-tabs .tab-item .tab-head.sp-summer a span:last-child {margin-top:auto;}
+    .cmp-main-tabs .tab-item .tab-head.sp-chuseok { width:100px; }
+	.cmp-main-tabs .tab-item .tab-head.sp-chuseok a{ padding-left:0; text-align: center; background-image: url();}
+	.cmp-main-tabs .tab-item .tab-head.sp-csat { width:100px; }
+	.cmp-main-tabs .tab-item .tab-head.sp-csat a{padding-left:0; text-align: center; background-image: url();}
+	.cmp-main-tabs .tab-item .tab-head.sp-forestfire { width:100px; }
+	.cmp-main-tabs .tab-item .tab-head.sp-forestfire a{ padding-left:0; text-align: center; background-image: url();}
+	.cmp-main-tabs .tab-item .tab-head.sp-marineaccident { width:100px; }
+	.cmp-main-tabs .tab-item .tab-head.sp-marineaccident a{ padding-left:0; text-align: center; background-image: url();}
+	
+	
+	/* 지역 검색 */
+	.cmp-local-search > *:first-child:after { content:''; position:absolute; width:48px; height:48px; left:5px; top:50%; margin-top:-24px; /* background:url(../image/srch-icon.png)no-repeat center; background-size: auto 22px;*/ }
+	.cmp-local-search .input[type="text"] { /*padding-left:42px;*/ font-size:16px;}
+	.cmp-local-search .input[type="text"]::placeholder { font-size:16px;}
+	.cmp-local-search > .sym-btn.sch { background-image:url(); background-color:#6B6B6B; color:#fff; text-indent:0px; line-height:48px; font-size:15px; text-align:center;}
+	
+	#pop-local-search .cmp-local-search-input > .sym-btn.sch { display:block; }
+	#pop-local-search .cmp-local-search-input > *:first-child {width:calc(100% - 215px);}
+	#pop-local-search .cmp-local-search-input > .pop-open{ font-size:16px; }
+	
+	.current-weather-wrap { margin-top:0;}
+	#index-local-search {display:none}
+	#current-weather {overflow:hidden; position:relative;}
+	#current-weather .cmp-cur-weather:first-child{ padding-top:0; margin-top:-10px;} 
+	#my-point-slider {display:block;}
+	.point-sch-wrap {position:relative;}
+	.point-sch-wrap .sym-btn.sch-b { position:absolute; right:0; top:0; background-color:rgba(0,0,0,0); width:45px; height:45px; background-size:27px; display:block;}
+	.cmp-weather-short-term .point-sch-wrap .sym-btn.sch-b { top:0; right:6px; } 
+	#digital-forecast .cmp-cur-weather-air { display:block; }
+	#current-weather .cmp-cur-weather-air { display:none; }
+	
+	/* 뉴 비주얼맵 홀더 */
+	.cmp-vismap .wrap{ max-height: 520px; }
+	
+	/* 특보 및 특보 내용 */
+	.cmp-main-wrn { top:46px;}
+	.cmp-main-wrn [class*="box-con"]{position:relative;float:none; margin:10px auto; display:block; width:170px; height:26px;line-height:26px;border-radius:13px;text-align:center;font-size:16px;z-index:2;}
+	.cmp-main-wrn .box-con-off{width:117px;padding:0 4px; line-height:26px; font-size:12px; display:inline-block; position: absolute; top: -50px; right: 5px;}
+	.cmp-main-wrn .box-con-on{width:auto;padding:0 22px 0 14px; line-height:24px; font-size:12px; display:inline-block; position: absolute; top: -50px; right: 5px; border-width:2px; font-weight:600;}
+	.cmp-main-wrn .box-con-on:after{ content:'▾'; position:absolute; display:inline-block; font-size:14px; width:14px; height:14px; line-height:14px; text-align:center; right:6px; top:50%; margin-top:-7px;transform:rotateZ(0deg);transition: all 0.2s;}
+	.cmp-main-wrn .box-con-on:before{display:none;}
+	.cmp-main-wrn .box-con-on > span{padding-left:0;padding-right:0;}
+	.cmp-main-wrn .box-con > span{padding-right:10px;font-size:14px;}
+	.cmp-main-wrn .box-con-wrn { max-width: calc(100% - 152px); width:auto; right: 147px; font-size:14px;}
+	.cmp-main-wrn .box-con-wrn > span{padding-right:10px;font-size:14px;}
+	.cmp-main-wrn .accordion-con{border:1px solid #bb0000;border-top:5px solid #bb0000;padding:0 13px;background:#eef2f7;}
+	.cmp-main-wrn .tab-cont-wrap01{padding:7px 0}
+	.cmp-main-wrn .tab-wrap01{padding-bottom:0;}
+	.cmp-main-wrn [class*="tab-btn"] button{font-size:17px;margin-top:0;padding:0 9px;line-height:42px;font-weight:300;}
+	.cmp-main-wrn [class*="tab-btn"] button.on{border-bottom:3px solid #bb0000;}
+	.cmp-main-wrn [class*="tab-btn"] button.on .icon{background:url('../image/sub-tab-icon-on.png');}
+	.cmp-main-wrn [class*="tab-btn"] button.on .icon .tooltip{top:35px;}
+	.cmp-main-wrn .tab-fild{overflow:hidden;padding-bottom:8px;}
+	.cmp-main-wrn .left-flid{width:100%;float:none}
+	.cmp-main-wrn .right-flid{float:none;width:100%;padding-left:0;margin-top:15px; padding-bottom:50px; }
+	.cmp-main-wrn .right-flid > .tit{padding-left:15px;position:relative;font-size:17px;font-weight:700;}
+	.cmp-main-wrn .right-flid > .tit:after{width:7px;height:7px;content:"";position:absolute; left:0;top:50%;margin-top:-4px;background:#000;}
+	.cmp-main-wrn .right-flid > .txt{font-size:13px;padding-left:15px;margin-top:5px;margin-bottom:25px;line-height:150%;}
+	.cmp-main-wrn .right-flid > .txt strong{font-weight:700;}
+	.cmp-main-wrn .right-flid .text-area{height:245px;background:#fff;margin-top:10px;}
+	.cmp-main-wrn .right-flid > .txt span{display:block;}
+	.cmp-main-wrn .right-flid > .txt span:before{display:none;}
+	.cmp-main-wrn .right-flid > .text-area{height:190px;}
+	.cmp-main-wrn .right-flid .text-area .swiper-slide .paragraph{margin-top:25px;}
+	.cmp-main-wrn .right-flid > .text-area .swiper-slide{height:auto;font-size:13px;padding:10px;}
+	.cmp-main-wrn .big-btn{position:absolute;right:63px;top:15px;color:#595959;width:76px;height:26px;line-height:12px;font-size:12px;text-align:center;}
+	.cmp-main-wrn .accordion-con .close {width:36px;height:36px;background-size:19px;right:5px;top:5px;}
+	
+	/* 신규 방재창 영역 */
+	.cmp-main-bangjae { top:46px;}
+	.cmp-main-bangjae [class*="box-con"]{position:relative;float:none; margin:10px auto; display:block; width:170px; height:26px;line-height:26px;border-radius:13px;text-align:center;font-size:16px;z-index:2;}
+	.cmp-main-bangjae .box-con-off{width:auto;padding:0 4px; line-height:26px; font-size:12px; display:inline-block; position: absolute; top: -46px; right: 130px;}
+	.cmp-main-bangjae .box-con-on{width:auto;padding:0 22px 0 14px; line-height:24px; font-size:12px; display:inline-block; position: absolute; top: -50px; right: 130px; border-width:2px; font-weight:600;}
+	.cmp-main-bangjae .box-con-on:after{ content:'▾'; position:absolute; display:inline-block; font-size:14px; width:14px; height:14px; line-height:14px; text-align:center; right:6px; top:50%; margin-top:-7px;transform:rotateZ(0deg);transition: all 0.2s;}
+	.cmp-main-bangjae .box-con-on:before{display:none;}
+	.cmp-main-bangjae .box-con-on > span{padding-left:0;padding-right:0;}
+	.cmp-main-bangjae .box-con > span{padding-right:10px;font-size:14px;}
+	.cmp-main-bangjae .box-con-wrn { max-width: calc(100% - 152px); width:auto; right: 147px; font-size:14px;}
+	.cmp-main-bangjae .box-con-wrn > span{padding-right:10px;font-size:14px;}
+	.cmp-main-bangjae .accordion-con{border:1px solid #bb0000;border-top:5px solid #bb0000;padding:0 13px;background:#eef2f7;}
+	.cmp-main-bangjae .tab-cont-wrap01{padding:7px 0}
+	.cmp-main-bangjae .tab-wrap01{padding-bottom:0;}
+	.cmp-main-bangjae [class*="tab-btn"] button{font-size:17px;margin-top:0;padding:0 9px;line-height:42px;font-weight:300;}
+	.cmp-main-bangjae [class*="tab-btn"] button.on{/*border-bottom:3px solid #bb0000;*/}
+	.cmp-main-bangjae [class*="tab-btn"] button.on .icon{background:url('../image/sub-tab-icon-on.png');}
+	.cmp-main-bangjae [class*="tab-btn"] button.on .icon .tooltip{top:35px; left: 0px; width: unset;}
+	.cmp-main-bangjae .sub-btn{font-size: 15px; line-height: 7px;}
+	.cmp-main-bangjae .tab-fild{overflow:hidden;padding-bottom:8px;}
+	.cmp-main-bangjae .bottom-flid{width:100%;float:none}
+	.cmp-main-bangjae .bottom-flid img{margin: 15px 15px 5px 0;}
+	.cmp-main-bangjae .top-flid{float:none;width:100%;padding-left:0;margin-top:8px;}
+	.cmp-main-bangjae .top-flid > .tit{padding-left:15px;position:relative;font-size:13px;font-weight:700; margin-top: 5px;}
+	.cmp-main-bangjae .top-flid > .tit:after{width:7px;height:7px;content:"";position:absolute; left:0;top:50%;margin-top:-4px;background:#000;}
+	.cmp-main-bangjae .top-flid > .txt{font-size:13px;padding-left:15px;margin-top:5px;margin-bottom:25px;line-height:150%;}
+	.cmp-main-bangjae .top-flid > .txt strong{font-weight:700;}
+	.cmp-main-bangjae .top-flid .text-area{height:245px;background:#fff;margin-top:10px;}
+	.cmp-main-bangjae .top-flid > .txt span{display:block;}
+	.cmp-main-bangjae .top-flid > .txt span:before{display:none;}
+	.cmp-main-bangjae .top-flid > .text-area{height:260px;}
+	.cmp-main-bangjae .top-flid .text-area .swiper-slide .paragraph{/*margin-top:25px;*/}
+	.cmp-main-bangjae .top-flid > .text-area .swiper-slide{height:auto;font-size:13px;padding:10px;}
+	.cmp-main-bangjae .big-btn{position:absolute;right:63px;top:15px;color:#595959;width:76px;height:26px;line-height:12px;font-size:12px;text-align:center;}
+	.cmp-main-bangjae .accordion-con .close {width:36px;height:36px;background-size:19px;right:5px;top:5px;}
+	.cmp-main-bangjae .accordion-con .dont-open{right:21px; top:16px; font-size:11px;}
+	.cmp-main-bangjae .new{top: -5px; right: 92%;}
+
+	/* 현재 날씨 */
+	.cmp-cur-weather .wrap-1 {margin-top:4px;}
+	
+	/* 북마크 - 현재 위치 버튼, 관심지역 드롭다운, 특보 여부 아이콘, 관심지역관리 버튼, 도움말 버튼 */
+	.cmp-bookmark { border-radius: 0px; padding:1px 0; background-color:#fff;}
+	.cmp-bookmark:after{content:"";clear:both;display:block;}
+	.cmp-bookmark .sym-btn.curr{float:left;}
+	.cmp-bookmark span{float:left; line-height:37px; font-size:14px;}
+	.cmp-bookmark span.sub-title{line-height:1.2; font-size:13px;}
+	.cmp-bookmark .serch-area{float:left; height:37px;width:100%;padding-left:5px; max-width:calc(100% - 100px);}
+	.cmp-weather-short-term .cmp-bookmark .serch-area{ width:100%; max-width:calc(100% - 120px);}
+	.plan-a .cmp-bookmark .serch-area{ max-width:calc(100% - 190px);}
+	.cmp-bookmark .serch-area-btn{ width:100%; padding-right:28px;font-size:14px; color:#000; line-height:1.2; height:37px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;}
+	.cmp-bookmark .serch-con{position:absolute;top:48px;left:0; padding-left:35px; padding-right:30px;background:#efefef;width:100%;overflow:auto;border-radius:5px;}
+	.cmp-bookmark .serch-con button, .serch-con a{ display:block;line-height:40px;font-size:14px;display:block;padding-left:10px;text-align:left;color:#595959;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;}
+	.cmp-bookmark .serch-con button:hover, .serch-con a:hover{background:#dfe6f0;color:#000}
+	.cmp-bookmark .right-wrap { display:inline-block; float:none; }
+	.cmp-bookmark .right-wrap .sym-btn.star { float:left; border:none; background-color:rgba(0,0,0,0);background-size:20px auto; width:30px; height:30px; margin:2px 0 4px 0;}
+	.cmp-bookmark .right-wrap .sym-btn.quest {display:none;}
+	.cmp-bookmark .right-wrap .tt-btn {float:left; margin-top:10px; display:unset !important; width:17px; height:17px; }
+	.cmp-bookmark .right-wrap .tt-btn .tt {width:100%;}
+	.cmp-bookmark .serch-area .serch-area-btn:after { display:none; }
+	.cmp-bookmark .serch-area-btn { padding-right:0;}
+	.cmp-bookmark .serch-con { display:none !important;}
+	.cmp-bookmark .right-wrap a.open-wgis { display:block;}
+	.cmp-bookmark .right-wrap a.open-wgis { margin-left:8px;float:right;padding: 4px 6px;line-height: 100%;font-size: 14px;background-color:#009AE1;color:#fff;border-radius:6px;margin-top: 4px;}
+	.cmp-bookmark .right-wrap a.open-wgis:after {color:#009AE1; content:''; display:inline-block; background:url(../image/renew/ic_sym_06_white.png) no-repeat center center; background-size:14px;width: 20px; height: 20px; vertical-align: middle;}
+	
+	/* 현재 날씨 */
+	.cmp-cur-weather .wrap-1 .w-txt {font-size:17px; margin-bottom:11px;}
+	
+	.cmp-cur-weather-head { font-size:14px; padding:10px; }
+	.cmp-cur-weather .wrap-3 li:last-child{text-align:unset;}
+	
+	/* 메인 영향예보 */
+	.cmp-impact-fct h3 { font-size:14px;width: 110px; }
+	.cmp-impact-fct h3 span {left:15px; margin-top:-9px;}
+	.cmp-impact-fct p { font-size:14px; padding:10px;}
+	
+	/* 현재날씨 갱신시각 */
+	.cmp-cur-weather .updated-at { display:none;}
+	.cmp-cmn-para.odam-updated {display:block; padding:4px 0; position:absolute; right:0; top:auto; z-index:1;}
+	.cmp-cmn-para.odam-updated .updated-at{ font-size:15px; line-height:16px; border-radius:6px; margin-top:-8px;}
+	
+	/* 메인 기상전망 */
+	.cmp-fct-summary p { font-size: 14px; margin:10px 0; padding:0 10px;line-height: 18px; height: 54px; overflow:hidden; text-overflow: ellipsis;
+		display: -webkit-box;
+	    -webkit-line-clamp: 3;
+	    -webkit-box-orient: vertical;
+	}
+	.cmp-fct-summary .more { text-align:center;position:relative; margin-bottom:16px; margin-top:16px; border-bottom:1px solid #D4E4EC;}
+	.cmp-fct-summary .more a { position:absolute; font-size: 15px; line-height:22px; color:#fff; background:#0099E1; padding:0 20px; left:50%; margin-left:-40px; bottom: -11px;}  
+		
+	/* 메인 가까운 AWS */
+	.cmp-main-aws h3 {font-size:13px; }
+	.cmp-main-aws table tr th {font-size: 13px; }
+	.cmp-main-aws table tr td {font-size: 13px; }
+	
+	/* 오른쪽 정렬 문단 */
+	.cmp-cmn-para p{ font-size:13px; padding:4px; }
+	
+	/* 날씨 슬라이더 */
+	.cmp-dfs-slider { position:relative;}
+	.cmp-dfs-slider .dfs-slider .dfs-slider-border { display:none; }
+	.cmp-dfs-slider .dfs-slider:focus { overflow:hidden; }
+	.cmp-dfs-slider .dfs-slider:focus .dfs-slider-border { display:none; }
+	.cmp-dfs-slider .dfs-tab-body .slide-wrap:after { border-bottom:1px dotted #555;}
+	.cmp-dfs-slider .view-options {position:absolute; left:3px; right:3px; top:50px; padding:16px; width:auto;box-shadow:3px 3px #CACACA; }
+	.cmp-dfs-slider .view-options h4 {float:none; width:100%; font-size:15px; color:#000; line-height:32px;}
+	.cmp-dfs-slider .view-options h4:first-of-type { margin-bottom:0; }
+	.cmp-dfs-slider .view-options h4:last-of-type { margin-bottom:6px; }
+	.cmp-dfs-slider .view-options ul {float:none; width:100%; margin-top:6px;}
+	.cmp-dfs-slider .view-options ul:first-of-type { margin-bottom:0; }
+	.cmp-dfs-slider .view-options ul li {float:left; height:auto; width:calc(100% / 3); min-width:unset; margin:0;}
+	.cmp-dfs-slider .view-options ul li a { display:block;font-size:15px; margin:3px;}
+	.cmp-dfs-slider .view-options .sym-btn.big-close { position:absolute; right:0; top:0;}
+	
+	.cmp-dfs-updated { position:relative; text-align:right;top: auto; left: auto; }
+	.cmp-dfs-updated a.open-box {font-size:13px; padding:0 15px;color:#000; line-height:22px; position:relative; margin:10px;}
+	.cmp-dfs-updated .shadow-box { height:0; transition: all .2s ease-out; opacity:0; overflow:hidden;}
+	.cmp-dfs-updated .shadow-box .inner {margin:10px 20px;padding:16px 20px 16px 20px; border-radius:5px; border:1px solid #CBCBCB; box-shadow:0px 0px 10px 0px rgba(0,0,0,0.2); text-align:left; position:relative;}
+	.cmp-dfs-updated .shadow-box a.close-box { content:'';position:absolute; top:0; right:0; width:34px; height:34px; background:url(../image/btn_close.png) no-repeat center center; background-size:14px; text-indent:-9999px;}
+	.cmp-dfs-updated .shadow-box h5 {font-size:15px; font-weight:700; line-height:200%;}
+	.cmp-dfs-updated .shadow-box dl { display:block; font-size:11px; line-height:170%;}
+	.cmp-dfs-updated .shadow-box dl dt { display:inline; color:#000;}
+	.cmp-dfs-updated .shadow-box dl dd { display:inline; color:#000;}
+	.cmp-dfs-updated a.on + .shadow-box { height:auto; max-height:136px; opacity:1;overflow:visible; margin-bottom:50px;}
+	
+	/*.cmp-dfs-slider.hr1-fct + .cmp-dfs-updated { position:relative; text-align:right;top: auto; left: auto; }
+	.dfs-guide-btn { top:22px; left:400px; }*/
+	
+	
+	.cmp-air-legend { position:relative;}
+	
+	.cmp-dfs-slider .dfs-tab-body .day-ten .item { width:54px; }
+	.cmp-dfs-slider .dfs-tab-body .day-ten .item.all-day { width:108px; }
+	
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide { width: 554px !important;}
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .daily-head { padding:18px 0 0 0;}
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .daily-head .date { font-size:17px;}
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .daily-head .table-head li { font-size:12px; padding:0; height:44px; } 
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li { font-size:13px; padding:1px 2px; height:30px; font-weight: 500; line-height: 20px;}
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li:nth-child(9) span[class*="lvl"] { padding:0;}
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide.day-ten .daily .item-wrap .item:not(.all-day):first-of-type { /* border-bottom:1px solid #eee; */ }
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide:not(.day-ten) .daily .item-wrap .item li .wic { display:inline-block; height:auto; text-align:center; width:100%; text-indent:0px; background-position-x:center; background-position-y: top; background-size:30px auto; padding-left:0; padding-top: 30px; vertical-align:middle;}
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li .wic { padding-left:34px; height:30px; background-size:30px auto;}
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li .lgt { right:auto; left:26px;}
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li .wdic { display:inline-block; text-indent:0px; margin:0;background:none; width:100%; transform:rotate(0deg);}
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li .chill { display:block; text-align:center; }
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li .wspd { display:block; text-align:center; padding-left:0;}
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li .feel { position:unset; display:block; text-indent:0px; text-align:center; line-height:normal; width:auto; height:auto;}
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li .feel .chill { display:block; font-size:12px; letter-spacing:-1px;}
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li .wspd .unit { font-size:11px;}
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide.day-ten { width: 414px !important;}
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide.day-ten .daily .daily-head .table-head li { font-size:12px; padding:0; height:44px; }
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide.day-ten .daily .daily-head .date { padding-right:0;}
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide.day-ten .daily .daily-head .end-date { font-size:17px; }
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide.day-ten .daily .daily-head .end-date:before { font-size:17px; }
+	
+	.cmp-dfs-slider .dfs-tab-body .slide .daily-head { font-size:13px; }
+
+	.cmp-dfs-slider.mode-table.hr03-fct .dfs-tab-body .slide { min-width:554px; }
+
+	.cmp-dfs-slider .skip_nav { display:none; }
+	/* 맵 모드 */
+	.mode-map .cmp-main-tabs { margin-top:4px; }
+	.mode-map .cmp-main-tabs .tab-item:nth-of-type(2) .tab-head { left: 0px; }
+	.mode-map .cmp-main-tabs .tab-item:nth-of-type(3) .tab-head { left: 55px; }
+	.mode-map .cmp-main-tabs .tab-item:nth-of-type(4) .tab-head { left: 110px; }
+	.mode-map .cmp-main-tabs .tab-item:nth-of-type(5) .tab-head { left: 165px; }
+	.mode-map .cmp-main-tabs .tab-item:nth-of-type(6) .tab-head { left: 220px; }
+	.mode-map .cmp-main-tabs .tab-item:nth-of-type(7) .tab-head { left: 275px; }
+	.mode-map .cmp-wgis-fullmap { padding-top:160px; }
+	.mode-map .cmp-wgis-fullmap:before { display:none; }
+	.mode-map .point-sch-wrap { height:auto; }
+	.mode-map .cmp-main-tabs .tab-item .tab-content { margin-top:44px; }
+	.mode-map .cmp-main-wrn .box-con-on { margin-right:10px; top:-55px; }	
+	
+	.cmp-common-tabs {position:relative; padding:13px 10px 0px 10px; overflow:hidden; border-bottom:1px solid #D1D1D1;}
+	.cmp-common-tabs li a{ padding:8px 14px; color:#000; font-size:17px; font-weight:700;}
+	.cmp-common-tabs li a:after {content:''; position:absolute; left:0;right:0;bottom:0; height:2px; background-color:#1D8DD9; opacity:0;transition: all .2s ease-out;}
+	.cmp-common-tabs li.on a:after {opacity:1;}
+	
+	.cmp-local-weather .map-data-wrap h3{ font-size:13px; color:#767676; width:55px; left:0; top:0px; height:31px; text-align:center;}
+	.cmp-local-weather .map-data-wrap h3:after { left:6px; right:6px; bottom:-1px; height:1px;}
+	.cmp-local-weather .map-data-wrap:nth-of-type(2) h3 { left:55px; }
+	.cmp-local-weather .map-data-wrap:nth-of-type(3) h3 { left:110px; }
+	.cmp-local-weather .map-data-wrap:nth-of-type(4) h3 { left:165px; }
+	.cmp-local-weather .map-data-wrap:nth-of-type(5) h3 { left:220px; }
+	.cmp-local-weather .map-data-wrap:nth-of-type(6) h3 { left:275px; }
+	.cmp-local-weather .map-data-wrap .map-data { margin-top: 34px; }
+	#local-weather .updated-at span{ background-size: auto 12px; padding-left: 12px; color:#666; font-size: 14px; line-height:20px;}
+	.cmp-local-weather.cmp-local-weather-fct .map-data-wrap h3 { width:55px; font-size:13px;}
+	.cmp-local-weather.cmp-local-weather-fct .map-data-wrap h3:after { left:6px; right:6px; bottom:-1px; height:1px;}
+	.cmp-local-weather.cmp-local-weather-fct .map-data-wrap:nth-of-type(2) h3 { left:55px; }
+    .cmp-local-weather.cmp-local-weather-fct .map-data-wrap:nth-of-type(3) h3 { left:110px; }
+    .cmp-local-weather.cmp-local-weather-fct .map-data-wrap:nth-of-type(4) h3 { left:165px; }
+    .cmp-local-weather.cmp-local-weather-fct .map-data-wrap:nth-of-type(5) h3 { left:220px; }
+    .cmp-local-weather.cmp-local-weather-fct .map-data-wrap:nth-of-type(6) h3 { left:275px; }
+    .cmp-local-weather.cmp-local-weather-fct .map-data-wrap:nth-of-type(7) h3 { left:330px; }
+	
+	.weather-cmt-main { padding:8px 16px;}
+	.weather-cmt-main h3 { font-size:19px; line-height:24px; }
+	.weather-cmt-main h4 { font-size:16px;}
+	.weather-cmt-main .updated-at span { font-size:14px; background-size: auto 14px; padding-left: 14px; }
+	.weather-cmt-main .cmt-cont { font-size:14px;}
+
+	/* 토글 */
+	.cmp-toggle-gis a[data-map-mode-action] span { line-height:24px; padding:5px 0; padding-left:65px; font-size:16px; }
+	.cmp-toggle-gis a[data-map-mode-action="img"] span { background-size:auto 24px; }
+	.cmp-toggle-gis a[data-map-mode-action="gis"] span { background-size:auto 24px; }
+	.cmp-toggle-gis a[data-map-mode-action="close"] span { padding-left:0;}
+	.cmp-toggle-gis a[data-map-mode-action="close"]:after span { background-size:auto 24px; }
+	.cmp-toggle-gis a[data-map-mode-action="open"] span { padding-left:0;}
+    .cmp-toggle-gis a[data-map-mode-action="open"]:after span { background-size:auto 24px; }
+	
+	.new-main #eqk-warning .map-cont-wrap { margin-top:14px;}
+	.sp-banner-enabled .cmp-sp-banner { display:block; top:55px; z-index:1; width:100%;}
+	.sp-banner-enabled .cmp-main-tabs .tab-item .tab-content { margin-top:96px;}
+	
+	.modal-layer-close {width:50px;height:50px;right:5px;top:5px; background-size:20px; }
+	.modal-layer-inner { margin-top:105px; padding-top:50px; }
+	#pop-local-search { display:block;}
+	.cont-wrap.plan-a .cmp-vismap { display:none; }
+	.cmp-bookmark .right-wrap a.open-wgis { display:none; }
+	.new-mobile-app .cmp-bookmark .right-wrap a.open-wgis { display:block; }
+	/* 전국날씨 */
+	.new-mobile-app #weather-cmt { display:none;}
+	
+	/* 아이콘 설명 */
+	.iconguide-btn-wrap { position:absolute; right:10px; top: 20px;}
+	.btn-fullimage-close{width:30px;height:30px;right:10px;top:10px;background-size:20px 20px;}
+	
+	/* 날씨 - 특보 */
+	.subp01-02 .kmap-wrap { height:380px; }
+	
+	/* 일별예보 추가로 인한 CSS */
+	.dfs-daily-head { padding: 0px 17px 7px 7px; }
+	.dfs-daily-slider-body .item-lbl:before { content:''; width:55px; left:0; top:10px; bottom:0; position:absolute;box-shadow:3px 0 3px -2px rgba(0, 0, 0, 0.1); }
+}
+@media screen and (max-width:768px){
+	/* 뉴 비주얼맵 홀더 */
+	.cmp-vismap .wrap{ max-height: 430px; }
+	/* 날씨 슬라이더 */
+	.cmp-dfs-slider .dfs-tab .right .btns .sym-btn.with-txt { text-indent:-9999px; padding-left:0; padding-right:0; width:32px;}
+	.cmp-dfs-slider .view-options ul li a { padding:0 10px;}
+	
+	/* 바다 중기 예보 */
+	.ocean-mid-term .cmp-view-header2 em{ position:unset; display:block; }
+	.ocean-mid-term .table-col { min-width:768px; }
+	.ocean-mid-term .cont-box01:first-of-type { margin-top:0; }
+	.ocean-mid-term .cmp-mg-top-20 { margin-top:0; }
+	
+	/* 날씨지도 */
+	/* KMAP */
+	
+	.kmap-app .kmap-message { padding:10px; width:calc(100% - 120px); left:47px; max-width:390px;}
+	.kmap-app .kmap-message > div { font-size:12px; line-height:16px; }
+	.kmap-app .kmap-message > a.kmap-message-close { right:14px; top:14px; width:32px; height:32px; background-size:13px;}
+	
+}
+@media screen and (max-width:610px) {
+	/* 날씨 슬라이더 */
+	.cmp-dfs-slider .dfs-tab { float:none; padding: 6px 0px 0px 8px; height:46px; position:relative; overflow:visible;  min-width:340px;}
+	.cmp-dfs-slider .dfs-tab .right { float:left; width:calc(100% - 316px); height:auto;}
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head-wrap { float:left; overflow:hidden; margin-top:0;}
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head { display:block; width:316px; height:40px; }
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head li { display:block; position:relative; float:left; min-width:62px; margin-left:3px; font-size: 16px; background:#DAE0E8;}
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head li:first-of-type { margin-left:0; }
+	.cmp-dfs-slider.hr1-fct .dfs-tab .right { width:calc(100% - 316px);}
+	.cmp-dfs-slider.hr1-fct .dfs-tab .dfs-tab-head { width:316px; }
+	.cmp-dfs-slider.hr1-fct .dfs-tab .dfs-tab-head li { min-width:50px;}
+	.cmp-dfs-slider.hr1-fct .dfs-tab .dfs-tab-head li[data-experimental="Y"] { width:50px;}
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head li[data-experimental="Y"] a > span { font-size:13px; }
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head li[data-experimental="Y"] a > small { font-size:11px; letter-spacing:-1px; }
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head li a { border:1px solid #B9C5D3; display:block; position:relative; text-align:center; line-height:36px;padding-top:2px;}
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head li a.on + .tt-btn { display:none;}
+	.cmp-dfs-slider .dfs-tab .right .updated { font-size:13px; float:left; display:none; height: 46px; position:relative; width: 250px; padding-top:0px;}
+	.cmp-dfs-slider .dfs-tab .right .updated h4 { position:absolute; left:6px; top:3px; font-weight: 600;}
+	.cmp-dfs-slider .dfs-tab .right .updated strong { display:block; padding-left:64px; line-height:20px; font-weight: 400; letter-spacing:-1px;}
+	.cmp-dfs-slider .dfs-tab .right .btns {float: right; display:inline-block; height:auto; padding-top:0; padding-right:5px;}
+	.cmp-dfs-slider .dfs-tab .right .btns .sym-btn { height:32px; padding-left:28px; background-size: 18px; line-height:32px;}
+}
+@media screen and (max-width:520px){
+	/* 날씨지도 */
+	.kmap-app .timebar { width:270px;margin-left: 0px; left:46px; }
+	.kmap-app .timebar input.range { width: 90px; }
+}
+@media screen and (max-width:460px) { 
+	.cmp-dfs-slider .dfs-tab .right { width:calc(100% - 210px)}
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head { width:210px; }
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head li { min-width:50px; }
+	.cmp-dfs-slider.hr1-fct .dfs-tab .dfs-tab-head li { min-width:46px; }
+	.cmp-dfs-slider.hr1-fct .dfs-tab .right .btns .btn-wrap { display:none; }
+	.cmp-dfs-slider.hr1-fct .dfs-tab .right .btns .sym-btn.settings { display:inline-block;}
+}
+@media screen and (max-width:430px){
+	/* 메인 내 모든 지점의 기온 및 날씨 현황 레이어 팝업*/
+	.cmp-pop-my-points { position: relative;display: block; background:#EEF2F7; font-size: 14px; padding-right:70px;}
+	.cmp-pop-my-points ul { overflow: auto; padding:10px 10px; }
+	.cmp-pop-my-points ul li { position:relative;float:left; width:50%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap; padding-right:33px; line-height:26px;}
+	.cmp-pop-my-points ul li:before { display:none;}
+	.cmp-pop-my-points ul li strong { position:absolute; right:5px; top:0;}
+	.cmp-pop-my-points .sym-close { position: absolute; right:0; top:auto; bottom: 4px;}
+	
+	/* 북마크 - 현재 위치 버튼, 관심지역 드롭다운, 특보 여부 아이콘, 관심지역관리 버튼, 도움말 버튼 */
+	.cmp-cur-weather .wrap-1 .w-temp .tmp .minmax span:first-child { display:none;}
+	.cmp-cur-weather .wrap-1 .w-temp .tmp .minmax span:nth-child(3) { display:none;}
+	.cmp-cur-weather .wrap-1 .w-temp .tmp .minmax span:nth-child(4):before { content:'/'; color:#000; font-size:13px; line-height:17px;}
+	
+	/* 뉴 비주얼맵 홀더 */
+	.cmp-vismap .wrap{ max-height: 380px; }
+	
+	/* 날씨 - 특보 */
+	.subp01-02 .kmap-wrap { height:300px; }
+}
+
+@media screen and (max-width:380px){
+	.cmp-dfs-slider .view-options .sym-btn.big-close { width:44px; height:44px; background-size:20px auto; }
+}
+
+@media screen and (max-width:360px) {
+	.cmp-cur-weather .w-temp .tmp { font-size:33px;}
+}
+@media screen and (max-width:320px){
+	.cmp-dfs-slider .view-options { padding:10px; }
+	.cmp-dfs-slider .view-options ul li a { font-size:14px;}
+	/* .cmp-dfs-slider .view-options ul li {float:none; display:block; height:auto; width:100%; min-width:unset; margin-bottom:6px;} */
+	/* 뉴 비주얼맵 홀더 */
+	.cmp-vismap .wrap{ max-height: 380px; }
+	
+}

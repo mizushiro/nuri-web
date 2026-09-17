@@ -1,0 +1,192 @@
+@charset "utf-8";
+
+/*삭제할 부분*/
+body, input, textarea, select, button, table, th, td {font-family: 'NanumSquareRound', 'Malgun Gothic','맑은고딕', 'Dotum', 'AppleSDGothicNeo', 'sans-serif';}
+
+/*공통*/
+.life_wtr_style {clear:both; width:100%;}
+.life_wtr_style h3.tit {font-size:30px; font-weight:600; margin-top:40px;}
+.life_btn button {display: block; position: absolute; top:0; right:0; width:110px; height:24px; line-height:24px; border:1px solid #27a2e3; border-radius: 30px;}
+.life_btn02 button {display: block; width:110px; height:24px; line-height:24px; border:1px solid #27a2e3; border-radius: 30px; margin-top:20px;}
+.life_txt_info {position:relative; clear:both; width:100%;  min-height: 50px; padding:10px 20px; border:1px solid #dae3fc; margin-bottom: 10px;}
+.life_txt_info:before {content:''; border-top:1px solid #006fe8;  border-left:1px solid #006fe8; position:absolute; top:-1px; left:-1px ; width:30px; height:30px;}
+.life_txt_info:after {content:''; border-bottom:1px solid #006fe8;  border-right:1px solid #006fe8; position:absolute; bottom:-1px; right:-1px ; width:30px; height:30px;}
+.life_txt_info p {font-size:16px; line-height:30px; font-weight: 300;}
+.life_txt_info .life_btn button {top:13px; right:20px;}
+.l_gray {background:#e5e5e5; color:#000;}
+.yellow {background:#fad98f; color:#000;}
+.orange {background:#f68c3a; color:#fff;}
+.red {background:#d92100; color:#fff;}
+.purple {background:#54248e; color:#fff;}
+.font_l_gray {color: #e5e5e5;}
+.font_yellow {color:#fad98f;}
+.font_orange {color:#f68c3a;}
+.font_red {color:#d92100;}
+.font_purple {color:#54248e;}
+.t_left {text-align: left;}
+.t_right {text-align: right;}
+.mt20 {margin-top:20px;}
+.mt30 {margin-top:30px;}
+.mt40 {margin-top:40px;}
+.mb20 {margin-bottom: 20px;}
+.cor_list {padding:20px;}
+.cor_list li {position:relative; text-align: left; text-align: 18px; line-height: 26px; padding-left:20px;}
+.cor_list li:before {content:'▶'; font-size: 16px; position:absolute; top:0; left:0;}
+.cor_circle p{display: inline-block; position:relative; font-size:22px; line-height: 50px; padding-left:60px; color:#000;}
+.cor_circle .circle {position:absolute; top:0; left:0;width:50px; height:50px; border-radius: 50px; }
+.bold_bottom {border-bottom: 1px solid #000 !important;}
+
+/*생활기상지수*/
+.mt25 {margin-top:25px;}
+.east_add_lay {margin-top:5px;}
+.subp .serch-area .serch-area-btn.east_sch {font-size:14px; line-height:37px; height:37px;}
+.small_date {clear:both; width:100%; font-size:14px;}
+.small_date button {display: inline-block; margin:0 5px;}
+.small_date button img {width:14px;}
+
+.lifeindex_state {position:relative; overflow: hidden;}
+.lifeindex_state ul {display:flex; justify-content:space-between; margin-top:20px;}
+.lifeindex_state li {text-align: center; width:140px; height:200px; border:1px solid #dae3fc; padding:20px 0;}
+.lifeindex_state li .info_img img {width:80px;}
+.lifeindex_state li .info_txt {display: inline-block; margin:15px auto 5px; min-height:34px; font-size: 15px;;}
+.lifeindex_state li .info_alert {display: inline-block; font-size:20px; width:80px; height:30px; line-height:30px; border-radius: 30px; font-weight: bold;}
+.info_tag {display:block; padding:8px 0 ; border-radius: 2px; font-size:15px;}
+
+.grade_area {width:100%; position:relative; overflow: hidden;}
+.grade_area h3 {margin-bottom: 20px;}
+.grade_area .left_area {float:left; width:50%; padding:0 40px; box-sizing: border-box;}
+.grade_area .right_area {position:relative; float:right; width:50%; padding:0 40px; box-sizing: border-box;}
+.grade_area .right_area:before {content:'';display: block;width:1px;height:200px;border-left:1px dotted #bababa;position:absolute;bottom: 0;left: 0px;}
+.grade_area li {float:left; width:33.3%;  }
+.grade_area li span {display: block;text-align: center; font-size:18px;  margin-top:20px;}
+.grade_area li .date_tit {font-weight: bold;}
+.grade_area li img {width:110px;}
+
+.alert_info_area {width:100%; clear:both; padding:30px; font-size:18px; border:2px solid #dae3fc; box-sizing: border-box; margin-top:40px;}
+.alert_info_area .alert_info_txt {padding-left:60px; background: url(/_indexImg/no_ser.png) left center no-repeat;}
+.alert_info_area .alert_info_txt p {margin-bottom:20px;}
+.alert_info_area .alert_info_txt p:last-of-type {margin-bottom: 0;}
+
+/*지수표출*/
+.time_info {position:absolute; top:22px; right:20px;}
+.time_info p {font-size:15px; text-align: right;}
+.map_area {float:left; width:400px; height:500px; border:1px solid #000; margin-top:20px;}
+.right_index_area {float:left; margin-left:20px; margin-top:20px; overflow: hidden;}
+.right_index_area h4, .correspond h4 {font-size:28px; font-weight:600;}
+.right_index_area h4 span {font-size:22px; padding-left:10px; font-weight: 300;}
+.state_area {float:left; width:390px; text-align: center; padding:40px 0; }
+.state_area .icon_img img {width:110px;}
+.state_area .state {display:inline-block; width:120px; height:40px; line-height: 40px; border-radius: 40px; font-size:22px; font-weight: bold; text-align: center; margin:30px 0 0 50px;} 
+.state_area ul li {float:left; width:60px; height:90px; margin-left:15px; font-size:22px; font-weight: 600; line-height: 90px;}
+.state_area ul li.red {line-height: normal; padding-top:20px}
+.cor_grade {clear:both;padding-top:10px;}
+.state_area.s_four ul li {width:80px;}
+.correspond {float:left; width:100%; max-width:780px; min-height:250px; background:#eef2f7; padding:35px 40px; margin-left:20px;}
+.correspond li {position:relative; font-size:20px; line-height:30px; padding-left:30px; margin-top:20px;}
+.correspond li::before {content:''; display: block; width:20px; height:20px; background: url(./_indexImg/info_icon_04.png) no-repeat; position: absolute; top:3px; left:0;}
+
+/*지수탭*/
+.life_tab {width:780px; margin:40px auto 20px; overflow: hidden;}
+.life_tab li {float: left; margin-left: 45px;}
+.life_tab li span {display: block; font-size:15px; padding-top:10px;}
+.life_tab li img {width:52px;}
+.life_tab li:first-child {margin-left:0;}
+.life_tab li button:focus {box-shadow: none;}
+.life_tab.tree_tab {width:250px;}
+
+/*타임테이블*/
+.time_tbl_wr {position:relative; }
+.time_left {font-size:15px; float:left; padding-bottom: 20px;}
+.time_right {font-size:15px; float:right; padding-bottom: 20px;}
+.time_tbl_wr .time_tbl th:first-of-type {padding: 0 20px;}
+.time_tbl_wr .time_tbl td {min-width:40px; padding:10px;}
+.time_tbl_wr .time_tbl td a {display: block; width: 100%; height: 100%;}
+.over-scroll-web {overflow-x: scroll; clear: both;}
+.over-scroll-web table {min-width:100%;}
+
+/*체감온도*/
+.cmp-common-heading .time_right {position:absolute; top:0; right:0; margin-top: 30px;}
+.cmp-common-heading .life_btn {position:absolute; top:10px; right:0;}
+.sensible_head {position:relative;}
+.sensible_head .life_btn {float:right;}
+
+/*지수안내*/
+.info_area h4 {position:relative; font-size:20px; font-weight: 600; padding-left:30px; margin-top:40px; margin-left:-10px;}
+.info_area h4:before {content:''; display: block; width:12px; height:12px; border:4px solid #27a2e3; position:absolute; top:0; left:0;}
+.info_area h5 {font-size:18px; font-weight: 900; padding-top:20px;}
+.info_area .txt_list {position:relative; width:100%; padding-left:20px; padding-bottom: 30px; border-bottom:1px solid #bababa;}
+.info_area .txt_list li {position:relative;  font-size: 18px; font-weight: 300; line-height: 30px; padding-left: 20px;}
+.info_area .txt_list li:first-of-type {margin-top:10px;}
+.info_area .txt_list li::before {content:'-'; padding-right:5px;}
+.info_area .txt_list>ul>li>ul>li {padding-left:30px;}
+.info_area .txt_list>ul>li>ul>li::before {content:'···'; letter-spacing: -2px; position:absolute; top:0; left:5px;}
+.info_area .txt_list p {font-size:18px; font-weight:bold; padding-top:20px;}
+.txt_list .life_btn button {top:auto; bottom:30px;}
+
+@media screen and (max-width:1440px){
+    /*생활기상지수*/
+    .lifeindex_state ul {display: block;}
+    .lifeindex_state li {width:24%; float:left; margin-left:1%; margin-bottom:10px;}
+    .lifeindex_state li:first-of-type, .lifeindex_state li:nth-child( 4n + 1) {margin-left:0;}
+    .lifeindex_state li span {display: inline-block; width:100%;}
+}
+@media screen and (max-width:1524px){
+    /*지수박스*/
+    .map_area {width:35%;}
+    .right_index_area {width:60%;}
+    .state_area {width:50%;}
+    .state_area ul li {width:20%;margin-left: 0;font-size: 16px;}
+    .state_area .state {margin:30px 0 0 15px;font-size: 16px;width: auto;padding: 0 20px;}
+    .correspond {width:60%;}
+    .correspond li {font-size:16px; line-height:24px;}
+    .cmp-common-heading .time_right {position:relative; width: 100%;text-align: right;margin-bottom: 10px;margin-top: 0px;}
+    .state_area.s_four ul li {width:25%;}
+    .state_area.s_four ul li.red {padding-top:25px;}
+}
+@media screen and (max-width:1260px){
+    .grade_area .left_area, .grade_area .right_area {width:100%; padding:0;}
+    .grade_area .right_area:before {display: none;}
+    .life_txt_info .life_btn button {top: -33px;right: 0px;}
+    .time_info {top:19px;}
+    .time_info p {font-size: 12px;}
+    /*지수박스*/
+    .map_area {width:100%;margin-top: 10px;}
+    .right_index_area {width:100%; margin-left:0;}
+    .correspond {width:100%; max-width:none; margin-left:0;padding: 20px 20px 30px; min-height: auto;}
+    .right_index_area h4, .correspond h4 {font-size:20px;}
+    .right_index_area h4 span {font-size:14px;}
+    .correspond li {line-height:18px;margin-top: 10px;}
+    .correspond li::before {top:0;}
+    .alert_info_area {font-size: 16px; margin-top:20px;}
+    /*지수테이블*/
+    .cor_circle p {font-size:20px; line-height:normal; padding-left:30px;}
+    .cor_circle .circle {width:20px; height:20px; border-radius: 20px;}
+    .cor_list {padding:5px;}
+}
+@media screen and (max-width:1000px){
+    .life_wtr_style h3.tit {font-size:20px;}
+    /*지수테이블*/
+    .over-scroll-web table tbody th:first-of-type {max-width:100px;}
+}
+@media screen and (max-width:840px){
+    /*생활기상탭*/
+    .life_tab {width:100%; text-align: center; margin:20px auto;}
+    .life_tab li {display: inline-block; margin-left:0; margin-right: 15px; float: none; margin-bottom: 10px;}
+    .life_tab li img {max-width:52px; width:100%;}
+    .life_tab li span {font-size: 12px;}
+    /*지수테이블*/
+    .over-scroll-web table tbody th:first-of-type {max-width:90px;}
+    .cor_circle .circle { top:-30px; left:13px;}
+    .cor_circle .circle.text4 { left:30px;}
+    .cor_circle p {padding-left:0; margin-left:-10px;}
+    
+}
+@media screen and (max-width:530px){
+    /*생활기상지수*/
+    .lifeindex_state li {width:48%; margin-left:2%;}
+    .lifeindex_state li:first-of-type, .lifeindex_state li:nth-child(2n + 1) {margin-left:0;}
+    /*지수박스*/
+    .state_area {width:100%;}
+    .life_tab.tree_tab {width:100%;}
+    .time_info {position:relative;top: 5px;right: 0;}
+}

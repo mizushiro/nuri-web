@@ -1,0 +1,3 @@
+/*<!-- LOGGER(TM) TRACKING SCRIPT V.40 FOR logger.co.kr / 100000 : COMBINE TYPE / DO NOT ALTER THIS SCRIPT. -->*/
+var _TRK_LID = "100000";var _L_TD = "webstats.kma.go.kr";var _TRK_CDMN = ".weather.go.kr"; var _CDN_DOMAIN = location.protocol == "https:" ? "https://webstats.kma.go.kr" : "http://webstats.kma.go.kr"; 
+(function (b, s) { var f = b.getElementsByTagName(s)[0], j = b.createElement(s); j.async = true; j.src = "//webstats.kma.go.kr/fs4/bstrk.sol.js"; f.parentNode.insertBefore(j, f); })(document, "script");

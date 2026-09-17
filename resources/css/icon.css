@@ -1,0 +1,104 @@
+/* 날씨 아이콘 */
+.wic { display:inline-block; width: 32px; height: 32px; background-size: 100% auto; text-indent: -9999px; background-repeat: no-repeat; background-position: center center;}
+.wic.sm { width: 20px; height: 20px;}
+.wic.none { display:none; }
+
+.wic.DB00 { background-image:rgba(0,0,0,0);}
+.wic.DB01 { background-image:url(../icon/DY@64/Light/DB01.png);}
+.wic.DB02 { background-image:url(../icon/DY@64/Light/DB02.png);}
+.wic.DB03 { background-image:url(../icon/DY@64/Light/DB03.png);}
+.wic.DB04 { background-image:url(../icon/DY@64/Light/DB04.png);}
+.wic.DB01_N { background-image:url(../icon/DY@64/Light/DB01_N.png);}
+.wic.DB02_N { background-image:url(../icon/DY@64/Light/DB02_N.png);}
+.wic.DB03_N { background-image:url(../icon/DY@64/Light/DB03_N.png);}
+.wic.DB04_N { background-image:url(../icon/DY@64/Light/DB04_N.png);}
+.wic.DB05 { background-image:url(../icon/DY@64/Light/DB05.png);}
+.wic.DB06 { background-image:url(../icon/DY@64/Light/DB06.png);}
+.wic.DB07 { background-image:url(../icon/DY@64/Light/DB07.png);}
+.wic.DB08 { background-image:url(../icon/DY@64/Light/DB08.png);}
+.wic.DB09 { background-image:url(../icon/DY@64/Light/DB09.png);}
+.wic.DB10 { background-image:url(../icon/DY@64/Light/DB10.png);}
+.wic.DB11 { background-image:url(../icon/DY@64/Light/DB11.png);}
+.wic.DB12 { background-image:url(../icon/DY@64/Light/DB12.png);}
+
+.wic.DB01.large { background-image:url(../icon/DY@128/Light/DB01.png);}
+.wic.DB02.large { background-image:url(../icon/DY@128/Light/DB02.png);}
+.wic.DB03.large { background-image:url(../icon/DY@128/Light/DB03.png);}
+.wic.DB04.large { background-image:url(../icon/DY@128/Light/DB04.png);}
+.wic.DB01_N.large { background-image:url(../icon/DY@128/Light/DB01_N.png);}
+.wic.DB02_N.large { background-image:url(../icon/DY@128/Light/DB02_N.png);}
+.wic.DB03_N.large { background-image:url(../icon/DY@128/Light/DB03_N.png);}
+.wic.DB04_N.large { background-image:url(../icon/DY@128/Light/DB04_N.png);}
+.wic.DB05.large { background-image:url(../icon/DY@128/Light/DB05.png);}
+.wic.DB06.large { background-image:url(../icon/DY@128/Light/DB06.png);}
+.wic.DB07.large { background-image:url(../icon/DY@128/Light/DB07.png);}
+.wic.DB08.large { background-image:url(../icon/DY@128/Light/DB08.png);}
+.wic.DB09.large { background-image:url(../icon/DY@128/Light/DB09.png);}
+.wic.DB10.large { background-image:url(../icon/DY@128/Light/DB10.png);}
+.wic.DB11.large { background-image:url(../icon/DY@128/Light/DB11.png);}
+.wic.DB12.large { background-image:url(../icon/DY@128/Light/DB12.png);}
+
+.wic.DB01.hero { background-image:url(../icon/DY@128/Light/DB01.png);}
+.wic.DB02.hero { background-image:url(../icon/DY@128/Light/DB02.png);}
+.wic.DB03.hero { background-image:url(../icon/DY@128/Light/DB03.png);}
+.wic.DB04.hero { background-image:url(../icon/DY@128/Light/DB04.png);}
+.wic.DB01_N.hero { background-image:url(../icon/DY@128/Light/DB01_N.png);}
+.wic.DB02_N.hero { background-image:url(../icon/DY@128/Light/DB02_N.png);}
+.wic.DB03_N.hero { background-image:url(../icon/DY@128/Light/DB03_N.png);}
+.wic.DB04_N.hero { background-image:url(../icon/DY@128/Light/DB04_N.png);}
+.wic.DB05.hero { background-image:url(../icon/DY@128/Light/DB05.png);}
+.wic.DB06.hero { background-image:url(../icon/DY@128/Light/DB06.png);}
+.wic.DB07.hero { background-image:url(../icon/DY@128/Light/DB07.png);}
+.wic.DB08.hero { background-image:url(../icon/DY@128/Light/DB08.png);}
+.wic.DB09.hero { background-image:url(../icon/DY@128/Light/DB09.png);}
+.wic.DB10.hero { background-image:url(../icon/DY@128/Light/DB10.png);}
+.wic.DB11.hero { background-image:url(../icon/DY@128/Light/DB11.png);}
+.wic.DB12.hero { background-image:url(../icon/DY@128/Light/DB12.png);}
+
+.wic.NB00 { background-image:rgba(0,0,0,0);}
+
+.wic.NB01 { background-image:url(../icon/NY@64/Light/NB01.png);}
+.wic.NB02 { background-image:url(../icon/NY@64/Light/NB02.png);}
+.wic.NB03 { background-image:url(../icon/NY@64/Light/NB03.png);}
+.wic.NB04 { background-image:url(../icon/NY@64/Light/NB04.png);}
+.wic.NB01_N { background-image:url(../icon/NY@64/Light/NB01_N.png);}
+.wic.NB02_N { background-image:url(../icon/NY@64/Light/NB02_N.png);}
+.wic.NB03_N { background-image:url(../icon/NY@64/Light/NB03_N.png);}
+.wic.NB04_N { background-image:url(../icon/NY@64/Light/NB04_N.png);}
+.wic.NB07 { background-image:url(../icon/NY@64/Light/NB07.png);}
+.wic.NB08 { background-image:url(../icon/NY@64/Light/NB08.png);}
+.wic.NB11 { background-image:url(../icon/NY@64/Light/NB11.png);}
+.wic.NB12 { background-image:url(../icon/NY@64/Light/NB12.png);}
+.wic.NB13 { background-image:url(../icon/NY@64/Light/NB13.png);}
+.wic.NB14 { background-image:url(../icon/NY@64/Light/NB14.png);}
+.wic.NB15 { background-image:url(../icon/NY@64/Light/NB15.png);}
+.wic.NB16 { background-image:url(../icon/NY@64/Light/NB16.png);}
+.wic.NB17 { background-image:url(../icon/NY@64/Light/NB17.png);}
+.wic.NB18 { background-image:url(../icon/NY@64/Light/NB18.png);}
+.wic.NB20 { background-image:url(../icon/NY@64/Light/NB20.png);}
+.wic.NB21 { background-image:url(../icon/NY@64/Light/NB21.png);}
+.wic.NB22 { background-image:url(../icon/NY@64/Light/NB22.png);}
+.wic.NB23 { background-image:url(../icon/NY@64/Light/NB23.png);}
+
+.wic.NB01.large { background-image:url(../icon/NY@128/Light/NB01.png);}
+.wic.NB02.large { background-image:url(../icon/NY@128/Light/NB02.png);}
+.wic.NB03.large { background-image:url(../icon/NY@128/Light/NB03.png);}
+.wic.NB04.large { background-image:url(../icon/NY@128/Light/NB04.png);}
+.wic.NB01_N.large { background-image:url(../icon/NY@128/Light/NB01_N.png);}
+.wic.NB02_N.large { background-image:url(../icon/NY@128/Light/NB02_N.png);}
+.wic.NB03_N.large { background-image:url(../icon/NY@128/Light/NB03_N.png);}
+.wic.NB04_N.large { background-image:url(../icon/NY@128/Light/NB04_N.png);}
+.wic.NB07.large { background-image:url(../icon/NY@128/Light/NB07.png);}
+.wic.NB08.large { background-image:url(../icon/NY@128/Light/NB08.png);}
+.wic.NB11.large { background-image:url(../icon/NY@128/Light/NB11.png);}
+.wic.NB12.large { background-image:url(../icon/NY@128/Light/NB12.png);}
+.wic.NB13.large { background-image:url(../icon/NY@128/Light/NB13.png);}
+.wic.NB14.large { background-image:url(../icon/NY@128/Light/NB14.png);}
+.wic.NB15.large { background-image:url(../icon/NY@128/Light/NB15.png);}
+.wic.NB16.large { background-image:url(../icon/NY@128/Light/NB16.png);}
+.wic.NB17.large { background-image:url(../icon/NY@128/Light/NB17.png);}
+.wic.NB18.large { background-image:url(../icon/NY@128/Light/NB18.png);}
+.wic.NB20.large { background-image:url(../icon/NY@128/Light/NB20.png);}
+.wic.NB21.large { background-image:url(../icon/NY@128/Light/NB21.png);}
+.wic.NB22.large { background-image:url(../icon/NY@128/Light/NB22.png);}
+.wic.NB23.large { background-image:url(../icon/NY@128/Light/NB23.png);}

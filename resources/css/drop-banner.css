@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+.ba-wrap {
+	background-image: url(../images/bg_drop_banner.png);
+	background-size: cover;
+	height: 40px;
+	margin-top: -40px;
+	/* transform: translateY(-100%); */
+	transition: all 0.3s ease-out;
+}
+.ba-wrap.on {
+	margin-top: 0;
+	/* transform: translateY(0); */
+}
+.ba-wrap.close { display:none; }
+.ba-body { margin:0 auto; height:40px; max-width:1300px; position:relative; display:flex; justify-content:center; align-items:center;}
+.ba-body-text {
+	display: flex;
+	align-items: center;
+	font-size:18px;
+	color:#fff;
+	font-weight:400;
+	text-align:center;
+	vertical-align:middle;
+}
+.ba-body-text em { color:#fff; font-weight:700; position:relative;}
+.ba-body-text::before {
+	content: '';
+	display: block;
+	width: 32px;
+	height: 32px;
+	background-image: url('../images/icon_drop_banner.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	margin-right: 8px;
+}
+.ba-close { background-color:#fff; font-size:13px; color:#717171; position:absolute; display:inline-block; right:10px; top:50%; margin-top:-12px; border:1px solid #4F79DB; border-radius:12px; height:24px;}
+.ba-close > span { display:block; line-height:22px; padding:0px 10px;}
+
+.overlay-layer {
+	position: fixed;
+	z-index: 2000;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0,0,0,0.7);
+}
+.overlay-layer.on {
+	display: flex !important;
+}
+.overlay-layer div.popup-layer {
+	position: relative;
+	width: 100%;
+	max-width: 640px;	
+}
+.overlay-layer div.popup-layer img {
+	display: block;
+	width: 100%;
+	cursor: pointer;
+}
+.overlay-layer div.popup-layer::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	right: -16px;
+	transform: translateX(100%);
+	width: 32px;
+	height: 32px;
+	background-image: url('../image/banner_close.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+	/* .ba-wrap { background:url(../image/renew/bg_top_banner_m.png) repeat-x center center #FFCF01; } */
+}
+@media screen and (max-width: 900px) {
+	.ba-body-text {font-size:16px;}
+}
+@media screen and (max-width: 768px) {
+	.ba-body { justify-content:flex-start; }
+	.ba-body-text { font-size: 15px; padding-left:4px; width:calc(100% - 120px); }
+}
+@media screen and (max-width: 425px) {
+	.ba-body-text { word-break:break-all; font-size: 14px; padding-left:4px; width:calc(100% - 90px); }
+	.ba-close { font-size:11px; right:4px;}
+	.ba-close > span { padding:0 6px; }
+}

@@ -1,0 +1,94 @@
+@charset "UTF-8";
+/*@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css); */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* Author : 이지현
+/* Date : 2017-04-18 ~
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* Reset */
+body,div,p,h1,h2,h3,h4,h5,h6,ol,li,dl,dt,dd,ul,pre,code,blockquote,form,fieldset,legend,input,textarea,button,select.pop_table,th,td {margin:0; padding:0; font-size:13px; font-family: '나눔고딕', 'nanumgothic', 'Nanumgothic'; }
+select>option{ margin:0; paading: 0; }
+ul,ol,li,dl,menu {list-style:none;}
+img {border:0 none;vertical-align:middle;}
+/*form,fieldset {border:0 none;}
+label,input,select,textarea,button {border:0;border-radius:0;font-size:inherit;line-height:normal;vertical-align:middle;}*/
+label{ position: absolute; margin: 0; padding: 0; border:0; border-radius:0;font-size:0;}
+textarea {resize:none;}
+table { width:100%; border-collapse:collapse; border:0 ;border-spacing:0; }
+caption {visibility:hidden; text-indent:-5000px; font-size:0; line-height:0;}
+/*p {word-break:keep-all;word-wrap:break-word;}*/
+th,td {word-break:break-all;}
+/*iframe, embed {position:relative;top:0;left:0;max-width:100%;}*/
+
+a{color:#666666; text-decoration:none;}
+a:hover{color:#000000;}
+a:active{color:#000000;}
+a:focus{color:#666666;}
+
+
+
+
+
+/* popup */
+li{word-break:keep-all;word-wrap:break-word;}
+.pop_wrapper{width: 100%; background: #307eb5; }
+.pop_wrapper .pop_wrap{ padding: 33px 30px 30px 30px; }
+.pop_wrapper .pop_wrap h1{ padding-bottom: 30px; line-height: 18px; font-size: 18px; font-weight: bold; color: #fff; text-align: center; }
+.pop_wrapper .pop_wrap .list_box{ padding: 28px 0 30px; }
+.pop_wrapper .pop_wrap .list_box ul{}
+.pop_wrapper .pop_wrap .list_box ul li{ line-height: 24px; }
+.pop_wrapper .pop_wrap .list_box ul li a{ font-size: 13.5px; color: #fff; }
+.pop_wrapper .pop_wrap .list_box ul li a:hover{ font-weight:bold; color: #3F0; }
+.pop_wrapper .pop_wrap .popbox_wrap{ background:url(../images/life/_indexImg/popbox_bg.gif) repeat-x left top #fff; border-radius: 4px; }
+.pop_wrapper .pop_wrap .popbox_wrap .popbox{ margin-bottom: 23px; padding: 0 25px 0; }
+.pop_wrapper .pop_wrap .popbox_wrap .popbox .title_area{ position: relative; }
+.pop_wrapper .pop_wrap .popbox_wrap .popbox .title_area .btn_open{ position: absolute; top: 50%; right: 0; margin-top: -10px; }
+.pop_wrapper .pop_wrap .popbox_wrap .popbox .title_area .btn_open a{ padding: 5px 10px 7px; border-radius: 2px; background: #307EB5; color: #fff; font-size: 12px; }
+.pop_wrapper .pop_wrap .popbox_wrap .popbox .title_area h2{ margin-bottom: 17px; padding: 20px 0; line-height: 15px; font-size: 15px; font-weight:bold; color: #044d80; }
+.pop_wrapper .pop_wrap .popbox_wrap .popbox h3{ margin-bottom: 4px; padding-left: 17px; background:url(../images/life/_indexImg/bullet01.gif) no-repeat left 6px; line-height: 19px; font-size: 13px; color: #333; font-weight: normal; }
+.pop_wrapper .pop_wrap .popbox_wrap .popbox .h3_section{ margin-bottom: 3px; margin-left: 17px; }
+.pop_wrapper .pop_wrap .popbox_wrap .popbox .ul_type01{ margin-bottom: 5px; }
+.pop_wrapper .pop_wrap .popbox_wrap .popbox .ul_type01 li{ padding-left: 12px; background: url(../images/life/_indexImg/bullet02.gif) no-repeat left 8px; line-height: 19px; }
+.pop_wrapper .pop_wrap .popbox_wrap .popbox .ul_type02{ margin-bottom: 3px; }
+.pop_wrapper .pop_wrap .popbox_wrap .popbox .ul_type02 li{ padding-left: 12px; background: url(../images/life/_indexImg/bullet03.gif) no-repeat left 8px; line-height: 19px; }
+.pop_wrapper .pop_wrap .popbox_wrap .popbox ul li ol li{ padding-left: 0 !important; background-image: none !important; }
+.pop_wrapper .pop_wrap .popbox_wrap .popbox li img{ margin-top: 3px; margin-bottom: 5px; }
+.pop_wrapper .pop_wrap .popbox_wrap .popbox dl{ margin-top: 3px; }
+.pop_wrapper .pop_wrap .popbox_wrap .popbox dl dt{ padding-left: 12px; background: url(../images/life/_indexImg/bullet03.gif) no-repeat left 8px; line-height: 19px; }
+.pop_wrapper .pop_wrap .popbox_wrap .popbox dl dd{}
+.pop_wrapper .pop_wrap .popbox_wrap .popbox .text_box{ margin-bottom: 4px; padding: 15px; border: 1px solid #307eb5; text-align:center;}
+.pop_wrapper .pop_wrap .popbox_wrap .popbox .box_img_wrapper{ width: 100%; text-align:center; }
+.pop_wrapper .pop_wrap .popbox_wrap .popbox .box_img_wrapper .box_img_wrap{ display: inline-block; margin: 0 auto 7px auto; }
+.pop_wrapper .pop_wrap .popbox_wrap .popbox .box_img_wrapper.box_img_wrap>img{ margin: 3px 0 0 0; }
+.pop_wrapper .pop_wrap .popbox_wrap .popbox .box_img_wrapper .box_img_wrap p{ padding: 4px 0 5px; background: #e3f0f9; }
+
+.hide{ display: none; padding-bottom: 20px; }
+/* hide 클래스에서 display:none 삭제 */
+
+/* 리스트 공통 */
+.pop_wrapper .pop_wrap .popbox_wrap .popbox .mt5{ margin-top: 5px; }
+.pop_wrapper .pop_wrap .popbox_wrap .popbox .mt20{ margin-top: 20px; }
+.pop_wrapper .pop_wrap .popbox_wrap .popbox .mb5{ margin-bottom: 5px; }
+.pop_wrapper .pop_wrap .popbox_wrap .popbox .mb14{ margin-bottom: 14px; }
+.pop_wrapper .pop_wrap .popbox_wrap .popbox .mb20{ margin-bottom: 20px; }
+.pop_wrapper .pop_wrap .popbox_wrap .popbox .bold{ font-weight: bold; }
+.pop_wrapper .pop_wrap .popbox_wrap .popbox .center{ text-align: center; }
+.pop_wrapper .pop_wrap .popbox_wrap .popbox .add_text{ font-size: 12px; color: #666; }
+.pop_wrapper .pop_wrap .popbox_wrap .popbox .footnote{ margin-top: 20px; margin-bottom: 3px; padding: 15px; background: #eee; font-size: 12px; line-height: 17px; color: #666; }
+.pop_wrapper .pop_wrap .popbox_wrap .popbox .footnote img{ margin-left: 1px; margin-right: 1px; }
+
+.pop_wrapper .pop_wrap .popbox_wrap .popbox .pop_table {width:100%; margin-top:7px; margin-bottom: 10px; border-top:2px solid #578cb2; border-bottom:1px solid #ccc; color: #555; }
+.pop_wrapper .pop_wrap .popbox_wrap .popbox .pop_table thead th, .pop_wrapper .pop_wrap .popbox_wrap .popbox .pop_table tbody th { background:#e3f0f9; border-top:1px solid #ccc; text-align: center; }
+.pop_wrapper .pop_wrap .popbox_wrap .popbox .pop_table th, .pop_wrapper .pop_wrap .popbox_wrap .popbox .pop_table td { padding:8px; border-top:1px solid #ccc; border-right: 1px solid #ccc; border-left: 1px solid #ccc; }
+
+
+
+
+
+
+
+
+
+
+
+

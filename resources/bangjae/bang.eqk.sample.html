@@ -1,0 +1,86 @@
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>기상청 : 방재 속보</title><meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+<meta http-equiv='Cache-Control' content='no-cache' />
+<meta http-equiv='Pragma' content='no-cache' />
+<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+<style>
+.pop_wrapper{background-color:#fff;}
+.pop_wrapper .pop_header{text-align:center;background-color:#009ae1;text-align:left;padding:1px 20px;}
+.pop_header h1{color:#fff;font-size:15px;font-weight:700;}
+.pop_wrapper .pop_body{padding:0px;background-color:#fff;}
+.kma_report_wrap{border:1px solid #333;padding:8px;}
+.kma_report_wrap .tit{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:10px;}
+.kma_report_wrap .tit h2{font-size:15px;font-weight:600;color:#333;letter-spacing:-.08em}
+.kma_report_wrap .tit b{color:#ff0000;}
+.kma_report_wrap .tit span{font-size:14px;letter-spacing:-.05em;}
+.report_cont{padding:0 5px;}
+.report_cont .article{margin-top:2px;}
+.kma_report_wrap h3{font-size:14px;margin-bottom:5px;}
+.info_list dt,
+.info_list dd{font-size:13px;padding-top:5px;letter-spacing:0;}
+.info_list dt{position:relative;float:left;font-weight:600;padding-left:15px;}
+.info_list dt::before{position:absolute;left:5px;top:15px;content:'';display:inline-block;width:4px;height:4px;background:#000;border-radius:50%;}
+.info_list dt::after{content:':';margin:0 5px;}
+.report_cont .cont_txt{background-color:#eef2f7;padding:10px;font-size:13px;}
+.report_cont .figure{display:flex;width:100%;width:100%;justify-content:center;align-items:center;}
+.report_cont .cont_txt{background-color:#eef2f7;padding:10px;}
+.report_cont .figure img{width:49%;height:auto;margin:0 1%;}
+.btn_area{margin-top:10px;text-align:center;}
+.btn_area button{background-color:#ffc600;color:#000;line-height:28px;padding:0 15px;font-size:12px;border:none;border-radius:5px;}
+@media screen and (max-width:980px){
+.kma_report_wrap .tit{flex-wrap:wrap;}
+.kma_report_wrap .tit h2,
+.kma_report_wrap .tit span{width:100%;}
+.kma_report_wrap .tit span{text-align:right;}
+.kma_report_wrap .tit h2{margin-bottom:13px;text-align:center;}
+}
+</style>
+<script LANGUAGE='javascript'>
+function doSubmit(url, target) {
+remote = window.open(url, target)
+}
+</script>
+</head>
+<body>
+<div class='pop_wrapper'>
+<div class='pop_header'>
+<h1>방재속보</h1>
+</div>
+<div class='pop_body'>
+<div class='kma_report_wrap'>
+<div class='tit'>
+<h2>［기상청 <b id='tit_lb'>지진해일특보</b> 방재속보］</h2>
+<span class=''>2020년 12월 18일 00시 32분 발표</span>
+</div>
+<div class='report_cont'>
+<div class='article'>
+<h3>〈 지진해일특보현황 〉</h3>
+<dl class='info_list'>
+<dt>지진해일특보구역</dt>
+<dd>울릉도해안, 강원중부해안, 강원남부해안, 강원북부해안, 경북북부해안, 경북남부해안, 울산해안, 부산해안거제시동부해안, 경남중부남해해안, 경남서부남해해안</dd>
+<dt>지진발생시각</dt>
+<dd>2020-12-18 00:22:43</dd>
+<dt>지진발생위치</dt>
+<dd>로컬테스트 경북 울릉군 울릉도 서북서쪽 75km 해역</dd>
+<dt>규모 &sol; 깊이</dt>
+<dd>8.0 &sol; 10㎞</dd>
+</dl>
+</div>
+<div class='article'>
+<h3>〈 내용 〉</h3>
+<p class='cont_txt'>지진해일정보 테스트 입니다.</p>
+</div>
+<div class='article figure'>
+<img src='http://www.kma.go.kr/repositary/xml/eqk/img/Map_2020017627_112_1_loc.jpg' alt=''>
+<img src='http://www.kma.go.kr/repositary/xml/eqk/img/Map_2020017627_112_1.jpg' alt=''>
+</div>
+</div>
+</div>
+<div class='btn_area'>
+<button type=button onClick="doSubmit('http://www.kma.go.kr/weather/earthquake_volcano/report.jsp','new1')";>발표정보</button>
+</div>
+</div>
+</div>
+</body>
+</html>

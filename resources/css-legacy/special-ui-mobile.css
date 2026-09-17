@@ -1,0 +1,423 @@
+@charset "utf-8";
+@media screen and (max-width:1199px) {
+    /* 외부 링크 */
+    .sp-ext-link > ul > li a { font-size: 16px; padding-left:50px; background-size:26px;}
+}
+@media screen and (max-width:1440px){
+    /* 날씨 슬라이더 */
+    .cmp-dfs-slider .dfs-tab .right { width:calc(100% - 560px);}
+    .cmp-dfs-slider .dfs-tab .dfs-tab-head { width:560px;}
+    .cmp-dfs-slider .dfs-tab .dfs-tab-head li { min-width:100px; font-size: 18px;}
+    
+    .cmp-dfs-updated { left:490px;}
+}
+@media screen and (max-width:1305px) {
+    /* 날씨슽라이더 */    
+    .cmp-dfs-slider .dfs-tab { float:none; padding: 6px 0px 0px 8px; height:46px; position:relative; overflow:visible;}
+    .cmp-dfs-slider .dfs-tab .right { float:left; width:calc(100% - 390px); height:auto;}
+    .cmp-dfs-slider .dfs-tab .dfs-tab-head-wrap { float:left; overflow:hidden; margin-top:0;}
+    .cmp-dfs-slider .dfs-tab .dfs-tab-head { display:block; width:390px; height:40px; }
+    .cmp-dfs-slider .dfs-tab .dfs-tab-head li { display:block; position:relative; float:left; min-width:94px; margin-left:3px; font-size: 16px; background:#DAE0E8;}
+    .cmp-dfs-slider .dfs-tab .dfs-tab-head li:first-of-type { margin-left:0; }
+    .cmp-dfs-slider .dfs-tab .dfs-tab-head li a { border:1px solid #B9C5D3; display:block; position:relative; text-align:center; line-height:36px;padding-top:2px;}
+    .cmp-dfs-slider .dfs-tab .dfs-tab-head li a.on + .tt-btn { display:none;}
+    .cmp-dfs-slider .dfs-tab .right .updated { display:none; font-size:13px; height: 46px; position:relative; width: 250px; padding-top:0px;}
+    .cmp-dfs-slider .dfs-tab .right .updated h4 { position:absolute; left:6px; top:3px; font-weight: 600;}
+    .cmp-dfs-slider .dfs-tab .right .updated strong { display:block; padding-left:64px; line-height:20px; font-weight: 400; letter-spacing:-1px;}
+    .cmp-dfs-slider .dfs-tab .right .btns {float: right; display:inline-block; height:auto; padding-top:0; padding-right:5px;}
+    .cmp-dfs-slider .dfs-tab .right .btns .sym-btn { height:32px; padding-left:28px; background-size: 18px; line-height:32px;}
+    
+    .cmp-dfs-slider .view-options { width:790px; }
+    
+    .cmp-dfs-updated { top:20px; left:420px; font-size:15px; }
+}
+
+@media screen and (max-width:1024px) {
+    /* === form */
+    .input[type="text"] { text-align: left; border-radius: 4px; font-size: 15px; line-height: 28px; border:1px solid #fff; display:block; padding:0 5px;}
+    .input::placeholder {font-size: 15px; color: #5D5D5D;}
+    .input.border { border: 1px solid #CBCBCB;}
+    /* table */
+    .table-col th, .table-col td { font-size:14px; padding:13px 2px; }
+    .sp-weather-summary .table-col
+        , .sp-land-forecast .table-col { min-width:1024px; }
+    .sp-weather-summary .table-col .left-sticky
+        , .sp-land-forecast .table-col .left-sticky { position: -webkit-sticky; position: sticky; left: 0; top: 0; background-color:#fff; border-right:1px solid #e5e5e5; }
+    .sp-weather-summary .table-col td:first-of-type
+        , .sp-land-forecast .table-col td:first-of-type { border-left:0;}
+    .sp-weather-summary .table-col thead th:nth-of-type(2)
+        , .sp-land-forecast .table-col thead tr:nth-child(1) th:nth-of-type(2)
+        , .sp-land-forecast .table-col thead tr:nth-child(2) th:nth-of-type(1) { border-left:0; }
+    .sp-land-forecast .table-col thead tr:nth-child(1) th[colspan="1"] { font-size:12px; }    
+    .sp-land-forecast tbody td.sp-land-forecast-area-group { }
+    
+    /* 날씨 해설 */
+    .sp-weather-cmt-video { width:400px}
+    .sp-weather-cmt-cont { width:calc(100% - 400px); }
+    .sp-weather-cmt-cont h2 { font-size:19px;}
+    .sp-weather-cmt-txt { font-size:16px; padding:8px 0; }
+    .sp-weather-cmt-txt-box-inner { font-size: 16px;}
+
+    /* 바다날씨 */
+    .sp-sea-area-sch{margin-top:8px; display:flex; padding-left:8px; }
+    .sp-sea-area-sch .serch-area .serch-area-btn{ border-radius:4px; border:1px solid #CBCBCB; line-height:39px; height:39px;width:450px; padding-left:18px; font-size:16px;padding-right:36px;}
+    .sp-sea-area-sch .serch-area .serch-area-btn:after{content:"";background:url(../image/arrow_down.png);background-size:11px 7px;width:11px;height:7px;position:absolute;right:20px;top:50%;margin-top:-4px;}
+    .sp-sea-area-sch .serch-util { margin-left:4px; }
+    .sym-btn.sch { height: 39px; width: 50px; background-size: auto 26px;}
+    
+    .sp-sea-area-sch .serch-con{top:40px;}
+    .sp-sea-area-sch .serch-con a, 
+        .sp-sea-area-sch .serch-con button {line-height:40px;font-size:15px; padding-left:8px;padding-right:16px;}
+    .sp-sea-daily-forecast table td {font-size:14px; }
+    .sp-sea-daily-forecast table td {padding:10px 1px;}
+    .sp-sea-daily-forecast table span{display:block;margin-bottom:10px;}
+    .sp-sea-daily-forecast table img{vertical-align:middle;}
+    .sp-sea-daily-forecast .right-con .tit { font-size:24px; padding:8px 0;}
+    .sp-sea-mid-forecast { margin-top:10px; }
+    .sp-sea-mid-forecast .tit { font-size:24px; padding:10px; }
+    
+    .sp-sea-warning [class*="box-con"] { font-size:16px; height:36px; line-height:36px; top:-40px; width:180px; right:8px; }
+    .sp-sea-warning .tit { font-size:18px; }
+    .sp-sea-warning .table-col th, .sp-sea-warning .table-col td { font-size:13px; padding:5px; }
+    .sp-sea-warning .accordion-con { padding-bottom:20px; }
+    /* 상단 메뉴 */
+    .sp-header-menu-item a span { font-size:18px; padding-left:10px; padding-right:10px; }
+    /* 전국 특보 */
+    .cmp-main-wrn [class*="box-con"] { font-size:16px; height:40px; line-height:40px; margin-right:10px; margin-top:-320px;}
+    .cmp-main-wrn .box-con-on:before { width:24px; height:24px; margin-top:-12px; }
+    
+    /* 산불기상지원 */
+    .sp-map-control { width:100%; }
+    .sp-map-wrap { width:100%; }
+    .sp-map .cmp-form-box { width:100%; position:unset; bottom:auto;}
+    .sp-map .cmp-form-select .select { width:calc(100% - 90px); }
+    
+    .cmp-sp-pos-item > span > a { font-size:15px; line-height:20px; padding:5px 3px; }
+    .cmp-sp-pos.no-pos { height:60px; }
+    .cmp-sp-pos.no-pos strong { font-size:16px; color:#0070E9; }
+    
+    /* 수능지원 */
+    .sp-sat-school { padding-bottom:10px; }
+    .sp-sat-school .sp-sat-school-name { padding:5px; margin-top:5px; font-size:17px; }
+    
+    .sp-sat-school-search { width:100%; position:relative; padding:5px; }
+    .sp-sat-school-info { padding:10px 0; }
+    .sp-sat-school-info h2 { font-size:17px; padding:5px 0;}
+    .sp-sat-school-info h3 { font-size:19px; line-height:30px; }
+    .sp-sat-school-info-none { padding:10px 0; }
+    .sp-sat-school-info-none h2 { font-size:17px; text-align:center; padding:10px 0;}
+    .sp-sat-school-info-none h3 { font-size:19px; line-height:30px; }
+    
+    .sp-sat-school-list { margin-top:10px; position:relative; }
+    .sp-sat-school-list h2 > a { font-size:17px; padding:8px; padding-left:20px; }
+    .sp-sat-school-list p { padding:8px; font-size:15px; }
+    .sp-sat-school-group {top:46px; position:fixed; top:0px; left:0px; right:0px; bottom:0px; }
+    .sp-sat-school-group > div h3 { font-size:17px; padding:8px 0; }
+    .sp-sat-school-group > div ul { max-height:calc(100% - 39px); }
+    .sp-sat-school-group > div li a { display:block; position:relative; text-align:center; padding:8px 0; font-size:15px; color:#000;}
+    
+    /* 해맞이 해넘이 */
+    .sp-sunriset-zone { padding-bottom:10px; }
+	.sp-sunriset-zone .sp-map { padding:5px; flex-direction: column-reverse; }
+	.sp-sunriset-zone .sp-sunriset-zone-name { padding:5px; margin-top:10px; font-size:17px; }
+	.sp-sunriset-zone .sp-map-wrap { width:100%; padding:5px; }
+	.sp-sunriset-zone-search { width:100%; position:relative; padding:10px; }
+	.sp-sunriset-zone-search > h2 { font-size:17px; text-align:center; padding:5px 0; margin:0; display:none;}
+	.sp-sunriset-zone-info { padding:10px 0; margin-top:10px; }
+	.sp-sunriset-zone-info h2 { font-size:17px; text-align:center; padding:5px 0;}
+	.sp-sunriset-zone-info h3 { font-size:20px; line-height:30px; }
+	.sp-sunriset-zone-info h3 address { display:inline; color:#000; font-size:14px; padding-left:5px; }
+	.sp-sunriset-zone-info .table-col { min-width:500px; }
+	.sp-sunriset-zone-info .table-col th { font-weight:600; }
+	.sp-sunriset-zone-info .table-col th:first-of-type { border-left:0; }
+	.sp-sunriset-zone-info .table-col tbody tr:not(:last-child) th { border-bottom:1px solid #e0e6ef;}
+	.sp-sunriset-zone-info-none { padding:20px 0; }
+	.sp-sunriset-zone-info-none h2 { font-size:26px; text-align:center; padding:10px 0;}
+	.sp-sunriset-zone-info-none h3 { font-weight:600; text-align:center; font-size:30px; line-height:50px; color:#0070E9; }
+	.sp-sunriset-zone-info-none h3:before { content:'['; }
+	.sp-sunriset-zone-info-none h3:after { content:']'; }
+	.sp-sunriset-zone-info-none .table-col { display:none; }
+	
+	.sp-sunriset-zone-list { margin-top:10px; }
+	.sp-sunriset-zone-group { width:calc(50% - 5px);}
+	.sp-sunriset-zone-group h2 > a { position:relative; display:block; color:#3F3F3F; font-size:16px; padding:8px 10px; }
+	.sp-sunriset-zone-group h2 > a:after { font-size:16px; width: 10px; height: 10px; line-height: 16px; right: 8px; top: 50%; margin-top: -8px;}
+	.sp-sunriset-zone-group p { padding:10px; font-size:16px; }
+	.sp-sunriset-zone-list .sp-sunriset-zone-group:nth-child(2) .sp-sunriset-zone-group-cont { left:auto; right:0;}
+	.sp-sunriset-zone-group-cont { width:100%; position:fixed; top:0px; left:0px; right:0px; bottom:0px; }
+	.sp-sunriset-zone-group-cont > div { flex:1; }
+	.sp-sunriset-zone-group-cont > div h3 { font-size:17px; text-align:center; padding:10px 0 9px 0;border-bottom:1px solid #eee;}
+	.sp-sunriset-zone-group-cont > div ul { max-height:calc(100% - 39px); }
+	.sp-sunriset-zone-group-cont > div li a { display:block; position:relative; text-align:center; padding:9px 0 8px 0; font-size:15px; color:#000;}
+    .sp-sunriset-zone-group-cont-close { position:absolute; top:0px; right:1px; text-indent:-9999px; width:40px; height:40px; background:url(../image/special/ic_close_blue.png) no-repeat center center; background-size:16px; background-color:#fff; border-radius:64px;}
+
+	/* 달맞이 명소 */
+    .sp-moon-event-place { padding-bottom:10px; }
+	.sp-moon-event-place .sp-map { padding:5px; flex-direction: column-reverse; }
+	.sp-moon-event-place .sp-moon-event-place-name { padding:5px; margin-top:10px; font-size:17px; }
+	.sp-moon-event-place .sp-map-wrap { width:100%; padding:5px; }
+	.sp-moon-event-place-search { width:100%; position:relative; padding:0px; }
+	.sp-moon-event-place-search > h2 { font-size:17px; text-align:center; padding:5px 0; margin:0; display:none;}
+	.sp-moon-event-place-info { padding:10px 0; margin-top:10px; }
+	.sp-moon-event-place-info h2 { font-size:17px; text-align:center; padding:5px 0;}
+	.sp-moon-event-place-info h3 { font-size:20px; line-height:30px; }
+	.sp-moon-event-place-info h3 address { display:inline; color:#000; font-size:14px; padding-left:5px; }
+	.sp-moon-event-place-info .table-col { min-width:500px; }
+	.sp-moon-event-place-info .table-col th { font-weight:600; }
+	.sp-moon-event-place-info .table-col th:first-of-type { border-left:0; }
+	.sp-moon-event-place-info .table-col tbody tr:not(:last-child) th { border-bottom:1px solid #e0e6ef;}
+	.sp-moon-event-place-info-none { padding:20px 0; }
+	.sp-moon-event-place-info-none h2 { font-size:26px; text-align:center; padding:10px 0;}
+	.sp-moon-event-place-info-none h3 { font-weight:600; text-align:center; font-size:30px; line-height:50px; color:#0070E9; }
+	.sp-moon-event-place-info-none h3:before { content:'['; }
+	.sp-moon-event-place-info-none h3:after { content:']'; }
+	.sp-moon-event-place-info-none .table-col { display:none; }
+	
+	.sp-moon-event-place-list { margin-top:10px; }
+	.sp-moon-event-place-group { width:100%;}
+	.sp-moon-event-place-group h2 > a { position:relative; display:block; color:#3F3F3F; font-size:16px; padding:8px 10px; }
+	.sp-moon-event-place-group h2 > a:after { font-size:16px; width: 10px; height: 10px; line-height: 16px; right: 8px; top: 50%; margin-top: -8px;}
+	.sp-moon-event-place-group p { padding:10px; font-size:16px; }
+	.sp-moon-event-place-list .sp-moon-event-place-group:nth-child(2) .sp-moon-event-place-group-cont { left:auto; right:0;}
+	.sp-moon-event-place-group-cont { width:100%; position:relative;}
+	.sp-moon-event-place-group-cont > div { flex:1; }
+	.sp-moon-event-place-group-cont > div h3 { font-size:17px; text-align:center; padding:10px 0 9px 0;border-bottom:1px solid #eee;}
+	.sp-moon-event-place-group-cont > div ul { max-height:calc(100% - 39px); }
+	.sp-moon-event-place-group-cont > div li a { display:block; position:relative; text-align:center; padding:9px 0 8px 0; font-size:15px; color:#000;}
+    .sp-moon-event-place-group-cont-close { position:absolute; top:0px; right:1px; text-indent:-9999px; width:40px; height:40px; background:url(../image/special/ic_close_blue.png) no-repeat center center; background-size:16px; background-color:#fff; border-radius:64px;}
+
+    /* 정보 제공 */
+    .sp-data-provide { font-size:13px; text-align:right; color:#000; padding:5px; }
+    .cmp-sp-image-dual > * { width:calc(100% - 20px); margin:10px; }
+}
+
+@media screen and (max-width:768px) {
+    /* page */
+    .sp-header { height:106px; }
+    .sp-header-logo { width:100%; }
+    .sp-header-logo a { line-height:60px; background-size:40px; display:inline-block;}
+    .sp-header-menu { width:100%; background-color:#fff; justify-content:flex-start;}
+    .sp-header-menu-item { padding:0; }
+    .sp-header-menu-item a { position:relative; height:48px; }
+    .sp-header-menu-item a span { color:#000; font-weight:400; font-size:16px; line-height:18px; border:0; }
+    .sp-header-chuseok .sp-header-menu-item a span { padding:0 5px; }
+    .sp-header-csat .sp-header-menu-item a span { padding:0 5px; }
+    .sp-header-sunrise .sp-header-menu-item a span { padding:0 5px; }
+    .sp-header-menu-item a.on span { color:#1D8DD9; font-weight:700; border:0;}
+    .sp-header-menu-item a.on span:after { content:''; position:absolute; left:2px; bottom:0px; right:2px; height:3px; background-color:#1D8DD9;}
+    .sp-header-sunrise .sp-header-menu-item a.on { border-color:transparent; }
+    #global-nav.sp-header-newyear { height:272px; }
+    #global-nav.sp-header-newyear:after{ height:166px; background-size:auto 166px; top:106px; background-position-y: 0;}
+    #global-nav.sp-header-summer { height:272px; }
+    #global-nav.sp-header-summer:after{ height:166px; background-size:auto 166px; top:106px; background-position-y: 0;}
+    #global-nav.sp-header-chuseok{ height:272px; }
+    #global-nav.sp-header-chuseok:after{ height:166px; background-size:auto 166px; top:106px; background-position-y: 0;}
+    #global-nav.sp-header-csat{ height:272px; }
+    #global-nav.sp-header-csat:after{ height:166px; background-size:auto 166px; top:106px; background-position-y: 0;}
+    #global-nav.sp-header-sunrise{ height:272px; background-size:auto 272px; }
+    #global-nav.sp-header-sunrise:after{ height:166px; background-size:auto 166px; top:106px; background-position-y: 0;}
+    .sp-header-sunrise .sp-header-menu { background:unset; }
+    .sp-header-sunrise .sp-header-menu-item a span { color:#fff;}
+    .sp-header-sunrise .sp-header-menu-item a.on span:after { background-color:#fff; }
+    .sp-page-title { font-size:18px; line-height:43px; margin-top:2px;}
+    .sp-page-title small { letter-spacing:-1px; }
+    
+    .sp-hero-header { height:60px; }
+    .sp-hero-header-logo { width:190px; }
+    .sp-hero-header-logo a { line-height:60px; background-size:30px auto; font-size:17px; padding-left:38px; }
+    .sp-hero-header-title { width:calc(100% - 190px); justify-content:flex-start;}
+    .sp-hero-header-title-item { font-size:20px; }
+    
+    /* table */
+    .sp-weather-summary .table-col { min-width:768px; }
+    
+    /* footer */
+    .sp-footer { background-image:none; height:auto; padding-top:16px; padding-bottom:16px;}
+    .sp-footer .sp-footer-address { padding-left:20px; }
+    .sp-footer .sp-footer-address > span { display:block;}
+    .sp-footer .sp-footer-address > span > small { display:none; }
+    .sp-footer .sp-footer-copyright { padding-left:20px; }
+    .sp-footer .sp-footer-copyright > span { display:block;}
+    .sp-footer .sp-footer-131 { right:10px; }
+    /* 웰컴 */
+    .sp-welcome { padding:5px; }
+    .sp-welcome-item { padding:5px; }
+    .sp-welcome-item > span > a { height:90px; font-size:18px; }
+    .sp-welcome-item > span > a > span { text-align:center; }
+    /* 산불지원 헤더 */
+    .sp-header-forest-fire .sp-hero-header { height:80px; }
+    .sp-header-marine-accident .sp-hero-header { height:80px; }
+    /* 날씨 해설 */
+    .sp-weather-cmt-box { flex-wrap:wrap; }
+    .sp-weather-cmt-video { width:100%; }
+    .sp-weather-cmt-cont { width:100%; margin-top:20px; padding:0;}
+    .sp-weather-cmt-txt-box { position:relative; }
+    .sp-weather-cmt-txt-box-inner { height:220px;}
+    .sp-weather-cmt-txt-box.more { position:fixed; top:20px; bottom:20px; left:10px; right:10px; }
+    .sp-weather-cmt-txt-box.more .sp-weather-cmt-txt-box-inner { max-height:100%;}
+    
+    /* 장기예보 링크 */
+    .sp-sub-link > ul > li { width:calc(50% - 8px); margin:0 4px; }
+    .sp-ext-link > ul > li a { font-size: 16px; padding-left:33px; background-size:22px;}
+    .sp-sub-link > ul > li > a:after { display:none; }
+    .sp-sub-link-summer > ul { flex-wrap:wrap; }
+    .sp-sub-link-summer > ul > li:nth-child(n+3) { margin-top:8px;}
+    
+    /* 외부 링크 */
+    .sp-ext-link { padding:10px; margin:5px 0;}
+    .sp-ext-link > h2 { position:relative; padding:10px 0; left:auto; top:auto; margin-top:auto; font-size:17px; }
+    .sp-ext-link > ul { display:block; padding-left:0;}
+    .sp-ext-link > ul:after { content:''; display:block; clear:both; }
+    .sp-ext-link > ul > li { float:left; width:calc(100% / 2); padding:2px;}
+    .sp-ext-link > ul > li a { justify-content:center; }
+    
+    /* 육상예보 */
+    .sp-land-forecast .table-col thead th { font-size:13px; }
+    .sp-land-forecast .table-col tbody th { font-size:13px; }
+    /* 바다날씨 */
+    .sp-sea-daily-forecast table img { margin-left:4px; }
+    .sp-sea-area-sch .serch-area { width:calc(100% - 50px); }
+    .sp-sea-area-sch .serch-area .serch-area-btn { width:100%; }
+    .sp-sea-warning > div { text-align:right; }
+    .sp-sea-warning [class*="box-con"] { margin-top:8px; position:relative; top:auto; left:auto; bottom:auto; right:auto; display:inline-block;}
+    .sp-sea-daily-forecast { margin-top:8px; min-height:auto; padding-left: 16px; padding-top:8px; }
+    .sp-sea-daily-forecast .img-con { margin:auto; position:relative; left:auto;top:auto; min-height:510px;}
+    .sp-sea-daily-forecast .right-con {float:none; width:100%; padding-left:0; min-height:auto;}
+    .sp-sea-daily-forecast .right-con .tit { font-size:18px; padding:5px 0;}
+    .sp-sea-daily-forecast .right-con .txt { font-size:16px; }
+    #sea-today-short-term {min-height:auto;}
+    .sp-sea-mid-forecast .tit { font-size:18px; padding:8px 12px; }
+    
+    /* 바다검색 */
+    .sp-modal-pop {padding-top:40px;}
+    .sp-modal-pop .pop-close{width:30px;height:30px;right:10px;top:10px;background-size:20px 20px;}
+    
+    .sp-layer-pop-wrap{width:100%;padding: 0 13px;}
+    .sp-layer-pop-wrap .right-wrap{ width:100%; padding:0; }
+    .sp-layer-pop-wrap .pop-cont-title{height:35px;line-height:35px;font-size:12px;margin-top:28px; width:100%;}
+    .sp-layer-pop-wrap .pop-cont {margin:0 auto; width:100%;}
+    .sp-layer-pop-wrap .cont01{ padding-top:12px;max-height:900px;;overflow-y:auto;overflow-y: -moz-scrollbars-none; /* Firefox scrollbar hide */-ms-overflow-style:none;margin-bottom:40px;}
+    .sp-layer-pop-wrap .cont01 ul{float:left;width:calc(50% - 40px); margin-left:40px; }
+    .sp-layer-pop-wrap .cont01 ul:first-of-type{margin-left:0;} 
+    .sp-layer-pop-wrap .cont01 ul:first-of-type:before{display:none;}
+    .sp-layer-pop-wrap .cont01 ul::before{content:"";display:block;width:20px;height:20px;background:url(../image/icon_side.png);position:absolute;left:-30px;top:75px;background-size:100%;}
+    .sp-layer-pop-wrap .cont01 ul li{height:33px; margin-bottom:2px;}
+    .sp-layer-pop-wrap .radio-wrap .addr-chk-btn{ line-height:33px; font-size:11px; padding-left:12px;}
+    .sp-layer-pop-wrap .radio-wrap label{ height:33px;line-height:33px;font-size:11px;padding-left:12px;}
+    .sp-layer-pop-wrap .bookmark-btn{width:28px;height:28px;margin-right:0;background-size:100%;}
+    .sp-layer-pop-wrap .sch-btn02{width:28px;height:28px;margin-right:0;background-size:100%;}
+    .sp-layer-pop-wrap .cont-item-wrap li{height:auto;margin-bottom:5px;line-height:27px;}
+    .sp-layer-pop-wrap .cont-item-wrap li:after{content:"";display:block;clear:both;}
+    .sp-layer-pop-wrap .cont-item-wrap li > *{float:none;}
+    .sp-layer-pop-wrap .cont-item-wrap li .tit{font-size:14px;margin-top:10px;}
+    .sp-layer-pop-wrap .cont-item-wrap li div a, .sp-layer-pop-wrap .cont-item-wrap li div button{width:100%;font-size:13px;height:35px; line-height:35px; margin-left:0;padding-left:10px;padding-right:24px; overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;}
+    .sp-layer-pop-wrap .cont-item-wrap li div .accordion-dropdown-wrap .co-btn:after{ content:''; position:absolute; height:1px; left:0; right:0; bottom:0; background-color:#e5e5e5;}
+    .sp-layer-pop-wrap .cont-item-wrap li div .accordion-dropdown-wrap:last-child .co-btn:after{display:none;}
+    .sp-layer-pop-wrap .cont-item-wrap li div .co-btn-top:after{content:"";position:absolute;right:10px;top:50%;background:url(../image/arrow_down03.png);width:11px;height:7px;margin-top:-4px;}
+    .sp-layer-pop-wrap .cont-item-wrap li .side-btn{margin-left:5px;width:67px;height:35px;line-height:35px;font-size:13px;}
+    .sp-layer-pop-wrap .cont-item-wrap .bok-src-wrap{float:left;width:calc(100% - 77px);}
+    .sp-layer-pop-wrap .cont-item-wrap .bok-src-wrap .accordionsecond-con{bottom:42px;position:absolute;}
+    .sp-layer-pop-wrap .cont-item-wrap .bok-src-wrap .accordion-con{bottom:42px;position:absolute;width:100%;}
+    .sp-layer-pop-wrap .accordion-con { border-radius:4px; box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);}
+    .sp-layer-pop-wrap .accordion-con a.delete-bookmark { text-indent:-9999px; position:absolute; right:-5px; top:7px;width:30px;height: 30px;display:inline-block;z-index:99; background:url(../image/item-hide-icon_2.png) no-repeat;width:21px;height:21px;}
+    .sp-layer-pop-wrap .accordion-con a.delete-bookmark .item-hide-btn { position: absolute; top:50%; left:50%; margin-left: -10.5px; margin-top: -10.5px; width: 21px; height: 21px; background: url(../image/item-hide-icon-on.png);}
+    .sp-layer-pop-wrap .accordion-con .accordion-dropdown-wrap { position: relative; height:35px; }
+    
+    /* 전국특보 */
+    .cmp-main-wrn { top:46px;}
+    .cmp-main-wrn [class*="box-con"]{position:relative;float:none; margin-top:-254px; display:block; width:170px; height:26px;line-height:26px;border-radius:13px;text-align:center;font-size:16px;z-index:2;}
+    .cmp-main-wrn .box-con-off{width:auto;padding:0 8px; line-height:26px; font-size:12px; display:inline-block; position: absolute; top: -46px; right: 5px;}
+    .cmp-main-wrn .box-con-on{width:120px;padding:0 12px; line-height:24px; font-size:12px; display:inline-block; position: absolute; top: -46px; right: 5px; border-width:2px; font-weight:600;}
+    .cmp-main-wrn .box-con-on:after{ content:'▾'; position:absolute; display:inline-block; font-size:14px; width:14px; height:14px; line-height:14px; text-align:center; right:6px; top:50%; margin-top:-7px;transform:rotateZ(0deg);transition: all 0.2s;}
+    .cmp-main-wrn .box-con-on:before{display:none;}
+    .cmp-main-wrn .box-con-on > span{padding-left:0;padding-right:0;}
+    .cmp-main-wrn .box-con > span{padding-right:10px;font-size:14px;}
+    .cmp-main-wrn .box-con-wrn { max-width: calc(100% - 152px); width:auto; right: 147px; font-size:14px;}
+    .cmp-main-wrn .box-con-wrn > span{padding-right:10px;font-size:14px;}
+    .cmp-main-wrn .accordion-con{border:1px solid #bb0000;border-top:5px solid #bb0000;padding:0 13px;background:#eef2f7; margin-top:-260px; }
+    .cmp-main-wrn .tab-cont-wrap01{padding:7px 0}
+    .cmp-main-wrn .tab-wrap01{padding-bottom:0;}
+    .cmp-main-wrn [class*="tab-btn"] button{font-size:17px;margin-top:0;padding:0 9px;line-height:42px;font-weight:300;}
+    .cmp-main-wrn [class*="tab-btn"] button.on{border-bottom:3px solid #bb0000;}
+    .cmp-main-wrn [class*="tab-btn"] button.on .icon{background:url('../image/sub-tab-icon-on.png');}
+    .cmp-main-wrn [class*="tab-btn"] button.on .icon .tooltip{top:35px;}
+    .cmp-main-wrn .tab-fild{overflow:hidden;padding-bottom:8px;}
+    .cmp-main-wrn .left-flid{width:100%;float:none}
+    .cmp-main-wrn .right-flid{float:none;width:100%;padding-left:0;margin-top:15px;}
+    .cmp-main-wrn .right-flid > .tit{padding-left:15px;position:relative;font-size:17px;font-weight:700;}
+    .cmp-main-wrn .right-flid > .tit:after{width:7px;height:7px;content:"";position:absolute; left:0;top:50%;margin-top:-4px;background:#000;}
+    .cmp-main-wrn .right-flid > .txt{font-size:13px;padding-left:15px;margin-top:5px;margin-bottom:25px;line-height:150%;}
+    .cmp-main-wrn .right-flid > .txt strong{font-weight:700;}
+    .cmp-main-wrn .right-flid .text-area{height:245px;background:#fff;margin-top:10px;}
+    .cmp-main-wrn .right-flid > .txt span{display:block;}
+    .cmp-main-wrn .right-flid > .txt span:before{display:none;}
+    .cmp-main-wrn .right-flid > .text-area{height:190px;}
+    .cmp-main-wrn .right-flid .text-area .swiper-slide .paragraph{margin-top:25px;}
+    .cmp-main-wrn .right-flid > .text-area .swiper-slide{height:auto;font-size:13px;padding:10px;}
+    .cmp-main-wrn .big-btn{position:absolute;right:63px;top:15px;color:#595959;width:76px;height:26px;line-height:12px;font-size:12px;text-align:center;}
+    .cmp-main-wrn .accordion-con .close {width:36px;height:36px;background-size:19px;right:5px;top:5px;}
+    
+    .sp-map-wrap { min-height:360px; height:360px;}
+    .sp-embeded-image-player-wrap .sp-map-wrap { min-height:auto; height:auto;}
+    
+    /* 산불기상지원 */
+    .cmp-sp-pos-item { width:50%; }
+    .cmp-sp-pos-item:nth-child(2n) > span { margin-left:10px; margin-right:0; }
+    .cmp-sp-pos-item:nth-child(2n+1) > span { margin-left:0; margin-right:10px; }
+    .cmp-sp-pos-item:nth-child(n+3) { margin-top:5px; }
+    
+    .cmp-sp-image { padding:20px 20px; }
+    .cmp-sp-image-header { font-size: 14px;}
+    .cmp-sp-image-foot { margin-top:20px; }
+    .cmp-sp-image-foot a {line-height:36px; font-size:14px; width:300px;}
+    .cmp-sp-image-foot a:after { content: '▾'; font-size: 14px; width: 14px; height: 14px; line-height: 14px; }
+
+    /* 해양사고 기사지원 */
+    .cmp-sp-image-dual { padding:5px; }
+    .cmp-sp-image-dual > * { width:calc(100% - 10px); margin:5px; }
+    .sp-ext-link > ul > li a.nifos { background-size:auto 30px; padding-left:40px;}
+    .sp-ext-link > ul > li a.afso { background-size:auto 30px; padding-left:40px;}
+    .sp-ext-link > ul > li a.marine-kma { background-size:auto 30px; padding-left:40px;}
+    .sp-ext-link > ul > li a.global-amo { background-size:auto 30px; padding-left:40px;}
+}
+
+@media screen and (max-width:425px) {
+    /* 웰컴 */
+    .sp-welcome-item { width:calc(100% / 2); }
+    .sp-welcome-item > span > a > span > span { display:block; }
+    /* 산불지원 헤더 */
+    .sp-header-forest-fire .sp-hero-header { height:60px; }
+    .sp-header-marine-accident .sp-hero-header { height:60px; }
+    /* 날씨해설 */
+    .sp-weather-cmt { padding:16px; }
+    .sp-weather-cmt-video { height:220px; }
+    .sp-weather-cmt-video iframe { height:220px; }
+    /* 산불기상지원 */
+    .cmp-sp-pos-item { width:100%; }
+    .cmp-sp-pos-item > span { margin:0; }
+    .cmp-sp-pos-item:nth-child(2n+1) > span { margin:0; }
+    .cmp-sp-pos-item:nth-child(2n) > span { margin:0; }
+    .cmp-sp-pos-item:nth-child(3n+1) > span { margin:0; }
+    .cmp-sp-pos-item:nth-child(3n) > span { margin:0; }
+    .cmp-sp-pos-item:nth-child(n+2) { margin-top:5px; }
+    /* 외부 링크 */
+    .sp-ext-link > ul > li { min-width:auto;}
+    .sp-ext-link > ul > li a.traffic { min-width:auto;}
+    .sp-ext-link > ul > li a.airport-weather { min-width:auto; }
+    .sp-ext-link > ul > li a.port-weather { min-width:auto; }
+    .sp-ext-link > ul > li a.coast-weather { min-width:auto; }
+    .sp-ext-link > ul > li a.hill-weather { min-width:auto; }
+    .sp-ext-link > ul > li a.jeju-weather { min-width:auto; }
+    .sp-ext-link > ul > li a.nifos { min-width:auto; }
+    .sp-ext-link > ul > li a.afso { min-width:auto; }
+    /* footer */
+    .sp-footer .sp-footer-address { max-width: 100%;}
+    .sp-footer .sp-footer-copyright { max-width: 100%;}
+    .sp-footer .sp-footer-131 { position:relative; top:auto; right:auto; bottom:auto; left:auto; margin-left:20px; margin-top:16px; }
+}
+
+@media screen and (max-width:320px){
+    .sp-weather-cmt-video { height:180px; }
+    .sp-weather-cmt-video iframe { height:180px; }    
+}
+    

@@ -1,0 +1,134 @@
+/*
+Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name Pretendard GOV.
+https://github.com/orioncactus/pretendard
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+*/
+
+/* @font-face {
+	font-family: 'Pretendard GOV';
+	font-weight: 900;
+	font-display: swap;
+	src: local('Pretendard GOV Black'), url(/w/resources/font/woff2-subset/PretendardGOV-Black.subset.woff2) format('woff2'), url(/w/resources/font/woff-subset/PretendardGOV-Black.subset.woff) format('woff');
+} */
+
+@font-face {
+	font-family: 'Pretendard GOV';
+	font-weight: 800;
+	font-display: swap;
+	src: local('Pretendard GOV ExtraBold'), url(/w/resources/font/woff2-subset/PretendardGOV-ExtraBold.subset.woff2) format('woff2'), url(/w/resources/font/woff-subset/PretendardGOV-ExtraBold.subset.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard GOV';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard GOV Bold'), url(/w/resources/font/woff2-subset/PretendardGOV-Bold.subset.woff2) format('woff2'), url(/w/resources/font/woff-subset/PretendardGOV-Bold.subset.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard GOV';
+	font-weight: 600;
+	font-display: swap;
+	src: local('Pretendard GOV SemiBold'), url(/w/resources/font/woff2-subset/PretendardGOV-SemiBold.subset.woff2) format('woff2'), url(/w/resources/font/woff-subset/PretendardGOV-SemiBold.subset.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard GOV';
+	font-weight: 500;
+	font-display: swap;
+	src: local('Pretendard GOV Medium'), url(/w/resources/font/woff2-subset/PretendardGOV-Medium.subset.woff2) format('woff2'), url(/w/resources/font/woff-subset/PretendardGOV-Medium.subset.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard GOV';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard GOV Regular'), url(/w/resources/font/woff2-subset/PretendardGOV-Regular.subset.woff2) format('woff2'), url(/w/resources/font/woff-subset/PretendardGOV-Regular.subset.woff) format('woff');
+}
+
+
+@font-face {
+	font-family: 'Material Symbols Outlined';
+	font-style: normal;
+	font-weight: 100 700;
+	src: url(/w/resources/font/material-symbols-outlined.woff2) format('woff2');
+}
+
+.material-symbols-outlined,
+.icon {
+	font-family: 'Material Symbols Outlined';
+	font-weight: 300;
+	font-style: normal;
+	font-size: 24px;
+	line-height: 1;
+	letter-spacing: normal;
+	text-transform: none;
+	display: inline-block;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	-webkit-font-feature-settings: 'liga';
+	-webkit-font-smoothing: antialiased;
+}
+
+[class^="size-"] .icon,
+[class^="size-"].icon {
+	font-size: inherit;
+}
+
+.icon.fill {
+	font-variation-settings: 'FILL' 1;
+}
+.icon.arrow::before {
+	content: '\f46a';
+}
+.icon.print::before {
+	content: '\e8ad';
+}
+.icon.share::before {
+	content: '\e80d';
+}
+.icon.home::before {
+	content: '\e88a';
+}
+.icon.settings::before {
+	content: '\e8b8';
+}
+.icon.info::before {
+	content: '\e88e';
+}
+.icon.menu::before {
+	content: '\e5d2';
+}
+.icon.language::before {
+	content: '\e894';
+}
+.icon.chevron-right::before {
+	content: '\e5cc';
+}
+
+h2.popup-title {
+	@apply block relative py-4 lg:px-3 lg:py-5 text-center font-semibold text-brand lg:text-xl;
+
+	&:after {
+		content: '';
+		@apply absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-1 bg-brand lg:h-1.5;
+	}
+}
+
+h3.tit {
+	@apply relative pb-2 text-xl font-semibold;
+}
+h3.subtitle {
+	@apply pb-2 text-lg font-semibold;
+}
+
+i, em {
+	@apply !not-italic;
+}
+.hide-tit {
+	@apply !hidden;
+}

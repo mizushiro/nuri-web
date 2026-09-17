@@ -1,0 +1,1987 @@
+@charset "utf-8";
+
+
+/* === symbols */
+/* 닫기 */
+.sym-close { padding: 10px; font-size: 14px; font-weight: 500; color: #089CE1;}
+.sym-close:before { content: 'x'; position: absolute; left:20px; top: 10px;line-height:20px; font-size:28px; font-weight:300;}
+.sym-close span {border:1px solid #089CE1; border-radius: 7px; margin-left:30px; line-height: 20px; padding:2px 12px;}
+
+/* 검색 */
+.sym-btn { position:relative; display:inline-block; background-size: auto 30px; background-position: center center; background-repeat: no-repeat; background-color: rgba(0,0,0,0); border-radius: 3px; text-indent: -9999px; background-image:url(../image/renew/ic_sym_03_gray.png);transition: all .3s ease-out;}
+.sym-btn.sch { height: 49px; width: 60px; background-color: #939393; background-size: auto 30px; background-image:url(../image/icon_search.png);}
+.sym-btn.sch-b { height: 49px; width: 49px; background-color: #fff; background-size: auto 30px; background-image:url(../image/renew/ic_sym_97.png);}
+.sym-btn.star { border:1px solid #979797; width: 35px; height: 35px; background-color: #fff; background-size: auto 20px; background-image:url(../image/renew/ic_sym_03_gray.png);}
+.sym-btn.star.on { background-image:url(../image/renew/ic_sym_03_yellow.png);}
+.sym-btn.star-big { width: 45px; height: 45px; background-size:auto 30px; }
+.sym-btn.curr { width: 37px; height: 37px; background-color: rgba(0,0,0,0); background-size: auto 22px; background-image:url(../image/renew/ic_sym_02.png);}
+.sym-btn.quest { border:1px solid #979797; width: 35px; height: 35px; background-color: #fff; background-size: auto 20px; background-image:url(../image/renew/ic_sym_04.png);}
+.sym-btn.settings { width: 37px; height: 37px; background-color: rgba(0,0,0,0); background-size: auto 20px;background-image:url(../image/renew/ic_sym_07.png);}
+.sym-btn.settings-g { width: 45px; height: 45px; background-color: #fff; background-size: auto 26px;background-image:url(../image/renew/ic_sym_08.png);}
+.sym-btn.hamb { width: 40px; height: 40px; background-color: #fff; background-size: auto 26px;background-image:url(../image/renew/ic_sym_09.png);}
+.sym-btn.big-close { width:50px; height:50px; background:url(../image/pop_close_icon.png) no-repeat center;background-size:24px auto;}
+.sym-btn.newwin { border:1px solid #979797; width: 35px; height: 35px; background-color: #fff; background-size: auto 20px; background-image:url(../image/renew/ic_sym_06.png);}
+
+.sym-btn.iconguide { border:1px solid #B2B2B2; width: 24px; height: 24px; line-height:23px; background-color:#F4F4F4; background-size: auto 13px; background-image:url(../image/icon_help_2.png);}
+
+.sym-btn.view-composite { width: 38px; height: 38px; background-size: auto 20px; background-image:url(../image/renew/ic_view_mode_composite_off.png);}
+.sym-btn.view-composite.on { background-image:url(../image/renew/ic_view_mode_composite.png); background-color:#fff; }
+.sym-btn.view-chart { width: 38px; height: 38px; background-size: auto 20px; background-image:url(../image/renew/ic_view_mode_chart_off.png);}
+.sym-btn.view-chart.on { background-image:url(../image/renew/ic_view_mode_chart.png); background-color:#fff;}
+.sym-btn.view-table { width: 38px; height: 38px; background-size: auto 20px; background-image:url(../image/renew/ic_view_mode_table_off.png);}
+.sym-btn.view-table.on { background-image:url(../image/renew/ic_view_mode_table.png); background-color:#fff;}
+
+.sym-btn.txt-only { font-size:18px; color:#6D6D6D; font-weight:500; background:#E8E9E9; text-indent:0px; text-align:center; padding:0 16px; line-height:46px;}
+.sym-btn.txt-only.on { font-weight:700; color:#fff; background:#009AE1;}
+.sym-btn.with-txt { text-indent:0px; width:auto; line-height:37px; font-size:15px; padding:1px 10px 0 30px; background-position: 6px center; }
+.sym-btn.iconguide.with-txt { line-height:23px; font-size:13px; color:#2B2B2B; padding-left:24px;}
+.sym-btn {transition: all .2s ease-out;}
+.sym-btn:hover { /*box-shadow: inset 0 0 0 150px rgba(0,0,0,0.1); */ }
+.sym-btn.settings-g:hover{ /* box-shadow: inset 0 0 0 150px rgba(0,0,0,0.0); */ }
+.sym-btn.hamb:hover{ /* box-shadow: inset 0 0 0 150px rgba(0,0,0,0.0); */ }
+
+.sym-btn.sym-btn-sm { font-size:14px; line-height:14px; background-color:#fff; padding:2px 10px; border-radius:3px; letter-spacing:-1px; }
+.sym-btn.sym-btn-color-blue { border:1px solid #4489DE; color:#4489DE; }
+
+.sym-ic { display:inline-block; background-size: auto 37px; background-position: center center; background-repeat: no-repeat; background-color: rgba(0,0,0,0); border-radius: 3px; text-indent: -9999px;}
+.sym-ic.alert { width: 37px; height: 37px; background-size: auto 30px; background-image:url(../image/renew/ic_sym_01.png);background-position: center 2px; }
+.sym-ic.sunrise { width: 30px; height: 30px; background-size: auto 24px;background-image:url(../image/renew/ic_sym_10.png);}
+.sym-ic.sunset { width: 30px; height: 30px; background-size: auto 24px;background-image:url(../image/renew/ic_sym_11.png);}
+.sym-ic.uv-index { width: 30px; height: 30px; background-size: auto 28px;background-image:url(../image/renew/ic_sym_11.png);}
+
+.sym-ic.with-txt { text-indent:0px; width:auto; padding-left:30px; background-position: left center; }
+
+.sym-btn-right { float:right;}
+/* 날씨 슬라이더 */
+#digital-forecast { min-height: 525px;}
+#digital-forecast .cmp-cur-weather-air { display:none; }
+#current-weather .cmp-cur-weather-air { display:block; }
+.cmp-cur-weather-air { z-index:1;}
+.cmp-cur-weather-air .air-lvt a[data-air-type] {vertical-align: middle;text-indent:-99999px; width:18px; height:18px; display:inline-block; background:url(../image/icon_help_2.png) no-repeat center center; background-size:14px; }
+
+.cmp-dfs-slider { position:relative; padding-top:10px;}
+.cmp-dfs-slider .dfs-tab { background:#EEF2F7; padding: 10px 15px 0px 15px; height: 60px; position:relative;}
+.cmp-dfs-slider .dfs-tab .right { float:left; width:calc(100% - 680px); height:50px;}
+.cmp-dfs-slider .dfs-tab .dfs-tab-head-wrap { float:left; overflow:hidden; margin-top:0;}
+.cmp-dfs-slider .dfs-tab .dfs-tab-head { width:680px;height:50px;}
+.cmp-dfs-slider .dfs-tab .dfs-tab-head li { display:block; position:relative; float:left; min-width:130px; margin-left:3px; font-size: 20px; background:#DAE0E8;}
+.cmp-dfs-slider .dfs-tab .dfs-tab-head li:first-of-type { margin-left:0; }
+.cmp-dfs-slider .dfs-tab .dfs-tab-head li:last-of-type { min-width: 140px; }
+.cmp-dfs-slider .dfs-tab .dfs-tab-head li a { border:1px solid #B9C5D3; display:block; position:relative; text-align:center; line-height:46px;padding-top:2px;transition: all .2s ease-out;}
+.cmp-dfs-slider .dfs-tab .dfs-tab-head li a.on 
+	, .cmp-dfs-slider .dfs-tab .dfs-tab-head li a:hover
+	, .cmp-dfs-slider .dfs-tab .dfs-tab-head li a:focus { z-index:3; color: #0099E1; background:#fff; border-bottom: 1px solid rgba(0,0,0,0);}
+.cmp-dfs-slider .dfs-tab .dfs-tab-head li a.on:after 
+	, .cmp-dfs-slider .dfs-tab .dfs-tab-head li a:hover:after
+	, .cmp-dfs-slider .dfs-tab .dfs-tab-head li a:focus:after { content: ''; position: absolute; height: 2px; left:0; top: 0; right:0; background:#00A9CD; }
+.cmp-dfs-slider .dfs-tab .dfs-tab-head li a + .tt-btn { z-index:3; display:none;}
+.cmp-dfs-slider .dfs-tab .dfs-tab-head li a.on + .tt-btn { display:inline-block;}
+.cmp-dfs-slider .dfs-tab .dfs-tab-head li .tt-btn { position: absolute; top:50%; margin-top:-10px; right:10px; }
+.cmp-dfs-slider .dfs-tab .dfs-tab-head li .tt {z-index:3; width: 300px; top:auto; bottom:-20px;}
+.cmp-dfs-slider .dfs-tab .right .updated { font-size:13px; float:left; height: 50px; position:relative; width: 270px; padding-top:7px; display:none;}
+.cmp-dfs-slider .dfs-tab .right .updated h4 { position:absolute; left:10px; top:9px; font-weight: 600;}
+.cmp-dfs-slider .dfs-tab .right .updated strong { display:block; padding-left:66px; line-height:20px; font-weight: 400;}
+.cmp-dfs-slider .dfs-tab .right .btns {float: right; height:50px; }
+.cmp-dfs-slider .dfs-tab .right .btns .btn-wrap { margin-top:1px; }
+.cmp-dfs-slider .dfs-tab .right .btns .sym-btn.settings {display:none;}
+.cmp-dfs-slider .dfs-tab-body { position:relative; min-height:350px; overflow:hidden; width:100%;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl {z-index:2; background:#fff; position:absolute; padding-top:60px; width:55px; left:0; top:0;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl li { width: 100%; float:left; line-height:30px; text-align:center; font-size:14px;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl li:nth-child(1) { line-height:25px;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl li:nth-child(2) { line-height:55px;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl li:nth-child(3) { line-height:110px;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl li:nth-child(4) { line-height:30px;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl li:nth-child(5) { height:36px; line-height:18px; padding-top:1px;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl li:nth-child(5) small{ display:block; font-size:13px;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl li:nth-child(5).snow-exists { font-size:13px;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl li:nth-child(6) { line-height:30px;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl li:nth-child(7) { height:60px; line-height:18px; padding-top:12px;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl li:nth-child(7) small{ display:block;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl li:nth-child(8) { line-height:30px;}
+
+.cmp-dfs-slider.cmp-dfs-wave-slider .dfs-tab-body .item-lbl li:nth-child(1) { line-height:25px;}
+.cmp-dfs-slider.cmp-dfs-wave-slider .dfs-tab-body .item-lbl li:nth-child(2) { line-height:55px;}
+.cmp-dfs-slider.cmp-dfs-wave-slider .dfs-tab-body .item-lbl li:nth-child(3) { height:60px; line-height:18px; padding-top:12px;}
+.cmp-dfs-slider.cmp-dfs-wave-slider .dfs-tab-body .item-lbl li:nth-child(4) { line-height:30px;}
+.cmp-dfs-slider.cmp-dfs-wave-slider .dfs-tab-body .item-lbl li:nth-child(n+5) { display:none;}
+
+.cmp-dfs-slider .dfs-tab-body .item-lbl.off { display:none !important; }
+.cmp-dfs-slider .dfs-tab-body .item-lbl-graph {display:none; z-index:2; background:#fff; position:absolute; padding-top:60px; width:55px; left:0; top:0;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl-graph li { width: 100%; float:left; line-height:30px; text-align:center; font-size:15px;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl-graph li:nth-child(1) { line-height:25px;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl-graph li:nth-child(2) { line-height:55px;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl-graph li:nth-child(3) { line-height:100px;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl-graph li:nth-child(4) { height:100px; line-height:20px; padding-top: 30px;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl-graph li:nth-child(4) small{display:block;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl-graph li:nth-child(5) { height:100px; line-height:20px; padding-top: 30px;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl-graph li:nth-child(5) small{display:block;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl-graph li:nth-child(6) { height:100px; line-height:20px; padding-top: 40px;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl-graph li:nth-child(7) { line-height:120px;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl-graph li:nth-child(8) { line-height:100px;}
+
+.cmp-dfs-slider.cmp-dfs-wave-slider .dfs-tab-body .item-lbl-graph li:nth-child(1) { line-height:25px;}
+.cmp-dfs-slider.cmp-dfs-wave-slider .dfs-tab-body .item-lbl-graph li:nth-child(2) { line-height:55px;}
+.cmp-dfs-slider.cmp-dfs-wave-slider .dfs-tab-body .item-lbl-graph li:nth-child(3) { line-height:120px;}
+.cmp-dfs-slider.cmp-dfs-wave-slider .dfs-tab-body .item-lbl-graph li:nth-child(4) { line-height:100px;}
+.cmp-dfs-slider.cmp-dfs-wave-slider .dfs-tab-body .item-lbl-graph li:nth-child(n+5) { display:none}
+
+
+.cmp-dfs-slider .dfs-tab-body .item-lbl-graph.off { display:none !important; }
+.cmp-dfs-slider .dfs-tab-body .item-lbl-midterm {display:none; z-index:2; background:#fff; position:absolute; padding-top:25px; width:55px; left:0; top:0; bottom:10px;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl-midterm li { width: 100%; float:left; line-height:30px; text-align:center; font-size:14px;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl-midterm li:nth-child(1) { line-height:60px;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl-midterm li:nth-child(2) { line-height:55px;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl-midterm li:nth-child(3) { line-height:110px;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl-midterm li:nth-child(4) { line-height:30px;}
+/* .cmp-dfs-slider .dfs-tab-body .item-lbl-midterm li:nth-child(5) { height:36px; line-height:18px; padding-top:1px;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl-midterm li:nth-child(6) { line-height:30px;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl-midterm li:nth-child(7) { height:60px; line-height:18px; padding-top:12px;}
+.cmp-dfs-slider .dfs-tab-body .item-lbl-midterm li:nth-child(8) { line-height:30px;} */
+.cmp-dfs-slider .dfs-tab-body .item-lbl-midterm.on { display:block; }
+
+.cmp-dfs-slider.cmp-dfs-wave-slider .dfs-tab-body .item-lbl-midterm { display:none;}
+.cmp-dfs-slider.cmp-dfs-wave-slider .dfs-tab-body .item-lbl-midterm.on { display:none;}
+
+.cmp-dfs-slider .dfs-tab-body .item { float:left; width: 47px;padding-top:60px; position:relative;}
+.cmp-dfs-slider .dfs-tab-body .day-ten .item { width:72px; }
+.cmp-dfs-slider .dfs-tab-body .day-ten .item.all-day { width:144px; }
+.cmp-dfs-slider .dfs-tab-body .day-ten .item .item-date { display:none; }
+.cmp-dfs-slider .dfs-tab-body .item li { width: 100%; float:left; line-height:30px; text-align:center; font-size:13px;}
+.cmp-dfs-slider .dfs-tab-body .item li:nth-child(1) { height:25px; line-height:25px;}
+.cmp-dfs-slider .dfs-tab-body .item li:nth-child(2) { height:55px; line-height:55px; text-align:unset; position:relative;}
+.cmp-dfs-slider .dfs-tab-body .slide:not(.day-ten) .item li:nth-child(2) { margin-left:-50%; }
+.cmp-dfs-slider .dfs-tab-body .item li:nth-child(2) .wic { width: 100%; height: 100%; background-size:44px auto; display:block; margin:0 auto;}
+.cmp-dfs-slider .dfs-tab-body .item li:nth-child(2) .lgt { width:24px; height:24px; background:url(../icon/DY@64/Light/DB_LGT.png) no-repeat center center; background-size:18px; text-indent:-9999px;position:absolute; top: 50%;right: 4px;margin-top: -26px;}
+.cmp-dfs-slider .dfs-tab-body .item li:nth-child(3) { height:110px; line-height:110px;}
+.cmp-dfs-slider .dfs-tab-body .item li:nth-child(4) { height:30px; line-height:30px;}
+.cmp-dfs-slider .dfs-tab-body .item li:nth-child(5) { height:35px; line-height:18px; background:#E9ECED; border-bottom:1px solid #dedede; z-index:0; display:table;}
+.cmp-dfs-slider .dfs-tab-body .item li:nth-child(5).snow-exists { font-size:13px; line-height:18px;}
+.cmp-dfs-slider .dfs-tab-body .item li:nth-child(5) span:nth-child(3) { display:block; text-align:center; border-right:1px solid #fff;}
+.cmp-dfs-slider .dfs-tab-body .item li:nth-child(5) .unit { display:none !important; }
+.cmp-dfs-slider .dfs-tab-body .slide:not(.day-ten) .item li:nth-child(5) { margin-left:-50%; }
+.cmp-dfs-slider .dfs-tab-body .item li:nth-child(6) { height:30px; line-height:30px;}
+.cmp-dfs-slider .dfs-tab-body .slide:not(.day-ten) .item li:nth-child(6) span:last-child { position:absolute; width:100%; left: -50%;}
+.cmp-dfs-slider .dfs-tab-body .item li:nth-child(7) { height:60px; text-align:unset; border-bottom:1px solid #dedede;}
+.cmp-dfs-slider .dfs-tab-body .item li:nth-child(7) .wdic { display:block; margin:10px auto 0;}
+.cmp-dfs-slider .dfs-tab-body .item li:nth-child(7) .wspd { display:block; text-align:center;}
+.cmp-dfs-slider .dfs-tab-body .item li:nth-child(7) .wspd .unit { display:none; }
+.cmp-dfs-slider .dfs-tab-body .item li:nth-child(8) { height:30px; line-height:30px;}
+.cmp-dfs-slider .dfs-tab-body .item li:nth-child(9) { height:30px; line-height:30px; text-align:unset;}
+.cmp-dfs-slider .dfs-tab-body .item li:nth-child(9) span[class*="lvl"] { display:block; text-indent:-99999px; height:18px; margin:7px 0 0 0;}
+.cmp-dfs-slider .dfs-tab-body .item li:nth-child(9) span.lvl-gray { background: #f3f3f3;}
+.cmp-dfs-slider .dfs-tab-body .item li:nth-child(9) span.lvl-white { background: #ffffff;}
+.cmp-dfs-slider .dfs-tab-body .item li:nth-child(9) span.lvl-blue { background: #99ccdd;}
+.cmp-dfs-slider .dfs-tab-body .item li:nth-child(9) span.lvl-yellow { background: #f9f57e;}
+.cmp-dfs-slider .dfs-tab-body .item li:nth-child(9) span.lvl-orange { background: #ffc46f;}
+.cmp-dfs-slider .dfs-tab-body .item li:nth-child(9) span.lvl-red { background: #f19898;}	
+.cmp-dfs-slider .dfs-tab-body .slide:not(.day-ten) .item li:nth-child(9) { margin-left:-50%;}
+.cmp-dfs-slider .dfs-tab-body .slide:not(.day-ten) .item li:nth-child(9) span.lvl-show { text-indent:0px; padding-left:10px; line-height:18px;}
+.cmp-dfs-slider .dfs-tab-body .item-wrap .s-item[data-time="03:00"] .pcp
+	,.cmp-dfs-slider .dfs-tab-body .item-wrap .s-item[data-time="09:00"] .pcp 
+	,.cmp-dfs-slider .dfs-tab-body .item-wrap .s-item[data-time="15:00"] .pcp 
+	,.cmp-dfs-slider .dfs-tab-body .item-wrap .s-item[data-time="21:00"] .pcp { width:200%;}
+.cmp-dfs-slider .dfs-tab-body .item-wrap .s-item[data-time="06:00"] .pcp
+	,.cmp-dfs-slider .dfs-tab-body .item-wrap .s-item[data-time="12:00"] .pcp 
+	,.cmp-dfs-slider .dfs-tab-body .item-wrap .s-item[data-time="18:00"] .pcp 
+	,.cmp-dfs-slider .dfs-tab-body .item-wrap .s-item[data-time="24:00"] .pcp { visibility:hidden;}
+.cmp-dfs-slider .dfs-tab-body .item-wrap .s-item-first .pcp { visibility:visible !important;}	
+.cmp-dfs-slider .dfs-tab-body .item-wrap .item .pcp span { display:table-cell; border-left:2px solid #fff; height:35px; margin-left:-1px; line-height:18px; vertical-align:middle; word-break:break-all;}
+.cmp-dfs-slider .dfs-tab-body .item:hover:before { display:block; }
+.cmp-dfs-slider .dfs-tab-body .item:before { content:''; position:absolute; top:55px; right:0; bottom:0; left:0; background:#f9f9f9; display:none; z-index:-1;}
+.cmp-dfs-slider .dfs-tab-body .slide:not(.day-ten) .item:after { content:''; position:absolute; width:1px; left:-23px; top:75px; bottom:5px; background:url(../image/renew/ic_vertical_line.png) repeat-y center top; background-size: 1px auto; z-index:-1;}
+.cmp-dfs-slider .dfs-tab-body .slide:not(.day-ten) .item:first-child:after { display:none; }
+.cmp-dfs-slider .dfs-tab-body .item.now li:nth-child(1) span:last-of-type{color:#fff; background-color:#DA6100; border-radius:4px;padding:4px 8px;} 
+.cmp-dfs-slider .dfs-tab-body .slide {float:left; position:relative; margin-bottom:15px;}
+.cmp-dfs-slider .dfs-tab-body .slide .daily-head { position:absolute; left:8px; top:30px; font-size:15px;}
+.cmp-dfs-slider .dfs-tab-body .slide:not(.day-ten) .daily-head { left:-46px; }
+.cmp-dfs-slider .dfs-tab-body .slide:first-child .daily-head {left:1px;}
+.cmp-dfs-slider .dfs-tab-body .slide:first-of-type {margin-left: 78px;}
+.cmp-dfs-slider .dfs-tab-body .slide .daily { float:left; position:relative;}
+.cmp-dfs-slider .dfs-tab-body .slide .daily .daily-head .date { background-color: #0099E1; color:#fff; border-radius:4px; padding:6px 10px; display:inline;}
+.cmp-dfs-slider .dfs-tab-body .slide .daily .daily-head .date:after { content:''; position:absolute; width:25px; height:10px; bottom:-14px; left:20px;background:url(../image/renew/ic_sym_13.png) no-repeat left top; background-size:25px 10px;}
+.cmp-dfs-slider .dfs-tab-body .slide .daily .daily-head .end-date { display:none; }
+.cmp-dfs-slider .dfs-tab-body .slide .daily .daily-head .tminmax { padding-left:4px; letter-spacing:-1px; display:inline;}
+.cmp-dfs-slider .dfs-tab-body .slide .daily .daily-head .tminmax .tmax:before { content: '/'; padding-right:8px;}
+.cmp-dfs-slider .dfs-tab-body .slide .daily .daily-head .tminmax .minval { padding-left:8px; padding-right:8px; color:#009AE1;}
+.cmp-dfs-slider .dfs-tab-body .slide .daily .daily-head .tminmax .maxval { padding-left:8px; color:#EB772C;}
+.cmp-dfs-slider .dfs-tab-body .slide .daily .daily-head .table-head { display:none; }
+.cmp-dfs-slider .dfs-tab-body .slide .daily[data-start-time="23:00"] .daily-head { display:none; }
+.cmp-dfs-slider .dfs-tab-body .slide .daily[data-start-time="22:00"] .daily-head { display:none; }
+/*
+.cmp-dfs-slider .dfs-tab-body .slide:not(.day-ten) .daily:before { content:''; position:absolute; width:1px; left:-23px; top:75px; bottom:5px; background:url(../image/renew/ic_vertical_line3.png) repeat-y center top; background-size: 1px auto; z-index:-1;}
+*/
+.cmp-dfs-slider .dfs-tab-body .slide .daily[data-start-time="22:00"]:before { display:none; }
+.cmp-dfs-slider .dfs-tab-body .slide .daily[data-start-time="23:00"]:before { display:none; }
+
+.cmp-dfs-slider .dfs-tab-body .slide:first-child .daily:before { display:none; }
+.cmp-dfs-slider .dfs-tab-body .slide-wrap:after {content:''; position:absolute; left: 57px; top:278px; right:5px; border-bottom:1px dotted #555;}
+.cmp-dfs-slider .dfs-tab-body .slide-wrap .tchart { position:absolute; height:100px; left:79.5px; top:140px; overflow:hidden;}
+.cmp-dfs-slider .dfs-tab-body .slide-wrap .midtchart { position:absolute; height:100px; left:55px; top:140px; overflow:hidden;}
+.cmp-dfs-slider .dfs-tab-body .slide-wrap .rainchart { display:none; position:absolute; height:100px; left:78px; top:240px; overflow:hidden; }
+.cmp-dfs-slider .dfs-tab-body .slide-wrap .rainchart .chart-label { display:block; text-align:center; }
+.cmp-dfs-slider .dfs-tab-body .slide-wrap .snowchart { display:none; position:absolute; height:100px; left:78px; top:240px; overflow:hidden; }
+.cmp-dfs-slider .dfs-tab-body .slide-wrap .snowchart .chart-label { display:block; text-align:center; }
+.cmp-dfs-slider .dfs-tab-body .slide-wrap .ptychart { display:none; position:absolute; height:100px; left:78px; top:240px; overflow:hidden; }
+.cmp-dfs-slider .dfs-tab-body .slide-wrap .windchart { display:none; position:absolute; height:120px; left:78px; top:340px; overflow:hidden; }
+.cmp-dfs-slider .dfs-tab-body .slide-wrap .hmchart { display:none; position:absolute; height:100px; left:78px; top:460px; overflow:hidden; }
+
+.cmp-dfs-slider .dfs-tab-body .slide-wrap.snow-exists:not(.rain-exists) .snowchart { display:none; position:absolute; height:100px; left:78px; top:240px; overflow:hidden; }
+.cmp-dfs-slider .dfs-tab-body .slide-wrap.snow-exists:not(.rain-exists) .ptychart { top:340px;}
+.cmp-dfs-slider .dfs-tab-body .slide-wrap.snow-exists:not(.rain-exists) .windchart { top:440px;}
+.cmp-dfs-slider .dfs-tab-body .slide-wrap.snow-exists:not(.rain-exists) .hmchart { top:560px;}
+
+.cmp-dfs-slider .dfs-tab-body .slide-wrap.rain-exists:not(.snow-exists) .rainchart { display:none; position:absolute; height:100px; left:78px; top:240px; overflow:hidden; }
+.cmp-dfs-slider .dfs-tab-body .slide-wrap.rain-exists:not(.snow-exists) .ptychart { top:340px;}
+.cmp-dfs-slider .dfs-tab-body .slide-wrap.rain-exists:not(.snow-exists) .windchart { top:440px;}
+.cmp-dfs-slider .dfs-tab-body .slide-wrap.rain-exists:not(.snow-exists) .hmchart { top:560px;}
+
+.cmp-dfs-slider .dfs-tab-body .slide-wrap.rain-exists.snow-exists .rainchart { display:none; position:absolute; height:100px; left:78px; top:240px; overflow:hidden; }
+.cmp-dfs-slider .dfs-tab-body .slide-wrap.rain-exists.snow-exists .snowchart { display:none; position:absolute; height:100px; left:78px; top:340px; overflow:hidden; }
+.cmp-dfs-slider .dfs-tab-body .slide-wrap.rain-exists.snow-exists .ptychart { top:440px;}
+.cmp-dfs-slider .dfs-tab-body .slide-wrap.rain-exists.snow-exists .windchart { top:540px;}
+.cmp-dfs-slider .dfs-tab-body .slide-wrap.rain-exists.snow-exists .hmchart { top:660px;}
+
+.cmp-dfs-slider .dfs-tab-body .slide-wrap.snow-exists .slide .daily .item-wrap .item li:nth-child(5).vs-txt-rn { height:37px; background-color:#fff;}
+.cmp-dfs-slider .dfs-tab-body .slide-wrap.snow-exists .slide .daily .item-wrap .item li:nth-child(5).vs-txt-rn span { height:auto; line-height:18px; vertical-align:top; background-color:#E9ECED; display: inline-block; width: 100%;}
+
+.cmp-dfs-slider.mode-chart .dfs-tab-body .item-lbl {display:none;}
+.cmp-dfs-slider.mode-chart .dfs-tab-body .item-lbl-graph {display:block;}
+.cmp-dfs-slider.mode-chart .dfs-tab-body .item-lbl-graph li:nth-child(7) { height:120px; line-height:20px; padding-top:40px;}
+.cmp-dfs-slider.mode-chart .dfs-tab-body .item-lbl-graph li:nth-child(7) small { display:block; }
+.cmp-dfs-slider.mode-chart .dfs-tab-body .item-lbl-graph .rain { display:none; }
+.cmp-dfs-slider.mode-chart .dfs-tab-body .item-lbl-graph.rain-exists .rain { display:block; } 
+.cmp-dfs-slider.mode-chart .dfs-tab-body .item-lbl-graph .snow { display:none; }
+.cmp-dfs-slider.mode-chart .dfs-tab-body .item-lbl-graph.snow-exists .snow { display:block; }
+
+.cmp-dfs-slider.mode-chart .dfs-tab-body .slide:not(.day-ten) .item li:nth-child(3) { height:100px; visibility: hidden;}
+.cmp-dfs-slider.mode-chart .dfs-tab-body .slide:not(.day-ten) .item li:nth-child(4) { display:none; height:100px; visibility: hidden;}
+.cmp-dfs-slider.mode-chart .dfs-tab-body .slide-wrap.rain-exists .slide:not(.day-ten) .item li:nth-child(4) { height:100px; display:block; visibility:hidden !important;}
+.cmp-dfs-slider.mode-chart .dfs-tab-body .slide:not(.day-ten) .item li:nth-child(5) { display:none; height:100px; visibility: hidden;}
+.cmp-dfs-slider.mode-chart .dfs-tab-body .slide-wrap.snow-exists .slide:not(.day-ten) .item li:nth-child(5) {  height:100px; display:block; visibility:hidden !important;}
+.cmp-dfs-slider.mode-chart .dfs-tab-body .slide:not(.day-ten) .item li:nth-child(6) { height:100px; visibility: hidden;}
+.cmp-dfs-slider.mode-chart .dfs-tab-body .slide:not(.day-ten) .item li:nth-child(7) { height:120px; visibility: hidden;}
+.cmp-dfs-slider.mode-chart .dfs-tab-body .slide:not(.day-ten) .item li:nth-child(8) { height:100px; visibility: hidden;}
+.cmp-dfs-slider.mode-chart .dfs-tab-body .slide:not(.day-ten) .item li:nth-child(9) { display:none; }
+.cmp-dfs-slider.mode-chart .dfs-tab-body .slide:not(.day-ten) .item li:nth-child(10) { display:none; }
+.cmp-dfs-slider.mode-chart .dfs-tab-body .slide.day-ten:after {content:''; position:absolute; left: 5px; top:278px; right:5px; border-bottom:1px dotted #555;}
+
+.cmp-dfs-slider.mode-chart .dfs-tab-body .item-wrap .s-item .pcp { display:none;}
+
+.cmp-dfs-slider.mode-chart .dfs-tab-body .slide-wrap:after { display:none;}
+.cmp-dfs-slider.mode-chart .dfs-tab-body .slide-wrap .tchart { height:100px;}
+.cmp-dfs-slider.mode-chart .dfs-tab-body .slide-wrap.snow-exists:not(.rain-exists) .snowchart { display:block; }
+
+.cmp-dfs-slider.mode-chart .dfs-tab-body .slide-wrap.rain-exists:not(.snow-exists) .rainchart { display:block; }
+
+.cmp-dfs-slider.mode-chart .dfs-tab-body .slide-wrap.rain-exists.snow-exists .rainchart { display:block; }
+.cmp-dfs-slider.mode-chart .dfs-tab-body .slide-wrap.rain-exists.snow-exists .snowchart { display:block; }
+.cmp-dfs-slider.mode-chart .dfs-tab-body .slide-wrap .ptychart { display:block; }
+.cmp-dfs-slider.mode-chart .dfs-tab-body .slide-wrap .windchart { display:block; }
+.cmp-dfs-slider.mode-chart .dfs-tab-body .slide-wrap .hmchart { display:block; }
+
+.cmp-dfs-slider.mode-chart .dfs-tab-body .slide:not(.day-ten) .daily:before { bottom:auto; height:583px;}
+
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide-wrap:after { display:none; }
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide-wrap .tchart { display:none;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide-wrap .midtchart { display:none;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide-wrap .rainchart { display:none;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide-wrap .snowchart { display:none;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide-wrap .ptychart { display:none;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide-wrap .windchart { display:none;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide-wrap .hmchart { display:none;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .item-lbl {display:none;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .item-lbl-midterm {display:none;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .midterm-guide {display:none;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .table-head { display:block;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide { width: 1200px !important;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide:first-of-type { margin-left:0; }
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily { float:none; display:block; overflow:hidden; border:1px solid #eee; border-top:0; border-bottom:0; margin-left:-1px;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily:first-child { margin-left:0px;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .daily-head { position:relative; left:auto; top:auto; display:block; width:100%; padding:25px 0 0 0;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .daily-head .date { font-size:24px; font-weight:bold; color:#000; background:rgba(0,0,0,0); border-radius:0; border:0; }
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .daily-head .date:after { display:none }
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .daily-head .table-head { display:table;table-layout:fixed;width:100%;border-bottom:1px solid #31AEE7;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .daily-head .table-head li { display:table-cell; width:calc(100% / 10); font-size:18px; text-align:center; padding:0; vertical-align:middle; height:55px;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .daily-head .table-head li:nth-child(2) { width:17%;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .daily-head .table-head li:nth-child(4) { width:20%;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .daily-head .table-head li:nth-child(6) { width:13%;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item { display:table;table-layout:fixed; float:none; width:100%; padding-top:0; }
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide:not(.day-ten) .daily .item-wrap .item:nth-child(2n) { background-color:#f9f9f9; z-index:-1;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li {  float:none; display:table-cell; width:calc(100% / 10); text-align:center; padding:2px; height:50px; font-weight: 600; vertical-align:middle; line-height: 20px; font-size:15px; border-bottom:0;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li:nth-child(2) { width:17%;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li:nth-child(5) { width:20%;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li:nth-child(7) { width:13%;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item:hover:before { display:none;}
+/* .cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item:hover { background-color: #f9f9f9; }*/
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li:nth-child(4) {display:none;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li:nth-child(6) span:last-child{position:unset; width:auto; left:auto;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li:nth-child(9) span[class*="lvl"] { display:inline; text-indent:0px; margin:0; padding:6px 24px; color:#000;background:none;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li .wic { display:table-cell; height:50px; text-align: left; text-indent:0px; background-position-x: left; padding-left: 55px; vertical-align:middle;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li .lgt { right:auto; left:26px;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li .wdic { display:inline; text-indent:0px; margin:0;background:none;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li .wspd { display:inline; padding-left:16px;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li .wspd .unit { display:inline;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li .feel { position:unset; display:block; text-indent:0px; text-align:center; line-height:normal; width:auto; height:auto;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li:nth-child(5) span:last-child{ border-right:0;border-left:0; height:auto;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li:nth-child(5) { background:none; border-bottom:0; position:relative;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li:nth-child(5) .unit { display:inline !important; }
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li:nth-child(5).vs-txt-rn .unit{display:none !important;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide-wrap.snow-exists .slide .daily .item-wrap .item li:nth-child(5).vs-txt-rn { background-color:unset; }
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide-wrap.snow-exists .slide .daily .item-wrap .item li:nth-child(5).vs-txt-rn span { background-color:unset; display:block; width:auto;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item .item-date { display:inline; padding-right:4px;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item .all-day-time { display:none; }
+.cmp-dfs-slider.mode-table .dfs-tab-body .item-wrap .item .pcp span { display:block; }
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide.day-ten { width: 1200px !important;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide.day-ten .daily .daily-head .date { padding-right:0;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide.day-ten .daily .daily-head .end-date { display:inline; font-size:24px; font-weight:bold; color:#000; padding: 6px 10px}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide.day-ten .daily .daily-head .end-date:before { content:'~'; font-size:24px; display:inline; padding-right:10px; }
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide.day-ten .daily:nth-of-type(n+2) .daily-head { display:none; }
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide.day-ten .daily:nth-of-type(2n) { background-color:#f9f9f9; }
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide.day-ten .daily .item-wrap .item li:nth-child(1) {width:29%;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide.day-ten .daily .item-wrap .item li:nth-child(2) {width:24%;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide.day-ten .daily .item-wrap .item li:nth-child(3) {width:34%;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide.day-ten .daily .item-wrap .item li:nth-child(3) .midminmax{ display: block !important; text-indent:0px; position: relative; width: auto; height: auto; left: auto; top: auto; line-height: normal;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide.day-ten .daily .item-wrap .item li:nth-child(4) { display:table-cell; width:13%;}
+
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide.day-ten .daily .daily-head .table-head li { display:table-cell; width:13%; font-size:18px; text-align:center; padding:0; height:55px; }
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide.day-ten .daily .daily-head .table-head li:nth-child(1) {width:29%;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide.day-ten .daily .daily-head .table-head li:nth-child(2) {width:24%;}
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide.day-ten .daily .daily-head .table-head li:nth-child(3) {width:34%;}
+
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide.day-ten .daily { border-top:0; }
+
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily:before {display:none;}
+
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item.s-item[data-time="03:00"] .pcp > span:last-child
+	,.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item.s-item[data-time="09:00"] .pcp > span:last-child 
+	,.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item.s-item[data-time="15:00"] .pcp > span:last-child 
+	,.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item.s-item[data-time="21:00"] .pcp > span:last-child{ position: absolute; height:100%; width:100%; top:100%; margin-top:-8px;}
+
+.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item.s-item[data-time="03:00"] .pcp.snow-exists > span:last-child
+	,.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item.s-item[data-time="09:00"] .pcp.snow-exists > span:last-child 
+	,.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item.s-item[data-time="15:00"] .pcp.snow-exists > span:last-child 
+	,.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item.s-item[data-time="21:00"] .pcp.snow-exists > span:last-child{ margin-top:-18px;}
+	
+
+.cmp-dfs-slider:not(.mode-table) .dfs-tab-body .slide .daily[data-start-data-time="22:00"] .daily-head,
+	.cmp-dfs-slider:not(.mode-table) .dfs-tab-body .slide .daily[data-start-data-time="23:00"] .daily-head,
+	.cmp-dfs-slider:not(.mode-table) .dfs-tab-body .slide .daily[data-start-data-time="24:00"] .daily-head { display:none; }
+
+.cmp-dfs-slider .dfs-tab-body .slide-wrap .midterm-guide { position:absolute; width:100%; top:285px; right:0; left:0; display:table; background:#F8F8F8; height:181px;}
+.cmp-dfs-slider.mode-chart .dfs-tab-body .slide-wrap .midterm-guide { height: 274px;}
+.cmp-dfs-slider.mode-chart .dfs-tab-body .slide-wrap.rain-exists .midterm-guide { height: 374px;}
+.cmp-dfs-slider.mode-chart .dfs-tab-body .slide-wrap.snow-exists .midterm-guide { height: 374px;}
+.cmp-dfs-slider.mode-chart .dfs-tab-body .slide-wrap.rain-exists.snow-exists .midterm-guide { height: 474px;}
+
+.cmp-dfs-slider .dfs-tab-body .slide-wrap .midterm-guide p { text-align:center; font-size:14px; line-height: 20px;display: table-cell;vertical-align: middle;}
+.highcharts-credits { color: rgba(0,0,0,0) !important; fill: rgba(0,0,0,0) !important;}
+.cmp-dfs-slider .dfs-more { border:1px solid #3FB3E8; border-bottom:0; text-align:center; }
+.cmp-dfs-slider .dfs-more:after { content:''; position:absolute; left:0; bottom:0; right:0; height:2px; background-color:#c9c9c9;border-top:1px solid #3FB3E8; }
+.cmp-dfs-slider .dfs-more a {position:relative;background-color:#fff; line-height:33px; text-align:center; color:#3FB3E8; padding:0 32px 0 20px;}
+.cmp-dfs-slider .dfs-more a:after{content:"";background:url(../image/arrow_down03.png);background-size:11px 7px;width:11px;height:7px;position:absolute;right:10px;top:50%;margin-top:-4px;}
+
+.cmp-dfs-slider .view-options {position:absolute; right:4px; top:60px; background:#fff; border:1px solid #0FA0E3; padding:24px; width:860px;transition: all .2s ease-out; opacity:0; z-index:-1;box-shadow:4px 4px #CACACA; }
+.cmp-dfs-slider .view-options.on { opacity:1; z-index:3;}
+.cmp-dfs-slider .view-options h4 {float:left; width:160px; font-size:18px; color:#000; line-height:46px;}
+.cmp-dfs-slider .view-options h4:first-of-type { margin-bottom:36px; }
+.cmp-dfs-slider .view-options ul {float:left; width:calc(100% - 160px);}
+.cmp-dfs-slider .view-options ul:first-of-type { margin-bottom:36px; }
+.cmp-dfs-slider .view-options ul li {float:left; height:46px; min-width:140px; margin-right:6px;}
+.cmp-dfs-slider .view-options ul li a { display:block;}
+.cmp-dfs-slider .view-options .sym-btn.big-close { position:absolute; right:0; top:0;}
+
+.cmp-dfs-updated { position:absolute; top: 32px; left:590px;}
+.cmp-dfs-updated a.open-box {font-size:15px; padding:0 15px;color:#333333; line-height:36px; margin-right:10px; position:relative;}
+.cmp-dfs-updated .shadow-box { height:0; transition: all .2s ease-out; opacity:0; overflow:hidden;}
+.cmp-dfs-updated .shadow-box .inner { margin:10px 10px;padding:16px 20px 16px 20px; border-radius:5px; border:1px solid #CBCBCB; box-shadow:0px 0px 10px 0px rgba(0,0,0,0.2); text-align:left; position:relative; background-color:#fff;}
+.cmp-dfs-updated .shadow-box a.close-box { content:'';position:absolute; top:0; right:0; width:34px; height:34px; background:url(../image/btn_close.png) no-repeat center center; background-size:14px; text-indent:-9999px;}
+.cmp-dfs-updated .shadow-box h5 {font-size:15px; font-weight:700px; line-height:200%;}
+.cmp-dfs-updated .shadow-box dl { display:block; font-size:11px; line-height:170%;}
+.cmp-dfs-updated .shadow-box dl dt { display:inline; color:#838383;}
+.cmp-dfs-updated .shadow-box dl dd { display:inline; color:#000;}
+.cmp-dfs-updated a.on + .shadow-box { height:auto; max-height:136px; opacity:1;overflow:visible;}
+
+.cmp-air-legend { position:absolute; width:100%;}
+.cmp-air-legend .shadow-box { height:0; transition: all .2s ease-out; opacity:0; overflow:hidden;}
+.cmp-air-legend .shadow-box .inner { margin:10px 10px;padding:16px 20px 16px 20px; border-radius:5px; border:1px solid #CBCBCB; box-shadow:0px 0px 10px 0px rgba(0,0,0,0.2); text-align:left; position:relative; background-color:#fff;}
+.cmp-air-legend .shadow-box a.close-box { content:'';position:absolute; top:0; right:0; width:34px; height:34px; background:url(../image/btn_close.png) no-repeat center center; background-size:14px; text-indent:-9999px;}
+.cmp-air-legend .shadow-box h5 {font-size:15px; font-weight:700px; line-height:200%; }
+.cmp-air-legend .shadow-box.on { height:auto; opacity:1;overflow:visible;}
+.cmp-air-legend .air-legend { display:block; overflow:hidden;}  
+.cmp-air-legend .air-legend li { float:left; width:25%; position:relative;}
+.cmp-air-legend .air-legend li span { font-size:11px; color:#000; display:block; text-align:center; padding:4px 0 8px 0; }
+.cmp-air-legend .air-legend li:after { content:''; position:absolute; left:2px; bottom:0; right:2px; height:4px; }
+.cmp-air-legend .air-legend li.air-legend-1:after { background-color:#1787FF; }
+.cmp-air-legend .air-legend li.air-legend-2:after { background-color:#4DBD78; }
+.cmp-air-legend .air-legend li.air-legend-3:after { background-color:#F29D52; }
+.cmp-air-legend .air-legend li.air-legend-4:after { background-color:#E52B27; }
+.cmp-air-legend .shadow-box p { font-size:11px; color:#838383; padding:4px 0; }
+
+.cmp-help-tooltip { position:absolute; width:100%; right:0; }
+.cmp-help-tooltip .shadow-box { height:0; transition: all .2s ease-out; opacity:0; overflow:hidden;}
+.cmp-help-tooltip .shadow-box .inner { margin:10px 10px;padding:16px 20px 16px 20px; border-radius:5px; border:1px solid #CBCBCB; box-shadow:0px 0px 10px 0px rgba(0,0,0,0.2); text-align:left; position:relative; background-color:#fff;}
+.cmp-help-tooltip .shadow-box a.close-box { content:'';position:absolute; top:0; right:0; width:34px; height:34px; background:url(../image/btn_close.png) no-repeat center center; background-size:14px; text-indent:-9999px;}
+.cmp-help-tooltip .shadow-box h5 {font-size:15px; font-weight:700px; line-height:200%; }
+.cmp-help-tooltip .shadow-box.on { height:auto; opacity:1;overflow:visible;}
+.cmp-help-tooltip.on .shadow-box, .cmp-help-tooltip.on .shadow-box.on { height:auto; opacity:1;overflow:visible;}
+.cmp-help-tooltip .shadow-box p { font-size:13px; color:#838383; padding:4px 0; }
+
+/* 메인 하단 주요 링크 */
+.cmp-major-ext-link{ display:flex; padding:10px; flex-wrap:wrap; align-items:stretch; background-color:#EDF1F7; }
+.cmp-major-ext-link a { display:block; width:calc((100% - 59px) / 8); margin:0 4px; border-radius:5px; background-color:#4D87B1; color:#fff; font-size:13px; line-height:13px; padding:65px 0 7px 0; text-align:center;}
+.cmp-major-ext-link a:first-child { margin-left:0;}
+.cmp-major-ext-link a:last-child { margin-right:0;}
+.cmp-major-ext-link a:nth-child(1) { background:url(../image/renew/ic_mext_01.png) no-repeat center 11px #4D87B1; background-size:auto 36px;}
+.cmp-major-ext-link a:nth-child(2) { background:url(../image/renew/ic_mext_02.png) no-repeat center 11px #4D87B1; background-size:auto 36px;}
+.cmp-major-ext-link a:nth-child(3) { background:url(../image/renew/ic_mext_03.png) no-repeat center 11px #4D87B1; background-size:auto 36px;}
+.cmp-major-ext-link a:nth-child(4) { background:url(../image/renew/ic_mext_04.png) no-repeat center 11px #4D87B1; background-size:auto 36px;}
+.cmp-major-ext-link a:nth-child(5) { background:url(../image/renew/ic_mext_05.png) no-repeat center 11px #4D87B1; background-size:auto 36px;}
+.cmp-major-ext-link a:nth-child(6) { background:url(../image/renew/ic_mext_06.png) no-repeat center 11px #4D87B1; background-size:auto 36px;}
+.cmp-major-ext-link a:nth-child(6) span { display:block;}
+.cmp-major-ext-link a:nth-child(7) { background:url(../image/renew/ic_mext_07.png) no-repeat center 11px #4D87B1; background-size:auto 36px;}
+.cmp-major-ext-link a:nth-child(8) { background:url(../image/renew/ic_mext_08.png) no-repeat center 11px #4D87B1; background-size:auto 36px;}
+
+.cmp-wgis-fullmap { display:none; }
+/* 맵 모드 */
+.mode-map.new-main section.page-wrap { min-height:auto; }
+.mode-map .right-content { max-width:100%; padding:0;  min-height:auto; }
+.mode-map .cont-wrap { padding:0; }
+.mode-map .cmp-wgis-fullmap { position:absolute; top:0; right:0; left:0; display:block; padding-top:66px;}
+.mode-map .cmp-wgis-fullmap:before {content:'';position:absolute;left:0;top: 61px;right:0;height: 4px;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.1);}
+.mode-map .cmp-wgis-fullmap iframe {width:100%; border:none; }
+.mode-map .cmp-bookmark { margin-top:5px; }
+.mode-map .cmp-my-point-slider { z-index:1; }
+.mode-map .map-cont-wrap { padding:0 20px 20px 20px;}
+.mode-map .cmp-global-menu .wrap { right:10px; top:10px; padding-left:20px; }
+.mode-map .point-sch-wrap { height:0; overflow:hidden; }
+.mode-map .point-sch-wrap-enable { height:59px; overflow:unset;}
+.mode-map .cmp-main-wrn { top:55px; }
+.mode-map .cmp-main-wrn .box-con-on { margin-right: 190px; }
+.mode-map .cmp-main-tabs { margin-top:10px; }
+.mode-map .cmp-main-tabs .tab-content { box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.1); }
+.mode-map .cmp-main-tabs .tab-item.on .tab-content { background-color:#fff; }
+.mode-map .cmp-main-tabs .tab-item:nth-of-type(2) .tab-head { left: 20px; }
+.mode-map .cmp-main-tabs .tab-item:nth-of-type(3) .tab-head { left: 150px; }
+.mode-map .cmp-main-tabs .tab-item:nth-of-type(4) .tab-head { left: 280px; }
+.mode-map .cmp-main-tabs .tab-item:nth-of-type(5) .tab-head { left: 410px; }
+.mode-map .cmp-main-tabs .tab-item:nth-of-type(6) .tab-head { left: 540px; }
+.mode-map .cmp-main-tabs .tab-item .tab-content { margin-top:56px; }
+
+
+/* 전국날씨 */
+.cmp-common-tabs {position:relative; padding:5px 10px; overflow:hidden; margin-top:10px;}
+.cmp-common-tabs li { float:left; position:relative;}
+.cmp-common-tabs li a{ padding:10px 20px; color:#000; font-size:20px;}
+.cmp-common-tabs li.on a { color:#1D8DD9; font-weight:600;}
+.cmp-common-tabs li a:after {content:''; position:absolute; left:0;right:0;bottom:0; height:3px; background-color:#1D8DD9; opacity:0;transition: all .2s ease-out;}
+.cmp-common-tabs li.on a:after {opacity:1;}
+
+.cmp-local-weather {position:relative; overflow:hidden;}
+.cmp-local-weather .map-data-wrap { float:left; width: 100%; background-color:#EDEDED;}
+.cmp-local-weather .map-data-wrap h3{ position:absolute; display:inline-block; font-size:17px; color:#767676; width:70px; left:0; top:0px; height:40px; line-height:40px; text-align:center;}
+.cmp-local-weather .map-data-wrap.on h3{ color:#353535; font-weight:700;}
+.cmp-local-weather .map-data-wrap h3 a{display:block; text-align:center; position:relative;}
+.cmp-local-weather .map-data-wrap h3 a:after { content:''; position:absolute; left:6px; right:6px; bottom:4px; height:2px; background-color:#000; opacity:0;transition: all .2s ease-out;}
+.cmp-local-weather .map-data-wrap.on h3 a:after { opacity:1;}
+.cmp-local-weather .map-data-wrap:nth-of-type(2) h3 { left:70px; }
+.cmp-local-weather .map-data-wrap:nth-of-type(3) h3 { left:140px; }
+.cmp-local-weather .map-data-wrap:nth-of-type(4) h3 { left:210px; }
+.cmp-local-weather .map-data-wrap:nth-of-type(5) h3 { left:280px; }
+.cmp-local-weather .map-data-wrap:nth-of-type(6) h3 { left:350px; }
+.cmp-local-weather .map-data-wrap .map-data { margin-top: 40px; display:none; transition: all .2s ease-out; opacity:0;}
+.cmp-local-weather .map-data-wrap.on .map-data { display:block; opacity:1}
+.cmp-local-weather .nation_map_wrapper { margin:0 5px 5px 5px; width:calc(100% - 10px);}
+.new-main #local-weather .updated-at {display:block;float:none;text-align:right; }
+.new-main #local-weather .updated-at span{ background:url(../image/renew/ic_sym_99.png) no-repeat left center; background-size: auto 16px; padding-left: 15px; color:#666; font-size: 17px; line-height:24px;}
+.cmp-local-weather.cmp-local-weather-fct .map-data-wrap h3 { width:90px; font-size:15px;}
+.cmp-local-weather.cmp-local-weather-fct .map-data-wrap:nth-of-type(2) h3 { left:90px; }
+.cmp-local-weather.cmp-local-weather-fct .map-data-wrap:nth-of-type(3) h3 { left:180px; }
+.cmp-local-weather.cmp-local-weather-fct .map-data-wrap:nth-of-type(4) h3 { left:270px; }
+.cmp-local-weather.cmp-local-weather-fct .map-data-wrap:nth-of-type(5) h3 { left:360px; }
+.cmp-local-weather.cmp-local-weather-fct .map-data-wrap:nth-of-type(6) h3 { left:450px; }
+
+/* 영상 */
+#rader-image { overflow:hidden; position:relative;}
+#radar-image .image-item { display:none; padding:8px; background-color:#EDEDED;}
+#radar-image .image-item.on { display:block; }
+
+.weather-cmt-main { padding:8px 16px;}
+.weather-cmt-main h3 { font-size:21px; text-align:center; display:block; line-height:24px; }
+.weather-cmt-main .cmt-image { padding:8px; }
+.weather-cmt-main h4 { font-size:17px; line-height:150%; display:block; text-align:center; border-bottom:1px solid #ddd;}
+.weather-cmt-main .updated-at { display:block; overflow:hidden;}
+.weather-cmt-main .updated-at span { float:right; font-size:16px; line-height:150%; background:url(../image/renew/ic_sym_99.png) no-repeat left center; background-size: auto 16px; padding-left: 15px; color:#444; }
+.weather-cmt-main .cmt-cont { padding:8px 0; font-size:15px; line-height:150%; }
+
+.cmp-sp-banner { position:absolute; overflow:hidden; padding:8px; display:none;}
+.cmp-sp-banner a { display:table; height:40px; width:100%; border-radius:5px; padding-left:35px; padding-right:35px; color:#fff; font-weight:700; font-size:15px; background-color:#00A9CD;}
+.cmp-sp-banner a span { line-height:17px; display:table-cell;vertical-align:middle; padding:4px 0;}
+.cmp-sp-banner a:before { content:''; background:url(../image/renew/ic_sym_14.png) no-repeat center center; background-size:22px; position:absolute; width:22px; height:22px;left:15px; top:50%; margin-top:-11px;}
+.cmp-sp-banner a:after { content:''; background:url(../image/renew/ic_sym_96.png) no-repeat center center; background-size:15px; position:absolute; width:15px; height:15px;right:18px; top:50%; margin-top:-7.5px;}
+
+.cmp-toggles { display: flex; padding:10px 10px; align-items:center; justify-content:space-evenly;}
+.cmp-toggles a { display:block;background-color:rgba(0,0,0,0.5); border-radius:5px; padding:10px; line-height:14px; font-size:14px; color:#fff; font-weight:500;transition: all .2s ease-out;}
+.cmp-toggles a.on { background-color:#00A9CD; font-weight:700; text-decoration:underline;}
+
+/* 도움툴팁 */
+.tt{display:none;color:#000000;background:#efefef;font-size:14px;padding:3px 10px;position:absolute;left:0;top:40px;;line-height:140%;text-align:left;font-weight:500;z-index:110;}
+.tt-btn{width:21px;height:21px;background:url('../image/icon_help_2.png');display:inline-block;vertical-align:middle;margin-left:5px;background-size:100%;transition: all .2s ease-out;}
+.tt-btn:hover, .tt-btn:focus{background:url('../image/icon_help_on.png');background-size:100%; display:inline-block !important;}
+.tt-btn:hover .tt, .tt-btn:focus .tt{display:block;}
+
+/* 풍향 아이콘 */
+.wdic { display:inline-block; width: 32px; height: 32px; background-size: 100%; text-indent: -9999px; background-repeat: no-repeat; background-position: center center; background-image:url(../icon/ic_wd_48x.png)}
+.wdic.sm { width: 16px; height: 16px;}
+.wdic.none { display:none; }
+.wdic.empty, .wdic.empty_b { background-image:rgba(0,0,0,0);}
+.wdic.empty:after { content: '-'; color:#fff; display:block; text-align:center; font-weight: 500;}
+.wdic.empty_b:after { content: '-'; color:#000; display:block; text-align:center; font-weight: 500;}
+
+.wdic.E { transform: rotate(90deg); }
+.wdic.E_b { transform: rotate(90deg); }
+.wdic.N { transform: rotate(0deg); }
+.wdic.N_b { transform: rotate(0deg); }
+.wdic.NE { transform: rotate(45deg);}
+.wdic.NE_b { transform: rotate(45deg); }
+.wdic.NW { transform: rotate(315deg);}
+.wdic.NW_b { transform: rotate(315deg);}
+.wdic.S { transform: rotate(180deg);}
+.wdic.S_b { transform: rotate(180deg);}
+.wdic.SE { transform: rotate(135deg);}
+.wdic.SE_b { transform: rotate(135deg);}
+.wdic.SW { transform: rotate(225deg);}
+.wdic.SW_b { transform: rotate(225deg);}
+.wdic.W { transform: rotate(270deg);}
+.wdic.W_b { transform: rotate(270deg);}
+
+.wdic.old_E { background-image:url(../icon/WD/E.png);}
+.wdic.old_E_b { background-image:url(../icon/WD/E_b.png);}
+.wdic.old_N { background-image:url(../icon/WD/N.png);}
+.wdic.old_N_b { background-image:url(../icon/WD/N_b.png);}
+.wdic.old_NE { background-image:url(../icon/WD/NE.png);}
+.wdic.old_NE_b { background-image:url(../icon/WD/NE_b.png);}
+.wdic.old_NW { background-image:url(../icon/WD/NW.png);}
+.wdic.old_NW_b { background-image:url(../icon/WD/NW_b.png);}
+.wdic.old_S { background-image:url(../icon/WD/S.png);}
+.wdic.old_S_b { background-image:url(../icon/WD/S_b.png);}
+.wdic.old_SE { background-image:url(../icon/WD/SE.png);}
+.wdic.old_SE_b { background-image:url(../icon/WD/SE_b.png);}
+.wdic.old_SW { background-image:url(../icon/WD/SW.png);}
+.wdic.old_SW_b { background-image:url(../icon/WD/SW_b.png);}
+.wdic.old_W { background-image:url(../icon/WD/W.png);}
+.wdic.old_W_b { background-image:url(../icon/WD/W_b.png);}
+
+
+/* 날씨 아이콘 */
+.wic { display:inline-block; width: 32px; height: 32px; background-size: 100% auto; text-indent: -9999px; background-repeat: no-repeat; background-position: center center;}
+.wic.sm { width: 20px; height: 20px;}
+.wic.none { display:none; }
+
+.wic.DB00 { background-image:rgba(0,0,0,0);}
+.wic.DB01 { background-image:url(../icon/DY@64/Light/DB01.png);}
+.wic.DB02 { background-image:url(../icon/DY@64/Light/DB02.png);}
+.wic.DB03 { background-image:url(../icon/DY@64/Light/DB03.png);}
+.wic.DB04 { background-image:url(../icon/DY@64/Light/DB04.png);}
+.wic.DB01_N { background-image:url(../icon/DY@64/Light/DB01_N.png);}
+.wic.DB02_N { background-image:url(../icon/DY@64/Light/DB02_N.png);}
+.wic.DB03_N { background-image:url(../icon/DY@64/Light/DB03_N.png);}
+.wic.DB04_N { background-image:url(../icon/DY@64/Light/DB04_N.png);}
+.wic.DB05 { background-image:url(../icon/DY@64/Light/DB05.png);}
+.wic.DB06 { background-image:url(../icon/DY@64/Light/DB06.png);}
+.wic.DB07 { background-image:url(../icon/DY@64/Light/DB07.png);}
+.wic.DB08 { background-image:url(../icon/DY@64/Light/DB08.png);}
+.wic.DB09 { background-image:url(../icon/DY@64/Light/DB09.png);}
+.wic.DB10 { background-image:url(../icon/DY@64/Light/DB10.png);}
+.wic.DB11 { background-image:url(../icon/DY@64/Light/DB11.png);}
+.wic.DB12 { background-image:url(../icon/DY@64/Light/DB12.png);}
+
+.wic.DB01.large { background-image:url(../icon/DY@128/Light/DB01.png);}
+.wic.DB02.large { background-image:url(../icon/DY@128/Light/DB02.png);}
+.wic.DB03.large { background-image:url(../icon/DY@128/Light/DB03.png);}
+.wic.DB04.large { background-image:url(../icon/DY@128/Light/DB04.png);}
+.wic.DB01_N.large { background-image:url(../icon/DY@128/Light/DB01_N.png);}
+.wic.DB02_N.large { background-image:url(../icon/DY@128/Light/DB02_N.png);}
+.wic.DB03_N.large { background-image:url(../icon/DY@128/Light/DB03_N.png);}
+.wic.DB04_N.large { background-image:url(../icon/DY@128/Light/DB04_N.png);}
+.wic.DB05.large { background-image:url(../icon/DY@128/Light/DB05.png);}
+.wic.DB06.large { background-image:url(../icon/DY@128/Light/DB06.png);}
+.wic.DB07.large { background-image:url(../icon/DY@128/Light/DB07.png);}
+.wic.DB08.large { background-image:url(../icon/DY@128/Light/DB08.png);}
+.wic.DB09.large { background-image:url(../icon/DY@128/Light/DB09.png);}
+.wic.DB10.large { background-image:url(../icon/DY@128/Light/DB10.png);}
+.wic.DB11.large { background-image:url(../icon/DY@128/Light/DB11.png);}
+.wic.DB12.large { background-image:url(../icon/DY@128/Light/DB12.png);}
+
+.wic.DB01.hero { background-image:url(../icon/DY@128/Light/DB01.png);}
+.wic.DB02.hero { background-image:url(../icon/DY@128/Light/DB02.png);}
+.wic.DB03.hero { background-image:url(../icon/DY@128/Light/DB03.png);}
+.wic.DB04.hero { background-image:url(../icon/DY@128/Light/DB04.png);}
+.wic.DB01_N.hero { background-image:url(../icon/DY@128/Light/DB01_N.png);}
+.wic.DB02_N.hero { background-image:url(../icon/DY@128/Light/DB02_N.png);}
+.wic.DB03_N.hero { background-image:url(../icon/DY@128/Light/DB03_N.png);}
+.wic.DB04_N.hero { background-image:url(../icon/DY@128/Light/DB04_N.png);}
+.wic.DB05.hero { background-image:url(../icon/DY@128/Light/DB05.png);}
+.wic.DB06.hero { background-image:url(../icon/DY@128/Light/DB06.png);}
+.wic.DB07.hero { background-image:url(../icon/DY@128/Light/DB07.png);}
+.wic.DB08.hero { background-image:url(../icon/DY@128/Light/DB08.png);}
+.wic.DB09.hero { background-image:url(../icon/DY@128/Light/DB09.png);}
+.wic.DB10.hero { background-image:url(../icon/DY@128/Light/DB10.png);}
+.wic.DB11.hero { background-image:url(../icon/DY@128/Light/DB11.png);}
+.wic.DB12.hero { background-image:url(../icon/DY@128/Light/DB12.png);}
+
+.wic.NB00 { background-image:rgba(0,0,0,0);}
+
+.wic.NB01 { background-image:url(../icon/NY@64/Light/NB01.png);}
+.wic.NB02 { background-image:url(../icon/NY@64/Light/NB02.png);}
+.wic.NB03 { background-image:url(../icon/NY@64/Light/NB03.png);}
+.wic.NB04 { background-image:url(../icon/NY@64/Light/NB04.png);}
+.wic.NB01_N { background-image:url(../icon/NY@64/Light/NB01_N.png);}
+.wic.NB02_N { background-image:url(../icon/NY@64/Light/NB02_N.png);}
+.wic.NB03_N { background-image:url(../icon/NY@64/Light/NB03_N.png);}
+.wic.NB04_N { background-image:url(../icon/NY@64/Light/NB04_N.png);}
+.wic.NB07 { background-image:url(../icon/NY@64/Light/NB07.png);}
+.wic.NB08 { background-image:url(../icon/NY@64/Light/NB08.png);}
+.wic.NB11 { background-image:url(../icon/NY@64/Light/NB11.png);}
+.wic.NB12 { background-image:url(../icon/NY@64/Light/NB12.png);}
+.wic.NB13 { background-image:url(../icon/NY@64/Light/NB13.png);}
+.wic.NB14 { background-image:url(../icon/NY@64/Light/NB14.png);}
+.wic.NB15 { background-image:url(../icon/NY@64/Light/NB15.png);}
+.wic.NB16 { background-image:url(../icon/NY@64/Light/NB16.png);}
+.wic.NB17 { background-image:url(../icon/NY@64/Light/NB17.png);}
+.wic.NB18 { background-image:url(../icon/NY@64/Light/NB18.png);}
+.wic.NB20 { background-image:url(../icon/NY@64/Light/NB20.png);}
+.wic.NB21 { background-image:url(../icon/NY@64/Light/NB21.png);}
+.wic.NB22 { background-image:url(../icon/NY@64/Light/NB22.png);}
+.wic.NB23 { background-image:url(../icon/NY@64/Light/NB23.png);}
+
+.wic.NB01.large { background-image:url(../icon/NY@128/Light/NB01.png);}
+.wic.NB02.large { background-image:url(../icon/NY@128/Light/NB02.png);}
+.wic.NB03.large { background-image:url(../icon/NY@128/Light/NB03.png);}
+.wic.NB04.large { background-image:url(../icon/NY@128/Light/NB04.png);}
+.wic.NB01_N.large { background-image:url(../icon/NY@128/Light/NB01_N.png);}
+.wic.NB02_N.large { background-image:url(../icon/NY@128/Light/NB02_N.png);}
+.wic.NB03_N.large { background-image:url(../icon/NY@128/Light/NB03_N.png);}
+.wic.NB04_N.large { background-image:url(../icon/NY@128/Light/NB04_N.png);}
+.wic.NB07.large { background-image:url(../icon/NY@128/Light/NB07.png);}
+.wic.NB08.large { background-image:url(../icon/NY@128/Light/NB08.png);}
+.wic.NB11.large { background-image:url(../icon/NY@128/Light/NB11.png);}
+.wic.NB12.large { background-image:url(../icon/NY@128/Light/NB12.png);}
+.wic.NB13.large { background-image:url(../icon/NY@128/Light/NB13.png);}
+.wic.NB14.large { background-image:url(../icon/NY@128/Light/NB14.png);}
+.wic.NB15.large { background-image:url(../icon/NY@128/Light/NB15.png);}
+.wic.NB16.large { background-image:url(../icon/NY@128/Light/NB16.png);}
+.wic.NB17.large { background-image:url(../icon/NY@128/Light/NB17.png);}
+.wic.NB18.large { background-image:url(../icon/NY@128/Light/NB18.png);}
+.wic.NB20.large { background-image:url(../icon/NY@128/Light/NB20.png);}
+.wic.NB21.large { background-image:url(../icon/NY@128/Light/NB21.png);}
+.wic.NB22.large { background-image:url(../icon/NY@128/Light/NB22.png);}
+.wic.NB23.large { background-image:url(../icon/NY@128/Light/NB23.png);}
+
+
+.anim { transition:all 0.3s ease; }
+
+
+.cmp-form { background-color:#eef2f7; padding:10px 20px;}
+.cmp-form-button { background:#fff;text-align:center; color:#000000;margin-left:10px;border-radius:5px;border:0;height:40px;line-height:40px;padding:0 20px; font-size:18px; }
+.cmp-form [data-form-role="submit"] { background:#ffc600;text-align:center; color:#000000;margin-left:10px;border-radius:5px;border:0;height:40px;line-height:40px;padding:0 20px; font-size:18px; }
+.cmp-form [data-form-role="button"] { background:#fff;text-align:center; color:#000000;margin-left:10px;border-radius:5px;border:0;height:40px;line-height:40px;padding:0 20px; font-size:18px; }
+
+.cmp-form-button.borderline { border:1px solid #333;}
+
+
+.cmp-form-row { display:flex; padding:10px 0;}
+.cmp-form-select { display:flex; margin-left:20px;}
+.cmp-form-select label { position:absolute; left:-9999px; top:-9999px; width:1px; height:1px; overflow:hidden; }
+.cmp-form-select.label-on label { margin-right:10px; position:unset; left:auto; top:auto; width:60px; height:auto; overflow:unset; text-align:right; }
+.cmp-form-select:first-child { margin-left:0; }
+.cmp-form-select label { font-size: 16px; font-weight: 700; line-height: 40px; padding:0 0px; }
+.cmp-form-select select { width:286px;background:#fff;border-radius:5px;border:0;height:40px;line-height:40px;padding:0 16px;font-size:18px; word-break: break-all;}
+.cmp-form-select-value-range { width:50%; }
+.cmp-form-select-value-range select { width:calc(50% - 70px);}
+.cmp-form-select-value-range span:first-of-type { font-size: 18px; font-weight:600; line-height:40px; padding:0 8px;}
+.cmp-form-select-value-range label {font-size:17px;}
+
+.cmp-form-input { display:flex; margin-left:20px;}
+.cmp-form-input label { position:absolute; left:-9999px; top:-9999px; width:1px; height:1px; overflow:hidden; }
+.cmp-form-input.label-on label { margin-right:10px; position:unset; left:auto; top:auto; width:60px; height:auto; overflow:unset; text-align:right; }
+.cmp-form-input:first-child { margin-left:0; }
+.cmp-form-input label { font-size: 16px; font-weight: 700; line-height: 40px; padding:0 5px; }
+.cmp-form-input input[type="text"] { width:286px;background:#fff;border-radius:5px;border:0;height:40px;line-height:40px;padding:0 16px;font-size:18px; word-break: break-all;}
+.cmp-form-input span { font-size:17px; line-height:40px; padding:0 10px; }
+.cmp-form-input select { width:286px;background:#fff;border-radius:5px;border:0;height:40px;line-height:40px;padding:0 16px;font-size:18px; word-break: break-all;}
+
+.cmp-form-input-value-range { width:50%; }
+.cmp-form-input-value-range input[type="text"] { width:calc(50% - 70px);}
+.cmp-form-input-value-range select { width:calc(50% - 70px);}
+.cmp-form-input-value-range span:first-of-type { font-size: 18px; font-weight:600; line-height:40px; padding:0 8px;}
+.cmp-form-input-value-range label {font-size:17px;}
+.cmp-form-input-twin { width:50%; }
+.cmp-form-input-twin input[type="text"] { width:calc(50% - 110px);}
+.cmp-form-input-twin select { width:calc(50% - 110px);}
+.cmp-form-input-half { width:50%; }
+.cmp-form-input-half input[type="text"] { width:calc(50% - 70px);}
+
+.cmp-form-input-tripple { width:calc(100% / 3); }
+.cmp-form-input-tripple input[type="text"] { width:calc(100% - 110px); font-size:16px;}
+.cmp-form-input-tripple select { width:calc(100% - 110px); font-size:16px;}
+.cmp-form-input-tripple label{ width:60px; margin-right:5px; font-size:16px; word-break:keep-all; }
+
+.cmp-form-buttons { display:flex; justify-content:center; }
+.cmp-form-buttons label { position:absolute; left:-9999px; top:-9999px; width:1px; height:1px; overflow:hidden; }
+.cmp-form-buttons label { font-size: 16px; font-weight: 700; line-height: 40px; padding:0; }
+.cmp-form-buttons.label-on label { word-break:keep-all; margin-right:0px; position:unset; left:auto; top:auto; width:60px; height:auto; overflow:unset; text-align:right; }
+.cmp-form-buttons .cmp-form-button:first-child { margin-left:0; }
+
+.cmp-form .table-col { background-color:#eef2f7; border-top:1px solid #e0e6ef}
+.cmp-form .table-col th { border-bottom: 1px solid #e0e6ef}
+.cmp-form .table-col td { text-align:left; padding:8px 10px; }
+.cmp-form .table-col td select { width:auto;background:#fff;border-radius:5px;border:0;height:40px;line-height:40px;padding:0 16px;font-size:18px; word-break: break-all; margin-right:4px; -webkit-appearance: none;}
+.cmp-form .table-col td input[type="text"] { width:auto;background:#fff;border-radius:5px;border:0;height:40px;line-height:40px;padding:0 16px;font-size:18px; word-break: break-all;}
+.cmp-form .table-col td input[type="checkbox"] { margin-right:8px;}
+.cmp-form .table-col td input[type="radio"] { }
+
+.cmp-typ-history { position:relative; }
+.cmp-typ-history #graphLayer { padding:10px 20px; } 
+.cmp-typ-history .cmp-form { padding:0;}
+.cmp-typ-history .table_top { font-size:15px; }
+.cmp-typ-history .table-col tbody tr:not(:last-child) th { border-bottom: 1px solid #e0e6ef; }
+.cmp-view { padding:10px 0;}
+.cmp-view-announce { font-size:15px; line-height:21px; font-weight:400; padding:4px 10px; color:#006FE8;}
+.cmp-view-announce em { font-size:14px; font-weight:600; float:right; color:#333;}
+.cmp-view-header { font-size:22px; font-weight:600; padding:10px; border-top:2px solid #000; border-bottom:1px solid #000; color:#000; line-height:30px;}
+.cmp-view-header em { font-size:20px; font-weight:500; float:right;}
+.cmp-view-header small { font-size:18px; font-weight:400; }
+.cmp-view-header h3 { font-size:22px; font-weight:600; display:block; text-align:center;}
+.cmp-view-header-center { text-align:center; }
+.cmp-view-header2 { padding:10px; color:#000; line-height:30px; position:relative; }
+.cmp-view-header2 h3 { font-size:30px; font-weight:600; line-height:50px;font-weight:600; }
+.cmp-view-header2 strong { font-size:18px;}
+.cmp-view-header2 span { font-size:18px; }
+.cmp-view-header2 em { font-size:15px; color:#006FE8; font-weight:400; position:absolute; right:10px; bottom:10px; }
+.cmp-view-content { font-size:18px; font-weight:400; line-height:28px; border-bottom:1px solid #000; padding:16px; color:#000; }
+.cmp-view-content * { font-size:18px; }
+.cmp-view-content h5 { padding-left:10px; }
+.cmp-view-content p { padding:10px 20px;}
+.cmp-view-content-img { display:flex; justify-content:center; flex-wrap:wrap;}
+.cmp-view-content-img img { width:calc(50% - 20px); margin:10px; }
+.cmp-view-content-img figure { text-align:center;}
+.cmp-view-content-img figure img { width:calc(100% - 40px)}
+.cmp-view-content-no-pd { padding:0; }
+.cmp-view-box { padding:10px; background-color:#EDF1F7; margin-top:10px; }
+.cmp-view-box:last-child { margin-bottom:10px; }
+.cmp-view-box h4 { font-size:22px; font-weight:600; line-height:42px; }
+.cmp-view-box h4:before { content:'█'; font-size:12px; font-weight:600; line-height:32px; vertical-align:middle; padding-right:8px; }
+
+.cmp-updated-box { display:flex; padding:10px; background-color:#EEF2F7; align-items:center;}
+.cmp-updated-box h4 { font-size:18px; display:inline-bloxk; padding:10px 20px; background-color:#000; color:#fff;}
+.cmp-updated-box-item { font-size:18px; font-weight:400px; padding-left:50px; }
+.cmp-updated-box-item strong { font-weight:600px; }
+
+.cmp-ext-link { margin-top:30px; margin-bottom:30px; position:relative; padding:20px 20px 20px 0px; background-color:#EEF2F7;}
+.cmp-ext-link > h3 { position:absolute; font-size:24px; margin-top:-12px; top:50%; font-weight:400; color:#000; left:50px;}
+.cmp-ext-link > ul { display:flex; padding-left:300px; justify-content:center; }
+.cmp-ext-link > ul > li { padding-left:4px; }
+.cmp-ext-link > ul > li a { display:flex; align-items: center; height:56px; background-color:#51A6DD; background-size:40px; color:#fff; font-size:20px; font-weight:400; padding:0 20px 0 70px;}
+.cmp-ext-link > ul > li a.aggr-weather { background-image:url(../image/renew/ic_ext_link01.png); background-repeat:no-repeat; background-position:15px center; background-color: #00A9CD;}
+.cmp-ext-link > ul > li a.drought-weatger { background-image:url(../image/renew/ic_ext_link02.png); background-repeat:no-repeat; background-position:15px center; background-color: #00A9CD;}
+.cmp-ext-link > ul > li a.sun-riset-time { background-image:url(../image/renew/ic_ext_link03.png); background-repeat:no-repeat; background-position:15px center; background-color: #00A9CD;}
+.cmp-ext-link > ul > li a.tide-info { background-image:url(../image/renew/ic_ext_link04.png); background-repeat:no-repeat; background-position:15px center; background-color: #00A9CD; background-size:32px;}
+.cmp-ext-link > ul > li a.no-icon { padding:0 30px; }
+.cmp-ext-link.com-ext-link-2banner > ul {padding-left:300px;}
+.cmp-ext-link.com-ext-link-2banner > ul > li { padding-left:20px; }
+
+.cmp-grid {display:flex; flex-wrap:wrap; align-items:strech;}
+.cmp-grid-cell { flex:1; }
+.cmp-grid-cell-2 { flex:2; }
+.cmp-grid-cell-3 { flex:3; }
+.cmp-grid-cell-4 { flex:4; }
+.cmp-grid-cell-5 { flex:5; }
+.cmp-grid-pd10 { padding:10px; }
+.cmp-grid-pd15 { padding:15px; }
+.cmp-grid-pd20 { padding:20px; }
+
+.cmp-stack { padding:10px 0;}
+.cmp-stack:first-child { padding-top:0;}
+
+.cmp-footnote { padding:5px 20px 15px 20px; font-size:17px;} 
+.cmp-footnote-red { color:#dc2422 }
+.cmp-common-content { font-size:18px; line-height:180%; color:#000; font-weight:400; padding:10px 20px; }
+.cmp-common-content p { padding:10px 0; }
+.cmp-common-content p:first-of-type { padding-top:0;}
+.cmp-common-content p:last-child { padding-bottom:0;}
+.cmp-common-content li { padding:4px 0; list-style:none; display:block;}
+/* .cmp-common-content li:first-of-type { padding-top:0;}
+.cmp-common-content li:last-child { padding-bottom:0;} */
+.cmp-common-content > ul { }
+.cmp-common-content > ul > li { position:relative; padding-left:14px; font-size:1em; }
+.cmp-common-content > ul > li:before { content:'·'; position:absolute; left:0; top:4px; font-size:30px; }
+.cmp-common-content > ul > li.no-head { padding-left:0;}
+.cmp-common-content > ul > li.no-head:before { display:none;}
+.cmp-common-content > ul > li > ul { margin-left:10px; }
+.cmp-common-content > ul > li > ul > li { position:relative; padding-left:12px; font-size:0.95em; padding:0 0 0 12px;}
+.cmp-common-content > ul > li > ul > li:before { content:'·'; position:absolute; left:0; top:3px; font-size:20px; }
+.cmp-common-content > ul > li > ul > li.no-head { padding-left:0;}
+.cmp-common-content > ul > li > ul > li.no-head:before { display:none;}
+
+.cmp-common-figure { padding:10px 20px; }
+.cmp-common-figure figcaption { font-size:17px; text-align:center; padding:10px 0;}
+.cmp-common-figure figcaption:before { content:'<';}
+.cmp-common-figure figcaption:after { content:'>';}
+
+.cmp-common-list { padding:10px 20px; }
+.cmp-common-list li { font-size:18px; line-height:150%; font-weight:400; color:#000; }
+
+.cmp-common-heading { padding:10px; color:#000; line-height:30px; position:relative; }
+.cmp-common-heading h3 { font-size:28px; font-weight:600; line-height:50px;font-weight:600; }
+.cmp-common-heading strong { font-size:18px;}
+.cmp-common-heading span { font-size:18px; }
+.cmp-common-heading em { font-size:15px; color:#006FE8; font-weight:400; position:absolute; right:10px; bottom:10px; }
+
+.cmp-img-heading-list { padding:10px; }
+.cmp-img-heading-list dl { display:flex;}
+.cmp-img-heading-list dl dt { width: 185px; font-size:18px; font-weight:600; min-height:110px; position:relative;}
+.cmp-img-heading-list dl dt h4 { position:absolute; right:10px; top:0px;line-height:180%;}
+.cmp-img-heading-list dl dd { width: calc(100% - 185px); font-size:18px; font-weight:400; min-height:110px; line-height:180%;}
+
+.cmp-img-side-list { padding:10px; }
+.cmp-img-side-list dl { display:flex; padding-left:440px; flex-wrap:wrap; padding-top:10px; min-height:130px; position:relative;}
+.cmp-img-side-list dl dt { width:100%; display:block; font-size:18px; font-weight:600; padding-top:20px;}
+.cmp-img-side-list dl dt h4 {line-height:180%;}
+.cmp-img-side-list dl dd { width:100%; display:block; font-size:17px; font-weight:300; line-height:180%; padding-left:20px;}
+
+.cmp-img-heading-list dl.vol-baekdu{background: url('../image/eqkvol/earthquake_img_2015_12.jpg') no-repeat 13px top;}
+.cmp-img-heading-list dl.vol-hanla{background: url('../image/eqkvol/earthquake_img_2015_13.jpg') no-repeat 13px top;}
+.cmp-img-heading-list dl.vol-ulleung{background: url('../image/eqkvol/earthquake_img_2015_14.jpg') no-repeat 13px top;}
+
+/* 엘리뇨 라니냐 */
+.ella-content { margin-bottom:20px; margin-top:0; }
+.ella-content .cmp-grid-cell { background-color:#fff; }
+.ella-content .cmp-grid-cell:first-child { width:400px; margin-right:20px;}
+.ella-content .cmp-grid-cell p { font-size:17px; color:#000; line-height:28px; padding:20px; }
+.ella-content figcaption { font-size:15px; text-align:center; }
+
+/* 태풍-기본지식 */
+.typ-content { margin-bottom:20px; margin-top:0; }
+.typ-content .cmp-grid-cell { background-color:#fff; }
+.typ-content .cmp-grid-cell:first-child { width:300px; margin-right:20px;}
+.typ-content .cmp-grid-cell p { font-size:17px; color:#000; line-height:28px; padding:10px; }
+.typ-content figcaption { font-size:17px; text-align:center; padding:10px 0;}
+.typ-content figcaption:before { content:'<';}
+.typ-content figcaption:after { content:'>';}
+.typ-content .table-col td:first-of-type { border-left:1px solid #e0e6ef;}
+
+/* 국내지진 검색 */
+.eqk-search-table td a em{ color:#ec5a73; font-weight:700; }
+.eqk-search-table.table-col tr:first-of-type th + th { border-left:1px solid #e5e5e5; }
+.cmp-w400 { width:400px !important; }
+.eqk-content .table-col tr:first-of-type th + th { border-left:1px solid #e5e5e5; }
+.eqk-content .table-col th:first-of-type { border-left:1px solid #e5e5e5; }
+.eqk-content .table-col th:first-of-type[rowspan] {border-left:0;border-bottom:1px solid #000;}
+.eqk-content .table-col tr:first-of-type th[rowspan] {border-bottom:1px solid #000;}
+.cmp-eqk-search .cmp-form-input.label-on label { width:80px; }
+.cmp-eqk-search .cmp-form-select.label-on label { width:80px; }
+
+/* 지진해일 */
+.tsu-content .table-col th[rowspan] + th { border-left:0; }
+.tsu-content .table-col th[rowspan] { border-right:1px solid #e5e5e5; }
+.tsu-content .table-col td:first-of-type { border-left:1px solid #e5e5e5; }
+
+/* 화산 */
+.cmp-img-side-list.vol-disaster dl:nth-child(1):before { content:''; position:absolute; left:0; top:0; width:410px; height:130px; background: url('../image/eqkvol/earthquake_img_2015_16.jpg') no-repeat left top; }
+.cmp-img-side-list.vol-disaster dl:nth-child(2):before { content:''; position:absolute; left:0; top:0; width:410px; height:130px; background: url('../image/eqkvol/earthquake_img_2015_16.jpg') no-repeat left -166px;}
+.cmp-img-side-list.vol-disaster dl:nth-child(3):before { content:''; position:absolute; left:0; top:0; width:410px; height:130px; background: url('../image/eqkvol/earthquake_img_2015_16.jpg') no-repeat left -332px;}
+.cmp-img-side-list.vol-disaster dl:nth-child(4):before { content:''; position:absolute; left:0; top:0; width:410px; height:130px; background: url('../image/eqkvol/earthquake_img_2015_17.jpg') no-repeat left top;}
+.cmp-img-side-list.vol-disaster dl:nth-child(5):before { content:''; position:absolute; left:0; top:0; width:410px; height:130px; background: url('../image/eqkvol/earthquake_img_2015_17.jpg') no-repeat left -166px;}
+.cmp-img-side-list.vol-disaster dl:nth-child(6):before { content:''; position:absolute; left:0; top:0; width:410px; height:130px; background: url('../image/eqkvol/earthquake_img_2015_17.jpg') no-repeat left -332px;}
+.cmp-mg-top-20 { margin-top:20px; }
+
+/* 산악기상정보 */
+.mountain-weather { position:relative; }
+.mountain-weather .cmp-dfs-slider { padding-top:0; }
+.mountain-weather .cmp-dfs-slider:not(.mode-table) .dfs-tab-body .slide .daily[data-start-data-time="18:00"] .daily-head { display:none; }
+.mountain-weather .cmp-dfs-slider:not(.mode-table) .dfs-tab-body .slide .daily[data-start-data-time="21:00"] .daily-head { display:none; }
+.mountain-weather.cmp-stack { position:relative; }
+.mountain-weather .cmp-dfs-updated { left:490px; top:24px;}
+.mountain-weather .cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li:nth-child(2) { width:22%;}
+.mountain-weather .cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li:nth-child(5) { width:25%;}
+.mountain-weather .cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .daily-head .table-head li:nth-child(2) { width:20%;}
+.mountain-weather .cmp-dfs-slider.mode-table .dfs-tab-body .slide:not(.day-ten) .item:after { display:none; }
+
+.cmp-mt-weather {display:flex;}
+.cmp-mt-weather p{ padding:20px; }
+.cmt-mt-mountains dt{font-size:0.9em;}
+.cmt-mt-mountains dl{line-height:1em;text-align:left;height:11px;width:50px;}
+.cmt-mt-mountains dl dt{padding-bottom:2px;font-size:0.90em;color:#333; position:absolute; left:8px; bottom:-5px; width:100%; z-index:2; padding-top:4px;}						
+.cmt-mt-mountains .unit{display:inline; position:absolute; bottom:50px; right:13px;}
+.cmt-mt-mountains dl dt.left{left: -33px;}
+.cmt-mt-mountains dl dt.top{bottom: 4px;}
+
+/* 서울 경기 산악 */
+.cmp-mt-weather-109 {overflow:hidden; background:url(../image/theme/bg_mountain_seo_kyunggi1.gif) no-repeat left top #73bf1f; width:335px; height:317px; position:relative;}
+.cmt-mt-mountains .po_11B012P0{position:absolute;left:86px;top:135px;} /* 마니산 */
+.cmt-mt-mountains .po_11B001P0{position:absolute;left:155px;top:156px;} /* 북한산 */
+.cmt-mt-mountains .po_11B007P0{position:absolute;left:166px;top:145px;} /* 도봉산 */
+.cmt-mt-mountains .po_11B008P0{position:absolute;left:180px;top:102px;} /* 소요산 */
+.cmt-mt-mountains .po_11B005P0{position:absolute;left:210px;top:140px;} /* 천마산 */
+.cmt-mt-mountains .po_11B009P0{position:absolute;left:175px;top:112px;text-align:right;height:21px;} /* 운악산 */
+.cmt-mt-mountains .po_11B002P0{position:absolute;left:232px;top:110px;} /* 연인산 */
+.cmt-mt-mountains .po_11B006P0{position:absolute;left:235px;top:95px;} /* 명지산 */
+.cmt-mt-mountains .po_11B010P0{position:absolute;left:253px;top:164px;} /* 용문산 */
+.cmt-mt-mountains .po_11B003P0{position:absolute;left:198px;top:178px;} /* 남한산성 */
+.cmt-mt-mountains .po_11B004P0{position:absolute;left:153px;top:200px;} /* 수리산 */
+.cmt-mt-mountains .po_11B011P0{position:absolute;left:173px;top:189px;} /*청계산 */
+/* 강원도 산악 */
+.cmp-mt-weather-105 {overflow:hidden; background:url(../image/theme/bg_mountain_kangwon1.gif) no-repeat left top #73bf1f; width:335px; height:317px; position:relative;}
+.cmt-mt-mountains .po_11D006P0{position:absolute;left:75px;top:105px;}
+.cmt-mt-mountains .po_11D007P0{position:absolute;left:100px;top:138px;}
+.cmt-mt-mountains .po_11D008P0{position:absolute;left:105px;top:170px;}
+.cmt-mt-mountains .po_11D005P0{position:absolute;left:163px;top:160px;}
+.cmt-mt-mountains .po_11D002P0{position:absolute;left:202px;top:150px;}
+.cmt-mt-mountains .po_11D001P0{position:absolute;left:195px;top:102px;}
+.cmt-mt-mountains .po_11D003P0{position:absolute;left:145px;top:215px;}
+.cmt-mt-mountains .po_11D009P0{position:absolute;left:173px;top:187px;}
+.cmt-mt-mountains .po_11D010P0{position:absolute;left:209px;top:201px;}
+.cmt-mt-mountains .po_11D011P0{position:absolute;left:202px;top:212px;}
+.cmt-mt-mountains .po_11D012P0{position:absolute;left:263px;top:205px;}
+.cmt-mt-mountains .po_11D004P0{position:absolute;left:255px;top:250px;}
+
+/* 충청남북도 산악 */
+.cmp-mt-weather-133 {overflow:hidden; background:url(../image/theme/bg_mountain_chungnam_buk1.gif) no-repeat left top #73bf1f; width:335px; height:317px; position:relative;}			
+.cmt-mt-mountains .po_11C005P0{position:absolute;left:125px;top:145px;}
+.cmt-mt-mountains .po_11C003P0{position:absolute;left:258px;top:115px;} 
+.cmt-mt-mountains .po_11C004P0{position:absolute;left:105px;top:185px;}
+.cmt-mt-mountains .po_11C001P0{position:absolute;left:145px;top:195px;}
+.cmt-mt-mountains .po_11C002P0{position:absolute;left:225px;top:165px;}
+.cmt-mt-mountains .po_11C006P0{position:absolute;left:225px;top:230px;}
+.cmp-mt-weather-133 .cmt-mt-mountains .po_11H003P0{position:absolute;left:307px;top:106px;}
+.cmt-mt-mountains .po_11H003P0 dt { bottom:4px; left:-33px; }
+/* 전라남북도 산악 */
+.cmp-mt-weather-156{overflow:hidden; background:url(../image/theme//bg_mountain_jeonbuk_nam1.gif) no-repeat left top #73bf1f; width:335px; height:317px; position:relative;}
+.cmt-mt-mountains .po_11F005P0{position:absolute;left:195px;top:50px;}
+.cmt-mt-mountains .po_11F006P0{position:absolute;left:215px;top:85px;}
+.cmt-mt-mountains .po_11F004P0{position:absolute;left:260px;top:75px;}
+.cmt-mt-mountains .po_11F007P0{position:absolute;left:172px;top:95px;}
+.cmt-mt-mountains .po_11F014P0{position:absolute;left:227px;top:110px;}
+.cmt-mt-mountains .po_11F003P0{position:absolute;left:145px;top:130px;}
+.cmt-mt-mountains .po_11F008P0{position:absolute;left:116px;top:140px;}
+.cmt-mt-mountains .po_11F015P0{position:absolute;left:178px;top:165px;}
+.cmt-mt-mountains .po_11F016P0{position:absolute;left:228px;top:145px;width:100px;}
+.cmt-mt-mountains .po_11F002P0{position:absolute;left:228px;top:160px;width:100px;}
+.cmt-mt-mountains .po_11F017P0{position:absolute;left:235px;top:178px;}
+.cmt-mt-mountains .po_11F010P0{position:absolute;left:200px;top:190px;}
+.cmt-mt-mountains .po_11F019P0{position:absolute;left:158px;top:185px;}
+.cmt-mt-mountains .po_11F001P0{position:absolute;left:125px;top:215px;}
+.cmt-mt-mountains .po_11F012P0{position:absolute;left:160px;top:235px;}
+.cmt-mt-mountains .po_11F011P0{position:absolute;left:205px;top:235px;}
+.cmt-mt-mountains .po_11F013P0{position:absolute;left:124px;top:244px;}
+.cmt-mt-mountains .po_11F018P0{position:absolute;left:44px;top:247px;text-align:right;height:20px; }
+/* 경상남북도 산악 */
+.cmp-mt-weather-159{overflow:hidden; background:url(../image/theme/bg_mountain_kyungnam_buk3.gif) no-repeat left top #73bf1f; width:335px; height:317px; position:relative; }
+.cmt-mt-mountains .po_11H003P0{position:absolute;left:155px;top:47px;}
+.cmt-mt-mountains .po_11H007P0{position:absolute;left:122px;top:67px;}
+.cmt-mt-mountains .po_11H006P0{position:absolute;left:191px;top:60px;}
+.cmt-mt-mountains .po_11H022P0{position:absolute;left:222px;top:70px;}
+.cmt-mt-mountains .po_11H001P0{position:absolute;left:208px;top:105px;}			
+.cmt-mt-mountains .po_11H009P0{position:absolute;left:173px;top:140px;}
+.cmt-mt-mountains .po_11H008P0{position:absolute;left:140px;top:130px;}
+.cmt-mt-mountains .po_11H023P0{position:absolute;left:230px;top:166px;}
+.cmt-mt-mountains .po_11H012P0{position:absolute;left:210px;top:188px;}			
+.cmt-mt-mountains .po_11H005P0{position:absolute;left:202px;top:181px;height:7px;}
+.cmt-mt-mountains .po_11H013P0{position:absolute;left:158px;top:179px; text-align:right;height:1px; width:40px; }
+.cmt-mt-mountains .po_11H024P0{position:absolute;left:192px;top:199px;}
+.cmt-mt-mountains .po_11H004P0{position:absolute;left:78px;top:158px;text-align:right;height:2px;}
+.cmt-mt-mountains .po_11H015P0{position:absolute;left:85px;top:170px;}
+.cmt-mt-mountains .po_11H016P0{position:absolute;left:105px;top:194px;}
+.cmt-mt-mountains .po_11H025P0{position:absolute;left:107px;top:207px;}
+.cmt-mt-mountains .po_11H017P0{position:absolute;left:53px;top:209px;text-align:left; padding-left:43px;}
+.cmt-mt-mountains .po_11H002P0{position:absolute;left:40px;top:197px;text-align:left; padding-left:43px;}
+.cmt-mt-mountains .po_11H018P0{position:absolute;left:135px;top:222px;height:7px;}
+.cmt-mt-mountains .po_11H026P0{position:absolute;left:156px;top:226px;height:14px;}
+.cmt-mt-mountains .po_11H028P0{position:absolute;left:210px;top:210px;}			
+.cmt-mt-mountains .po_11H027P0{position:absolute;left:210px;top:218px;height:15px;}
+.cmt-mt-mountains .po_11H010P0{position:absolute;left:133px;top:238px;}
+.cmt-mt-mountains .po_11H019P0{position:absolute;left:60px;top:238px;height:20px;text-align:right;}
+.cmt-mt-mountains .po_11H020P0{position:absolute;left:95px;top:259px;}
+.cmt-mt-mountains .po_11H011P0{position:absolute;left:113px;top:174px;text-align:right;height:2px;}
+.cmt-mt-mountains .po_11H014P0{position:absolute;left:150px;top:190px;text-align:left;}
+.cmt-mt-mountains .po_11H021P0{position:absolute;left:263px;top:19px;}
+/* 제주특별자치도 산악 */
+.cmp-mt-weather-184{overflow:hidden; background:url(../image/theme/bg_mountain_jeju1.gif) no-repeat left top #73bf1f; width:335px; height:317px; position:relative; }
+.cmt-mt-mountains .po_11G001P0{position:absolute;left:176px;top:165px;}
+
+/* 해수욕장 예보 */
+.cmp-theme-beach { display:flex; }
+.cmp-theme-beach .beachmap{ width:360px;}
+.cmp-theme-beach .beachmap p{font-size:17px; padding:10px 4px; }
+.cmp-theme-beach .beachmap ul{background:url(../image/theme/bg_beach.jpg) no-repeat 0 0;position:relative;width:298px;height:407px; margin:auto;}
+.cmp-theme-beach .beachmap ul li{position:absolute;line-height:1em;}
+.cmp-theme-beach .beachmap ul li a{vertical-align:top;line-height:1em;}
+.cmp-theme-beach .beachmap ul li img{vertical-align:top;}
+.cmp-theme-beach .beachmap ul li.pos01{left:13px;top:80px;}
+.cmp-theme-beach .beachmap ul li.pos02{left:21px;top:103px;}
+.cmp-theme-beach .beachmap ul li.pos03{left:64px;top:110px;}
+.cmp-theme-beach .beachmap ul li.pos04{left:29px;top:130px;}
+.cmp-theme-beach .beachmap ul li.pos05{left:7px;top:153px;}
+.cmp-theme-beach .beachmap ul li.pos06{left:25px;top:176px;}
+.cmp-theme-beach .beachmap ul li.pos07{left:56px;top:199px;}
+.cmp-theme-beach .beachmap ul li.pos08{left:12px;top:206px;}
+.cmp-theme-beach .beachmap ul li.pos09{left:33px;top:226px;}
+.cmp-theme-beach .beachmap ul li.pos10{left:15px;top:246px;}
+.cmp-theme-beach .beachmap ul li.pos11{left:11px;top:300px;}
+.cmp-theme-beach .beachmap ul li.pos12{left:18px;top:333px;}
+.cmp-theme-beach .beachmap ul li.pos13{left:70px;top:322px;}
+.cmp-theme-beach .beachmap ul li.pos14{left:112px;top:315px;}
+.cmp-theme-beach .beachmap ul li.pos15{left:142px;top:291px;}
+.cmp-theme-beach .beachmap ul li.pos16{left:182px;top:291px;}
+.cmp-theme-beach .beachmap ul li.pos17{left:196px;top:270px;}
+.cmp-theme-beach .beachmap ul li.pos18{left:236px;top:270px;}
+.cmp-theme-beach .beachmap ul li.pos19{left:225px;top:200px;}
+.cmp-theme-beach .beachmap ul li.pos20{left:213px;top:166px;}
+.cmp-theme-beach .beachmap ul li.pos21{left:222px;top:133px;}
+.cmp-theme-beach .beachmap ul li.pos22{left:205px;top:90px;}/* 20130708 */
+.cmp-theme-beach .beachmap ul li.pos23{left:177px;top:60px;}
+.cmp-theme-beach .beachmap ul li.pos24{left:158px;top:35px;}
+.cmp-theme-beach .beachmap ul li.pos25{left:98px;top:354px;}
+.cmp-theme-beach .beachmap ul li.pos26{left:138px;top:354px;}
+.cmp-theme-beach .beachmap ul li.pos27{left:178px;top:354px;}
+.cmp-theme-beach .beachmap ul li.pos28{left:218px;top:354px;}
+.cmp-theme-beach .beachmap ul li.pos29{left:98px;top:374px;}
+.cmp-theme-beach .beachmap ul li.pos30{left:138px;top:374px;}
+.cmp-theme-beach .beachmap ul li.pos31{left:136px;top:69px;}
+.cmp-theme-beach .beachmap ul li.pos32{left:74px;top:88px;}
+.cmp-theme-beach .beachmap ul li.pos33{left:116px;top:141px;}
+.cmp-theme-beach .beachmap ul li.pos34{left:59px;top:161px;}
+.cmp-theme-beach .beachmap ul li.pos35{left:152px;top:173px;}
+.cmp-theme-beach .beachmap ul li.pos36{left:73px;top:226px;}
+.cmp-theme-beach .beachmap ul li.pos37{left:141px;top:252px;}
+.cmp-theme-beach .beachmap ul li.pos38{left:72px;top:292px;}
+.cmp-theme-beach .beachmap ul li.pos39{left:46px;top:368px;}
+.cmp-theme-beach .beachmap ul li.pos40{left:5px;top:333px;}
+.cmp-theme-beach .beachmap ul li.pos41{left:216px;top:60px;}
+.cmp-theme-beach .beachmap ul li.pos42{left:256px;top:59px;border-bottom:1px solid #484848}
+
+.cmp-theme-beach .beachtable{ width:calc(100% - 360px);}
+.cmp-theme-beach .beachtable p{ font-size:17px; padding:10px 4px;}
+.cmp-theme-beach .beachtable p.beach_title{font-size:20px;}
+.cmp-theme-beach .beachtable p.beach_title strong{color:#0958a5;}
+
+.cmp-theme-beach .table-col { position:relative;}
+.cmp-theme-beach .table-col th { padding:8px 5px; }
+.cmp-theme-beach .table-col td { padding:8px 8px; text-align:left; border-left:1px solid #e0e6ef;}
+.cmp-theme-beach .table-col tbody th { border-bottom:1px solid #e0e6ef;}
+.cmp-theme-beach .table-col tbody tr:last-child th { border-bottom:1px solid #000; }
+.cmp-theme-beach .cmp-form-row { padding:5px 0; }
+
+/* no service */
+.cmp-no-service { min-height:190px; background-color:#eef2f7; display:flex; align-items:center;}
+.cmp-no-service p { margin:auto; font-size:22px; font-weight:500; color:#000; text-align:center; }
+
+/* 북한예보 */
+/* 특보예보|북한예보 */
+/* 육상 */
+.cmp-nk-weather-current{ display:flex; padding:10px 0; }
+.cmp-nk-weather-current .cmp-nk-weather-map {width:280px;}
+.cmp-nk-weather-current .cmp-nk-weather-map h3 { font-size:28px; font-weight:600; line-height:36px; padding-left:10px; }
+.cmp-nk-weather-current .cmp-nk-weather-map .map{width:280px;height:355px;background:url('../image/theme/bg_northmap.gif') no-repeat 0 0;position:relative;}
+.cmp-nk-weather-current .cmp-nk-weather-map .map .clock{ padding-left:20px; font-size:15px; color:#666666;}
+.cmp-nk-weather-current .cmp-nk-weather-map .map ul.nkpo-47003{position:absolute;left:245px;top:74px;width:47px;height:56px;padding:4px 0 0 0;margin:0;line-height:1.1em;}
+.cmp-nk-weather-current .cmp-nk-weather-map .map ul.nkpo-47008{position:absolute;left:210px;top:100px;width:47px;height:56px;padding:3px 0 0 0;margin:0;line-height:1.1em;}
+.cmp-nk-weather-current .cmp-nk-weather-map .map ul.nkpo-47014{position:absolute;left:102px;top:115px;width:47px;height:56px;padding:4px 0 0 0;margin:0;line-height:1.1em;}
+.cmp-nk-weather-current .cmp-nk-weather-map .map ul.nkpo-47022{position:absolute;left:148px;top:150px;width:47px;height:56px;padding:4px 0 0 0;margin:0;line-height:1.1em;}
+.cmp-nk-weather-current .cmp-nk-weather-map .map ul.nkpo-47020{position:absolute;left:84px;top:155px;width:47px;height:56px;padding:4px 0 0 0;margin:0;line-height:1.1em;}
+.cmp-nk-weather-current .cmp-nk-weather-map .map ul.nkpo-47035{position:absolute;left:12px;top:190px;width:47px;height:56px;padding:4px 0 0 0;margin:0;line-height:1.1em;}
+.cmp-nk-weather-current .cmp-nk-weather-map .map ul.nkpo-47041{position:absolute;left:114px;top:197px;width:47px;height:56px;padding:4px 0 0 0;margin:0;line-height:1.1em;}
+.cmp-nk-weather-current .cmp-nk-weather-map .map ul.nkpo-47055{position:absolute;left:125px;top:245px;width:47px;height:56px;padding:4px 0 0 0;margin:0;line-height:1.1em;}
+.cmp-nk-weather-current .cmp-nk-weather-map .map ul.nkpo-47075{position:absolute;left:57px;top:250px;width:47px;height:56px;padding:4px 0 0 0;margin:0;line-height:1.1em;}
+.cmp-nk-weather-current .cmp-nk-weather-map .map ul.nkpo-47069{position:absolute;left:40px;top:290px;width:47px;height:56px;padding:4px 0 0 0;margin:0;line-height:1.1em;}
+.cmp-nk-weather-current .cmp-nk-weather-map .map ul.nkpo-47070{position:absolute;left:88px;top:290px;width:47px;height:56px;padding:4px 0 0 0;margin:0;line-height:1.1em;}
+.cmp-nk-weather-current .cmp-nk-weather-map .map ul.nkpo-47050{position:absolute;left:60px;top:200px;width:47px;height:56px;padding:4px 0 0 0;margin:0;line-height:1.1em;}
+.cmp-nk-weather-current .cmp-nk-weather-map .map ul.nkpo-47005{position:absolute;left:160px;top:100px;width:47px;height:56px;padding:4px 0 0 0;margin:0;line-height:1.1em;}
+.cmp-nk-weather-current .cmp-nk-weather-map .map ul li{padding:0;margin:0;text-align:center;}
+.cmp-nk-weather-current .cmp-nk-weather-map .map ul li.img img{vertical-align:top; width:30px; height:auto; }
+.cmp-nk-weather-current .cmp-nk-weather-map .map ul li.lowhigh{color:#606060;font-size:0.9em;}
+.cmp-nk-weather-current .cmp-nk-weather-map .map ul li.lowhigh .red{color:#ff2501;}
+.cmp-nk-weather-current .cmp-nk-weather-map .map ul li.lowhigh .blue{color:#0958a5;}
+.cmp-nk-weather-current .cmp-nk-weather-map .map ul li.name{color:#000;font-size:0.9em;}
+.cmp-nk-weather-current .cmp-nk-weather-summary{width:calc(100% - 280px); padding-left:30px; position:relative;}
+.cmp-nk-weather-current .cmp-nk-weather-summary h3 { font-size:28px; font-weight:600; line-height:36px; padding-left:10px; }
+.cmp-nk-weather-current .cmp-nk-weather-summary p { font-size:16px; line-height:22px; padding:10px; }
+.cmp-nk-weather-current .cmp-nk-weather-summary .download-buttons { position:absolute; right:30px; top:10px; }
+.cmp-nk-weather-current .cmp-nk-weather-summary .data_text{width:375px;clear:left;display:inline-block;overflow:hidden;margin:7px 0 0 0; border-bottom:1px solid #c8c8c8;}
+.cmp-nk-weather-current .cmp-nk-weather-summary .data_text .style1{float:left;width:188px;}
+.cmp-nk-weather-current .cmp-nk-weather-summary .data_text .style1 dt{float:left;width:186px;font-weight:bold;color:#0958a5;padding:8px 0;text-align:center; background:#f7f6f6;border-top:1px solid #0958a5;border-right:1px solid #c8c8c8;border-left:1px solid #c8c8c8;}
+.cmp-nk-weather-current .cmp-nk-weather-summary .data_text .style1 dd{float:left;width:170px;border:1px solid #c8c8c8;padding:8px; border-bottom:none;}
+.cmp-nk-weather-current .cmp-nk-weather-summary .data_text .style2{float:left;width:187px;}
+.cmp-nk-weather-current .cmp-nk-weather-summary .data_text .style2 dt{float:left;width:185px;font-weight:bold;color:#0958a5;padding:8px 0;text-align:center;background:#f7f6f6;border-top:1px solid #0958a5;border-right:1px solid #c8c8c8;}
+.cmp-nk-weather-current .cmp-nk-weather-summary .data_text .style2 dd{float:left;width:169px;border-top:1px solid #c8c8c8;padding:8px;border-right:1px solid #c8c8c8;border-bottom:1px solid #c8c8c8; border-bottom:none;}
+.cmp-nk-weather-current .table-col td { line-height:180%; text-align:left; padding-left:20px; }
+.cmp-nk-weather-timeseries{padding:4px 10px; display:flex; font-size:16px; }
+.cmp-nk-weather-timeseries .title{flex:1;font-weight:bold;color:#333;text-align:left; font-size:18px; }
+.cmp-nk-weather-timeseries .time{flex:1; text-align:right;color:#666; font-size:16px;  }
+
+.nk-weather .cmp-dfs-slider { padding-top:0;}
+.nk-weather .cmp-dfs-slider:not(.mode-table) .dfs-tab-body .slide .daily[data-start-data-time="21:00"] .daily-head { display:none; }
+.nk-weather.cmp-stack { position:relative; }
+.nk-weather .cmp-dfs-updated { left:490px; top:24px; }
+.nk-weather .cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li:nth-child(2) { width:22%;}
+.nk-weather .cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li:nth-child(5) { width:25%;}
+.nk-weather .cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .daily-head .table-head li:nth-child(2) { width:20%;}
+.nk-weather .cmp-dfs-slider.mode-table .dfs-tab-body .slide:not(.day-ten) .item:after { display:none; }
+.nk-midterm-forecast table {min-width:768px;}
+.nk-midterm-forecast table thead tr:first-child th:nth-child(2) { border-left:0; }
+.nk-midterm-forecast table thead tr:first-child th:first-child { position:sticky; left:0; background-color:#fff; border-right:1px solid #e0e6ef;}
+.nk-midterm-forecast table tbody tr th:first-child { position:sticky; left:0; background-color:#fff; border-right:1px solid #e0e6ef;}
+.nk-midterm-forecast span.tmn { line-height:150%; display:block; }
+.nk-midterm-forecast span.tmx { line-height:150%; display:block; }
+.nk-midterm-forecast .tmnx-group { display:block; }
+.nk-midterm-forecast .tmnx-group .tmn {display:inline; }
+.nk-midterm-forecast .tmnx-group .tmx {display:inline; }
+
+.nk-sea-weather .table-col th:first-of-type { border-left:1px solid #e0e6ef; }
+.nk-sea-weather .table-col td:first-of-type { border-left:1px solid #e0e6ef; }
+.nk-sea-weather .table-col th[rowspan]:first-of-type { border-left:0; }
+.nk-sea-weather .table-col td img { max-width:80px;}
+.nk-sea-weather .table-col { min-width:520px; }
+
+/* 세계 날씨 */
+.cmp-world-weather { padding:0 10px; }
+.cmp-world-weather .climate_chart { width:100%; height:230px;}
+.cmp-world-weather .h6 { font-size:22px; line-height:40px; font-weight:600; }
+.cmp-world-weather .h6-title{font-size:21px;border-bottom:1px solid #e4e4e4;}
+.cmp-world-weather .h6-title > span{font-size:11px; color:#8c8c8c;margin-left: 7px;}
+
+.cmp-world-weather .clearfix:after{content: "";display: block;height: 0;clear: both;visibility: hidden;}
+.cmp-world-weather .weather-box01{position:relative;width: 100%;padding: 13px 0px; margin-top:22px; margin-bottom:12px;}
+.cmp-world-weather .weather-box01 ul { text-align: center; float:right;}
+.cmp-world-weather .weather-box01 ul li.first{font-size: 18px;font-weight: bold;border-right: none;padding: 0;position: absolute;left: 20px;top:10px;border: 0;}
+.cmp-world-weather .weather-box01 ul li.first img { max-width:72px; }
+.cmp-world-weather .weather-box01 ul li.first span{ margin-left:20px; }
+.cmp-world-weather .weather-box01 ul li{width: 144px;font-size: 14px;font-size: 14px;padding: 6px 10px;border-bottom: 2px dotted #cccccc;}
+.cmp-world-weather .weather-box01 ul li span.bold{font-weight:bold; margin-left:8px;}
+.cmp-world-weather .weather-box01 ul li:last-child{ border-right:none; }
+.cmp-world-weather .text-zone{ width:100%; text-align:right; margin-top:20px; margin-bottom:5px; font-size:15px; }
+.cmp-world-weather .h4-next{font-weight:bold;font-size: 15px;padding: 0 8px;border-left: 1px solid #d5cccc;}
+.cmp-world-weather .box-b{margin-bottom: 12px;}
+.cmp-world-weather .box-left{float:left;width:320px;}
+.cmp-world-weather .box-right{float:right; width:calc(100% - 350px);margin-left:28px;}
+.cmp-world-weather .box-b .box-left .time{border:1px solid #e4e4e4; position:relative;}
+.cmp-world-weather .box-b .box-left .time p.title{position:absolute; left:0; top:0; background:#a5a5a5; color:#ffffff; width:60px; height:22px; text-align:center; line-height:24px; font-size:12px;}
+.cmp-world-weather .box-b .box-left .time .top-z{ font-size:15px;font-weight:bold;text-align:center; margin-top: 12px;}
+.cmp-world-weather .box-b .box-left .time .bottom-z{text-align:center; margin-top: -4px; margin-bottom: 4px;}
+.cmp-world-weather .box-b .box-left .time .bottom-z ul{text-align:center; margin-left: -12px;}
+.cmp-world-weather .box-b .box-left .time .bottom-z ul li{display:inline-block;font-weight:bold;font-size:30px;}
+.cmp-world-weather .box-b .box-left .time .bottom-z ul li:last-child{position:relative;margin-top:-4px; margin-left:3px;}
+.cmp-world-weather .box-b .box-left .time .bottom-z ul li:last-child span{padding: 3px 3px 2px 3px;background: #666666;color: #ffffff;font-size: 12px;position: absolute;top: -19px;}
+.cmp-world-weather .box-b .box-left .link{padding:8px 0;}
+.cmp-world-weather .box-b .box-left .link ul{text-align:center;}
+.cmp-world-weather .box-b .box-left .link ul li:first-child{margin-right:5px;width:144px; height:52px;padding-top:5px;color:#333333;display:inline-block;font-weight:bold;font-size:15px;text-align:center;}
+.cmp-world-weather .box-b .box-left .link ul li:first-child p{font-size:18px;}
+.cmp-world-weather .box-b .box-left .link ul li{display:inline-block;vertical-align: top;}
+.cmp-world-weather .icon-weather img { max-width:48px; }
+.cmp-world-weather .icon-weather span { vertical-align:middle; line-height:48px; }
+.cmp-world-weather .table-col td { padding:5px 5px;}
+
+/* 과거관측 */
+.cmp-past-obs { padding-top:10px; }
+
+/* 도시별 관측 */
+.cmp-city-obs .table-col thead tr:nth-of-type(2) th:first-of-type {border-left:1px solid #e0e6ef; }
+.cmp-city-obs .kmap-wrap { width:100%; height:400px; }
+
+/* 태풍통계 */
+.cmp-typ-stat .table_midterm,
+.cmp-typ-stat .table_brown{width:100%;margin-top:1px;border-top:2px solid #006ad0;*border-right:1px solid #d0d0d0;}
+.cmp-typ-stat .table_midterm thead th,
+.cmp-typ-stat .table_brown thead th{padding:6px 2px 3px 2px; border-top:none; border:1px solid #d0d0d0; background:#dce6ef; color:#333;text-align:center;}
+.cmp-typ-stat .table_midterm tbody th,
+.cmp-typ-stat .table_brown tbody th{padding:6px 3px 3px 3px; border-top:none; border:1px solid #d0d0d0; font-weight:normal; color:#666;text-align:center; background:#f4f7ff;}
+.cmp-typ-stat .table_midterm tbody th.bg_gray{background:#f2f2f2; font-weight:bold; color:#006ad0;}
+.cmp-typ-stat .table_midterm tbody td,
+.cmp-typ-stat .table_brown tbody td{padding:5px 2px 2px 2px; border-top:none; border:1px solid #d0d0d0; text-align:center;}
+.cmp-typ-stat .table_midterm tbody td img{vertical-align:top;}
+.cmp-typ-stat .table_midterm tbody td ul{text-align:left;}
+.cmp-typ-stat .table_midterm tbody td ul li{text-align:center;}
+.cmp-typ-stat .table_midterm tfoot td{padding:6px 5px 3px 5px; border-top:none; border:1px solid #c8c8c8; text-align:center;}
+.cmp-typ-stat .table_midterm tfoot th{padding:6px 5px 3px 5px; border-top:none; border:1px solid #c8c8c8; text-align:center;font-weight:normal;}
+
+.typ_info_wrap{position:relative;border:1px solid #eee;padding:4px;display:inline-block;width:100%;margin-bottom:20px;}
+.typ_info_wrap p{display:inline-block;margin-top:10px;line-height:22px;}
+.typ_info_wrap .bg_gray{background:#eee;padding:13px 16px;display:inline-block;width:100%;box-sizing:border-box; }
+.typ_info_wrap .bg_gray a {float:left;display:block;width: calc(66% - 20px);margin-right:20px;}
+.typ_info_wrap .bg_gray a.crop{ max-height: 361px; overflow:hidden;}
+.typ_info_wrap .bg_gray a img { width: 100%; height: auto;  }
+.typ_info_wrap .bg_gray .txt_wrap {float:left;display:inline-block;width:33%;}
+.typ_info_wrap .bg_gray .h6_blue_circle{background:url(../image/bullet_circle_blue.png) 0 3px no-repeat;font-weight:bold;color:#1c75cb;font-size:12px;letter-spacing:-1px;padding-left:15px;display:block;}
+
+.cmp-typ-stat .table_brown{border-top:2px solid #ef870d; *border-right:1px solid #fec891; border-collapse: collapse;}
+.cmp-typ-stat .table_brown thead th{border:1px solid #fec891;background:#fdd1a4;color:#993900;}
+.cmp-typ-stat .table_brown tbody th{border:1px solid #fec891;background:#f9ecdf;color:#993900;}
+.cmp-typ-stat .table_brown tbody td{border:1px solid #fec891}
+
+.cmp-typ-stat .h6cb{ padding-left:19px;line-height:150%;margin-bottom:7px;clear:both;font-weight: 600;font-size:22px; position:relative;}
+.cmp-typ-stat .h6cb:before{ content:''; position:absolute; left:7px; top:50%; margin-top:-3.5px; width:7px; height:7px; background-color:#016999; }
+.cmp-typ-stat .h6_brown:before{ background-color:#E5B700;}
+.cmp-typ-stat .fr { display:block; text-align:right;}
+
+.cmp-typ-stat .table-col tbody td:first-of-type { border-left:1px solid #e0e6ef; }
+.cmp-typ-stat .table-col tbody th:first-of-type { border-bottom:1px solid #e0e6ef; }
+.cmp-typ-stat .table-col tbody tr:last-child th:first-of-type { border-bottom:1px solid #000; }
+
+/* 날씨 - 단기예보 */
+.cmp-weather-short-term .cmp-bookmark { margin-top:5px; }
+.cmp-weather-short-term .cmp-my-point-slider { padding-top:0; }
+.cmp-weather-short-term .cmp-my-point-slider .slide-wrap { margin-top:0;}
+.cmp-weather-short-term #digital-forecast .cmp-cur-weather-air { display:none; }
+
+/* 테이블 위 설명 */
+.cmp-table-topinfo { width:100%; padding:7px; text-align:right; color:#343434; line-height:17px; clear:both; font-size:17px;}
+.cmp-table-topinfo strong { color: #1874ce; padding:0 10px; } 
+.cmp-table-topinfo img{margin-right:8px; vertical-align:middle;}
+
+/* 테이블 위 헤드 */
+.cmp-table-heading { padding:5px 10px; }
+.cmp-table-heading .title{background:url('../image/renew/bul_bluearrow.gif') no-repeat left center;line-height:40px;font-size:22px;color:#0958a5; padding-left:10px; font-weight:600;}
+.cmp-table-heading .date{font-size:16px}
+
+/* 정보 메세지 */
+.cmp-info-message {padding:10px; background:#ffffff; border:5px solid #ebebeb; line-height:160%; min-height:100px; display:flex; align-items:stretch;}
+.cmp-info-message-no-data { font-size:20px; text-align:center; margin:auto; }
+
+/* 회색 테두리의 안내 박스 */
+.cmp-comment-gray {padding:10px; background:#ffffff; border:5px solid #ebebeb; font-size:16px; line-height:160%; }
+.cmp-comment-gray dl.maT0{margin-top:0;}
+.cmp-comment-gray dl{font-size:0.9em;}
+.cmp-comment-gray dl dt{color:#1676cd; font-weight:bold;}
+.cmp-comment-gray dl dd{margin-left:8px; padding-left:11px; background:url(../image/bu_hyphen.gif) no-repeat left 9px;}
+.cmp-comment-gray p.maT10{margin-top:10px; font-size:0.9em;}
+.cmp-comment-gray p strong{font-size:0.9em;}
+.cmp-comment-gray p strong.spot{font-size:0.9em; font-weight:normal; color:#ff7f01;}
+.cmp-comment-gray p.blue{font-size:0.9em; font-weight:normal; color:#0958a5;}
+.cmp-comment-gray p span.bluebold{font-weight:bold; color:#0958a5;}
+.cmp-comment-gray table{margin-left:10px; max-width:700px; border-left:1px solid #c8c8c8; border-top:2px solid #006ad0; }
+.cmp-comment-gray table th{padding:6px 5px 3px 5px; background:#dce6ef; color:#333; border-right:1px solid #c8c8c8; border-bottom:1px solid #c8c8c8; font-size:0.95em; }
+.cmp-comment-gray table tr:last-child th{ border-bottom:1px solid #000; }
+.cmp-comment-gray table td{padding: 6px 10px 3px 10px; border-right:1px solid #c8c8c8; border-bottom:1px solid #c8c8c8; font-size:0.95em;}
+/* 과거관측 일별 */
+.cmp-past-obs .table-col.table-cal tbody tr:nth-child(2n) td{ height:150px;}
+.cmp-past-obs .table-col.table-cal tbody tr:nth-child(2n+1) td{ text-align:left; }
+
+/* 황사 관측 그래프 */
+.cmp-dust-graph .cmp-sub-tabs .cmp-sub-tab span { display:block; text-align:center; }
+.cmp-dust-graph .cmp-sub-tabs .cmp-sub-tab span:nth-child(2){ display:block; text-align:center; }
+.cmp-dust-graph-legend { display:flex; flex-wrap:wrap; border: 5px solid #ebebeb;}
+.cmp-dust-graph-legend [class*="fc"] { padding:5px 10px; font-size:15px; width:calc(100% / 8);}
+.cmp-dust-graph-legend [class*="fc"] span { text-align:center; display:block; }
+.fc102{color:#f81818;}
+.fc201{color:#f7410d;}
+.fc116{color:#f728a2;}
+.fc108{color:#0000ff;}
+.fc229{color:#000000;}
+.fc132{color:#eea010;}
+.fc119{color:#b0f3f7;}
+.fc094{color:#f2b332;}
+.fc101{color:#f57349;}
+.fc232{color:#21239b;}
+.fc399{color:#1211ef;}
+.fc135{color:#1270cd;}
+.fc169{color:#0e6e0f;}
+.fc140{color:#3f9944;}
+.fc175{color:#b5d48b;}
+.fc146{color:#6fc89f;}
+.fc156{color:#13f211;}
+.fc121{color:#3d575d;}
+.fc136{color:#4f8c8d;}
+.fc143{color:#676768;}
+.fc192{color:#d2b390;}
+.fc160{color:#998d62;}
+.fc090{color:#8c1963;}
+.fc100{color:#7b3999;}
+.fc152{color:#b152b2;}
+.fc277{color:#ae30f3;}
+.fc115{color:#f58cf5;}
+.fc185{color:#808080;}
+.fc130{color:#a020f0;}
+.fc501{color:#00ff00;}
+.cmp-dust-graph .ul_arrow_T10{margin-top:10px;}
+.cmp-dust-graph .ul_arrow_T10 li{background:url(../image/bu_arrow_orangesmall.gif) no-repeat left 5px;padding-left:10px;}
+.cmp-dust-graph .table-col th, .cmp-dust-graph .table-col td { padding:8px 3px; font-size:16px; }
+.cmp-dust-graph .table-col tbody th { border-bottom: 1px solid #e0e6ef;border-right: 1px solid #e0e6ef;}
+.cmp-dust-graph .over-scroll { margin-top:10px; }
+.cmp-dust-graph .over-scroll:first-child { margin-top:0; }
+
+/* 월별 해양기상도 */
+.cmp-monthly-ocean-chart .table-col tbody tr:nth-child(2) td:first-child {  border-left:1px solid #e0e6ef;}
+
+/* 날씨 - 기상특보 */
+.cmp-weather-cmt-txt-box { width:calc(100% - 20px); background-color:#fff; position:absolute; margin-top:10px; bottom:0; }
+.cmp-weather-cmt-txt-box-inner {height:355px; overflow-y:auto; font-size:18px; line-height:32px;border:1px solid #fff;}
+.cmp-weather-cmt-txt-box-inner .inner-content { padding:10px 20px; background:#fff; }
+.cmp-weather-cmt-txt-box.more { z-index:1004; position:fixed; top:20px; bottom:20px; width:calc(100% - 40px); left:50%; transform:translateX(-50%); max-width:1160px; }
+.cmp-weather-cmt-txt-box.more .cmp-weather-cmt-txt-box-inner { height:100%;border:1px solid #00A8CC;}
+.cmp-weather-cmt-txt-box-close { display:none; position:absolute; top:4px; right:8px; text-indent:-9999px; width:40px; height:40px; background:url(../image/special/ic_close_blue.png) no-repeat center center; background-size:16px; background-color:#fff; border-radius:64px;}
+.cmp-weather-cmt-txt-box.more .cmp-weather-cmt-txt-box-close { display:block; }
+.cmp-weather-cmt-txt-box-close:hover { background-color:#f5f5f5;}
+.cmp-weather-cmt-more { position:absolute; display:inline-block; right:8px; bottom: 8px; font-size:14px; color:#fff;}
+.cmp-weather-cmt-more span { display:block; line-height:27px; padding:0 30px; padding-top:1px; background:#98B2CC; font-weight:400; }
+
+/* 한국 기후 + 지역별기후 + 제공안내 */
+.cmp-korea-climate { padding:10px 0; }
+.cmp-korea-climate .table-col tbody td:first-of-type { text-align:left; border-left:1px solid #e0e6ef; }
+.cmp-korea-climate .table-col tbody th[rowspan] + th { border-left:0; }
+.cmp-korea-climate .table-col tbody th[rowspan] { border-right:1px solid #e0e6ef; }
+.cmp-korea-climate .h6{font-size:100%; padding:10px 10px 10px 19px;line-height:1em;margin-bottom:4px;color:#444; font-size:22px; position:relative; }
+.cmp-korea-climate .h6:before{ content:''; position:absolute; left:7px; top:50%; margin-top:-4px; width:7px; height:7px; background-color:#016999; }
+.cmp-korea-climate .ar { text-align:right !important; }
+.cmp-korea-climate p { font-size:18px; font-weight:300; line-height:150%; padding:5px 10px;}
+.cmp-korea-climate .list_text_1 dt{font-size:18px; margin:0 0 5px 5px;padding:8px 0 8px 13px;font-weight:600;/* background:url(../image/bu_square_orange.gif) no-repeat left center; */ position:relative;}
+.cmp-korea-climate .list_text_1 dt:before{ content:''; position:absolute; left:5px; top:50%; margin-top:-2px; width:4px; height:4px; background-color:#0099E1; }
+.cmp-korea-climate .list_text_1 dt.mt4{ margin:0 0 5px 5px;padding:0 0 0 13px;font-weight:bold;background:url(../image/bu_square_orange.gif) no-repeat left center;}
+.cmp-korea-climate .list_text_1 dd{ font-size:16px; margin-left:5px;padding-bottom:20px;padding-left:10px; line-height:150%;}
+.cmp-korea-climate .list_text_1 dd ul{ font-weight:300; font-size:0.95em; margin-top:3px; padding-top:10px; padding-left:10px; }
+.cmp-korea-climate .list_text_1 dd ul li{padding:0 0 2px 12px; background:url(../image/bu_arrow_orangesmall.gif) no-repeat 5px 7px; margin-bottom:10px;}
+.cmp-korea-climate .list_text_1 dd ul li ul li{background:url(../image/bu_hyphen.gif) no-repeat left 6px;  padding-left:9px;margin:0 0 0 1px;}
+
+.cmp-korea-climate-content .table-col tbody td:first-of-type { text-align:center; }
+.cmp-korea-climate-content .align_left { text-align:left; }
+.cmp-korea-climate-content .table-col.no-row-scope tbody td:first-of-type { border-left:0; }
+.cmp-korea-climate .tab-area-xsm div[data-area="1"] { margin-left:0px; }
+.cmp-korea-climate .tab-area-xsm div[data-area="2"] { margin-left:90px; }
+.cmp-korea-climate .tab-area-xsm div[data-area="3"] { margin-left:170px; }
+.cmp-korea-climate .tab-area-xsm div[data-area="4"] { margin-left:250px; }
+.cmp-korea-climate .tab-area-xsm div[data-area="5"] { margin-left:330px; }
+.cmp-korea-climate .tab-area-xsm div[data-area="6"] { margin-left:410px; }
+.cmp-korea-climate .tab-area-xsm div[data-area="7"] { margin-left:490px; }
+.cmp-korea-climate .tab-area-xsm div[data-area="8"] { margin-left:580px; }
+.cmp-korea-climate .tab-area-xsm div[data-area="9"] { margin-left:590px; }
+
+.cmp-korea-climate-content .ul_square{padding-left:5px;}
+.cmp-korea-climate-content .ul_square li{font-size:18px; font-weight:300;/*  background:url(../image/bu_square_orange.gif) no-repeat left 4px; */padding-left:15px;margin-bottom:20px; position:relative;}
+.cmp-korea-climate-content .ul_square li:before{ content:''; position:absolute; left:5px; top:6px; width:4px; height:4px; background-color:#0099E1; }
+.cmp-korea-climate-content .ul_square li ul{margin-top:3px;}
+.cmp-korea-climate-content .ul_square li ul li{background:url(../image/bu_arrow_orangesmall.gif) no-repeat left 5px;padding-left:9px;margin-bottom:0;}
+.cmp-korea-climate-content .ul_square li ul li.bg_none{background:none;}
+.cmp-korea-climate-content .ul_square li ul li.bg_none img{vertical-align:top;}
+.cmp-korea-climate-content .ul_square li ul li ul li{background:url(../image/bu_hyphen.gif) no-repeat left 6px;  padding-left:9px; margin-bottom:0; }
+.cmp-korea-climate-content .ul_square li ul li ul li.bg_none{background:none;}
+.cmp-korea-climate-content .ul_square li ul li ul li ul li{background:none;padding-left:0;}
+.cmp-korea-climate-content .ul_square li ol{margin-top:3px;}
+.cmp-korea-climate-content .ul_square li ol li{background:url(../image/bu_arrow_orangesmall.gif) no-repeat left 6px;padding-left:9px;margin-bottom:0;}
+.cmp-korea-climate-content .ul_square li ol li.bg_none{background:none;}
+.cmp-korea-climate-content .ul_square li ol li ul li{background:url(../image/bu_hyphen.gif) no-repeat left 7px;  padding-left:9px; margin-bottom:0; }
+.cmp-korea-climate-content .ul_square li ol li ul li.bg_none{background:none;}
+.cmp-korea-climate-content .ul_square li ol li ul li ol li{background:none;padding-left:0;}
+.cmp-korea-climate-content .average_regional01 .left { float:left; }
+.cmp-korea-climate-content .average_regional01 .left img { max-width:200px; }
+.cmp-korea-climate-content .p_square{font-weight:500; font-size:20px;/*  background:url(../image/bu_square_orange.gif) no-repeat left center; */padding-left:15px; margin:10px 0; position:relative;}
+.cmp-korea-climate-content .p_square:before{ content:''; position:absolute; left:5px; top:50%; margin-top:-2px; width:4px; height:4px; background-color:#0099E1; }
+.cmp-korea-climate-content .p_square_T20{font-weight:500; font-size:20px;/*  background:url(../image/bu_square_orange.gif) no-repeat left center; */padding-left:15px; margin:10px 0; position:relative;}
+.cmp-korea-climate-content .p_square_T20:before{ content:''; position:absolute; left:5px; top:50%; margin-top:-2px; width:4px; height:4px; background-color:#0099E1; }
+
+/* 지진화산 홍보책자 */
+.cmp-eqk-toon {position:relative;}
+.cmp-eqk-toon .cmp-eqk-toon-items { display:flex; flex-wrap:wrap; }
+.cmp-eqk-toon .cmp-eqk-toon-item { width:calc(50% - 20px); margin:10px; position:relative; background-color:#CFE8F8; }
+.cmp-eqk-toon .cmp-eqk-toon-item figure { width:30%; padding:10px; }
+.cmp-eqk-toon .cmp-eqk-toon-item figure img { max-height:135px; width:auto; }
+.cmp-eqk-toon .cmp-eqk-toon-item figcaption {position:absolute; top:20px; left:30%; margin-left:20px; font-size:15px; font-weight:600; }
+.cmp-eqk-toon .cmp-eqk-toon-item a { position:absolute; bottom:20px; left:30%; margin-left:20px; font-size:13px; font-weight:600; padding:5px 10px; background-color:#fff; color:#4D7AD9; border:1px solid #4D7AD9; border-radius:5px; }
+.cmp-eqk-toon .cmp-eqk-toon-kogl { text-align:right; padding:0 20px; }
+.cmp-eqk-toon .cmp-eqk-toon-kogl img { max-width:200px;}
+
+/* 날씨 - 특보현황 */
+.cmp-weather-warning-status .table-col { min-width:600px; }
+
+/* 해구별 예보 */
+.cmp-marine-zone-pop { position:absolute; left:100px; top:100px; }
+.cmp-marine-zone-pop .shadow-box { transition: all .2s ease-out; height:auto; opacity:1; overflow:visible;}
+.cmp-marine-zone-pop .shadow-box .inner { margin:10px 10px;padding:16px 30px 10px 20px; border-radius:5px; border:1px solid #CBCBCB; box-shadow:0px 0px 10px 0px rgba(0,0,0,0.2); text-align:left; position:relative; background-color:#fff;}
+.cmp-marine-zone-pop .shadow-box a.close-box { content:'';position:absolute; top:0; right:0; width:34px; height:34px; background:url(../image/btn_close.png) no-repeat center center; background-size:14px; text-indent:-9999px;}
+.cmp-marine-zone-pop .shadow-box h5 {font-size:15px; font-weight:700px; line-height:200%;}
+.cmp-marine-zone-pop .shadow-box dl { display:block; font-size:12px; line-height:170%;}
+.cmp-marine-zone-pop .shadow-box dl dt { display:inline; color:#333;}
+.cmp-marine-zone-pop .shadow-box dl:not(:last-child) dt:after { content:':'; padding-right:5px; }
+.cmp-marine-zone-pop .shadow-box dl dd { display:inline; color:#000;}
+.cmp-marine-zone-pop .shadow-box dl:last-child dt { display:block; width:100%; text-align:center; padding-top:5px; }
+.cmp-marine-zone-pop .shadow-box dl:last-child dd { display:none; }
+.cmp-marine-zone-pop .shadow-box dl:last-child dt a[data-role="view-forecast"] { font-size: 14px; font-weight:600; }
+
+/* 버튼 */
+.cmp-blue-btn{color:#fff;background:#006fe8;border-radius:4px;height:40px;line-height:40px;font-size:18px;padding:0 55px 0 20px;position:relative;}
+.cmp-blue-btn:after{content:"";position:absolute;right:20px;top:50%;transform:translateY(-50%);background:url(../image/arrow_side.png);width:8px;height:12px;}
+.cmp-btn-orange { background:#ffc600; color:#000; font-weight: 400; border-radius: 5px; font-size:16px; padding:4px 10px;}
+
+.cmp-btn-inline-blue { padding:4px 8px; background-color:#0859ac; color:#ffffff; text-decoration:none; border-radius:4px; font-weight:bold; }
+
+/* label */
+.cmp-lbl-ann { font-weight: normal; font-style: normal; font-size:13px; line-height:16px; padding:2px 0; background: #0159ae; color: #fff; display:inline-block;padding:2px 8px; margin-right:10px; }
+
+/* 팝업 */
+.popup-frame-header { background:url(../image/renew/ic_corner.png) no-repeat left top #0099E1; border-bottom:5px solid #0099E1;}
+.popup-frame-header h2 { font-size:18px; font-weight:600; color:#fff; padding:15px 8px 10px 28px; } 
+.popup-frame-header a[data-role="window-close"] { position:absolute; right:10px; top:8px; text-indent:-9999px; width:36px; height:36px;background:url(../image/banner_close.png) no-repeat center center; background-size:16px; background-color:#0099E1; border-radius:64px; }
+.popup-frame-header a[data-role="window-close"]:hover { background-color:rgba(0,0,0,0.1);}
+.popup-frame .footnote { padding: 10px 5px; text-align: center; font-size: 15px; font-weight: 500; line-height: 150%;}
+.popup-frame .tab-menu-wrap .tab-menu { margin-top:0;}
+img.roma { width: auto; max-width: auto;}
+.popup-frame .cont-box-eqk  td:first-of-type {border-left: 1px solid #e0e6ef; padding-left:10px;}
+.popup-frame .cont-box-eqk  td {border-bottom: 1px solid #000;}
+.popup-frame .page-wrap { padding-left:0; }
+
+/* 작은 탭 */
+.cmp-stack .tab-wrap01{position:relative;padding-bottom:15px;}
+.cmp-stack .tab-wrap01 [class*="tab-btn"]{display:inline-block;}
+.cmp-stack .tab-wrap01 [class*="tab-btn"] button
+	, .cmp-stack .tab-wrap01 [class*="tab-btn"] a{font-size:30px;padding:0 18px; border-bottom:0;line-height:60px;font-weight:300;color:#000000;}
+.cmp-stack .tab-wrap01 [class*="tab-btn"] button.on
+	, .cmp-stack .tab-wrap01 [class*="tab-btn"] a.on{font-weight:700;color:#009ae1;border-bottom:5px solid #009ae1}
+.cmp-stack .tab-area-xm { margin-top:10px; }
+.cmp-stack .tab-area-xm .tab-wrap01 [class*="tab-btn"] a { font-size:17px; padding:0 13px; line-height:30px;}
+.cmp-stack .tab-area-xm .tab-wrap01 [class*="tab-btn"] a.on { color:#000; border-bottom:2px solid #333; }
+
+.cmp-stack .tab-area-xm.tab-area-xsm .tab-wrap01 [class*="tab-btn"] a { font-size:15px; line-height:27px;}
+
+.tab-menu-wrap.tab-area-xm .tab-menu > * button, .tab-menu-wrap.tab-area-xm .tab-menu > * a { font-size:17px; padding:4px 14px; line-height:30px; margin-bottom:4px;}
+.tab-menu-wrap.tab-area-xm .tab-menu > * button, .tab-menu-wrap.tab-area-xm .tab-menu > * a.on { color:#000; border-bottom:2px solid #333; }
+
+/* 서브 탭 */
+.cmp-sub-tabs { display:flex; flex-wrap:wrap; padding:5px 10px; justify-content:flex-start; align-items:stretch; }
+.cmp-sub-tabs .cmp-sub-tab { font-size:15px; font-weight:300; line-height:17px; padding:4px 4px; }
+.cmp-sub-tabs .cmp-sub-tab.on { font-weight:600; position:relative; }
+.cmp-sub-tabs .cmp-sub-tab.on:after { content:''; position:absolute; left:4px; right:4px; bottom:0; height:1px; background-color:#000; }
+
+/* 페이징 */
+.cmp-paging {margin:80px 0; text-align:center;}
+.cmp-paging a {position:relative; color:#808080; display:inline-block; text-align:center; padding:7px; vertical-align:middle; margin:0 5px; font-size:18px; font-family:'nsr_b';}
+.cmp-paging a .sun {position:absolute; left:-2px; top:-35px; width:30.5px; height:30px; background-position:-193.5px -400.5px;;}
+.cmp-paging a.now {color:#006b99; cursor:default; position:relative; }
+.cmp-paging a.bbs_btn {margin:0; padding: 5px;}
+.cmp-paging a.first {width:24.5px; height:22px; background-position:-468px -252.5px; margin-right:10px;}
+.cmp-paging a.prev {width:12px; height:22px; background-position:-468px -252.5px;}
+.cmp-paging a.next {width:12px; height:22px; background-position:-496.5px -252.5px;}
+.cmp-paging a.last {width:24.5px; height:22px; background-position:-496.5px -252.5px; margin-left:10px;}
+
+.sprite {background-image: url('../image/renew/sprite.png'); background-size:1000px; background-repeat:no-repeat; text-indent:-999em;}
+
+@media screen and (max-width:1550px) {
+	/* 날씨 특보 */
+	.cmp-weather-cmt-txt-box { width:100%; position:relative; }
+	.cmp-weather-cmt-more { right:8px; }
+}
+@media screen and (max-width: 1300px) {
+	.cmp-form { background-color:#eef2f7; padding:5px 10px;}
+	.cmp-form-row { padding:5px 0; flex-wrap:wrap; }
+	.cmp-form-select { margin-left:0px;}
+	.cmp-form-select select { width:200px; font-size:16px; }
+	.cmp-form-select-value-range select { width:calc(50% - 60px); font-size:16px; }
+	
+	.cmp-form-input { margin-left:0px;}
+	.cmp-form-input input[type="text"] { width:200px; font-size:16px; }
+	.cmp-form-input-value-range input[type="text"] { width:calc(50% - 60px);}
+	.cmp-form-input-twin input[type="text"] { width:calc(50% - 110px);}
+	.cmp-form-input-twin select { width:calc(50% - 110px);}
+	.cmp-form-input-half input[type="text"] { width:calc(50% - 60px);}
+	.cmp-form-input-half select { width:calc(50% - 60px);}
+	
+	.cmp-form-input-tripple { width:calc(50% - 20px); }
+	.cmp-form-input-tripple:last-child { margin-left:0; margin-top:5px; }
+	.cmp-form-input-tripple input[type="text"] { width:calc(100% - 110px); font-size:16px;}
+	.cmp-form-input-tripple select { width:calc(100% - 110px); font-size:16px;}
+	.cmp-form-input-tripple label{ width:60px; margin-right:5px; font-size:16px; word-break:keep-all; }
+	
+	.cmp-form-buttons { justify-content:center; }
+	.cmp-form-buttons label { font-size: 16px; font-weight: 700; line-height: 40px; padding:0 5px; }
+	.cmp-form-buttons.label-on label { padding:0; margin-right:5px; position:unset; left:auto; top:auto; width:60px; height:auto; overflow:unset; text-align:right; }
+	
+	.cmp-form [data-form-role="submit"] { font-size:16px; }
+	.cmp-form [data-form-role="button"] { font-size:16px; }
+	.cmp-form-button { font-size:16px; }
+	
+	.cmp-w400 {width:280px !important; }
+	
+	.cmp-ext-link { margin-top:15px; margin-bottom:15px; padding:10px 10px 10px 0px; }
+	.cmp-ext-link > h3 { position:absolute; font-size:18px; margin-top:-9px; top:50%;left:30px;}
+	.cmp-ext-link > ul { display:flex; padding-left:120px;}
+	.cmp-ext-link > ul > li a { height:36px; background-size:30px; color:#fff; font-size:15px;padding:0 10px 0 48px;}
+	.cmp-ext-link > ul > li a.aggr-weather { background-position:9px center; }
+	.cmp-ext-link > ul > li a.drought-weatger { background-position:9px center; }
+	.cmp-ext-link.com-ext-link-2banner > ul {padding-left:240px;}
+	.cmp-ext-link.com-ext-link-2banner > ul > li { padding-left:10px; }
+}
+
+@media screen and (max-width: 1100px) {
+	.cmp-form [data-form-role="submit"] { margin-left:5px;border-radius:4px;height:30px;line-height:30px;padding:0 10px; font-size:13px; }
+	.cmp-form [data-form-role="button"] { margin-left:5px;border-radius:4px;height:30px;line-height:30px;padding:0 10px; font-size:13px; }
+	.cmp-form-buttons.label-on label { width:80px; padding:0 5px; font-size:13px; line-height:30px; margin-right: 0;} 
+	.cmp-form-button { margin-left:5px;border-radius:4px;height:30px;line-height:30px;padding:0 10px; font-size:13px; }
+	
+	.cmp-form-input-value-range { width:calc(50% - 10px); }
+	.cmp-form-input-twin { width:calc(50% - 10px); }
+	.cmp-form-select.label-on label {padding:0 5px; font-size:13px; line-height:30px; }
+	.cmp-form-select label {padding:0 5px; font-size:13px; line-height:30px; }
+	.cmp-form-select span {padding:0 5px; font-size:13px; line-height:30px; }
+	.cmp-form-select select { height:30px;line-height:30px; font-size:13px;}
+	.cmp-form-select-value-range select { width:calc(50% - 50px);}
+	.cmp-form-select-value-range span {font-size:13px; line-height:30px; }
+	.cmp-form-select-value-range span:first-of-type {font-size:13px; line-height:30px; }
+	
+	.cmp-form-input.label-on label {padding:0 5px; font-size:13px; line-height:30px; }
+	.cmp-form-input label {padding:0 5px; font-size:13px; line-height:30px; }
+	.cmp-form-input span {padding:0 5px; font-size:13px; line-height:30px; }
+	.cmp-form-input input[type="text"] { height:30px;line-height:30px; font-size:13px;}
+	.cmp-form-input select { height:30px;line-height:30px; font-size:13px;}
+	.cmp-form-input-value-range select { width:calc(50% - 50px);}
+	.cmp-form-input-value-range span {font-size:13px; line-height:30px; }
+	.cmp-form-input-value-range span:first-of-type {font-size:13px; line-height:30px; }
+	.cmp-form-input-twin input[type="text"] { width:calc(50% - 110px); }
+	.cmp-form-input-twin select { width:calc(50% - 110px); }
+	.cmp-form-input-half input[type="text"] { width:calc(50% - 60px); }
+	.cmp-form-input-half select { width:calc(50% - 60px); }
+	
+	.cmp-footnote { padding:5px 10px; font-size:15px; }
+	.cmp-common-content { padding:5px 10px; font-size:15px; }
+	.cmp-common-figure figcaption { font-size:15px; }
+	.cmp-common-list { padding:5px 10px; }
+	.cmp-common-list li { font-size:15px; }
+	.cmp-common-heading { padding:5px; color:#000; line-height:30px; position:relative; }
+	.cmp-common-heading h3 { font-size:20px; line-height:36px;}
+	.cmp-common-heading strong { font-size:16px;}
+	.cmp-common-heading span { font-size:16px; }
+	.cmp-common-heading em { font-size:13px;right:8px; bottom:8px; }
+	.cmp-img-heading-list dl dt { font-size:15px; }
+	.cmp-img-heading-list dl dd { font-size:15px; }
+	.cmp-img-side-list { padding:5px; }
+	.cmp-img-side-list dl dt { font-size:16px; font-weight:600; padding-top:10px;}
+	.cmp-img-side-list dl dd { font-size:15px; padding-left:10px;}
+	/* 버튼 */
+	.cmp-blue-btn{ border-radius:3px;height:34px;line-height:34px;font-size:16px;padding:0 40px 0 15px; }
+	.cmp-blue-btn:after{ right:14px;top:50%;transform:translateY(-50%);width:7px;height:10px;}
+	
+	.popup-frame .tab-menu-wrap .tab-menu{margin-top:0;}
+	.popup-frame .cont-wrap { padding-top:0; }
+	
+	/* 산악 예보 */
+	.mountain-weather .cmp-dfs-updated { left:auto;}
+	
+	/* 해수욕장예보 */
+	.cmp-theme-beach .beachmap p{font-size:15px; padding:5px;}
+	.cmp-theme-beach .beachtable p{ font-size:15px; padding:5px 0;}
+	.cmp-theme-beach .beachtable p.beach_title{font-size:16px;}
+	
+	/* 북한예보 육상 */
+	.cmp-nk-weather-current .cmp-nk-weather-map h3 { font-size:20px; }
+	.cmp-nk-weather-current .cmp-nk-weather-summary h3 { font-size:20px; }
+	.nk-weather .cmp-dfs-updated { left:auto;}
+	
+	/* 세계날씨 */
+	.cmp-world-weather .h6-title { font-size:19px; }
+	.cmp-world-weather .h6 { font-size:18px; }
+	.cmp-world-weather .h6 { font-size:18px; }
+	/* 테이블 위의 설명 */
+	.cmp-table-topinfo { font-size:15px; }
+	.cmp-table-topinfo strong { padding:0 5px; }
+	
+	/* 정보 메세지 */
+	.cmp-info-message {padding:6px; border:4px solid #ebebeb; min-height:80px;}
+	.cmp-info-message-no-data { font-size:15px;}
+
+	/* 도시별 관측 */
+	.cmp-city-obs .table-col { min-width:1024px; }
+	
+	/* 과거관측 일별 */
+	.cmp-past-obs .table-col.table-cal tbody tr:nth-child(2n) td{ height:110px;}
+	
+	/* 황사관측 그래프 */
+	.cmp-dust-graph-legend [class*="fc"] { padding:5px 8px; font-size:14px; width:calc(100% / 8);}
+	.cmp-dust-graph .table-col th, .cmp-dust-graph .table-col td { padding:4px 2px; font-size:13px; }
+	
+	/* 태풍 통계 */
+	.cmp-typ-stat .h6cb{font-size:16px; }
+	.cmp-typ-stat .h6_brown{font-size:16px; }
+
+	/* 작은 탭 */
+	.cmp-stack .tab-area-xm .tab-wrap01 [class*="tab-btn"] a { font-size:15px; }
+	
+	/* 테이블 위 헤드 */
+	.cmp-table-heading { padding:5px 5px; }
+	.cmp-table-heading .title{line-height:30px;font-size:16px;padding-left:8px; }
+	.cmp-table-heading .date{font-size:14px}
+	
+	/* 날씨 특보 */
+	.cmp-weather-cmt-txt-box-inner {height:300px; font-size:14px; line-height:24px;}
+	.cmp-weather-cmt-txt-box-inner .inner-content { padding:5px 10px; }
+	
+	/* 기후 특성 */
+	.cmp-korea-climate .table-col{ min-width:600px; }
+	.cmp-korea-climate { padding:0px 10px; }
+	.cmp-korea-climate .h6{ padding:6px 6px 6px 19px;line-height:1em;margin-bottom:7px;color:#444; font-size:17px; }
+	.cmp-korea-climate p { font-size:15px; padding:3px 6px;}
+	.cmp-korea-climate .list_text_1 dt{font-size:14px;}
+	.cmp-korea-climate .list_text_1 dt.mt4{ margin:0 0 5px 5px;padding:0 0 0 13px;font-weight:bold;background:url(../image/bu_square_orange.gif) no-repeat left 4px;}
+	.cmp-korea-climate .list_text_1 dd{ font-size:14px;; margin-left:5px;padding-bottom:10px;padding-left:6px; line-height:150%;}
+	.cmp-korea-climate .list_text_1 dd ul{ font-size:0.98em; margin-top:3px; padding-top:6px; padding-left:6px; }
+	.cmp-korea-climate-content .p_square{font-weight:500; font-size:16px; background:url(../image/bu_square_orange.gif) no-repeat left center;padding-left:15px; margin:5px 0;}
+	.cmp-korea-climate-content .p_square_T20{font-weight:500; font-size:16px; background:url(../image/bu_square_orange.gif) no-repeat left center;padding-left:15px; margin:5px 0;}
+}
+
+@media screen and (max-width: 768px) {
+	.cmp-form-row { flex-wrap:wrap; }
+	
+	.cmp-form-select { width:100%; margin-left:0; }
+	.cmp-form-select { margin-top:5px; }
+	.cmp-form-select:first-child { margin-top:0;}
+	.cmp-form-select select { width:calc(100% - 100px);}
+	.cmp-form-select.label-on label { width:60px; }
+	.cmp-form-select-value-range { width:100%; }
+	.cmp-form-select-value-range select { width:calc(50% - 50px);}
+	
+	.cmp-form-input { width:100%; margin-left:0; }
+	.cmp-form-input { margin-top:5px; }
+	.cmp-form-input:first-child { margin-top:0;}
+	.cmp-form-input input[type="text"] { width:calc(100% - 100px);}
+	.cmp-form-input.label-on label { width:60px; }
+	.cmp-form-input-value-range { width:100%; }
+	.cmp-form-input-value-range input[type="text"] { width:calc(50% - 50px);}
+	.cmp-form-input-twin input[type="text"] { width:calc(50% - 80px); }
+	.cmp-form-input-twin select { width:calc(50% - 80px); }
+	.cmp-form-input-half input[type="text"] { width:calc(50% - 80px); }
+	.cmp-form-input-half select { width:calc(50% - 80px); }
+	.cmp-form-buttons { padding:5px 0;  justify-content:center;}
+	.cmp-form-buttons.label-on label { width:60px; }
+	.cmp-city-obs .cmp-form-buttons { justify-content:flex-start; }
+	
+	.cmp-w400 { width:calc(100% - 50px) !important;}
+	
+	.cmp-view { padding:5px 0;}
+	.cmp-view-announce { font-size:13px; line-height:17px; font-weight:400; padding:2px 5px;}
+	.cmp-view-announce em { font-size:13px; }
+	.cmp-view-header { font-size:15px; font-weight:600; padding:5px; line-height:20px;}
+	.cmp-view-header em { font-size:14px; }
+	.cmp-view-header small { font-size:13px; }
+	.cmp-view-header h3 { font-size:14px; }
+	
+	.cmp-view-header2 { padding:5px; }
+	.cmp-view-header2 span { font-size:16px; line-height:30px;}
+	.cmp-view-header2 h3 { font-size:16px; line-height:30px;}
+	.cmp-view-header2 em { font-size:13px; right:5px; bottom:5px; }
+	
+	.cmp-view-content { font-size:15px; line-height:20px; padding:8px; }
+	.cmp-view-content * { font-size:14px; }
+	.cmp-view-content h5 { padding-left:5px; }
+	.cmp-view-content p { padding:5px 10px;}
+	
+	.cmp-view-content-img img { width:calc(50% - 10px); margin:5px; }
+	.cmp-view-content-img figure { text-align:center;}
+	.cmp-view-content-img figure img { width:calc(100% - 20px)}
+	
+	.cmp-view-box h4 { font-size:14px; line-height:20px;}
+
+	.cmp-updated-box { display:flex; padding:10px; background-color:#EEF2F7; align-items:center; flex-wrap:wrap;}
+	.cmp-updated-box h4 { font-weight:700; font-size:15px; display:block; width:100%; padding:5px 10px; background-color:unset; color:#000; display:none; }
+	.cmp-updated-box-item { font-size:15px; font-weight:400px; padding:5px 10px; }
+	.cmp-updated-box-item strong { font-weight:600px; }
+	
+	.cmp-img-side-list dl { padding-left:0; border:1px solid #e0e0e0; margin-bottom:10px; padding-bottom:10px; }
+	.cmp-img-side-list dl dt { max-width:400px; padding-left:10px; margin:0 auto;}
+	.cmp-img-side-list dl dd { max-width:400px; padding-left:20px; margin:0 auto;}
+	.cmp-img-side-list.vol-disaster dl:nth-child(1):before { content:''; position:relative; margin:0 auto; left:auto; top:auto; width:400px; height:120px;}
+	.cmp-img-side-list.vol-disaster dl:nth-child(2):before { content:''; position:relative; margin:0 auto; left:auto; top:auto; width:400px; height:120px;}
+	.cmp-img-side-list.vol-disaster dl:nth-child(3):before { content:''; position:relative; margin:0 auto; left:auto; top:auto; width:400px; height:120px;}
+	.cmp-img-side-list.vol-disaster dl:nth-child(4):before { content:''; position:relative; margin:0 auto; left:auto; top:auto; width:400px; height:120px;}
+	.cmp-img-side-list.vol-disaster dl:nth-child(5):before { content:''; position:relative; margin:0 auto; left:auto; top:auto; width:400px; height:120px;}
+	.cmp-img-side-list.vol-disaster dl:nth-child(6):before { content:''; position:relative; margin:0 auto; left:auto; top:auto; width:400px; height:120px;}
+	
+	.ella-content { margin-bottom:10px; }
+	.ella-content .cmp-grid-cell { background-color:#fff; }
+	.ella-content .cmp-grid-cell:first-child { width:400px; margin-right:10px;}
+	.ella-content .cmp-grid-cell p { font-size:15px; color:#000; line-height:20px; padding:10px; }
+	.ella-content figcaption { font-size:13px; text-align:center; }
+	
+	.typ-content { margin-bottom:10px; }
+	.typ-content .cmp-grid-cell { background-color:#fff; }
+	.typ-content .cmp-grid-cell:first-child { width:400px; margin-right:10px;}
+	.typ-content .cmp-grid-cell p { font-size:15px; color:#000; line-height:20px; padding:10px; }
+	.typ-content figcaption { font-size:13px; text-align:center; }
+	
+	.cmp-grid-pd10 { padding:5px; }
+	.cmp-grid-pd15 { padding:7.5px; }
+	.cmp-grid-pd20 { padding:10px; }
+	.cmp-mg-top-20 { margin-top:10px; }
+	
+	.popup-frame .cont-wrap .tab-wrap01{position:relative;padding-bottom:10px;}
+	.popup-frame .cont-wrap [class*="tab-btn"] button
+		, .popup-frame .cont-wrap [class*="tab-btn"] a{font-size:18px;padding:0 8px; border-bottom:0;line-height:40px;}
+	.popup-frame .cont-wrap [class*="tab-btn"] button.on
+		, .popup-frame .cont-wrap [class*="tab-btn"] a.on{border-bottom:3px solid #009ae1}
+	 .popup-frame .footnote { padding: 10px 5px; text-align: center; font-size: 14px; }
+	/* 산악기상정보 */ 
+	.cmp-mt-weather { flex-wrap:wrap;}
+	.cmp-mt-weather [class*=cmp-mt-weather-] { margin:0 auto; }
+	.cmp-mt-weather p{ padding:10px; width:100%;}
+	
+	/* 해수욕장예보 */
+	.cmp-theme-beach { flex-wrap:wrap; padding:0 5px; }
+	.cmp-theme-beach .beachmap { width:100%; }
+	.cmp-theme-beach .beachmap > ul { margin:auto; }
+	.cmp-theme-beach .beachtable { width:100%; }
+	
+	/* 북한 육상 */
+	.cmp-nk-weather-current { flex-wrap:wrap; }
+	.cmp-nk-weather-current .cmp-nk-weather-map { width:100%; padding-bottom:20px; }
+	.cmp-nk-weather-current .cmp-nk-weather-map .map { margin:auto; }
+	.cmp-nk-weather-current .cmp-nk-weather-map h3 { font-size:18px; }
+	.cmp-nk-weather-current .cmp-nk-weather-summary { padding-left:0; width:100%; }
+	.cmp-nk-weather-current .cmp-nk-weather-summary h3 { font-size:18px; }
+	.cmp-nk-weather-current .cmp-nk-weather-summary p { font-size:14px; }
+	.cmp-nk-weather-timeseries{padding:2px 5px; display:flex; font-size:14px; }
+	.cmp-nk-weather-timeseries .title{ font-size:16px; }
+	.cmp-nk-weather-timeseries .time{ font-size:14px; }
+	
+	/* 버튼 */
+	.cmp-btn-orange { font-size: 14px; }
+	
+	/* 세계기상 */
+	.cmp-world-weather .box-left { float:none; margin:auto; }
+	.cmp-world-weather .box-right { float:none; width:100%; margin:auto; }
+	
+	/* 회색 테두리의 안내박스 */
+	.cmp-comment-gray { font-size:15px; }
+	
+	/* 서브 탭 */
+	.cmp-sub-tabs .cmp-sub-tab { font-size:13px; }
+	
+	/* 황사관측 그래프 */
+	.cmp-dust-graph-legend [class*="fc"] { padding:5px 5px; font-size:13px; width:calc(100% / 4);}
+	/* 북한 기후 */
+	.cmp-korea-climate .tab-area-xsm div[data-area="1"] { margin-left:0px; }
+	.cmp-korea-climate .tab-area-xsm div[data-area="2"] { margin-left:0px; }
+	.cmp-korea-climate .tab-area-xsm div[data-area="3"] { margin-left:0px; }
+	.cmp-korea-climate .tab-area-xsm div[data-area="4"] { margin-left:0px; }
+	.cmp-korea-climate .tab-area-xsm div[data-area="5"] { margin-left:0px; }
+	.cmp-korea-climate .tab-area-xsm div[data-area="6"] { margin-left:0px; }
+	.cmp-korea-climate .tab-area-xsm div[data-area="7"] { margin-left:0px; }
+	.cmp-korea-climate .tab-area-xsm div[data-area="8"] { margin-left:0px; }
+	.cmp-korea-climate .tab-area-xsm div[data-area="9"] { margin-left:0px; }
+	
+	/* 지진해일 홍보책자 */
+	.cmp-eqk-toon .cmp-eqk-toon-item { width:calc(50% - 10px); margin:5px; }
+	.cmp-eqk-toon .cmp-eqk-toon-item figure { padding:5px; }
+	.cmp-eqk-toon .cmp-eqk-toon-item figure img { max-height:135px; width:auto; }
+	.cmp-eqk-toon .cmp-eqk-toon-item figcaption { top:10px; left:30%; margin-left:10px; }
+	.cmp-eqk-toon .cmp-eqk-toon-item a { bottom:10px; left:30%; margin-left:10px; border-radius:4px; }
+	.cmp-eqk-toon .cmp-eqk-toon-kogl { padding:0 10px; }
+	
+	/* 날씨 예보 단기예보 */
+	.cmp-weather-short-term .cmp-stack .tab-area-xm .tab-wrap01 [class*="tab-btn"] a { padding:0 6px; letter-spacing:-1px;}
+	
+	/* 태풍 검색 */
+	.cmp-form .table-col td select { border-radius:4px;border:0;height:30px;line-height:30px;padding:0 8px;font-size:14px; margin-right:2px;}
+	.cmp-form .table-col td input[type="text"] {border-radius:4px;border:0;height:30px;line-height:30px;padding:0 8px;font-size:14px; margin-right:2px;}
+	.cmp-form .table-col td .mobile-block { display:block; height:30px; line-height:30px; }
+}
+@media screen and (max-width: 500px) {
+	.cmp-form-buttons { flex-wrap:wrap; }
+	.cmp-city-obs .cmp-form-buttons { justify-content:flex-start; }
+	.cmp-form-buttons .cmp-form-button-wrap { display:block; width:100%; height:5px; }
+	.cmp-form-buttons .cmp-form-button-wrap + .cmp-form-button { margin-left:65px; }
+	.cmp-dust-graph .cmp-form-buttons{ justify-content:flex-start; }
+	.cmp-asia-coastal-obs .cmp-form-buttons { justify-content:flex-start; }
+	.cmp-ship-obs .cmp-form-buttons { justify-content:flex-start; }
+	
+	/* 지진해일 홍보책자 */
+	.cmp-eqk-toon .cmp-eqk-toon-item { width:calc(100% - 10px); margin:5px; }
+	.cmp-eqk-toon .cmp-eqk-toon-item figure { width:45%; padding:10px; }
+	.cmp-eqk-toon .cmp-eqk-toon-item figure img { max-height:185px; width:auto; }
+	.cmp-eqk-toon .cmp-eqk-toon-item figcaption { top:20px; left:45%; margin-left:10px; margin-right:10px; }
+	.cmp-eqk-toon .cmp-eqk-toon-item a { bottom:20px; left:45%; margin-left:10px; border-radius:5px; }
+	.cmp-eqk-toon .cmp-eqk-toon-kogl { text-align:right; padding:0 20px; }
+	.cmp-eqk-toon .cmp-eqk-toon-kogl img { max-width:200px;}
+}
+@media screen and (max-width: 425px) {
+	.cmp-ext-link { margin-top:15px; margin-bottom:15px; padding:10px 10px 10px 0px; }
+	.cmp-ext-link > h3 { position:relative; font-size:18px; line-height:26px; margin-top:auto; top:auto;left:auto; display:block; padding-left:15px;}
+	.cmp-ext-link > ul { display:flex; flex-wrap:wrap; padding-left:15px;}
+	.cmp-ext-link > ul > li { margin:5px 0;}
+	.cmp-ext-link > ul > li a { height:36px; background-size:30px; color:#fff; font-size:15px;padding:0 10px 0 48px;}
+	.cmp-ext-link > ul > li a.aggr-weather { background-position:9px center; }
+	.cmp-ext-link > ul > li a.drought-weatger { background-position:9px center; }
+	.cmp-ext-link.com-ext-link-2banner > ul {padding-left:0;}
+	.cmp-ext-link.com-ext-link-2banner > ul > li { padding-left:10px; }
+	
+	.ella-content .cmp-grid-cell { width:100%; flex:unset; }
+	.ella-content .cmp-grid-cell:first-child { width:100%; margin-right:10px;}
+	
+	.typ-content .cmp-grid-cell { width:100%; flex:unset; }
+	.typ-content .cmp-grid-cell:first-child { width:100%; margin-right:10px;}
+	
+}
+@media screen and (max-width: 320px) {
+	.cmp-ext-link > ul > li { width:100%; }
+}
+
+/* jquery datepicker */
+.ui-datepicker select { -webkit-appearance:auto; }
+
+/* --------- 2020 NEW --------- */
+@media screen and (max-width:1550px){
+	
+}
+@media screen and (max-width:1440px){
+	/* 날씨 슬라이더 */
+	.cmp-dfs-slider .dfs-tab .right { width:calc(100% - 560px);}
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head { width:560px;}
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head li { font-size: 18px;}
+	
+	.cmp-dfs-updated { left:490px;}
+}
+@media screen and (max-width:1305px) {
+	/* === layouts */
+	.lay .lay-500 { float:left; width: 400px; padding:0 8px;}
+	.lay .lay-500ext { float:left; width: calc(100% - 400px);}
+	
+	/* 뉴 비주얼맵 홀더 */
+	.cmp-vismap .wrap{ min-height:auto; max-height: 620px; }
+
+	/* 북마크 - 현재 위치 버튼, 관심지역 드롭다운, 특보 여부 아이콘, 관심지역관리 버튼, 도움말 버튼 */
+	.cmp-bookmark .serch-area{ max-width:250px;}
+	
+	/* 메일 화면 현재 날씨 */
+	.cmp-cur-weather .wrap-1 { margin-top: 34px; overflow:hidden;}
+	.cmp-cur-weather .w-icon .wic { height: 70px; width: 70px; margin-right: 2px; vertical-align:top; margin-top:5px;}
+	.cmp-cur-weather .w-temp { font-size: 60px; height:80px; margin-top:11px;}
+	.cmp-cur-weather .w-temp .tmp { font-weight: 700;font-size: 48px; letter-spacing:-1px;}	
+	.cmp-cur-weather .wrap-2 li:before { height:58px; top:3px;} 
+	.cmp-cur-weather .wrap-2 .lbl { font-size: 15px; line-height:18px; }
+	.cmp-cur-weather .wrap-2 .lbl > small {font-size:12px; text-align:center; padding:0 2px;}
+	.cmp-cur-weather .wrap-2 .lbl.rn-hr1 small:first-child {font-size:12px;} 
+	.cmp-cur-weather .wrap-2 .val { font-size: 16px; line-height: 25px;}
+	.cmp-cur-weather .wrap-3 { border-bottom:2px solid #D4E4EC; margin-top:14px; padding-bottom:10px; display:flex; position:relative; justify-content:center;}
+	.cmp-cur-weather .wrap-3 li { line-height: 22px; font-size: 14px; color: #000; padding:0 5px;}
+	.cmp-cur-weather .wrap-3 li .with-txt { margin-right:5px; padding-left:26px;}
+	.cmp-cur-weather .wrap-3 li .sym-ic.sunrise {background-size: auto 24px; height:22px;}
+	.cmp-cur-weather .wrap-3 li .sym-ic.sunset {background-size: auto 24px; height:22px;} 
+
+	/* 날씨슽라이더 */	
+	.cmp-dfs-slider .dfs-tab { float:none; padding: 6px 0px 0px 8px; height:46px; position:relative; overflow:visible;}
+	.cmp-dfs-slider .dfs-tab .right { float:left; width:calc(100% - 390px); height:auto;}
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head-wrap { float:left; overflow:hidden; margin-top:0;}
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head { display:block; width:390px; height:40px; }
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head li { display:block; position:relative; float:left; min-width:94px; margin-left:3px; font-size: 16px; background:#DAE0E8;}
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head li:first-of-type { margin-left:0; }
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head li:last-of-type { min-width: 94px; }
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head li a { border:1px solid #B9C5D3; display:block; position:relative; text-align:center; line-height:36px;padding-top:2px;}
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head li a.on + .tt-btn { display:none;}
+	.cmp-dfs-slider .dfs-tab .right .updated { display:none; font-size:13px; height: 46px; position:relative; width: 250px; padding-top:0px;}
+	.cmp-dfs-slider .dfs-tab .right .updated h4 { position:absolute; left:6px; top:3px; font-weight: 600;}
+	.cmp-dfs-slider .dfs-tab .right .updated strong { display:block; padding-left:64px; line-height:20px; font-weight: 400; letter-spacing:-1px;}
+	.cmp-dfs-slider .dfs-tab .right .btns {float: right; display:inline-block; height:auto; padding-top:0; padding-right:5px;}
+	.cmp-dfs-slider .dfs-tab .right .btns .sym-btn { height:32px; padding-left:28px; background-size: 18px; line-height:32px;}
+	
+	.cmp-dfs-slider .view-options { width:790px; }
+	
+	.cmp-dfs-updated { top:20px; left:420px; font-size:15px; }
+	.mountain-weather .cmp-dfs-updated { top:10px; left:420px; font-size:15px; }
+	
+}
+@media screen and (max-width:1100px){
+	/* 날씨 슬라이더 */
+	.cmp-dfs-slider { position:relative;}
+	
+	.cmp-dfs-slider .dfs-tab-body .slide-wrap:after { border-bottom:1px dotted #555;}
+	.cmp-dfs-slider .view-options {position:absolute; left:3px; right:3px; top:50px; padding:16px; width:auto;box-shadow:3px 3px #CACACA; }
+	.cmp-dfs-slider .view-options h4 {float:none; width:100%px; font-size:15px; color:#000; line-height:32px;}
+	.cmp-dfs-slider .view-options h4:first-of-type { margin-bottom:0; }
+	.cmp-dfs-slider .view-options h4:last-of-type { margin-bottom:6px; }
+	.cmp-dfs-slider .view-options ul {float:none; width:100%; margin-top:6px;}
+	.cmp-dfs-slider .view-options ul:first-of-type { margin-bottom:0; }
+	.cmp-dfs-slider .view-options ul li {float:left; height:auto; width:calc(100% / 3); min-width:unset; margin:0;}
+	.cmp-dfs-slider .view-options ul li a { display:block;font-size:15px; margin:3px;}
+	.cmp-dfs-slider .view-options .sym-btn.big-close { position:absolute; right:0; top:0;}
+	
+	.cmp-dfs-updated { position:relative; text-align:right;top: auto; left: auto; }
+	.cmp-dfs-updated a.open-box {font-size:12px; padding:0 15px;color:#767676; line-height:36px; margin-right:10px; position:relative;}
+	.cmp-dfs-updated .shadow-box { height:0; transition: all .2s ease-out; opacity:0; overflow:hidden;}
+	.cmp-dfs-updated .shadow-box .inner {margin:10px 20px;padding:16px 20px 16px 20px; border-radius:5px; border:1px solid #CBCBCB; box-shadow:0px 0px 10px 0px rgba(0,0,0,0.2); text-align:left; position:relative;}
+	.cmp-dfs-updated .shadow-box a.close-box { content:'';position:absolute; top:0; right:0; width:34px; height:34px; background:url(../image/btn_close.png) no-repeat center center; background-size:14px; text-indent:-9999px;}
+	.cmp-dfs-updated .shadow-box h5 {font-size:15px; font-weight:700px; line-height:200%;}
+	.cmp-dfs-updated .shadow-box dl { display:block; font-size:11px; line-height:170%;}
+	.cmp-dfs-updated .shadow-box dl dt { display:inline; color:#838383;}
+	.cmp-dfs-updated .shadow-box dl dd { display:inline; color:#000;}
+	.cmp-dfs-updated a.on + .shadow-box { height:auto; max-height:136px; opacity:1;overflow:visible;}
+	
+	.cmp-air-legend { position:relative;}
+	
+	.cmp-dfs-slider .dfs-tab-body .day-ten .item { width:54px; }
+	.cmp-dfs-slider .dfs-tab-body .day-ten .item.all-day { width:108px; }
+	
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide { width: 414px !important;}
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .daily-head { padding:18px 0 0 0;}
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .daily-head .date { font-size:17px;}
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .daily-head .table-head li { font-size:12px; padding:0; height:44px; } 
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li { font-size:13px; padding:1px 2px; height:30px; font-weight: 500; line-height: 20px;}
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li:nth-child(9) span[class*="lvl"] { padding:0;}
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide.day-ten .daily .item-wrap .item:not(.all-day):first-of-type { /* border-bottom:1px solid #eee; */ }
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide:not(.day-ten) .daily .item-wrap .item li .wic { display:inline-block; height:auto; text-align:center; width:100%; text-indent:0px; background-position-x:center; background-position-y: top; background-size:30px auto; padding-left:0; padding-top: 30px; vertical-align:middle;}
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li .wic { padding-left:34px; height:30px; background-size:30px auto;}
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li .lgt { right:auto; left:26px;}
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li .wdic { display:inline-block; text-indent:0px; margin:0;background:none; width:100%; transform:rotate(0deg);}
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li .chill { display:block; text-align:center; }
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li .wspd { display:block; text-align:center; padding-left:0;}
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li .feel { position:unset; display:block; text-indent:0px; text-align:center; line-height:normal; width:auto; height:auto;}
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li .feel .chill { display:block; font-size:12px; letter-spacing:-1px;}
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide .daily .item-wrap .item li .wspd .unit { font-size:11px;}
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide.day-ten { width: 414px !important;}
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide.day-ten .daily .daily-head .table-head li { font-size:12px; padding:0; height:44px; }
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide.day-ten .daily .daily-head .date { padding-right:0;}
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide.day-ten .daily .daily-head .end-date { font-size:17px; }
+	.cmp-dfs-slider.mode-table .dfs-tab-body .slide.day-ten .daily .daily-head .end-date:before { font-size:17px; }
+	
+	.cmp-dfs-slider .dfs-tab-body .slide .daily-head { font-size:13px; }
+}
+@media screen and (max-width:768px){
+	/* 날씨 슬라이더 */
+	.cmp-dfs-slider .dfs-tab .right .btns .sym-btn.with-txt { text-indent:-9999px; padding-left:0; padding-right:0; width:32px;}
+	.cmp-dfs-slider .view-options ul li a { padding:0 10px;}	
+}
+@media screen and (max-width:520px){
+	/* 날씨 슬라이더 */
+	.cmp-dfs-slider .dfs-tab { float:none; padding: 6px 0px 0px 8px; height:46px; position:relative; overflow:visible;  min-width:320px;}
+	.cmp-dfs-slider .dfs-tab .right { float:left; width:calc(100% - 258px); height:auto;}
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head-wrap { float:left; overflow:hidden; margin-top:0;}
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head { display:block; width:258px; height:40px; }
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head li { display:block; position:relative; float:left; min-width:62px; margin-left:3px; font-size: 16px; background:#DAE0E8;}
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head li:first-of-type { margin-left:0; }
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head li:last-of-type { min-width: 62px; }
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head li a { border:1px solid #B9C5D3; display:block; position:relative; text-align:center; line-height:36px;padding-top:2px;}
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head li a.on + .tt-btn { display:none;}
+	.cmp-dfs-slider .dfs-tab .right .updated { font-size:13px; float:left; display:none; height: 46px; position:relative; width: 250px; padding-top:0px;}
+	.cmp-dfs-slider .dfs-tab .right .updated h4 { position:absolute; left:6px; top:3px; font-weight: 600;}
+	.cmp-dfs-slider .dfs-tab .right .updated strong { display:block; padding-left:64px; line-height:20px; font-weight: 400; letter-spacing:-1px;}
+	.cmp-dfs-slider .dfs-tab .right .btns {float: right; display:inline-block; height:auto; padding-top:0; padding-right:5px;}
+	.cmp-dfs-slider .dfs-tab .right .btns .sym-btn { height:32px; padding-left:28px; background-size: 18px; line-height:32px;}
+}
+@media screen and (max-width:430px){
+	
+}
+@media screen and (max-width:380px){
+	.cmp-dfs-slider .dfs-tab .right { width:calc(100% - 242px)}
+	.cmp-dfs-slider .dfs-tab { min-width:285px;}
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head { width:242px; }
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head li { min-width:58px; }
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head li:last-of-type { min-width: 58px; }
+}
+@media screen and (max-width:370px){
+	.cmp-dfs-slider .dfs-tab .right { width:calc(100% - 210px)}
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head { width:210px; }
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head li { min-width:50px; }
+	.cmp-dfs-slider .dfs-tab .dfs-tab-head li:last-of-type { min-width: 50px; }
+}
+@media screen and (max-width:360px) {
+}
+@media screen and (max-width:350px){
+	.cmp-dfs-slider .dfs-tab .right .btns .btn-wrap { display:none; }
+	.cmp-dfs-slider .dfs-tab .right .btns .sym-btn.settings { display:inline-block;}
+}
+@media screen and (max-width:320px){
+	.cmp-dfs-slider .view-options { padding:10px; }
+	.cmp-dfs-slider .view-options ul li a { font-size:14px;}	
+}

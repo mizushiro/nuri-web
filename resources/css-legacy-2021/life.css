@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+th, td {background:none;}
+
+.lifeTab_message {clear:both; padding:7px 10px; border:1px solid #d7d7d7; border-top:none; }
+.lifeTabmenu2 {border:1px solid #d7d7d7; border-top:none; }
+.lifeTabmenu2 ul {height:25px; padding:7px 10px;}
+.lifeTabmenu2 ul li {float:left; margin:0; padding:5px 0 2px; background:url(../../images/weather/lifenindustry/stabBg.gif) 0 50% no-repeat;}
+.lifeTabmenu2 ul li:first-child {background:none;}
+.lifeTabmenu2 ul li a {display:block; padding:0 9px; width:80px; text-align:center;}
+.lifeTabmenu2 ul li a:hover {font-weight:bold; color:#000; text-decoration:none; letter-spacing:-0.3px;}
+.lifeTabmenu2 ul li:first-child a {padding-left:0;}
+.lifeTabmenu2 ul li.on {background:url(../../images/weather/lifenindustry/lifeTabmenu_ulliBg.gif) 50% 0 no-repeat;}
+.lifeTabmenu2 ul li.on a {font-weight:bold;letter-spacing:-0.3px;}
+
+.lifeTabmenu3 {border:1px solid #d7d7d7; border-top:none; }
+.lifeTabmenu3 ul {height:18px; padding:7px 10px;}
+.lifeTabmenu3 ul li {float:left; margin:0; padding:0; background:url(../../images/weather/lifenindustry/stabBg.gif) 0 50% no-repeat;}
+.lifeTabmenu3 ul li:first-child {background:none;}
+.lifeTabmenu3 ul li a {display:block; padding:0 9px; text-align:center;}
+.lifeTabmenu3 ul li a:hover {font-weight:bold; color:#000; text-decoration:none; letter-spacing:-0.3px;}
+.lifeTabmenu3 ul li:first-child a {padding-left:0;letter-spacing:-0.3px;}
+.lifeTabmenu3 ul li.on a {font-weight:bold; color:#0958a5}
+
+.current_life_con {margin:15px 0;}
+
+.totop {height:24px;}
+.totop a {display:block; float:right; background:url(../../images/weather/lifenindustry/totop.gif) 0 50% no-repeat; color:#666; height:18px; padding:3px 0 3px 27px;}
+
+table.lifeT01 {width:100%; border-collapse:collapse;}
+table.lifeT01 caption {display:block; background:url(../../images/weather/lifenindustry/titleicon01.png) 0 50% no-repeat; padding-left:12px; margin-bottom:px; text-align:left;}
+table.lifeT01 caption img {padding-bottom:3px;}
+table.lifeT01 th, table.lifeT01 td {border:1px solid #c9c9c9; padding:7px 5px; line-height:15px; height:45px;}
+table.lifeT01 th {background:url(../../images/weather/lifenindustry/thBg01.gif) 0 0 repeat-x #f3f3f3;}
+
+table.timeGraph {width:100%; border-collapse:collapse; border-top:2px solid #0958a5;}
+table.timeGraph th, table.timeGraph td {border:1px solid #d2d2d2; text-align:center; padding:3px 0;}
+table.timeGraph thead th, table.timeGraph thead td {background:#f7f6f6; color:#555; }
+table.timeGraph tbody th {color:#0958a5; font-weight:bold;}
+table.timeGraph tr.indexText td {color:#fff;}
+table.timeGraph tr.indexText td.indexStep01 {background:#d6f3ff; color:#000}
+table.timeGraph tr.indexText td.indexStep02 {background:#ecf500; color:#000;}
+table.timeGraph tr.indexText td.indexStep03 {background:#ff7800;}
+table.timeGraph tr.indexText td.indexStep04 {background:#ff0030;}
+table.timeGraph tr.indexText td.indexStep05 {background:#7030a0;}
+table.timeGraph td.graph {overflow:hidden !important; width:auto;}
+table.timeGraph tr.indexText td {padding:2px 0; line-height:12px; height:24px; font-size:11px; overflow:hidden;}
+table.timeGraph tr.noGraph td {background:url(../../images/weather/lifenindustry/indextable_tdBg.gif) 0 50% repeat-x; width:auto;}
+table.timeGraph tr.noGraph td span {color:#0062c1; font-weight:bold; display:block; padding:5px 0;}
+table.timeGraph tr.noGraph td img {padding:5px 0}
+
+div.chart_ofh {width:615px; height:114px; overflow:hidden; position:relative;}
+div#chart_wrap {z-index:0; position:absolute; top:-13px; left:-10px;}
+div.indexGraph {margin-right:-11px; height:145px; margin-bottom:-18px;}
+.highcharts-axis {display:none;}
+
+table.timeGraph.time03 tr.indexText td {width:38px;}
+table.timeGraph.time03 td.graph div.chart_ofh {width:582px;}
+table.timeGraph.time03 td.graph div.indexGraph {width:605px;}
+
+table.timeGraph.time06 tr.indexText td {width:27px;}
+table.timeGraph.time06 td.graph div.chart_ofh {width:613px;}
+table.timeGraph.time06 td.graph div.indexGraph {width:636px;}
+
+table.timeGraph.time09 tr.indexText td {width:28px;}
+table.timeGraph.time09 td.graph div.chart_ofh {width:606px;}
+table.timeGraph.time09 td.graph div.indexGraph {width:629px;}
+
+table.timeGraph.time12 tr.indexText td {width:29px;}
+table.timeGraph.time12 td.graph div.chart_ofh {width:597px;}
+table.timeGraph.time12 td.graph div.indexGraph {width:620px;}
+
+table.timeGraph.time15 tr.indexText td {width:30px;}
+table.timeGraph.time15 td.graph div.chart_ofh {width:585px;}
+table.timeGraph.time15 td.graph div.indexGraph {width:609px;}
+
+table.timeGraph.time18 tr.indexText td {width:31px;}
+table.timeGraph.time18 td.graph div.chart_ofh {width:573px;}
+table.timeGraph.time18 td.graph div.indexGraph {width:596px;}
+
+table.timeGraph.time21 tr.indexText td {width:34px;}
+table.timeGraph.time21 td.graph div.chart_ofh {width:592px;}
+table.timeGraph.time21 td.graph div.indexGraph {width:615px;}
+
+table.timeGraph.time00 tr.indexText td {width:36px;}
+table.timeGraph.time00 td.graph div.chart_ofh {width:589px;}
+table.timeGraph.time00 td.graph div.indexGraph {width:612px;}
+
+table.legend tbody th {width:50px;}
+
+.mapIndex .mapView h6 {position:relative; height:14px; }
+.mapIndex .mapView h6 img {position:absolute; left:22px; top:0;}
+.mapIndex .mapView h6 span, .mapIndex .mapView h6 a {position:static !important; float:right;} 
+.mapIndex .mapView h6 a img {position:static; left:auto; padding-left:5px;}
+
+
+#dateTabmenu2 ul.time06 li span {width:60px !important;}
+#dateTabmenu2 ul.time06 ul li a {width:27px !important;}
+#dateTabmenu2 ul.time09 li span {width:67px !important;}
+#dateTabmenu2 ul.time09 ul li a {width:28px !important;}
+#dateTabmenu2 ul.time12 li span {width:76px !important;}
+#dateTabmenu2 ul.time12 ul li a {width:29px !important;}
+#dateTabmenu2 ul.time15 li span {width:68px !important;}
+#dateTabmenu2 ul.time15 ul li a {width:31px !important;}
+#dateTabmenu2 ul.time18 li span {width:64px !important;}
+#dateTabmenu2 ul.time18 ul li a {width:33px !important;}
+#dateTabmenu2 ul.time21 li span {width:81px !important;}
+#dateTabmenu2 ul.time21 ul li a {width:34px !important;}
+#dateTabmenu2 ul.time00 li span {width:68px !important;}
+#dateTabmenu2 ul.time00 ul li a {width:37px !important;}
+#dateTabmenu2 ul.time03 li span {width:61px !important;}
+#dateTabmenu2 ul.time03 ul li a {width:40px !important;}
+
+
+table.viewDataT {width:90%; margin:20px auto; border-collapse:collapse; border-top:2px solid #006ad0; }
+table.viewDataT caption {position: relative; height:auto; text-align:left; background:url(../images/life/_indexImg/bu_arrow_orange.gif) no-repeat 0 center; padding:4px 18px; font-weight: 600;}
+table.viewDataT th, table.viewDataT td {border:1px solid #d0d0d0; text-align:center;}
+table.viewDataT thead td,table.viewDataT thead th {font-weight:bold; background:#dce6ef; padding:6px 2px 3px; border:1px solid #bbb;}
+table.viewDataT tbody th {background:#f7f7f7;  }
+table.viewDataT tbody th, table.viewDataT tbody td {padding:5px 2px 2px;}
+
+#lifeTabmenu.industry_tab ul li a {padding:7px 11px;}
+.industry_message {clear:both; padding:7px 10px 7px 25px; background:url(../../images/weather/lifenindustry/time_bg.gif) 0 50% no-repeat;}
+.lifeTabmenu2.industry_tab ul li a {width:auto;}
+
+
+div.industryT_title {display:block; position:relative; text-align:left; background:url(../../images/common/bu_arrow_gr.gif) 0 50% no-repeat; padding-left:15px; margin-bottom:5px; font-weight:bold;}
+div.industryT_title .indusM_select {position:absolute; bottom:0; right:0;}
+table.industryT {width:100%; border-collapse:collapse; border-top:2px solid #0958a5;  background:url(../../images/weather/lifenindustry/industryT_line.png) 0 1px no-repeat #f1f1f1}
+table.industryT th, table.industryT td {border:1px solid #d2d2d2; text-align:center; padding:4px 3px;}
+table.industryT thead td, table.industryT tbody td {background:#fff;}
+table.industryT th {font-weight:bold;}
+table.industryT tbody th {background:#f1f1f1;}
+table.industryT thead th, table.industryT thead td {font-weight:bold; color:#222;}
+table.industryT thead th.line {position:relative;; }
+table.industryT thead th.line span {position:absolute;}
+table.industryT thead th.line span.fr {top:3px; right:3px;}
+table.industryT thead th.line span.fl {bottom:3px; left:3px;}
+table.industryT tbody th {width:70px;}
+
+
+.indusM2_title {font-weight:bold; margin-bottom:15px;}
+.indusM2_box {position:relative; border:5px solid #eee; padding:15px; margin-bottom:10px;}
+.indusM2_box dl {width:400px;}
+.indusM2_box dl dt {background:url(../../images/common/bu_arrow_gr.gif) 0 3px no-repeat; padding-left:16px; font-weight:bold; color:#0958a5; margin-bottom:7px;}
+.indusM2_box dl dd {background:url(../../images/common/list_dot.png) 0 7px no-repeat; padding-left:7px; margin:10px 0;}
+.indusM2_box img {position:absolute; top:15px; right:15px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

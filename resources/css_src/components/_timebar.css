@@ -1,0 +1,114 @@
+#timebar {
+    @apply bg-white/75 !select-none overflow-hidden;
+}
+
+#timebar-days,
+#timebar-hours {
+    @apply transition-transform;
+
+    #timebar.dragging & {
+      @apply duration-0;
+    }
+}
+
+#timebar-days {
+  @apply relative z-40;
+
+  li {
+    @apply relative shrink-0 flex items-start justify-center pt-1 w-32 h-12 md:h-12 cursor-pointer;
+  }
+
+  li + li:before {
+    content: '';
+    @apply absolute left-0 top-1/2 -translate-y-1/2 -ml-px block w-0.5 h-6 bg-brand;
+  }
+
+  li.active {
+    @apply bg-brand text-white rounded-t-xl;
+
+    &:before,
+    & + li:before {
+      @apply hidden;
+    }
+
+    &:after {
+      content: '';
+      @apply absolute bottom-0 translate-y-1/2 block size-3 bg-brand rotate-45;
+    }
+
+    .label {
+        @apply !flex;
+    }
+  }
+
+  .label-today {
+    @apply absolute top-1 left-1/2 -translate-x-1/2 text-xs;
+  }
+
+  .label-date {
+    @apply block text-sm md:text-base font-semibold text-center;
+  }
+
+  .label {
+    @apply absolute bottom-1 left-0 right-0 px-4 flex items-center justify-between text-xs;
+  }
+}
+
+.timebar-hours-wrap {
+  @apply relative;
+
+  &:after {
+    content: '';
+    @apply absolute z-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-16 h-8 rounded border border-brand;
+  }
+}
+
+#timebar-hours {
+  @apply relative z-10 flex items-stretch justify-center w-full h-12;
+  /* overflow-x-auto snap-mandatory snap-x scroll-smooth */
+
+  /* &::-webkit-scrollbar {
+    display: none;
+  } */
+
+  /* li {
+    @apply snap-always snap-center;
+  } */
+
+  li:before {
+    content: '';
+    @apply absolute top-0 left-1/2 -ml-px block w-0.5 h-2 bg-brand;
+  }
+}
+
+#timestamp {
+  @apply fixed top-2 md:top-4 left-1/2 -translate-x-1/2 flex items-center justify-between gap-x-3 md:gap-x-0;
+  @apply px-4 py-1 rounded-xl bg-white/75 text-brand font-bold shadow;
+
+  time {
+    @apply text-lg md:text-3xl md:mx-8;
+  }
+  span {
+    @apply md:w-24 text-xs md:text-base;
+  }
+}
+
+#timebar-control {
+  @apply bg-white absolute z-50 left-0 bottom-0 px-0 py-2 md:px-8 md:py-4 flex items-center gap-x-0 md:gap-x-2 border-t border-grayscale-3;
+
+  body.timebar-enabled.timebar-daysonly & {
+    @apply top-0 border-transparent;
+  }
+
+  .icon-button {
+    @apply !size-12;
+  }
+}
+
+/* .image-player-slide {
+  @apply p-4;
+} */
+
+/* .image-player-slide > img {
+  @apply block mx-auto;
+} */

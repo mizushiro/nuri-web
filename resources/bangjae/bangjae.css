@@ -1,0 +1,205 @@
+@charset "utf-8";
+
+.bangjae-dialog {
+	position:absolute;
+	background: #fff;
+	border: 1px solid #666;
+	border-radius: 3px;
+	padding:0;
+	width: 700px;
+	height:auto;
+	left:50%;
+	top:175px;
+	margin-left:-310px;
+	z-index:9999;
+	-webkit-overflow-scrolling:touch;
+}
+.bangjae-dialog-title {
+	position:relative;
+	text-align:center;
+	color: #b71c1c;
+	font-size:12px;
+	font-weight:bold;
+	line-height:46px;
+}
+.bangjae-dialog-close {
+	position:absolute;
+	right:4px;
+	top:2px;
+	display: inline-block;
+	margin-bottom: 0;
+	font-weight: normal;
+	text-align: center;
+	vertical-align: middle;
+	touch-action: manipulation;
+	cursor: pointer;
+	background-image: none;
+	border: 1px solid transparent;
+	white-space: nowrap;
+	padding: 4px 8px;
+	font-size: 16px;
+	line-height: 1.42857143;
+	border-radius: 8px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	font-weight: bold;
+	color:#333;
+}
+.bangjae-dialog-close:focus,
+.bangjae-dialog-close:active:focus,
+.bangjae-dialog-close:active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.bangjae-dialog-iframe {
+	margin-left:10px;
+	padding: 0 0 20px 0;
+	overflow:auto;
+	-webkit-overflow-scrolling:touch;
+}
+.bangjae-dialog-iframe iframe {
+	
+}
+.bangjae-dialog-footer {
+	display:block;
+	text-align:right;
+	padding:5px 15px 10px 10px;
+	color:#333;
+}
+.bangjae-dialog-footer span {
+	line-height: 14px;
+	font-size: 12px;
+	font-weight: bold;
+	cursor:pointer;
+	display:inline-block;
+	vertical-align:middle;
+	float:left;
+}
+.bangjae-dialog-footer input[type="checkbox"] {
+	display:inline-block;
+	vertical-align:middle;
+}
+
+.bangjae-eqk-dialog {
+	position:absolute;
+	background: #fff;
+	border: 1px solid #666;
+	border-radius: 3px;
+	padding:0;
+	width: 620px;
+	height:auto;
+	left:50%;
+	top:75px;
+	margin-left:-310px;
+	z-index:9999;
+	-webkit-overflow-scrolling:touch;
+}
+.bangjae-eqk-dialog-title {
+	position:relative;
+	text-align:center;
+	color: #b71c1c;
+	font-size:12px;
+	font-weight:bold;
+	line-height:46px;
+}
+.bangjae-eqk-dialog-close {
+	position:absolute;
+	right:4px;
+	top:2px;
+	display: inline-block;
+	margin-bottom: 0;
+	font-weight: normal;
+	text-align: center;
+	vertical-align: middle;
+	touch-action: manipulation;
+	cursor: pointer;
+	background-image: none;
+	border: 1px solid transparent;
+	white-space: nowrap;
+	padding: 4px 8px;
+	font-size: 16px;
+	line-height: 1.42857143;
+	border-radius: 8px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	font-weight: bold;
+	color:#333;
+}
+.bangjae-eqk-dialog-close:focus,
+.bangjae-eqk-dialog-close:active:focus,
+.bangjae-eqk-dialog-close:active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.bangjae-eqk-dialog-iframe {
+	margin:0 10px 0 10px;
+	padding: 0 0 20px 0;
+	overflow:auto;
+	-webkit-overflow-scrolling:touch;
+}
+.bangjae-eqk-dialog-iframe iframe {
+	
+}
+.bangjae-eqk-dialog-footer {
+	display:block;
+	text-align:right;
+	padding:5px 15px 10px 10px;
+	color:#333;
+}
+.bangjae-eqk-dialog-footer span {
+	line-height: 14px;
+	font-size: 12px;
+	font-weight: bold;
+	cursor:pointer;
+	display:inline-block;
+	vertical-align:middle;
+	float:left;
+}
+.bangjae-eqk-dialog-footer input[type="checkbox"] {
+	display:inline-block;
+	vertical-align:middle;
+}
+
+#panel_bangjae {
+	color: #333;
+	padding:5px;
+}
+#panel_bangjae .title {font-family:굴림,Verdana; font-size:18pt; color:#000000; font-weight:bold;}
+#panel_bangjae .head  {font-family:굴림,Verdana; font-size:14pt; color:#000000; font-weight:bold;}
+#panel_bangjae .ehead {font-family:굴림,Verdana; font-size:10pt; color:#0000ff; font-weight:bold;}
+#panel_bangjae .name  {font-family:굴림,Verdana; font-size:10pt; color:#000000;}
+#panel_bangjae .text  {font-family:굴림체,Verdana; font-size:10pt; color:#000000; line-height:1.2em;}
+#panel_bangjae .point {font-family:굴림,Verdana; font-size:9pt; color:#000000;}
+#panel_bangjae img,
+#panel_bangjae table tbody tr td img {
+	width: 100% !important;
+	height: auto !important;
+}
+#panel_bangjae .bang-img {
+	width: 100% !important;
+	height: auto !important;
+}
+@media screen and (max-width:640px) {
+	.bangjae-dialog{
+		top:85px;
+		width:95%;
+		margin-left: -47.5%;
+	}
+	#iframe_bangjae {
+		width:100%;
+	}
+	
+	.bangjae-eqk-dialog{
+		top:85px;
+		width:95%;
+		margin-left: -47.5%;
+	}
+	
+	.pop_header h1{font-size:15px !important;}
+}

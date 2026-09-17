@@ -1,0 +1,22 @@
+ul.tab {
+    @apply flex flex-wrap w-full mb-4 border-b;
+
+    a {
+        @apply block px-4 py-2 lg:px-8 lg:py-3 text-sm lg:text-lg text-center lg:min-w-40 border border-b-0;
+        @apply bg-grayscale-5 text-grayscale-2;
+
+        &.active {
+            @apply bg-white text-brand font-semibold;
+        }
+    }
+
+    li + li {
+        @apply -ml-px;
+    }
+}
+
+ul.tab.small {
+    a {
+        @apply lg:!min-w-20;
+    }
+}

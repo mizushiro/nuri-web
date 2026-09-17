@@ -1,0 +1,19 @@
+dl.listed {
+  @apply md:flex;
+
+  dt {
+    @apply font-bold;
+  }
+  dt::after {
+    content: ':';
+  }
+
+  > div {
+    @apply flex space-x-px;
+  }
+
+  > div + div::before {
+    content: '|';
+    @apply hidden md:block mx-1;
+  }
+}

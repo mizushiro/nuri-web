@@ -1,0 +1,146 @@
+@charset "utf-8";
+
+/* 홈 > 날씨 > 특보·예보 > 특보·정보 > 국민행동요령 > 낙뢰 */
+.thunder_wrap1, .thunder_wrap2, .thunder_wrap3, .thunder_wrap4{width:100%; height:auto; padding:5px; display:flex; flex-wrap:wrap;align-items:stretch;}
+.thunder_tit{font-size:18px; width:170px;  background-color:#dbe5ee; color:#333333; text-align:center; padding:10px 0;}
+.thunder_tit1{font-size:18px; width:170px;  background-color:#dbe5ee; color:#333333; text-align:center;  padding:10px 0;}
+.thunder_sub{width:calc(100% - 175px); height:auto; font-size:16px; padding:8px; font-weight:bold; border-top:3px dashed #eaeaea; border-bottom:3px dashed #eaeaea;}
+.thunder_txt{width:100%; height:auto; clear:both; padding-top:30px;}
+.thunder_txt4{width:100%; height:auto; clear:both; padding-top:30px;}
+.thunder_txt h3,.thunder_txt4 h3{width:160px; height:40px; background-color:#12477a; font-size:18px; color:#ffffff; text-align:center; line-height:40px;}
+.thunder_list{width:100%; height:auto; padding-top:20px; border-top:2px solid #12477a; padding-left:20px;}
+
+/* 홈 > 날씨 > 특보·예보 > 특보·정보 > 국민행동요령 > 한파 */
+.coldweather_wrap1, .coldweather_wrap2, .coldweather_wrap3{width:100%; height:auto; padding:5px; display:flex; flex-wrap:wrap;align-items:stretch;}
+.coldweather_tit{font-size:18px; width:170px;  background-color:#dbe5ee; color:#333333; text-align:center; padding:10px 0;}
+.coldweather_tit1{font-size:18px; width:170px;  background-color:#dbe5ee; color:#333333; text-align:center;  padding:10px 0;}
+.coldweather_tit3{font-size:18px; width:170px;  background-color:#dbe5ee; color:#333333; text-align:center;  padding:10px 0;}
+.coldweather_sub{width:calc(100% - 175px); height:auto; font-size:16px; padding:8px; font-weight:bold; border-top:3px dashed #eaeaea; border-bottom:3px dashed #eaeaea;}
+.coldweather_txt{width:100%; height:auto; clear:both; padding-top:30px;}
+.coldweather_txt2{width:100%; height:auto; clear:both; padding-top:30px; padding-bottom:20px;}
+.coldweather_txt h3,.coldweather_txt2 h3{width:160px; height:40px; background-color:#12477a; font-size:18px; color:#ffffff; text-align:center; line-height:40px;}
+.coldweather_table{width:100%; height:auto; border-top:2px solid #12477a; padding-top:25px;}
+.coldweather_list{width:100%; height:auto; padding-top:20px; border-top:2px solid #12477a; padding-left:20px;}
+
+/* 홈 > 날씨 > 특보·예보 > 특보·정보 > 국민행동요령 > 태풍*/
+.typoon_wrap1, .typoon_wrap2,.typoon_wrap3{width:100%; height:auto; padding:5px; display:flex; flex-wrap:wrap;align-items:stretch;}
+.typoon_tit{font-size:18px; width:170px;  background-color:#dbe5ee; color:#333333; text-align:center; padding:10px 0;}
+.typoon_tit1{font-size:18px; width:170px;  background-color:#dbe5ee; color:#333333; text-align:center;  padding:10px 0;}
+.typoon_sub{width:calc(100% - 175px); height:auto; font-size:16px; padding:8px; font-weight:bold; border-top:3px dashed #eaeaea; border-bottom:3px dashed #eaeaea;}
+.typoon_sub1{width:calc(100% - 175px); height:auto; font-size:16px; padding:8px; font-weight:bold; border-top:3px dashed #eaeaea; border-bottom:3px dashed #eaeaea;}
+.typoon_txt{width:100%; height:auto; clear:both; padding-top:30px;}
+.typoon_txt h3{width:120px; height:40px; background-color:#12477a; font-size:18px; color:#ffffff; text-align:center; line-height:40px;}
+.typoon_list{width:100%; height:auto; padding-top:20px; border-top:2px solid #12477a; padding-left:20px;}
+
+
+/* 홈 > 날씨 > 특보·예보 > 특보·정보 > 국민행동요령 > 호우 */
+.rain_wrap1,.rain_wrap2,.rain_wrap3,.rain_wrap4{width:100%; height:auto; padding:5px; display:flex; flex-wrap:wrap;align-items:stretch;}
+.rain_tit{font-size:18px; width:170px;  background-color:#dbe5ee; color:#333333; text-align:center; padding:10px 0;}
+.rain_tit2{font-size:18px; width:170px;  background-color:#dbe5ee; color:#333333; text-align:center;  padding:10px 0;}
+.rain_sub{width:calc(100% - 175px); height:auto; font-size:16px; padding:8px; font-weight:bold; border-top:3px dashed #eaeaea; border-bottom:3px dashed #eaeaea;}
+.rain_sub2{width:calc(100% - 175px); height:auto; font-size:16px; padding:8px; font-weight:bold; border-top:3px dashed #eaeaea; border-bottom:3px dashed #eaeaea;}
+.rain_txt{width:100%; height:auto; clear:both; padding-top:30px;}
+.rain_txt h3{width:120px; height:40px; background-color:#12477a; font-size:18px; color:#ffffff; text-align:center; line-height:40px;}
+.rain_list{width:100%; height:auto; padding-top:20px; border-top:2px solid #12477a; padding-left:20px;}
+
+/* 홈 > 날씨 > 특보·예보 > 특보·정보 > 국민행동요령 > 대설 */
+.snow_wrap1,.snow_wrap2,.snow_wrap3,.snow_wrap4{width:100%; height:auto; padding:5px; display:flex; flex-wrap:wrap;align-items:stretch;}
+.snow_tit{font-size:18px; width:170px;  background-color:#dbe5ee; color:#333333; text-align:center; padding:10px 0;}
+.snow_tit4{font-size:18px; width:170px;  background-color:#dbe5ee; color:#333333; text-align:center;  padding:10px 0;}
+.snow_sub{width:calc(100% - 175px); height:auto; font-size:16px; padding:8px; font-weight:bold; border-top:3px dashed #eaeaea; border-bottom:3px dashed #eaeaea;}
+.snow_sub4{width:calc(100% - 175px); height:auto; font-size:16px; padding:8px; font-weight:bold; border-top:3px dashed #eaeaea; border-bottom:3px dashed #eaeaea;}
+.snow_txt{width:100%; height:auto; clear:both; padding-top:30px;}
+.snow_txt h3{width:120px; height:40px; background-color:#12477a; font-size:18px; color:#ffffff; text-align:center; line-height:40px;}
+.snow_list{width:100%; height:auto; padding-top:20px; border-top:2px solid #12477a; padding-left:20px;}
+
+/* 홈 > 날씨 > 특보·예보 > 특보·정보 > 국민행동요령 > 황사 */
+.asiandust_wrap1,.asiandust_wrap2,.asiandust_wrap3,.asiandust_wrap4,.asiandust_wrap5,.asiandust_wrap6{width:100%; height:auto; padding:5px; display:flex; flex-wrap:wrap;align-items:stretch;}
+.asiandust_tit{font-size:18px; width:170px;  background-color:#dbe5ee; color:#333333; text-align:center; padding:10px 0;}
+.asiandust_tit4{font-size:18px; width:170px;  background-color:#dbe5ee; color:#333333; text-align:center;  padding:10px 0;}
+.asiandust_sub{width:calc(100% - 175px); height:auto; font-size:16px; padding:8px; font-weight:bold; border-top:3px dashed #eaeaea; border-bottom:3px dashed #eaeaea;}
+.asiandust_txt{width:100%; height:auto; clear:both; padding-top:30px;}
+.asiandust_txt h3{width:120px; height:40px; background-color:#12477a; font-size:18px; color:#ffffff; text-align:center; line-height:40px;}
+.asiandust_list{width:100%; height:auto; padding-top:20px; border-top:2px solid #12477a; padding-left:20px;}
+.asiandust_txt2{width:100%; height:auto; clear:both; padding-top:30px; padding-bottom:20px;}
+.asiandust_txt2 h3{width:160px; height:40px; background-color:#12477a; font-size:18px; color:#ffffff; text-align:center; line-height:40px;}
+.asiandust_table{width:100%; height:auto; border-top:2px solid #12477a; padding-top:25px;}
+.asiandust_table2{width:100%; height:auto; border-top:2px solid #12477a; padding-top:25px;}
+
+
+/* 홈 > 날씨 > 특보·예보 > 특보·정보 > 국민행동요령 > 강풍 */
+.wind_wrap1,.wind_wrap2,.wind_wrap3{width:100%; height:auto; padding:5px; display:flex; flex-wrap:wrap;align-items:stretch;}
+.wind_tit{font-size:18px; width:170px;  background-color:#dbe5ee; color:#333333; text-align:center; padding:10px 0;}
+.wind_tit1{font-size:18px; width:170px;  background-color:#dbe5ee; color:#333333; text-align:center;  padding:10px 0;}
+.wind_tit4{font-size:18px; width:170px;  background-color:#dbe5ee; color:#333333; text-align:center;  padding:10px 0;}
+.wind_sub{width:calc(100% - 175px); height:auto; font-size:16px; padding:8px; font-weight:bold; border-top:3px dashed #eaeaea; border-bottom:3px dashed #eaeaea;}
+.wind_sub1{width:calc(100% - 175px); height:auto; font-size:16px; padding:8px; font-weight:bold; border-top:3px dashed #eaeaea; border-bottom:3px dashed #eaeaea;}
+.wind_txt{width:100%; height:auto; clear:both; padding-top:30px;}
+.wind_txt h3{width:120px; height:40px; background-color:#12477a; font-size:18px; color:#ffffff; text-align:center; line-height:40px;}
+.wind_list{width:100%; height:auto; padding-top:20px; border-top:2px solid #12477a; padding-left:20px;}
+.wind_txt2{width:100%; height:auto; clear:both; padding-top:30px; padding-bottom:20px;}
+.wind_txt3{width:100%; height:auto; clear:both; padding-top:30px; padding-bottom:20px;}
+.wind_txt2 h3,.wind_txt3 h3{width:160px; height:40px; background-color:#12477a; font-size:18px; color:#ffffff; text-align:center; line-height:40px;}
+.wind_table{width:100%; height:auto; border-top:2px solid #12477a; padding-top:25px;}
+
+
+/* 홈 > 날씨 > 특보·예보 > 특보·정보 > 국민행동요령 > 폭염 */
+.heat_wrap1,.heat_wrap2,.heat_wrap3{width:100%; height:auto; padding:5px; display:flex; flex-wrap:wrap;align-items:stretch;}
+.heat_tit{font-size:18px; width:170px;  background-color:#dbe5ee; color:#333333; text-align:center; padding:10px 0;}
+.heat_tit1{font-size:18px; width:170px;  background-color:#dbe5ee; color:#333333; text-align:center; padding:10px 0;}
+.heat_sub{width:calc(100% - 175px); height:auto; font-size:16px; padding:8px; font-weight:bold; border-top:3px dashed #eaeaea; border-bottom:3px dashed #eaeaea;}
+.heat_sub1{width:calc(100% - 175px); height:auto; font-size:16px; padding:8px; font-weight:bold; border-top:3px dashed #eaeaea; border-bottom:3px dashed #eaeaea;}
+.heat_txt{width:100%; height:auto; clear:both; padding-top:30px;}
+.heat_txt h3{width:120px; height:40px; background-color:#12477a; font-size:18px; color:#ffffff; text-align:center; line-height:40px;}
+.heat_list{width:100%; height:auto; padding-top:20px; border-top:2px solid #12477a; padding-left:20px;}
+.heat_txt2{width:100%; height:auto; clear:both; padding-top:30px; padding-bottom:20px;}
+.heat_txt2 h3{width:160px; height:40px; background-color:#12477a; font-size:18px; color:#ffffff; text-align:center; line-height:40px;}
+.heat_table{width:100%; height:auto; border-top:2px solid #12477a; padding-top:25px;}
+
+/* 홈 > 날씨 > 특보·예보 > 특보·정보 > 국민행동요령 > 가뭄 */
+.drought_wrap1, .drought_wrap2{width:100%; height:auto; padding:5px; display:flex; flex-wrap:wrap;align-items:stretch;}
+.drought_tit{font-size:18px; width:170px;  background-color:#dbe5ee; color:#333333; text-align:center; padding:10px 0;}
+.drought_sub{width:calc(100% - 175px); height:auto; font-size:16px; padding:8px; font-weight:bold; border-top:3px dashed #eaeaea; border-bottom:3px dashed #eaeaea;}
+.drought_txt{width:100%; height:auto; clear:both; padding-top:30px;}
+.drought_txt h3{width:120px; height:40px; background-color:#12477a; font-size:18px; color:#ffffff; text-align:center; line-height:40px;}
+.drought_list{width:100%; height:auto; padding-top:20px; border-top:2px solid #12477a; padding-left:20px;}
+
+/* bullet */
+.ul_square{padding-left:5px; font-size:16px;}
+.ul_square li{background:url(../image/bu_square_orange.gif) no-repeat left 6px;padding-left:15px;margin-bottom:20px; line-height:150%; text-align:left;}
+.ul_square li ul{margin-top:3px;}
+.ul_square li ul li{background:url(../image/bu_arrow_orangesmall.gif) no-repeat left 7px;padding-left:9px;margin-bottom:0;}
+.ul_square li ul li.bg_none{background:none;}
+.ul_square li ul li.bg_none img{vertical-align:top;}
+.ul_square li ul li ul li{background:url(../image/bu_hyphen.gif) no-repeat left 6px;  padding-left:9px; margin-bottom:0; }
+.ul_square li ul li ul li.bg_none{background:none;}
+.ul_square li ul li ul li ul li{background:none;padding-left:0;}
+.ul_square li ol{margin-top:3px;}
+.ul_square li ol li{background:url(../image/bu_arrow_orangesmall.gif) no-repeat left 6px;padding-left:9px;margin-bottom:0;}
+.ul_square li ol li.bg_none{background:none;}
+.ul_square li ol li ul li{background:url(../image/bu_hyphen.gif) no-repeat left 7px;  padding-left:9px; margin-bottom:0; }
+.ul_square li ol li ul li.bg_none{background:none;}
+.ul_square li ol li ul li ol li{background:none;padding-left:0;}
+
+/* 기타 */
+.table-col-basic td { text-align:left; padding-left:8px; }
+.table-col.table-col-basic td:first-of-type { border-left:1px solid #e0e6ef; }
+ 
+@media screen and (max-width: 1300px) {
+	
+}
+
+@media screen and (max-width: 1100px) {
+	
+}
+
+@media screen and (max-width: 768px) {
+	
+}
+
+@media screen and (max-width: 425px) {
+	
+}
+
+@media screen and (max-width: 320px) {
+	
+}

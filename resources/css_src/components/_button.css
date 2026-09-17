@@ -1,0 +1,15 @@
+
+.button {
+    @apply flex items-center w-fit gap-x-2 px-5 py-2.5 rounded-lg border border-alternative bg-transparent text-alternative;
+    @apply transition-colors duration-300;
+
+    &:hover,
+    &.active,
+    &.primary {
+        @apply bg-alternative text-white;
+    }
+
+    &.small {
+        @apply px-2 py-1 text-sm;
+    }
+}
