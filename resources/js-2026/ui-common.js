@@ -8,12 +8,12 @@ export const UX = {
       window[global] = {};
     }
     const Global = window[global];
+    const krdsHeader = document.querySelector("#krds-header");
+    const krdsFooter = document.querySelector("#krds-footer");
 
-    console.log(1111);
-
-    if (document.querySelector("#krds-header")) {
+    if (krdsHeader) {
       loadContent({
-        area: document.querySelector("#krds-header"),
+        area: krdsHeader,
         src: "../inc/header.html",
         insert: true,
       })
@@ -21,6 +21,17 @@ export const UX = {
           console.log("header load");
         })
         .catch((err) => console.error("Error loading header content:", err));
+    }
+    if (krdsFooter) {
+      loadContent({
+        area: krdsFooter,
+        src: "../inc/footer.html",
+        insert: true,
+      })
+        .then(() => {
+          console.log("footer load");
+        })
+        .catch((err) => console.error("Error loading footer content:", err));
     }
   },
 };
