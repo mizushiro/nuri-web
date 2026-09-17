@@ -1,0 +1,99 @@
+[
+  {
+    "day": "오늘",
+    "date": "05.22",
+    "amIcon": "NB01",
+    "amText": "맑음",
+    "amTemp": "20°C",
+    "amRain": "0%",
+    "pmIcon": "NB02",
+    "pmText": "구름조금",
+    "pmTemp": "26°C",
+    "pmRain": "40%",
+    "active": true
+  },
+  {
+    "day": "내일",
+    "date": "05.23",
+    "amIcon": "NB01",
+    "amText": "맑음",
+    "amTemp": "20°C",
+    "amRain": "10%",
+    "pmIcon": "NB01",
+    "pmText": "맑음",
+    "pmTemp": "30°C",
+    "pmRain": "0%"
+  },
+  {
+    "day": "일",
+    "date": "05.24",
+    "amIcon": "NB03",
+    "amText": "구름많음",
+    "amTemp": "20°C",
+    "amRain": "50%",
+    "pmIcon": "NB01",
+    "pmText": "맑음",
+    "pmTemp": "32°C",
+    "pmRain": "0%"
+  },
+  {
+    "day": "월",
+    "date": "05.25",
+    "amIcon": "NB01",
+    "amText": "맑음",
+    "amTemp": "20°C",
+    "amRain": "0%",
+    "pmIcon": "NB01",
+    "pmText": "맑음",
+    "pmTemp": "36°C",
+    "pmRain": "10%"
+  },
+  {
+    "day": "화",
+    "date": "05.26",
+    "amIcon": "NB01",
+    "amText": "맑음",
+    "amTemp": "20°C",
+    "amRain": "10%",
+    "pmIcon": "NB04",
+    "pmText": "흐림",
+    "pmTemp": "29°C",
+    "pmRain": "30%"
+  },
+  {
+    "day": "수",
+    "date": "05.27",
+    "amIcon": "NB04",
+    "amText": "흐림",
+    "amTemp": "20°C",
+    "amRain": "40%",
+    "pmIcon": "NB01",
+    "pmText": "맑음",
+    "pmTemp": "32°C",
+    "pmRain": "10%"
+  },
+  {
+    "day": "목",
+    "date": "05.28",
+    "amIcon": "NB01",
+    "amText": "맑음",
+    "amTemp": "21°C",
+    "amRain": "20%",
+    "pmIcon": "NB02",
+    "pmText": "구름조금",
+    "pmTemp": "31°C",
+    "pmRain": "10%"
+  },
+  {
+    "day": "금",
+    "date": "05.29",
+    "amIcon": "NB05",
+    "amText": "비",
+    "amTemp": "19°C",
+    "amRain": "60%",
+    "pmIcon": "NB01",
+    "pmText": "맑음",
+    "pmTemp": "28°C",
+    "pmRain": "20%"
+  }
+]

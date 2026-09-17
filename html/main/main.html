@@ -1,48 +1,215 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>날씨 예보 - 메인</title>
 
-	<link rel="stylesheet" href="../../resources/cdn/krds.min.css">
-	<link rel="stylesheet" href="../../resources/css/custom.css">
-	<link rel="stylesheet" href="../../resources/css/icon.css">
+  <link rel="stylesheet" href="../../resources/cdn/krds.min.css">
+  <link rel="stylesheet" href="../../resources/css/plugin/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../../resources/css/custom.css">
+  <link rel="stylesheet" href="../../resources/css/icon.css">
 </head>
 
 <body>
-	<div>
-		<!-- header -->
-		<header id="krds-header"></header>
-		<!-- //header -->
+  <div>
+    <!-- header -->
+    <header id="krds-header"></header>
+    <!-- //header -->
 
-		<main class="krds-main">
-			<section class="krds-main--sec" data-bg="gray">
-				<div class="krds-main--wrap">
-					1
-				</div>
-			</section>
-			<section class="krds-main--sec">
-				<div class="krds-main--wrap">
-					2
-				</div>
-			</section>
-			<section class="krds-main--sec" data-bg="gray">
-				<div class="krds-main--wrap">
-					3
-				</div>
-			</section>
-		</main>
-	</div>
-	<!-- 기본 셋팅  -->
-	<script src="../../resources/cdn/krds.min.js"></script>
-	<script type="module">
-		import { UX } from '../../resources/js/ui-common.js';
-		UX.init();
+    <main class="krds-main">
+      <section class="krds-main--sec" data-bg="gray">
+        <div class="krds-main--wrap">
+          1
+        </div>
+      </section>
+      <section class="krds-main--sec">
+        <div class="krds-main--wrap">
+          <h3>일별 예보</h3>
+          <!-- 스와이퍼 콘텐츠 -->
+          <div class="weather-swiper-container">
+            <div class="swiper weather-swiper">
+              <div class="swiper-wrapper">
+                <!-- 카드 1: 오늘 -->
+                <div class="swiper-slide weather-card active" data-date="05.22" data-day="오늘" data-am-temp="20°C" data-am-rain="0%" data-pm-temp="26°C" data-pm-rain="40%">
+                  <div class="card-header">
+                    <strong class="day">오늘</strong>
+                    <span class="date">05.22</span>
+                  </div>
+                  <div class="card-body">
+                    <div class="time-col am">
+                      <div class="weather-icon">
+                        <div data-icon-weather="NB01">
+                          <span class="sr-only">맑음</span>
+                        </div>
+                      </div>
+                      <span class="temp am">20°C</span>
+                      <span class="rain">0%</span>
+                    </div>
+                    <div class="time-col pm">
+                      <div class="weather-icon">
+                        <div data-icon-weather="NB02">
+                          <span class="sr-only">구름조금</span>
+                        </div>
+                      </div>
+                      <span class="temp pm">26°C</span>
+                      <span class="rain">40%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-	</script>
-	<!-- 컴포넌트 -->
+            <!-- 좌우 이동 버튼 (클릭 시 1개씩 이동) -->
+            <button type="button" class="weather-swiper-prev swiper-button-prev" aria-label="이전 일기예보"></button>
+            <button type="button" class="weather-swiper-next swiper-button-next" aria-label="다음 일기예보"></button>
+          </div>
+
+          <!-- 콜백 실행 시 선택 정보 출력 영역 -->
+          <div class="selected-weather-info">
+            <span class="info-title">📌 선택된 날씨 예보:</span>
+            <span id="selected-info-detail" class="info-detail">오늘(05.22) - 오전 20°C (강수 0%) / 오후 26°C (강수 40%)</span>
+          </div>
+        </div>
+      </section>
+      <section class="krds-main--sec" data-bg="gray">
+        <div class="krds-main--wrap">
+          3
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- 기본 셋팅  -->
+  <script src="../../resources/cdn/krds.min.js"></script>
+  <script src="../../resources/js/plugin/swiper-bundle.min.js"></script>
+  <script type="module">
+    import { UX } from '../../resources/js/ui-common.js';
+    UX.init();
+
+    // Swiper 초기화 함수 및 데이터 바인딩
+    const weatherSwiperExe = (data) => {
+      // JSON 데이터를 Swiper 슬라이드 HTML 문자열로 생성하는 함수
+      const weatherSlideMaker = (dataList) => {
+        let result = '';
+        dataList.forEach(item => {
+          result += `
+            <div class="swiper-slide weather-card ${item.active ? 'active' : ''}" data-date="${item.date}" data-day="${item.day}" data-am-temp="${item.amTemp}" data-am-rain="${item.amRain}" data-pm-temp="${item.pmTemp}" data-pm-rain="${item.pmRain}">
+              <div class="card-header">
+                <strong class="day">${item.day}</strong>
+                <span class="date">${item.date}</span>
+              </div>
+              <div class="card-body">
+                <div class="time-col am">
+                  <div class="weather-icon">
+                    <div data-icon-weather="${item.amIcon}">
+                      <span class="sr-only">${item.amText}</span>
+                    </div>
+                  </div>
+                  <span class="temp am">${item.amTemp}</span>
+                  <span class="rain">${item.amRain}</span>
+                </div>
+                <div class="time-col pm">
+                  <div class="weather-icon">
+                    <div data-icon-weather="${item.pmIcon}">
+                      <span class="sr-only">${item.pmText}</span>
+                    </div>
+                  </div>
+                  <span class="temp pm">${item.pmTemp}</span>
+                  <span class="rain">${item.pmRain}</span>
+                </div>
+              </div>
+            </div>
+          `;
+        });
+        return result;
+      };
+
+      // HTML 슬라이드 노드 추가
+      const wrapper = document.querySelector('.weather-swiper .swiper-wrapper');
+      if (wrapper) {
+        wrapper.innerHTML = weatherSlideMaker(data);
+      }
+
+      // Swiper 인스턴스 생성 (한 화면에 6개 노출)
+      const weatherSwiper = new Swiper('.weather-swiper', {
+        slidesPerView: 6,
+        slidesPerGroup: 1, // 버튼 클릭 시 하나씩 이동
+        spaceBetween: 12,
+        navigation: {
+          nextEl: '.weather-swiper-next',
+          prevEl: '.weather-swiper-prev',
+        },
+        breakpoints: {
+          320: { slidesPerView: 2, spaceBetween: 8 },
+          640: { slidesPerView: 3, spaceBetween: 10 },
+          768: { slidesPerView: 4, spaceBetween: 12 },
+          1024: { slidesPerView: 6, spaceBetween: 12 }
+        }
+      });
+
+      /**
+       * 날씨 카드 클릭 시 실행되는 콜백 함수
+       * @param {Object} cardData - 클릭한 카드의 날씨 정보
+       * @param {HTMLElement} element - 클릭한 카드의 DOM 엘리먼트
+       */
+      function onWeatherCardClick(cardData, element) {
+        console.log('[콜백 실행] 선택한 날씨 정보:', cardData);
+
+        // 하단 안내 영역 업데이트
+        const infoDetail = document.getElementById('selected-info-detail');
+        if (infoDetail) {
+          infoDetail.textContent = `${cardData.day}(${cardData.date}) - 오전 ${cardData.amTemp} (강수 ${cardData.amRain}) / 오후 ${cardData.pmTemp} (강수 ${cardData.pmRain})`;
+        }
+
+        // 커스텀 이벤트 전달 (필요 시 외부 연동용)
+        element.dispatchEvent(new CustomEvent('weatherSelect', { detail: cardData, bubbles: true }));
+      }
+
+      // 카드 클릭 이벤트 및 콜백 바인딩
+      const weatherCards = document.querySelectorAll('.weather-card');
+      weatherCards.forEach((card) => {
+        card.addEventListener('click', function () {
+          // 활성 클래스 변경
+          weatherCards.forEach(c => c.classList.remove('active'));
+          this.classList.add('active');
+
+          // 데이터 수집
+          const cardData = {
+            day: this.dataset.day,
+            date: this.dataset.date,
+            amTemp: this.dataset.amTemp,
+            amRain: this.dataset.amRain,
+            pmTemp: this.dataset.pmTemp,
+            pmRain: this.dataset.pmRain
+          };
+
+          // 콜백 함수 실행
+          onWeatherCardClick(cardData, this);
+        });
+      });
+    };
+
+    // 로컬 fallback용 데이터
+    const fallbackData = [
+      { day: "오늘", date: "05.22", amIcon: "NB01", amText: "맑음", amTemp: "20°C", amRain: "0%", pmIcon: "NB02", pmText: "구름조금", pmTemp: "26°C", pmRain: "40%", active: true },
+      { day: "내일", date: "05.23", amIcon: "NB01", amText: "맑음", amTemp: "20°C", amRain: "10%", pmIcon: "NB01", pmText: "맑음", pmTemp: "30°C", pmRain: "0%" },
+      { day: "일", date: "05.24", amIcon: "NB03", amText: "구름많음", amTemp: "20°C", amRain: "50%", pmIcon: "NB01", pmText: "맑음", pmTemp: "32°C", pmRain: "0%" },
+      { day: "월", date: "05.25", amIcon: "NB01", amText: "맑음", amTemp: "20°C", amRain: "0%", pmIcon: "NB01", pmText: "맑음", pmTemp: "36°C", pmRain: "10%" },
+      { day: "화", date: "05.26", amIcon: "NB01", amText: "맑음", amTemp: "20°C", amRain: "10%", pmIcon: "NB04", pmText: "흐림", pmTemp: "29°C", pmRain: "30%" },
+      { day: "수", date: "05.27", amIcon: "NB04", amText: "흐림", amTemp: "20°C", amRain: "40%", pmIcon: "NB01", pmText: "맑음", pmTemp: "32°C", pmRain: "10%" },
+      { day: "목", date: "05.28", amIcon: "NB01", amText: "맑음", amTemp: "21°C", amRain: "20%", pmIcon: "NB02", pmText: "구름조금", pmTemp: "31°C", pmRain: "10%" },
+      { day: "금", date: "05.29", amIcon: "NB05", amText: "비", amTemp: "19°C", amRain: "60%", pmIcon: "NB01", pmText: "맑음", pmTemp: "28°C", pmRain: "20%" }
+    ];
+
+    // weather.json 데이터 패치 후 weatherSwiperExe 실행
+    fetch('./weather.json')
+      .then(res => res.json())
+      .then(data => weatherSwiperExe(data))
+      .catch(() => weatherSwiperExe(fallbackData));
+
+  </script>
 </body>
 
 </html>
