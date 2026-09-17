@@ -89,6 +89,9 @@
 }
 
 /* footer */
+#krds-footer {
+  background-color: #DBE1E9;
+}
 #krds-footer .f-logo{
   background-image: url(../img/common/logo-weather.svg);
 	background-size: contain;
