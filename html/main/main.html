@@ -6,11 +6,109 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>날씨 예보 - 메인</title>
 
+    
+
+  <link href="https://www.weather.go.kr/w/resources/css/styles.css?ver=202607091110" rel="stylesheet" type="text/css">
+  <link href="https://www.weather.go.kr/w/resources/css-2021/slick.css?ver=202607091110" rel="stylesheet" type="text/css">
+  <link href="https://www.weather.go.kr/w/resources/css-2021/basic.css?ver=202607091110" rel="stylesheet" type="text/css">
+  <link href="https://www.weather.go.kr/w/resources/css-2021/common-ui.css?ver=202607091110" rel="stylesheet" type="text/css">
+  <link href="https://www.weather.go.kr/w/resources/css-2021/common-ui-mobile.css?ver=202607091110" rel="stylesheet" type="text/css">
+  <link href="https://www.weather.go.kr/w/resources/css-2021/common-ui-new-mobile.css?ver=202607091110" rel="stylesheet" type="text/css">
+  <link href="https://www.weather.go.kr/w/resources/css-2021/custom.css?ver=202607091110" rel="stylesheet" type="text/css">
+  <link href="https://www.weather.go.kr/w/resources/css-2021/component.css?ver=202607091110" rel="stylesheet" type="text/css">
+  <link href="https://www.weather.go.kr/w/resources/css-2021/print.css?ver=202607091110" rel="stylesheet" media="print" type="text/css">
+  <link href="https://www.weather.go.kr/w/resources/css-2021/ie.css?ver=202607091110" rel="stylesheet" type="text/css">
+
+  <script async="" src="//webstats.kma.go.kr/fs4/logger.v4.sol.js"></script><script async="" src="//webstats.kma.go.kr/fs4/bstrk.sol.js"></script><script src="https://www.weather.go.kr/w/resources/js/lodash.min.js"></script>
+  <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+  <script src="https://www.weather.go.kr/w/resources/js/clipboard.min.js"></script>
+  <script src="https://www.weather.go.kr/w/resources/js/moment-with-locales.js"></script>
+  <script src="https://www.weather.go.kr/w/resources/js/moment-timezone.js"></script>
+  <script src="https://www.weather.go.kr/w/resources/js/jquery-3.5.0.min.js"></script>
+  <script src="https://www.weather.go.kr/w/resources/js/jquery-ui.min.js"></script>
+  <script src="https://www.weather.go.kr/w/resources/js/iscroll-probe.js"></script>
+  <script src="https://www.weather.go.kr/w/resources/js/scrollbooster.min.js"></script>
+  <script src="https://www.weather.go.kr/w/resources/js/slick.min.js"></script>
+  <script src="https://www.weather.go.kr/w/resources/js/mustache.min.js"></script>
+  <script src="https://www.weather.go.kr/w/resources/js/store.modern.min.js"></script>
+  <script src="https://www.weather.go.kr/w/resources/js/object-assign.js"></script>
+  <script src="https://www.weather.go.kr/w/resources/js/highcharts.js"></script>
+  <script src="https://www.weather.go.kr/w/resources/js/fn.js?ver=202607091110"></script>
+  <script> 
+    window.appBase = "\/w\/";
+    window.vmapBaseUrl = "https:\/\/vmap.kma.go.kr";
+    window.vmapBaseParam = "HIDEMENU=Y";
+    window.wgisBaseUrl = "https:\/\/www.weather.go.kr\/wgis-nuri";
+    var hashParam = null;
+  </script>
+  
+
+	<link rel="stylesheet" href="https://www.weather.go.kr/wgis-nuri/css/ol.css?ver=202607091110">
+	<link rel="stylesheet" href="https://www.weather.go.kr/wgis-nuri/css/kmap.css?ver=202607091110">
+	<script src="https://www.weather.go.kr/w/resources/lib/fetch.umd-3.6.1.min.js?ver=202607091110"></script>
+	<script src="https://www.weather.go.kr/w/resources/lib/promise-polyfill-8.min.js?ver=202607091110"></script>
+	<script src="https://www.weather.go.kr/w/resources/lib/babel-polyfill-7.12.1.min.js?ver=202607091110"></script>
+	<script src="https://www.weather.go.kr/w/resources/lib/abortcontroller-polyfill-1.7.1.min.js?ver=202607091110"></script>
+	<script src="https://www.weather.go.kr/w/resources/lib/vshrt-rain-fetch.js?ver=202607091110"></script>
+	<script src="https://www.weather.go.kr/wgis-nuri/js/proj4/proj4.js?ver=202607091110"></script>
+	<script src="https://www.weather.go.kr/w/resources/lib/v6.5.0-dist/ol.bb.js?ver=202607091110"></script>
+	<script src="https://www.weather.go.kr/w/resources/js/kmap.bb.js?ver=202607091110"></script>
+	<script src="https://www.weather.go.kr/wgis-nuri/js/common/windy.js?ver=202607091110"></script>
+	<script src="https://www.weather.go.kr/w/resources/lib/vue/vue.min.js?ver=202607091110"></script>
+	<link rel="stylesheet" href="https://www.weather.go.kr/w/resources/lib/kmap/legend.css?ver=202607091110">
+	<script src="https://www.weather.go.kr/w/resources/lib/kmap/dfsLegends.js?ver=202607091110"></script>
+	<script src="https://www.weather.go.kr/w/resources/lib/kmap/legend.js?ver=202607091110"></script>
+	<script src="https://www.weather.go.kr/w/resources/lib/kmap/kmap_overlay.js?ver=202607091110"></script>
+  <link href="https://www.weather.go.kr/w/resources/css-2021/weather-local.css?ver=202607091110" rel="stylesheet" type="text/css">
+  <link href="https://www.weather.go.kr/w/resources/bangjae/bangjae.css?ver=202607091110" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="https://www.weather.go.kr/m/popup_layer/m_popup_wnuri.css?ver=202607091110">
+  <style>.m_notice-dialog-footer input[type="checkbox"] { -webkit-appearance: checkbox; }</style>
+  <script> 
+    window.forestfireEnabled = false;
+    window.winterEnabled = false;
+    window.marineAccidentEnabled = false;
+    window.typhoonEnabled = false;
+    window.typhoonTabNumber = 0;
+  </script>
+  <script src="https://www.weather.go.kr/w/resources/js/app-2021/my-point-slider.js?ver=202607091110"></script>
+  <script src="https://www.weather.go.kr/w/resources/js/app-2021/dong-searchbox.js?ver=202607091110"></script>
+  <script src="https://www.weather.go.kr/w/resources/js/app-2021/bookmark-dropdown.js?ver=202607091110"></script>
+  <script src="https://www.weather.go.kr/w/resources/js/app-2021/today-warning.js?ver=202607091110"></script>
+  <script src="https://www.weather.go.kr/w/resources/js/app-2021/today-bangjae.js?ver=202607091110"></script>
+  <script src="https://www.weather.go.kr/w/resources/js/app-2021/eqk-warning.js?ver=202607091110"></script>
+  <script src="https://www.weather.go.kr/w/resources/js/app-2021/typhoon-info.js?ver=202607091110"></script>
+  <script src="https://www.weather.go.kr/w/resources/js/app-2021/heatwave-warning.js?ver=202607091110"></script>
+  <link href="https://www.weather.go.kr/w/resources/css/drop-banner.css?ver=202607091110" rel="stylesheet" type="text/css">
+  <script src="https://www.weather.go.kr/w/resources/js/drop-banner.js?ver=202607091110"></script>
+  <link href="https://www.weather.go.kr/w/resources/css/layer-banner3.css?ver=202607091110" rel="stylesheet" type="text/css">
+  <script src="https://www.weather.go.kr/w/resources/js/layer-banner3.js?ver=202607091110"></script>
+  <script src="https://www.weather.go.kr/w/resources/js/banners.js?ver=202607091110"></script>
+  <script src="https://www.weather.go.kr/w/resources/js/app-2021/index-sns.js?ver=202607091110"></script>
+  <script src="https://www.weather.go.kr/w/repositary/config/main-config.js?ver=202607091110"></script>
+  <style>	
+    .cmp-main-wrn { top: 65px; z-index:99;}
+    @media screen and (max-width:1100px) {
+    .cmp-main-wrn { top: 49px;}
+    }        	 
+
+    .cmp-main-bangjae { top: 65px; z-index:99;}
+    @media screen and (max-width:1100px) {
+    .cmp-main-wrn { top: 49px;}
+    .cmp-main-bangjae { top: 49px;}
+    }
+  </style>
+
+  
   <link rel="stylesheet" href="../../resources/cdn/krds.min.css">
   <link rel="stylesheet" href="../../resources/css/plugin/swiper-bundle.min.css">
   <link rel="stylesheet" href="../../resources/css/custom.css">
   <link rel="stylesheet" href="../../resources/css/icon.css">
 </head>
+
+    
+    
+  
+
 
 <body>
   <div>
@@ -158,7 +256,53 @@
   </div>
 
   <!-- 기본 셋팅  -->
-  <script src="../../resources/cdn/krds.min.js"></script>
+  <script src="https://www.weather.go.kr/w/resources/js/com.ui-2021.js?ver=202607091110"></script>
+  <script src="https://www.weather.go.kr/w/resources/js/app-2021/app-config.js?ver=202607091110"></script>
+  <script src="https://www.weather.go.kr/w/resources/js/app-2021/dong-config.js?ver=202607091110"></script>
+  <script src="https://www.weather.go.kr/w/resources/js/app-2021/sea-config.js?ver=202607091110"></script>
+  <script src="https://www.weather.go.kr/w/resources/js/app-2021/app-init.js?ver=202607091110"></script>
+  <script src="https://www.weather.go.kr/w/resources/js/kmap-wrap.js?ver=202607091110"></script>
+  <script src="https://www.weather.go.kr/w/resources/js/global.js?ver=202607091110"></script>
+  <script src="https://www.weather.go.kr/w/resources/js/app-2021/app-index.js?ver=202607091110"></script>
+  <!-- (구)방재창 표출 // 재표출 시 주석처리 제거할 것 -->
+  <!-- <script th:src="@{'/resources/bangjae/bangjae.js?ver=' + ${appVersion}}"></script> -->
+  <script src="https://www.weather.go.kr/w/resources/bangjae/bangjae_eqk.js?ver=202607091110"></script>
+  <script>
+      var indexSNS = new IndexSNS("index-sns");
+      function applySnsConfig(config) {
+          indexSNS.refresh(config);
+      }
+      var BannerDrawer = new BannerDrawer("index-banners");
+      weatherUI.slickChange2('.sns-list');
+  </script>
+  <script src="https://www.kma.go.kr/repositary/sns/sns-config-wnuri.js?ver=202609170850"></script>
+  <!-- 긴급작업공지 공지가 필요한 경우 // 주석 지움 -->
+  <script src="https://www.weather.go.kr/common/cookie.js?ver=202607091110"></script>
+  <script src="https://www.weather.go.kr/repositary/bangjae/popup.js?ver=202607091110"></script>
+  <!-- 1. 신규 팝업창 - 텍스트 입력 팝업 -->
+  <script src="https://www.weather.go.kr/repositary/bangjae/popup_nuri_txt.js?ver=202607091110"></script>
+  <!-- 2. 신규 팝업창 - 이미지 팝업 -->
+  <script src="https://www.weather.go.kr/repositary/bangjae/popup_nuri_img.js?ver=202607091110"></script>
+  <script>
+    (function($, window, document){
+      if(isMobileEnv()) {
+        $('#swtc').attr("href","http://www.khoa.go.kr/swtc/mobile.do");
+      }
+    })(jQuery, window, document);
+  </script>
+  <script src="https://www.weather.go.kr/w/resources/js/special/special-config-lib.js?ver=202607091110"></script>
+  <script src="https://www.kma.go.kr/repositary/special/special-config.js?ver=202607091110"></script>
+
+  <!-- START OF LOGGER TRACKING SCRIPT -->
+  <!-- 기존 logger2 로그 -->
+  <!--<script th:src="@{'/resources/js/logger2.weather.go.kr.1057.js?ver=' + ${appVersion}}"></script>
+  <noscript><img alt="로그" src="https://logger.kma.go.kr/tracker.tsp?u=7&amp;js=N" width="0" height="0" /></noscript>-->
+  
+  <script src="https://www.weather.go.kr/w/resources/js/webstats.weather.go.kr.100000.js?ver=202607091110"></script>
+  <noscript><img alt="로그" src="http://webstats.kma.go.kr/tracker.sol.tsp?u=100000&amp;js=N" width="0" height="0" /></noscript>
+  <!-- END OF LOGGER TRACKING SCRIPT -->
+  <script src="https://www.weather.go.kr/w/resources/js/UserScriptConf.js"></script>
+
   <script src="../../resources/js/plugin/swiper-bundle.min.js"></script>
   <script type="module">
     import { UX } from '../../resources/js/ui-common.js';
