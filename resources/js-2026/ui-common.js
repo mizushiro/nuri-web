@@ -14,7 +14,7 @@ export const UX = {
     if (krdsHeader) {
       loadContent({
         area: krdsHeader,
-        src: "../inc/header.html",
+        src: "../../inc/header.html",
         insert: true,
       })
         .then(() => {
@@ -25,7 +25,7 @@ export const UX = {
     if (krdsFooter) {
       loadContent({
         area: krdsFooter,
-        src: "../inc/footer.html",
+        src: "../../inc/footer.html",
         insert: true,
       })
         .then(() => {
