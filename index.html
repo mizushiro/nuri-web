@@ -8,31 +8,31 @@
   <title>날씨 예보 - 메인</title>
 
   <!-- 기존코드 -->
-  <link href="/resources/css/styles.css?ver=202607091110" rel="stylesheet" type="text/css">
-  <link href="/resources/css-2021/slick.css?ver=202607091110" rel="stylesheet" type="text/css">
-  <link href="/resources/css-2021/basic.css?ver=202607091110" rel="stylesheet" type="text/css">
-  <link href="/resources/css-2021/common-ui.css?ver=202607091110" rel="stylesheet" type="text/css">
-  <link href="/resources/css-2021/common-ui-mobile.css?ver=202607091110" rel="stylesheet" type="text/css">
-  <link href="/resources/css-2021/common-ui-new-mobile.css?ver=202607091110" rel="stylesheet" type="text/css">
-  <link href="/resources/css-2021/custom.css?ver=202607091110" rel="stylesheet" type="text/css">
-  <link href="/resources/css-2021/component.css?ver=202607091110" rel="stylesheet" type="text/css">
-  <link href="/resources/css-2021/print.css?ver=202607091110" rel="stylesheet" media="print" type="text/css">
-  <link href="/resources/css-2021/ie.css?ver=202607091110" rel="stylesheet" type="text/css">
-  <script async="" src="//webstats.kma.go.kr/fs4/logger.v4.sol.js"></script><script async="" src="//webstats.kma.go.kr/fs4/bstrk.sol.js"></script><script src="/resources/js/lodash.min.js"></script>
+  <link href="./resources/css/styles.css?ver=202607091110" rel="stylesheet" type="text/css">
+  <link href="./resources/css-2021/slick.css?ver=202607091110" rel="stylesheet" type="text/css">
+  <link href="./resources/css-2021/basic.css?ver=202607091110" rel="stylesheet" type="text/css">
+  <link href="./resources/css-2021/common-ui.css?ver=202607091110" rel="stylesheet" type="text/css">
+  <link href="./resources/css-2021/common-ui-mobile.css?ver=202607091110" rel="stylesheet" type="text/css">
+  <link href="./resources/css-2021/common-ui-new-mobile.css?ver=202607091110" rel="stylesheet" type="text/css">
+  <link href="./resources/css-2021/custom.css?ver=202607091110" rel="stylesheet" type="text/css">
+  <link href="./resources/css-2021/component.css?ver=202607091110" rel="stylesheet" type="text/css">
+  <link href="./resources/css-2021/print.css?ver=202607091110" rel="stylesheet" media="print" type="text/css">
+  <link href="./resources/css-2021/ie.css?ver=202607091110" rel="stylesheet" type="text/css">
+  <script async="" src="//webstats.kma.go.kr/fs4/logger.v4.sol.js"></script><script async="" src="//webstats.kma.go.kr/fs4/bstrk.sol.js"></script><script src="./resources/js/lodash.min.js"></script>
   <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
-  <script src="/resources/js/clipboard.min.js"></script>
-  <script src="/resources/js/moment-with-locales.js"></script>
-  <script src="/resources/js/moment-timezone.js"></script>
-  <script src="/resources/js/jquery-3.5.0.min.js"></script>
-  <script src="/resources/js/jquery-ui.min.js"></script>
-  <script src="/resources/js/iscroll-probe.js"></script>
-  <script src="/resources/js/scrollbooster.min.js"></script>
-  <script src="/resources/js/slick.min.js"></script>
-  <script src="/resources/js/mustache.min.js"></script>
-  <script src="/resources/js/store.modern.min.js"></script>
-  <script src="/resources/js/object-assign.js"></script>
-  <script src="/resources/js/highcharts.js"></script>
-  <script src="/resources/js/fn.js?ver=202607091110"></script>
+  <script src="./resources/js/clipboard.min.js"></script>
+  <script src="./resources/js/moment-with-locales.js"></script>
+  <script src="./resources/js/moment-timezone.js"></script>
+  <script src="./resources/js/jquery-3.5.0.min.js"></script>
+  <script src="./resources/js/jquery-ui.min.js"></script>
+  <script src="./resources/js/iscroll-probe.js"></script>
+  <script src="./resources/js/scrollbooster.min.js"></script>
+  <script src="./resources/js/slick.min.js"></script>
+  <script src="./resources/js/mustache.min.js"></script>
+  <script src="./resources/js/store.modern.min.js"></script>
+  <script src="./resources/js/object-assign.js"></script>
+  <script src="./resources/js/highcharts.js"></script>
+  <script src="./resources/js/fn.js?ver=202607091110"></script>
   <script>
     window.appBase = "\/w\/";
     window.vmapBaseUrl = "https:\/\/vmap.kma.go.kr";
@@ -42,22 +42,22 @@
   </script>
 	<link rel="stylesheet" href="/wgis-nuri/css/ol.css?ver=202607091110">
 	<link rel="stylesheet" href="/wgis-nuri/css/kmap.css?ver=202607091110">
-	<script src="/resources/lib/fetch.umd-3.6.1.min.js?ver=202607091110"></script>
-	<script src="/resources/lib/promise-polyfill-8.min.js?ver=202607091110"></script>
-	<script src="/resources/lib/babel-polyfill-7.12.1.min.js?ver=202607091110"></script>
-	<script src="/resources/lib/abortcontroller-polyfill-1.7.1.min.js?ver=202607091110"></script>
-	<script src="/resources/lib/vshrt-rain-fetch.js?ver=202607091110"></script>
-	<script src="/wgis-nuri/js/proj4/proj4.js?ver=202607091110"></script>
-	<script src="/resources/lib/v6.5.0-dist/ol.bb.js?ver=202607091110"></script>
-	<script src="/resources/js/kmap.bb.js?ver=202607091110"></script>
-	<script src="/wgis-nuri/js/common/windy.js?ver=202607091110"></script>
-	<script src="/resources/lib/vue/vue.min.js?ver=202607091110"></script>
-	<link rel="stylesheet" href="/resources/lib/kmap/legend.css?ver=202607091110">
-	<script src="/resources/lib/kmap/dfsLegends.js?ver=202607091110"></script>
-	<script src="/resources/lib/kmap/legend.js?ver=202607091110"></script>
-	<script src="/resources/lib/kmap/kmap_overlay.js?ver=202607091110"></script>
-  <link href="/resources/css-2021/weather-local.css?ver=202607091110" rel="stylesheet" type="text/css">
-  <link href="/resources/bangjae/bangjae.css?ver=202607091110" rel="stylesheet" type="text/css">
+	<script src="./resources/lib/fetch.umd-3.6.1.min.js?ver=202607091110"></script>
+	<script src="./resources/lib/promise-polyfill-8.min.js?ver=202607091110"></script>
+	<script src="./resources/lib/babel-polyfill-7.12.1.min.js?ver=202607091110"></script>
+	<script src="./resources/lib/abortcontroller-polyfill-1.7.1.min.js?ver=202607091110"></script>
+	<script src="./resources/lib/vshrt-rain-fetch.js?ver=202607091110"></script>
+	<script src="./wgis-nuri/js/proj4/proj4.js?ver=202607091110"></script>
+	<script src="./resources/lib/v6.5.0-dist/ol.bb.js?ver=202607091110"></script>
+	<script src="./resources/js/kmap.bb.js?ver=202607091110"></script>
+	<script src="./wgis-nuri/js/common/windy.js?ver=202607091110"></script>
+	<script src="./resources/lib/vue/vue.min.js?ver=202607091110"></script>
+	<link rel="stylesheet" href="./resources/lib/kmap/legend.css?ver=202607091110">
+	<script src="./resources/lib/kmap/dfsLegends.js?ver=202607091110"></script>
+	<script src="./resources/lib/kmap/legend.js?ver=202607091110"></script>
+	<script src="./resources/lib/kmap/kmap_overlay.js?ver=202607091110"></script>
+  <link href="./resources/css-2021/weather-local.css?ver=202607091110" rel="stylesheet" type="text/css">
+  <link href="./resources/bangjae/bangjae.css?ver=202607091110" rel="stylesheet" type="text/css">
   <link rel="stylesheet" type="text/css" href="/m/popup_layer/m_popup_wnuri.css?ver=202607091110">
   <style>.m_notice-dialog-footer input[type="checkbox"] { -webkit-appearance: checkbox; }</style>
   <script>
@@ -67,20 +67,20 @@
     window.typhoonEnabled = false;
     window.typhoonTabNumber = 0;
   </script>
-  <script src="/resources/js/app-2021/my-point-slider.js?ver=202607091110"></script>
-  <script src="/resources/js/app-2021/dong-searchbox.js?ver=202607091110"></script>
-  <script src="/resources/js/app-2021/bookmark-dropdown.js?ver=202607091110"></script>
-  <script src="/resources/js/app-2021/today-warning.js?ver=202607091110"></script>
-  <script src="/resources/js/app-2021/today-bangjae.js?ver=202607091110"></script>
-  <script src="/resources/js/app-2021/eqk-warning.js?ver=202607091110"></script>
-  <script src="/resources/js/app-2021/typhoon-info.js?ver=202607091110"></script>
-  <script src="/resources/js/app-2021/heatwave-warning.js?ver=202607091110"></script>
-  <link href="/resources/css/drop-banner.css?ver=202607091110" rel="stylesheet" type="text/css">
-  <script src="/resources/js/drop-banner.js?ver=202607091110"></script>
-  <link href="/resources/css/layer-banner3.css?ver=202607091110" rel="stylesheet" type="text/css">
-  <script src="/resources/js/layer-banner3.js?ver=202607091110"></script>
-  <script src="/resources/js/banners.js?ver=202607091110"></script>
-  <script src="/resources/js/app-2021/index-sns.js?ver=202607091110"></script>
+  <script src="./resources/js/app-2021/my-point-slider.js?ver=202607091110"></script>
+  <script src="./resources/js/app-2021/dong-searchbox.js?ver=202607091110"></script>
+  <script src="./resources/js/app-2021/bookmark-dropdown.js?ver=202607091110"></script>
+  <script src="./resources/js/app-2021/today-warning.js?ver=202607091110"></script>
+  <script src="./resources/js/app-2021/today-bangjae.js?ver=202607091110"></script>
+  <script src="./resources/js/app-2021/eqk-warning.js?ver=202607091110"></script>
+  <script src="./resources/js/app-2021/typhoon-info.js?ver=202607091110"></script>
+  <script src="./resources/js/app-2021/heatwave-warning.js?ver=202607091110"></script>
+  <link href="./resources/css/drop-banner.css?ver=202607091110" rel="stylesheet" type="text/css">
+  <script src="./resources/js/drop-banner.js?ver=202607091110"></script>
+  <link href="./resources/css/layer-banner3.css?ver=202607091110" rel="stylesheet" type="text/css">
+  <script src="./resources/js/layer-banner3.js?ver=202607091110"></script>
+  <script src="./resources/js/banners.js?ver=202607091110"></script>
+  <script src="./resources/js/app-2021/index-sns.js?ver=202607091110"></script>
   <script src="/repositary/config/main-config.js?ver=202607091110"></script>
   <style>
     .cmp-main-wrn { top: 65px; z-index:99;}
@@ -95,10 +95,10 @@
   </style>
 
   <!-- 신규코드 -->
-  <link rel="stylesheet" href="/resources/cdn/krds.min.css">
-  <link rel="stylesheet" href="/resources/css-2026/plugin/swiper-bundle.min.css">
-  <link rel="stylesheet" href="/resources/css-2026/custom.css">
-  <link rel="stylesheet" href="/resources/css-2026/icon.css">
+  <link rel="stylesheet" href="./resources/cdn/krds.min.css">
+  <link rel="stylesheet" href="./resources/css-2026/plugin/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./resources/css-2026/custom.css">
+  <link rel="stylesheet" href="./resources/css-2026/icon.css">
 </head>
 
 
@@ -143,9 +143,9 @@
               <div class="krds-main--head-item" data-gap="3">
                 <h3 class="krds-main--title">시간별 예보</h3>
                 <div class="hourly-interval-group">
-                    <button type="button" class="hourly-interval-btn" data-interval="3">3시간 간격</button>
-                    <button type="button" class="hourly-interval-btn active" data-interval="1">1시간 간격</button>
-                  </div>
+                  <button type="button" class="hourly-interval-btn" data-interval="3">3시간 간격</button>
+                  <button type="button" class="hourly-interval-btn active" data-interval="1">1시간 간격</button>
+                </div>
               </div>
 
               <div class="krds-main--head-item" data-gap="3">
@@ -176,6 +176,7 @@
               <!-- Content Container (Rendered dynamically) -->
               <div id="hourly-forecast-content"></div>
             </div>
+          </div>
         </div>
       </section>
       <section class="krds-main--sec" data-bg="gray">
@@ -193,15 +194,15 @@
   </div>
 
   <!-- 기존 코드 -->
-  <script src="/resources/js/com.ui-2021.js?ver=202607091110"></script>
-  <script src="/resources/js/app-2021/app-config.js?ver=202607091110"></script>
-  <script src="/resources/js/app-2021/dong-config.js?ver=202607091110"></script>
-  <script src="/resources/js/app-2021/sea-config.js?ver=202607091110"></script>
-  <script src="/resources/js/app-2021/app-init.js?ver=202607091110"></script>
-  <script src="/resources/js/kmap-wrap.js?ver=202607091110"></script>
-  <script src="/resources/js/global.js?ver=202607091110"></script>
-  <script src="/resources/js/app-2021/app-index.js?ver=202607091110"></script>
-  <script src="/resources/bangjae/bangjae_eqk.js?ver=202607091110"></script>
+  <script src="./resources/js/com.ui-2021.js?ver=202607091110"></script>
+  <script src="./resources/js/app-2021/app-config.js?ver=202607091110"></script>
+  <script src="./resources/js/app-2021/dong-config.js?ver=202607091110"></script>
+  <script src="./resources/js/app-2021/sea-config.js?ver=202607091110"></script>
+  <script src="./resources/js/app-2021/app-init.js?ver=202607091110"></script>
+  <script src="./resources/js/kmap-wrap.js?ver=202607091110"></script>
+  <script src="./resources/js/global.js?ver=202607091110"></script>
+  <script src="./resources/js/app-2021/app-index.js?ver=202607091110"></script>
+  <script src="./resources/bangjae/bangjae_eqk.js?ver=202607091110"></script>
   <script>
     var indexSNS = new IndexSNS("index-sns");
     function applySnsConfig(config) {
@@ -222,14 +223,14 @@
       }
     })(jQuery, window, document);
   </script>
-  <script src="/resources/js/special/special-config-lib.js?ver=202607091110"></script>
+  <script src="./resources/js/special/special-config-lib.js?ver=202607091110"></script>
   <script src="https://www.kma.go.kr/repositary/special/special-config.js?ver=202607091110"></script>
-  <script src="/resources/js/webstats.weather.go.kr.100000.js?ver=202607091110"></script>
+  <script src="./resources/js/webstats.weather.go.kr.100000.js?ver=202607091110"></script>
   <noscript><img alt="로그" src="http://webstats.kma.go.kr/tracker.sol.tsp?u=100000&amp;js=N" width="0" height="0" /></noscript>
-  <script src="/resources/js/UserScriptConf.js"></script>
+  <script src="./resources/js/UserScriptConf.js"></script>
 
   <!-- 신규 코드 -->
-  <script src="/resources/js-2026/plugin/swiper-bundle.min.js"></script>
+  <script src="./resources/js-2026/plugin/swiper-bundle.min.js"></script>
   <script type="module">
     import { UX } from '/resources/js-2026/ui-common.js';
     import { uiForecastExe } from '/resources/js-2026/component/ui-forecast.js';
