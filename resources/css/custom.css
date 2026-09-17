@@ -288,3 +288,493 @@
 	color: #0088ff;
 	font-weight: 600;
 }
+
+/* ==========================================================================
+   Hourly Weather Forecast Component (시간별 예보)
+   ========================================================================== */
+
+.hourly-forecast-container {
+	width: 100%;
+	background: #ffffff;
+	border: 0.1rem solid #e5e8eb;
+	border-radius: 1.2rem;
+	padding: 2.4rem;
+	box-sizing: border-box;
+}
+
+/* 1. Header Toolbar */
+.hourly-toolbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+	flex-wrap: wrap;
+	gap: 1.2rem;
+}
+
+.hourly-toolbar-left {
+	display: flex;
+	align-items: center;
+	gap: 1.6rem;
+}
+
+.hourly-title {
+	font-size: 2.2rem;
+	font-weight: 700;
+	color: #111111;
+	margin: 0;
+}
+
+.hourly-interval-group {
+	display: flex;
+	background: #f1f3f5;
+	border-radius: 0.8rem;
+	padding: 0.3rem;
+	gap: 0.2rem;
+}
+
+.hourly-interval-btn {
+	padding: 0.6rem 1.4rem;
+	font-size: 1.4rem;
+	font-weight: 600;
+	color: #666666;
+	background: transparent;
+	border: none;
+	border-radius: 0.6rem;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.hourly-interval-btn.active {
+	background: #ffffff;
+	color: #111111;
+	font-weight: 700;
+	box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.08);
+}
+
+.hourly-toolbar-right {
+	display: flex;
+	align-items: center;
+	gap: 1.2rem;
+}
+
+.hourly-info-btn {
+	padding: 0.6rem 1.4rem;
+	font-size: 1.3rem;
+	font-weight: 500;
+	color: #495057;
+	background: #ffffff;
+	border: 0.1rem solid #ced4da;
+	border-radius: 2rem;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.hourly-info-btn:hover {
+	background: #f8f9fa;
+	border-color: #adb5bd;
+}
+
+/* View Mode Switcher Icons */
+.hourly-view-switcher {
+	display: flex;
+	border: 0.1rem solid #ced4da;
+	border-radius: 0.8rem;
+	overflow: hidden;
+	background: #ffffff;
+}
+
+.hourly-view-btn {
+	width: 3.8rem;
+	height: 3.4rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #ffffff;
+	border: none;
+	border-right: 0.1rem solid #e9ecef;
+	cursor: pointer;
+	color: #666666;
+	transition: all 0.2s ease;
+}
+
+.hourly-view-btn:last-child {
+	border-right: none;
+}
+
+.hourly-view-btn:hover {
+	background: #f8f9fa;
+	color: #0088ff;
+}
+
+.hourly-view-btn.active {
+	background: #f0f7ff;
+	color: #0088ff;
+}
+
+.hourly-view-btn svg {
+	width: 1.8rem;
+	height: 1.8rem;
+}
+
+
+/* 2. Grid Table Layout (Mode 1 & Mode 2) */
+.hourly-grid-container {
+	display: flex;
+	width: 100%;
+	border: 0.1rem solid #e5e8eb;
+	border-radius: 0.8rem;
+	overflow: hidden;
+	background: #ffffff;
+	position: relative;
+}
+
+/* Fixed Left Column */
+.hourly-fixed-column {
+	width: 12rem;
+	flex-shrink: 0;
+	background: #ffffff;
+	border-right: 0.1rem solid #e5e8eb;
+	z-index: 10;
+	box-shadow: 0.2rem 0 0.6rem rgba(0, 0, 0, 0.03);
+}
+
+.fixed-header-cell {
+	height: 4.8rem;
+	display: flex;
+	align-items: center;
+	padding: 0 1.2rem;
+	font-size: 1.4rem;
+	font-weight: 700;
+	color: #333333;
+	border-bottom: 0.1rem solid #f0f0f0;
+	background: #fafafa;
+}
+
+.fixed-header-cell .info-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 1.8rem;
+	height: 1.8rem;
+	border-radius: 50%;
+	border: 0.1rem solid #999999;
+	font-size: 1.1rem;
+	color: #666666;
+	font-weight: bold;
+}
+
+.fixed-row-cell {
+	display: flex;
+	align-items: center;
+	padding: 0 1.2rem;
+	font-size: 1.3rem;
+	font-weight: 600;
+	color: #444444;
+	border-bottom: 0.1rem solid #f0f0f0;
+	box-sizing: border-box;
+}
+
+/* Custom row heights to match content & chart areas */
+.row-time { height: 3.6rem; }
+.row-weather { height: 6.4rem; }
+.row-temp-chart { height: 10rem; } /* Chart Placeholder Height */
+.row-sensory { height: 4rem; }
+.row-precip { height: 3.6rem; }
+.row-rain-prob { height: 3.6rem; }
+.row-rain-prob.has-bar-chart { height: 10rem; } /* Bar Chart Mode Height */
+.row-wind { height: 5.6rem; }
+.row-humidity { height: 3.6rem; }
+.row-humidity.has-chart { height: 8rem; }
+.row-heat { height: 3.6rem; }
+
+
+/* Horizontally Scrollable Viewport */
+.hourly-scroll-viewport {
+	flex: 1;
+	overflow-x: auto;
+	overflow-y: hidden;
+	position: relative;
+	scrollbar-width: thin;
+	cursor: grab;
+	user-select: none;
+}
+
+.hourly-scroll-viewport.grabbing {
+	cursor: grabbing;
+}
+
+.hourly-dates-wrapper {
+	display: flex;
+	width: max-content;
+	min-width: 100%;
+}
+
+/* Individual Date Group Block */
+.date-group {
+	display: flex;
+	flex-direction: column;
+	border-right: 0.1rem solid #e5e8eb;
+	position: relative;
+}
+
+.date-group:last-child {
+	border-right: none;
+}
+
+/* Sticky Date Header Row */
+.date-sticky-header {
+	position: sticky;
+	left: 0;
+	z-index: 5;
+	display: inline-flex;
+	align-items: center;
+	gap: 1.2rem;
+	height: 4.8rem;
+	padding: 0 1.6rem;
+	background: #ffffff;
+	border-bottom: 0.1rem solid #e5e8eb;
+	white-space: nowrap;
+	width: fit-content;
+	max-width: 100%;
+	box-sizing: border-box;
+}
+
+.date-sticky-header .badge-type {
+	font-size: 1.3rem;
+	font-weight: 700;
+	color: #333333;
+}
+
+.date-sticky-header .date-pill {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.6rem;
+	padding: 0.4rem 1.2rem;
+	background: #0088ff;
+	color: #ffffff;
+	font-size: 1.3rem;
+	font-weight: 700;
+	border-radius: 1.6rem;
+}
+
+.date-sticky-header .temp-range {
+	font-size: 1.3rem;
+	font-weight: 600;
+	color: #555555;
+}
+
+.date-sticky-header .temp-range .min-temp { color: #0088ff; font-weight: 700; }
+.date-sticky-header .temp-range .max-temp { color: #dc143c; font-weight: 700; }
+.date-sticky-header .temp-range .divider { margin: 0 0.4rem; color: #cccccc; }
+
+
+/* Hourly Columns Container */
+.hourly-columns-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.hourly-col {
+	width: 5.6rem;
+	flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
+	border-right: 0.1rem solid #f5f5f5;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.hourly-col:last-child {
+	border-right: none;
+}
+
+.cell {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 0.4rem;
+	border-bottom: 0.1rem solid #f0f0f0;
+	font-size: 1.3rem;
+	color: #333333;
+	box-sizing: border-box;
+}
+
+.cell.cell-time {
+	font-weight: 600;
+	color: #555555;
+	background: #fafafa;
+}
+
+.cell.cell-weather [data-icon-weather] {
+	width: 4.4rem;
+	height: 4.4rem;
+	background-size: contain;
+}
+
+/* Chart Space Reserved Placeholder */
+.cell.cell-temp-chart {
+	position: relative;
+	justify-content: space-between;
+	padding: 1.2rem 0;
+}
+
+.cell-temp-chart .chart-temp-val {
+	font-weight: 700;
+	font-size: 1.3rem;
+	color: #111111;
+	z-index: 2;
+}
+
+.cell-temp-chart .chart-dot {
+	width: 0.8rem;
+	height: 0.8rem;
+	background: #0088ff;
+	border: 0.2rem solid #ffffff;
+	border-radius: 50%;
+	box-shadow: 0 0.2rem 0.4rem rgba(0, 136, 255, 0.4);
+	z-index: 2;
+}
+
+/* Empty Chart Guide Area (Reserved for dev integration) */
+.cell-temp-chart::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	height: 0.1rem;
+	border-top: 0.1rem dashed #e0e0e0;
+	z-index: 1;
+}
+
+.cell.cell-sensory {
+	font-weight: 600;
+}
+
+.cell.cell-precip,
+.cell.cell-rain-prob,
+.cell.cell-humidity,
+.cell.cell-heat {
+	font-size: 1.3rem;
+}
+
+/* Mode 2: Bar Chart Placeholders */
+.cell.cell-rain-bar-chart {
+	position: relative;
+	justify-content: flex-end;
+	padding-bottom: 0.8rem;
+}
+
+.cell-rain-bar-chart .bar-val {
+	font-size: 1.1rem;
+	font-weight: 700;
+	color: #0088ff;
+	margin-bottom: 0.4rem;
+	z-index: 2;
+}
+
+.cell-rain-bar-chart .bar-fill {
+	width: 1.4rem;
+	background: linear-gradient(180deg, #4dabf7 0%, #1c7ed6 100%);
+	border-radius: 0.3rem 0.3rem 0 0;
+	min-height: 0.4rem;
+	z-index: 2;
+	transition: height 0.3s ease;
+}
+
+/* Wind Cell with direction arrow */
+.cell.cell-wind {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.2rem;
+}
+
+.cell-wind .wind-arrow {
+	font-size: 1.2rem;
+	color: #333333;
+	line-height: 1;
+}
+
+.cell-wind .wind-text {
+	font-size: 1.2rem;
+	color: #666666;
+}
+
+
+/* 3. List / Table Mode Layout (Mode 3) */
+.hourly-list-container {
+	display: flex;
+	flex-direction: column;
+	gap: 2.4rem;
+	width: 100%;
+}
+
+.list-date-block {
+	border: 0.1rem solid #e5e8eb;
+	border-radius: 0.8rem;
+	overflow: hidden;
+	background: #ffffff;
+}
+
+.list-date-header {
+	display: flex;
+	align-items: center;
+	gap: 1.2rem;
+	padding: 1.2rem 1.6rem;
+	background: #f8f9fa;
+	border-bottom: 0.1rem solid #e5e8eb;
+}
+
+.hourly-list-table {
+	width: 100%;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+.hourly-list-table th {
+	background: #fafafa;
+	padding: 1rem 0.8rem;
+	font-size: 1.3rem;
+	font-weight: 700;
+	color: #444444;
+	border-bottom: 0.1rem solid #e5e8eb;
+	border-right: 0.1rem solid #f0f0f0;
+}
+
+.hourly-list-table th:last-child {
+	border-right: none;
+}
+
+.hourly-list-table td {
+	padding: 1rem 0.8rem;
+	font-size: 1.3rem;
+	color: #333333;
+	border-bottom: 0.1rem solid #f0f0f0;
+	border-right: 0.1rem solid #f0f0f0;
+	vertical-align: middle;
+}
+
+.hourly-list-table td:last-child {
+	border-right: none;
+}
+
+.hourly-list-table tr:hover td {
+	background: #f8f9fa;
+}
+
+.hourly-list-table .td-weather {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.6rem;
+}
+
+.hourly-list-table .td-weather [data-icon-weather] {
+	width: 3.2rem;
+	height: 3.2rem;
+	background-size: contain;
+}
+
