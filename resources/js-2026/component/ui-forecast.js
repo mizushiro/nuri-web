@@ -1,3 +1,5 @@
+import { renderAllForecastCharts } from './ui-forecast-chart.js';
+
 // 선택된 날짜 및 스크롤 동기화 상태 관리 변수
 let currentSelectedDate = null;
 let isProgrammaticScroll = false;
@@ -204,8 +206,9 @@ export const weatherSwiperExe = (data) => {
 /**
  * 시간별 예보 컴포넌트 실행 함수
  * @param {Array} data - weather.json 데이터
+ * @param {Object} options - 차트 렌더링 옵션 (options.renderTempChart 등)
  */
-export const hourlyForecastExe = (data) => {
+export const hourlyForecastExe = (data, options = {}) => {
   let currentInterval = 1; // 1: 1시간 간격, 3: 3시간 간격
   let currentViewMode = 'mode1'; // mode1: 선형 차트, mode2: 막대 차트, mode3: 리스트
 
@@ -360,9 +363,21 @@ export const hourlyForecastExe = (data) => {
       `;
     }
 
+    let chartLayersHtml = `
+      <div class="hourly-chart-layer temp-chart-layer" id="hourly-temp-chart-layer"></div>
+    `;
+    if (isBarChartMode) {
+      chartLayersHtml += `
+        <div class="hourly-chart-layer rain-chart-layer" id="hourly-rain-chart-layer"></div>
+        <div class="hourly-chart-layer wind-chart-layer" id="hourly-wind-chart-layer"></div>
+        <div class="hourly-chart-layer humidity-chart-layer" id="hourly-humidity-chart-layer"></div>
+      `;
+    }
+
     let scrollViewportHtml = `
       <div class="hourly-scroll-viewport">
         <div class="hourly-dates-wrapper">
+          ${chartLayersHtml}
     `;
 
     validDates.forEach((dayItem, dayIndex) => {
@@ -388,9 +403,16 @@ export const hourlyForecastExe = (data) => {
       `;
 
       hours.forEach(h => {
+        const numericTemp = parseInt(h.temp) || 0;
+        const rainProbVal = parseInt(h.rainProb) || 0;
+        const windDirVal = typeof h.windDir === 'number' ? h.windDir : getWindAngle(h.windDir);
+        const windSpeedVal = Array.isArray(h.windText) ? (h.windText.length >= 3 ? h.windText[2] : h.windText[1]) : (h.windSpeed || '0');
+        const windStrengthVal = Array.isArray(h.windText) && h.windText.length >= 3 ? h.windText[1] : '약';
+        const humidityVal = parseInt(h.humidity) || 0;
+
         if (isBarChartMode) {
           scrollViewportHtml += `
-            <div class="hourly-col">
+            <div class="hourly-col" data-date="${dayItem.date}" data-time="${h.time}" data-temp="${numericTemp}" data-rain-prob="${rainProbVal}" data-wind-dir="${windDirVal}" data-wind-speed="${windSpeedVal}" data-wind-strength="${windStrengthVal}" data-humidity="${humidityVal}">
               <div class="cell row-time cell-time">
                 <span class="sr-only">시각</span>
                 ${h.time}
@@ -402,22 +424,22 @@ export const hourlyForecastExe = (data) => {
                 </div>
               </div>
               <div class="cell row-temp-chart cell-temp-chart">
-                <span class="sr-only">기온</span>
+                <span class="sr-only">기온 ${h.temp}</span>
               </div>
               <div class="cell row-rain-prob cell-rain-chart has-chart" data-rain-prob="${h.rainProb}">
-                <span class="sr-only">강수확률</span>
+                <span class="sr-only">강수확률 ${h.rainProb}</span>
               </div>
-              <div class="cell row-wind cell-wind-chart has-chart" data-wind-dir="${typeof h.windDir === 'number' ? h.windDir : getWindAngle(h.windDir)}" data-wind-speed="${Array.isArray(h.windText) ? (h.windText.length >= 3 ? h.windText[2] : h.windText[1]) : (h.windSpeed || '0')}">
+              <div class="cell row-wind cell-wind-chart has-chart">
                 <span class="sr-only">풍향/풍속</span>
               </div>
               <div class="cell row-humidity cell-humidity-chart has-chart" data-humidity="${h.humidity}">
-                <span class="sr-only">습도</span>
+                <span class="sr-only">습도 ${h.humidity}</span>
               </div>
             </div>
           `;
         } else {
           scrollViewportHtml += `
-            <div class="hourly-col">
+            <div class="hourly-col" data-date="${dayItem.date}" data-time="${h.time}" data-temp="${numericTemp}" data-rain-prob="${rainProbVal}" data-wind-dir="${windDirVal}" data-wind-speed="${windSpeedVal}" data-wind-strength="${windStrengthVal}" data-humidity="${humidityVal}">
               <div class="cell row-time cell-time">
                 <span class="sr-only">시각</span>
                 ${h.time}
@@ -429,7 +451,7 @@ export const hourlyForecastExe = (data) => {
                 </div>
               </div>
               <div class="cell row-temp-chart cell-temp-chart">
-                <span class="sr-only">기온</span>
+                <span class="sr-only">기온 ${h.temp}</span>
               </div>
               <div class="cell row-sensory cell-sensory">
                 <span class="sr-only">체감기온</span>
@@ -445,9 +467,9 @@ export const hourlyForecastExe = (data) => {
               </div>
               <div class="cell row-wind cell-wind">
                 <span class="sr-only">${Array.isArray(h.windText) ? `${h.windText[0]} ${h.windText.length >= 3 ? h.windText[1] + ' ' : ''}${h.windText.length >= 3 ? h.windText[2] : h.windText[1]}m/s` : '풍향 및 풍속'}</span>
-                <span class="wind-arrow" data-icon="wind-arrow" style="transform: rotate(${typeof h.windDir === 'number' ? h.windDir : getWindAngle(h.windDir)}deg);"></span>
-                <span class="wind-strength">${Array.isArray(h.windText) && h.windText.length >= 3 ? h.windText[1] : '약'}</span>
-                <span class="wind-text">${Array.isArray(h.windText) ? (h.windText.length >= 3 ? h.windText[2] : h.windText[1]) : (h.windSpeed || '0')}</span>
+                <span class="wind-arrow" data-icon="wind-arrow" style="transform: rotate(${windDirVal}deg);"></span>
+                <span class="wind-strength">${windStrengthVal}</span>
+                <span class="wind-text">${windSpeedVal}</span>
               </div>
               <div class="cell row-humidity cell-humidity">
                 <span class="sr-only">습도</span>
@@ -508,6 +530,9 @@ export const hourlyForecastExe = (data) => {
         ${scrollViewportHtml}
       </div>
     `;
+
+    // 차트 레이어 렌더링 (전체 4가지 차트 통합 렌더링)
+    renderAllForecastCharts(container, validDates, options);
 
     // 드래그 스크롤 이벤트 바인딩
     bindDragScroll();
@@ -659,13 +684,19 @@ export const hourlyForecastExe = (data) => {
  * 예보 UI 통합 실행 함수
  * 외부에서 불러온 데이터를 전달받아 내부에서 일별(Swiper) 및 시간별 예보를 각각 분기 실행합니다.
  * @param {Array} data - 날씨 예보 데이터
+ * @param {Object} [options] - 차트 렌더링 및 UI 옵션 객체
+ * @param {Function|string} [options.renderTempChart] - 외부 기온 챠트 스크립트/함수
+ * @param {Function|string} [options.renderRainChart] - 외부 강수확률 챠트 스크립트/함수
+ * @param {Function|string} [options.renderWindChart] - 외부 풍향/풍속 챠트 스크립트/함수
+ * @param {Function|string} [options.renderHumidityChart] - 외부 습도 챠트 스크립트/함수
  */
-export const uiForecastExe = (data) => {
+export const uiForecastExe = (data, options = {}) => {
   if (!data) return;
   weatherSwiperExe(data);
-  hourlyForecastExe(data);
+  hourlyForecastExe(data, options);
 };
 
 export const initForecast = uiForecastExe;
+
 
 

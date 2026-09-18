@@ -239,7 +239,17 @@
 
     fetch('./resources/json/weather.json')
       .then(res => res.json())
-      .then(data => uiForecastExe(data));
+      .then(data => {
+        uiForecastExe(data, {
+          // 외부 차트 스크립트 커스텀 옵션 예시 (미지정 시 ui-forecast-chart.js 기본 SVG 차트 실행)
+          /*
+          renderTempChart: (layer, context, validDates) => console.log('기온 차트 커스텀', layer, context),
+          renderRainChart: (layer, context, validDates) => console.log('강수확률 차트 커스텀', layer, context),
+          renderWindChart: (layer, context, validDates) => console.log('풍향/풍속 차트 커스텀', layer, context),
+          renderHumidityChart: (layer, context, validDates) => console.log('습도 차트 커스텀', layer, context),
+          */
+        });
+      });
   </script>
 </body>
 
