@@ -626,6 +626,24 @@
 	display: flex;
 	width: max-content;
 	min-width: 100%;
+	position: relative;
+}
+
+/* Hourly Chart Layers (Positioned Absolute inside dates-wrapper) */
+.hourly-chart-layer,
+.hourly-temp-chart-layer {
+	position: absolute;
+	left: 0;
+	width: max-content;
+	pointer-events: none;
+	z-index: 3;
+}
+
+.hourly-chart-layer svg,
+.hourly-temp-chart-layer svg {
+	display: block;
+	height: 100%;
+	overflow: visible;
 }
 
 /* Individual Date Group Block */
