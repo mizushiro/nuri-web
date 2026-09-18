@@ -243,3 +243,246 @@
 [data-icon-weather="NB21"] {
   background-image: url('../img/weather/NB21.png');
 }
+
+
+/* icon */
+[class*="icon-aspect-"] {aspect-ratio:1/1;display:block;background-position:50% 50%;background-repeat:no-repeat;background-size:contain;flex-shrink:0}
+[class*="icon-aspect-"][data-size="6"] {width:.6rem}
+[class*="icon-aspect-"][data-size="8"] {width:.8rem}
+[class*="icon-aspect-"][data-size="10"] {width:1rem}
+[class*="icon-aspect-"][data-size="12"] {width:1.2rem}
+[class*="icon-aspect-"][data-size="14"] {width:1.4rem}
+[class*="icon-aspect-"][data-size="16"] {width:1.6rem}
+[class*="icon-aspect-"][data-size="18"] {width:1.8rem}
+[class*="icon-aspect-"][data-size="20"] {width:2rem}
+[class*="icon-aspect-"][data-size="24"] {width:2.4rem}
+[class*="icon-aspect-"][data-size="26"] {width:2.6rem}
+[class*="icon-aspect-"][data-size="28"] {width:2.8rem}
+[class*="icon-aspect-"][data-size="36"] {width:3.6rem}
+[class*="icon-aspect-"][data-size="40"] {width:4rem}
+[class*="icon-aspect-"][data-size="42"] {width:4.2rem}
+[class*="icon-aspect-"][data-size="48"] {width:4.8rem}
+[class*="icon-aspect-"][data-size="56"] {width:5.6rem}
+[class*="icon-aspect-"][data-size="58"] {width:5.8rem}
+[class*="icon-aspect-"][data-size="80"] {width:8rem}
+
+[class*="icon-aspect-"][data-opacity="0.3"] {opacity:.3}
+[class*="icon-aspect-"][data-opacity="0.6"] {opacity:.6}
+[class*="icon-aspect-"][data-opacity="0.8"] {opacity:.8}
+
+@media (max-width:1023px) {
+  [class*="icon-aspect-"][data-m-size="16"] {width:1.6rem !important;}
+  [class*="icon-aspect-"][data-m-size="20"] {width:2rem !important;}
+}
+
+.icon-aspect-avg {background-image:url("../img/icon/icon-aspect-avg.svg")}
+.icon-aspect-breadcrumbs-arrow {background-image:url("../img/icon/icon-aspect-breadcrumbs-arrow.svg")}
+.icon-aspect-breadcrumbs-arrow-w {background-image:url("../img/icon/icon-aspect-breadcrumbs-arrow-w.svg")}
+.icon-aspect-checkbox-off {background-image:url("../img/icon/icon-aspect-checkbox-off.svg")}
+.icon-aspect-checkbox-on {background-image:url("../img/icon/icon-aspect-checkbox-on.svg")}
+.icon-aspect-close {background-image:url("../img/icon/icon-aspect-close.svg")}
+.icon-aspect-close2 {background-image:url("../img/icon/icon-aspect-close2.svg")}
+.icon-aspect-close-small {background-image:url("../img/icon/icon-aspect-close-small.svg")}
+.icon-aspect-close2-w {background-image:url("../img/icon/icon-aspect-close2-w.svg")}
+.icon-aspect-close3-w {background-image:url("../img/icon/icon-aspect-close3-w.svg")}
+.icon-aspect-csv {background-image:url("../img/icon/icon-aspect-csv.svg")}
+.icon-aspect-down {background-image:url("../img/icon/icon-aspect-down.svg")}
+.icon-aspect-home {background-image:url("../img/icon/icon-aspect-home.svg")}
+.icon-aspect-home-w {background-image:url("../img/icon/icon-aspect-home-w.svg")}
+.icon-aspect-lnb1 {background-image:url("../img/icon/icon-aspect-lnb1.svg")}
+.icon-aspect-lnb2 {background-image:url("../img/icon/icon-aspect-lnb2.svg")}
+.icon-aspect-lnb3 {background-image:url("../img/icon/icon-aspect-lnb3.svg")}
+.icon-aspect-lnb4 {background-image:url("../img/icon/icon-aspect-lnb4.svg")}
+.icon-aspect-lnb5 {background-image:url("../img/icon/icon-aspect-lnb5.svg")}
+.icon-aspect-lnb6 {background-image:url("../img/icon/icon-aspect-lnb6.svg")}
+.icon-aspect-lnb7 {background-image:url("../img/icon/icon-aspect-lnb7.svg")}
+.icon-aspect-lnb8 {background-image:url("../img/icon/icon-aspect-lnb8.svg")}
+.icon-aspect-lnb9{background-image:url("../img/icon/icon-aspect-lnb9.svg")}
+.icon-aspect-lnb1-on {background-image:url("../img/icon/icon-aspect-lnb1-on.svg")}
+.icon-aspect-lnb2-on {background-image:url("../img/icon/icon-aspect-lnb2-on.svg")}
+.icon-aspect-lnb3-on {background-image:url("../img/icon/icon-aspect-lnb3-on.svg")}
+.icon-aspect-lnb4-on {background-image:url("../img/icon/icon-aspect-lnb4-on.svg")}
+.icon-aspect-lnb5-on {background-image:url("../img/icon/icon-aspect-lnb5-on.svg")}
+.icon-aspect-lnb6-on {background-image:url("../img/icon/icon-aspect-lnb6-on.svg")}
+.icon-aspect-lnb7-on {background-image:url("../img/icon/icon-aspect-lnb7-on.svg")}
+.icon-aspect-lnb8-on {background-image:url("../img/icon/icon-aspect-lnb8-on.svg")}
+.icon-aspect-lnb9-on {background-image:url("../img/icon/icon-aspect-lnb9-on.svg")}
+.icon-aspect-map1 {background-image:url("../img/icon/icon-aspect-map1.svg")}
+.icon-aspect-map2 {background-image:url("../img/icon/icon-aspect-map2.svg")}
+.icon-aspect-map3 {background-image:url("../img/icon/icon-aspect-map3.svg")}
+.icon-aspect-map4 {background-image:url("../img/icon/icon-aspect-map4.svg")}
+.icon-aspect-map5 {background-image:url("../img/icon/icon-aspect-map5.svg")}
+.icon-aspect-map6 {background-image:url("../img/icon/icon-aspect-map6.svg")}
+.icon-aspect-map7 {background-image:url("../img/icon/icon-aspect-map7.svg")}
+.icon-aspect-map8 {background-image:url("../img/icon/icon-aspect-map8.svg")}
+.icon-aspect-map9 {background-image:url("../img/icon/icon-aspect-map9.svg")}
+.icon-aspect-map10 {background-image:url("../img/icon/icon-aspect-map10.svg")}
+.icon-aspect-map11 {background-image:url("../img/icon/icon-aspect-map11.svg")}
+.icon-aspect-map12 {background-image:url("../img/icon/icon-aspect-map12.svg")}
+.icon-aspect-map13 {background-image:url("../img/icon/icon-aspect-map13.svg")}
+.icon-aspect-map14 {background-image:url("../img/icon/icon-aspect-map14.svg")}
+.icon-aspect-map1-on {background-image:url("../img/icon/icon-aspect-map1-on.svg")}
+.icon-aspect-map2-on {background-image:url("../img/icon/icon-aspect-map2-on.svg")}
+.icon-aspect-map3-on {background-image:url("../img/icon/icon-aspect-map3-on.svg")}
+.icon-aspect-map4-on {background-image:url("../img/icon/icon-aspect-map4-on.svg")}
+.icon-aspect-map5-on {background-image:url("../img/icon/icon-aspect-map5-on.svg")}
+.icon-aspect-map6-on {background-image:url("../img/icon/icon-aspect-map6-on.svg")}
+.icon-aspect-map7-on {background-image:url("../img/icon/icon-aspect-map7-on.svg")}
+.icon-aspect-map8-on {background-image:url("../img/icon/icon-aspect-map8-on.svg")}
+.icon-aspect-map9-on {background-image:url("../img/icon/icon-aspect-map9-on.svg")}
+.icon-aspect-map10-on {background-image:url("../img/icon/icon-aspect-map10-on.svg")}
+.icon-aspect-map11-on {background-image:url("../img/icon/icon-aspect-map11-on.svg")}
+.icon-aspect-map12-on {background-image:url("../img/icon/icon-aspect-map12-on.svg")}
+.icon-aspect-map13-on {background-image:url("../img/icon/icon-aspect-map13-on.svg")}
+.icon-aspect-map14-on {background-image:url("../img/icon/icon-aspect-map14-on.svg")}
+.icon-aspect-main-n01 {background-image:url("../img/icon/icon-aspect-main-n01.svg")}
+.icon-aspect-main-n02 {background-image:url("../img/icon/icon-aspect-main-n02.svg")}
+.icon-aspect-main-n03 {background-image:url("../img/icon/icon-aspect-main-n03.svg")}
+.icon-aspect-main-n04 {background-image:url("../img/icon/icon-aspect-main-n04.svg")}
+.icon-aspect-main-n05 {background-image:url("../img/icon/icon-aspect-main-n05.svg")}
+.icon-aspect-main-n06 {background-image:url("../img/icon/icon-aspect-main-n06.svg")}
+.icon-aspect-main-n07 {background-image:url("../img/icon/icon-aspect-main-n07.svg")}
+.icon-aspect-main-n08 {background-image:url("../img/icon/icon-aspect-main-n08.svg")}
+.icon-aspect-main-n09 {background-image:url("../img/icon/icon-aspect-main-n09.svg")}
+.icon-aspect-main-n10 {background-image:url("../img/icon/icon-aspect-main-n10.svg")}
+.icon-aspect-main-n11 {background-image:url("../img/icon/icon-aspect-main-n11.svg")}
+.icon-aspect-main-n12 {background-image:url("../img/icon/icon-aspect-main-n12.svg")}
+.icon-aspect-tab1 {background-image:url("../img/icon/icon-aspect-tab1.svg")}
+.icon-aspect-tab2 {background-image:url("../img/icon/icon-aspect-tab2.svg")}
+.icon-aspect-tab3 {background-image:url("../img/icon/icon-aspect-tab3.svg")}
+.icon-aspect-tab1-on {background-image:url("../img/icon/icon-aspect-tab1-on.svg")}
+.icon-aspect-tab2-on {background-image:url("../img/icon/icon-aspect-tab2-on.svg")}
+.icon-aspect-tab3-on {background-image:url("../img/icon/icon-aspect-tab3-on.svg")}
+.icon-aspect-aws {background-image:url("../img/icon/icon-aspect-aws.svg")}
+.icon-aspect-aws-on {background-image:url("../img/icon/icon-aspect-aws-on.svg")}
+.icon-aspect-asos {background-image:url("../img/icon/icon-aspect-asos.svg")}
+.icon-aspect-asos-on {background-image:url("../img/icon/icon-aspect-asos-on.svg")}
+.icon-aspect-minus {background-image:url("../img/icon/icon-aspect-minus.svg")}
+.icon-aspect-minus-on {background-image:url("../img/icon/icon-aspect-minus-on.svg")}
+.icon-aspect-plus {background-image:url("../img/icon/icon-aspect-plus.svg")}
+.icon-aspect-plus-on {background-image:url("../img/icon/icon-aspect-plus-on.svg")}
+.icon-aspect-plus2 {background-image:url("../img/icon/icon-aspect-plus2.svg")}
+.icon-aspect-refresh {background-image:url("../img/icon/icon-aspect-refresh.svg")}
+.icon-aspect-refresh-on {background-image:url("../img/icon/icon-aspect-refresh-on.svg")}
+.icon-aspect-select-arrow {background-image:url("../img/icon/icon-aspect-select-arrow.svg")}
+.icon-aspect-select-arrow-w {background-image:url("../img/icon/icon-aspect-select-arrow-w.svg")}
+.icon-aspect-circle-down {background-image:url("../img/icon/icon-aspect-circle-down.svg")}
+.icon-aspect-contrast {background-image:url("../img/icon/icon-aspect-contrast.svg")}
+.icon-aspect-settings {background-image:url("../img/icon/icon-aspect-settings.svg")}
+.icon-aspect-stacks {background-image:url("../img/icon/icon-aspect-stacks.svg")}
+.icon-aspect-split-scene {background-image:url("../img/icon/icon-aspect-split-scene.svg")}
+.icon-aspect-expand-circle {background-image:url("../img/icon/icon-aspect-expand-circle.svg")}
+.icon-aspect-expand-circle2 {background-image:url("../img/icon/icon-aspect-expand-circle2.svg")}
+.icon-aspect-search {background-image:url("../img/icon/icon-aspect-search.svg")}
+.icon-aspect-search-b {background-image:url("../img/icon/icon-aspect-search-b.svg")}
+.icon-aspect-reset {background-image:url("../img/icon/icon-aspect-reset.svg")}
+.icon-aspect-reset2 {background-image:url("../img/icon/icon-aspect-reset2.svg")}
+.icon-aspect-filter-w {background-image:url("../img/icon/icon-aspect-filter-w.svg")}
+.icon-aspect-menu {background-image:url("../img/icon/icon-aspect-menu.svg")}
+.icon-aspect-play {background-image:url("../img/icon/icon-aspect-play.svg")}
+.icon-aspect-stop {background-image:url("../img/icon/icon-aspect-stop.svg")}
+.icon-aspect-pause {background-image:url("../img/icon/icon-aspect-pause.svg")}
+.icon-aspect-play-dark {background-image:url("../img/icon/icon-aspect-play-dark.svg")}
+.icon-aspect-stop-dark {background-image:url("../img/icon/icon-aspect-stop-dark.svg")}
+.icon-aspect-pause-dark {background-image:url("../img/icon/icon-aspect-pause-dark.svg")}
+.icon-aspect-division {background-image:url("../img/icon/icon-aspect-division.svg")}
+.icon-aspect-division2 {background-image:url("../img/icon/icon-aspect-division2.svg")}
+.icon-aspect-link {background-image:url("../img/icon/icon-aspect-link.svg")}
+.icon-aspect-unlink {background-image:url("../img/icon/icon-aspect-unlink.svg")}
+.icon-aspect-range {background-image:url("../img/icon/icon-aspect-range.svg")}
+.icon-aspect-swap-vert-w {background-image:url("../img/icon/icon-aspect-swap-vert-w.svg")}
+.icon-aspect-screen-right {background-image:url("../img/icon/icon-aspect-screen-right.svg")}
+.icon-aspect-screen-left {background-image:url("../img/icon/icon-aspect-screen-left.svg")}
+.icon-aspect-query-stats-w {background-image:url("../img/icon/icon-aspect-query-stats-w.svg")}
+.icon-aspect-arrow-more {background-image:url("../img/icon/icon-aspect-arrow-more.svg")}
+.icon-aspect-arrow-right {background-image:url("../img/icon/icon-aspect-arrow-right.svg")}
+.icon-aspect-notice {background-image:url("../img/icon/icon-aspect-notice.svg")}
+.icon-aspect-notice2 {background-image:url("../img/icon/icon-aspect-notice2.svg")}
+.icon-aspect-m-filter {background-image:url("../img/icon/icon-aspect-m-filter.svg")}
+.icon-aspect-calendar {background-image:url("../img/icon/icon-aspect-calendar.svg")}
+.icon-aspect-web {background-image:url("../img/icon/icon-aspect-web.svg")}
+.icon-aspect-prev {background-image:url("../img/icon/icon-aspect-prev.svg")}
+.icon-aspect-next {background-image:url("../img/icon/icon-aspect-next.svg")}
+.icon-aspect-join1 {background-image:url("../img/icon/icon-aspect-join1.svg")}
+.icon-aspect-join2 {background-image:url("../img/icon/icon-aspect-join2.svg")}
+.icon-aspect-join3 {background-image:url("../img/icon/icon-aspect-join3.svg")}
+.icon-aspect-join1-on {background-image:url("../img/icon/icon-aspect-join1-on.svg")}
+.icon-aspect-join2-on {background-image:url("../img/icon/icon-aspect-join2-on.svg")}
+.icon-aspect-join3-on {background-image:url("../img/icon/icon-aspect-join3-on.svg")}
+.icon-aspect-exclamation {background-image:url("../img/icon/icon-aspect-exclamation.svg")}
+.icon-aspect-del {background-image:url("../img/icon/icon-aspect-del.svg")}
+.icon-aspect-write {background-image:url("../img/icon/icon-aspect-write.svg")}
+.icon-aspect-more {background-image:url("../img/icon/icon-aspect-more.svg")}
+.icon-aspect-palette {background-image:url("../img/icon/icon-aspect-palette.svg")}
+.icon-aspect-t {background-image:url("../img/icon/icon-aspect-t.svg")}
+.icon-aspect-download {background-image:url("../img/icon/icon-aspect-download.svg")}
+.icon-aspect-download-w {background-image:url("../img/icon/icon-aspect-download-w.svg")}
+.icon-aspect-article {background-image:url("../img/icon/icon-aspect-article.svg")}
+.icon-aspect-help {background-image:url("../img/icon/icon-aspect-help.svg")}
+.icon-aspect-round-help {background-image:url("../img/icon/icon-aspect-round-help.svg")}
+.icon-aspect-touch {background-image:url("../img/icon/icon-aspect-touch.svg")}
+.icon-aspect-add {background-image:url("../img/icon/icon-aspect-add.svg")}
+.icon-aspect-round-arrow {background-image:url("../img/icon/icon-aspect-round-arrow.svg")}
+.icon-aspect-round-more {background-image:url("../img/icon/icon-aspect-round-more.svg")}
+.icon-aspect-q {background-image:url("../img/icon/icon-q.svg")}
+.icon-aspect-q-w {background-image:url("../img/icon/icon-q-w.svg")}
+.icon-aspect-blank {background-image:url("../img/icon/icon-aspect-blank.svg")}
+.icon-aspect-reload {background-image:url("../img/icon/icon-aspect-reload.svg")}
+.icon-aspect-q {background-image:url("../img/icon/icon-aspect-q.svg")}
+.icon-aspect-star {background-image:url("../img/icon/icon-aspect-star.svg")}
+.icon-aspect-star-on {background-image:url("../img/icon/icon-aspect-star-on.svg")}
+.icon-aspect-down {background-image:url("../img/icon/icon-aspect-down.svg")}
+.icon-aspect-location {background-image:url("../img/icon/icon-aspect-location.svg")}
+.icon-aspect-error {background-image:url("../img/icon/icon-aspect-error.svg")}
+.icon-aspect-setting {background-image:url("../img/icon/icon-aspect-setting.svg")}
+.icon-aspect-menu {background-image:url("../img/icon/icon-aspect-menu.svg")}
+.icon-aspect-info-round {background-image:url("../img/icon/icon-aspect-info-round.svg")}
+.icon-aspect-arrow-r {background-image:url("../img/icon/icon-aspect-arrow-r.svg")}
+.icon-aspect-main-img1 {background-image:url("../img/main/main-img-1.png")}
+.icon-aspect-main-img2 {background-image:url("../img/main/main-img-2.png")}
+.icon-aspect-main-img3 {background-image:url("../img/main/main-img-3.png")}
+
+/* 컬러타입 */
+.icon-aspect-bloodtype {background-image:url("../img/icon/icon-aspect-bloodtype.svg")}
+.icon-aspect-bloodtype2 {background-image:url("../img/icon/icon-aspect-bloodtype2.svg")}
+.icon-aspect-sunny-snowing {background-image:url("../img/icon/icon-aspect-sunny-snowing.svg")}
+.icon-aspect-dew-point {background-image:url("../img/icon/icon-aspect-dew-point.svg")}
+.icon-aspect-average-temperature {background-image:url("../img/icon/icon-aspect-average-temperature.svg")}
+.icon-aspect-minimum-temperature {background-image:url("../img/icon/icon-aspect-minimum-temperature.svg")}
+.icon-aspect-high-temperature {background-image:url("../img/icon/icon-aspect-high-temperature.svg")}
+.icon-aspect-humidity {background-image:url("../img/icon/icon-aspect-humidity.svg")}
+.icon-aspect-rainfall {background-image:url("../img/icon/icon-aspect-rainfall.svg")}
+.icon-aspect-air {background-image:url("../img/icon/icon-aspect-air.svg")}
+.icon-aspect-scenario {background-image:url("../img/icon/icon-aspect-scenario.svg")}
+.icon-aspect-past {background-image:url("../img/icon/icon-aspect-past.svg")}
+.icon-aspect-past2 {background-image:url("../img/icon/icon-aspect-past2.svg")}
+.icon-aspect-login {background-image:url("../img/icon/icon-aspect-login.svg")}
+.icon-aspect-logout {background-image:url("../img/icon/icon-aspect-logout.svg")}
+
+/* 날씨 */
+.icon-aspect-NB01 {background-image:url("../img/weather/NB01.png")}  /* 맑은 */
+.icon-aspect-NB02 {background-image:url("../img/weather/NB02.png")}  /* 구름많은(낮) */
+.icon-aspect-NB03 {background-image:url("../img/weather/NB03.png")}  /* 흐림 */
+.icon-aspect-NB04 {background-image:url("../img/weather/NB04.png")}  /* 비 */
+.icon-aspect-NB05 {background-image:url("../img/weather/NB05.png")}  /* 눈 */
+.icon-aspect-NB06 {background-image:url("../img/weather/NB06.png")}  /* 비 또는 눈 */
+.icon-aspect-NB07 {background-image:url("../img/weather/NB07.png")}  /* 눈 또는 비 */
+.icon-aspect-NB08 {background-image:url("../img/weather/NB08.png")}  /* 낙뢰 */
+.icon-aspect-NB09 {background-image:url("../img/weather/NB09.png")}  /* 연무 */
+.icon-aspect-NB10 {background-image:url("../img/weather/NB10.png")}  /* 안개 */
+.icon-aspect-NB11 {background-image:url("../img/weather/NB11.png")}  /* 황사 */
+.icon-aspect-NB12 {background-image:url("../img/weather/NB12.png")}  /* 맑음(밤) */
+.icon-aspect-NB13 {background-image:url("../img/weather/NB13.png")}  /* 구름많음(밤) */
+.icon-aspect-NB14 {background-image:url("../img/weather/NB14.png")}  /* 소나기 */
+.icon-aspect-NB15 {background-image:url("../img/weather/NB15.png")}  /* 가끔 비, 한때 비 */
+.icon-aspect-NB16 {background-image:url("../img/weather/NB16.png")}  /* 가끔 눈, 한때 눈 */
+.icon-aspect-NB17 {background-image:url("../img/weather/NB17.png")}  /* 가끔 비 또는 눈, 한때 비 또는 눈 */
+.icon-aspect-NB18 {background-image:url("../img/weather/NB18.png")}  /* 가끔 눈 또는 비, 한때 눈 또는 비 */
+.icon-aspect-NB19 {background-image:url("../img/weather/NB19.png")}  /* 빗방울 */
+.icon-aspect-NB20 {background-image:url("../img/weather/NB20.png")}  /* 눈날림 */
+.icon-aspect-NB21 {background-image:url("../img/weather/NB21.png")}  /* 박무 */
+
+.main-logo-1 {height:2.2rem;background:url("../img/main/main-logo-1.svg") no-repeat 50% 50% / contain;display:block;width:11.2rem}
+.main-logo-2 {height:2.2rem;background:url("../img/main/main-logo-2.svg") no-repeat 50% 50% / contain;display:block;width:8.1rem}
+.main-logo-3 {height:2.2rem;background:url("../img/main/main-logo-3.svg") no-repeat 50% 50% / contain;display:block;width:6.2rem}
+.main-logo-4 {height:2.2rem;background:url("../img/main/main-logo-4.svg") no-repeat 50% 50% / contain;display:block;width:3.7rem}
