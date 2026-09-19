@@ -258,6 +258,7 @@
 [class*="icon-aspect-"][data-size="24"] {width:2.4rem}
 [class*="icon-aspect-"][data-size="26"] {width:2.6rem}
 [class*="icon-aspect-"][data-size="28"] {width:2.8rem}
+[class*="icon-aspect-"][data-size="32"] {width:3.2rem}
 [class*="icon-aspect-"][data-size="36"] {width:3.6rem}
 [class*="icon-aspect-"][data-size="40"] {width:4rem}
 [class*="icon-aspect-"][data-size="42"] {width:4.2rem}
@@ -486,3 +487,17 @@
 .main-logo-2 {height:2.2rem;background:url("../img/main/main-logo-2.svg") no-repeat 50% 50% / contain;display:block;width:8.1rem}
 .main-logo-3 {height:2.2rem;background:url("../img/main/main-logo-3.svg") no-repeat 50% 50% / contain;display:block;width:6.2rem}
 .main-logo-4 {height:2.2rem;background:url("../img/main/main-logo-4.svg") no-repeat 50% 50% / contain;display:block;width:3.7rem}
+
+/* 메인 퀵서비스 바로가기 아이콘 */
+.icon-aspect-main-n01 {background-image:url("../img/icon/icon-aspect-main-n01.svg")}
+.icon-aspect-main-n02 {background-image:url("../img/icon/icon-aspect-main-n02.svg")}
+.icon-aspect-main-n03 {background-image:url("../img/icon/icon-aspect-main-n03.svg")}
+.icon-aspect-main-n04 {background-image:url("../img/icon/icon-aspect-main-n04.svg")}
+.icon-aspect-main-n05 {background-image:url("../img/icon/icon-aspect-main-n05.svg")}
+.icon-aspect-main-n06 {background-image:url("../img/icon/icon-aspect-main-n06.svg")}
+.icon-aspect-main-n07 {background-image:url("../img/icon/icon-aspect-main-n07.svg")}
+.icon-aspect-main-n08 {background-image:url("../img/icon/icon-aspect-main-n08.svg")}
+.icon-aspect-main-n09 {background-image:url("../img/icon/icon-aspect-main-n09.svg")}
+.icon-aspect-main-n10 {background-image:url("../img/icon/icon-aspect-main-n10.svg")}
+.icon-aspect-main-n11 {background-image:url("../img/icon/icon-aspect-main-n11.svg")}
+.icon-aspect-main-n12 {background-image:url("../img/icon/icon-aspect-main-n12.svg")}
